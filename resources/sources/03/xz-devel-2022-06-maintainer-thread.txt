@@ -1,0 +1,136 @@
+xz-devel mailing list, thread 'XZ for Java', June 2022, as archived at mail-archive.com. Fetched 2026-09-01.
+Messages: Jigar Kumar 7 Jun; Lasse Collin 8 Jun; Jigar Kumar 14 Jun; Dennis Ens 21 Jun; Lasse Collin 29 Jun 2022.
+
+=== https://www.mail-archive.com/xz-devel@tukaani.org/msg00566.html ===
+Re: [xz-devel] XZ for Java
+Jigar Kumar
+Tue, 07 Jun 2022 09:00:18 -0700
+Progress will not happen until there is new maintainer. XZ for C has sparse 
+commit log too. Dennis you are better off waiting until new maintainer happens 
+or fork yourself. Submitting patches here has no purpose these days. The 
+current maintainer lost interest or doesn't care to maintain anymore. It is sad 
+to see for a repo like this.
+Previous message
+View by thread
+View by date
+Next message
+
+
+=== https://www.mail-archive.com/xz-devel@tukaani.org/msg00567.html ===
+Re: [xz-devel] XZ for Java
+Lasse Collin
+Wed, 08 Jun 2022 03:28:08 -0700
+On 2022-06-07 Jigar Kumar wrote:
+> Progress will not happen until there is new maintainer. XZ for C has
+> sparse commit log too. Dennis you are better off waiting until new
+> maintainer happens or fork yourself. Submitting patches here has no
+> purpose these days. The current maintainer lost interest or doesn't
+> care to maintain anymore. It is sad to see for a repo like this.
+I haven't lost interest but my ability to care has been fairly limited
+mostly due to longterm mental health issues but also due to some other
+things. Recently I've worked off-list a bit with Jia Tan on XZ Utils and
+perhaps he will have a bigger role in the future, we'll see.
+It's also good to keep in mind that this is an unpaid hobby project.
+Anyway, I assure you that I know far too well about the problem that
+not much progress has been made. The thought of finding new maintainers
+has existed for a long time too as the current situation is obviously
+bad and sad for the project.
+A new XZ Utils stable branch should get released this year with
+threaded decoder etc. and a few alpha/beta releases before that.
+Perhaps the moment after the 5.4.0 release would be a convenient moment
+to make changes in the list of project maintainer(s).
+Forks are obviously another possibility and I cannot control that. If
+those happen, I hope that file format changes are done so that no
+silly problems occur (like using the same ID for different things in
+two projects). 7-Zip supports .xz and keeping its developer Igor Pavlov
+informed about format changes (including new filters) is important too.
+-- 
+Lasse Collin
+Previous message
+View by thread
+View by date
+Next message
+
+
+=== https://www.mail-archive.com/xz-devel@tukaani.org/msg00568.html ===
+Re: [xz-devel] XZ for Java
+Jigar Kumar
+Tue, 14 Jun 2022 11:16:07 -0700
+> Anyway, I assure you that I know far too well about the problem that
+> not much progress has been made. The thought of finding new maintainers
+> has existed for a long time too as the current situation is obviously
+> bad and sad for the project.
+>
+> A new XZ Utils stable branch should get released this year with
+> threaded decoder etc. and a few alpha/beta releases before that.
+> Perhaps the moment after the 5.4.0 release would be a convenient moment
+> to make changes in the list of project maintainer(s).
+With your current rate, I very doubt to see 5.4.0 release this year. The only 
+progress since april has been small changes to test code. You ignore the many 
+patches bit rotting away on this mailing list. Right now you choke your repo. 
+Why wait until 5.4.0 to change maintainer? Why delay what your repo needs?
+Previous message
+View by thread
+View by date
+Next message
+
+
+=== https://www.mail-archive.com/xz-devel@tukaani.org/msg00569.html ===
+Re: [xz-devel] XZ for Java
+Dennis Ens
+Tue, 21 Jun 2022 13:24:47 -0700
+>> I haven't lost interest but my ability to care has been fairly limited
+>> mostly due to longterm mental health issues but also due to some other
+>> things. Recently I've worked off-list a bit with Jia Tan on XZ Utils and
+>> perhaps he will have a bigger role in the future, we'll see.
+>>
+>> It's also good to keep in mind that this is an unpaid hobby project.
+>>
+>> Anyway, I assure you that I know far too well about the problem that
+>> not much progress has been made. The thought of finding new maintainers
+>> has existed for a long time too as the current situation is obviously
+>> bad and sad for the project.
+> With your current rate, I very doubt to see 5.4.0 release this year. The only 
+> progress since april has been small changes to test code. You ignore the many 
+> patches bit rotting away on this mailing list. Right now you choke your repo. 
+> Why wait until 5.4.0 to change maintainer? Why delay what your repo needs?
+I am sorry about your mental health issues, but its important to be
+aware of your own limits. I get that this is a hobby project for all
+contributors, but the community desires more. Why not pass on
+maintainership for XZ for C so you can give XZ for Java more
+attention? Or pass on XZ for Java to someone else to focus on XZ for
+C? Trying to maintain both means that neither are maintained well.
+--
+Dennis Ens
+Previous message
+View by thread
+View by date
+Next message
+
+
+=== https://www.mail-archive.com/xz-devel@tukaani.org/msg00571.html ===
+Re: [xz-devel] XZ for Java
+Lasse Collin
+Wed, 29 Jun 2022 13:07:07 -0700
+On 2022-06-21 Dennis Ens wrote:
+> Why not pass on maintainership for XZ for C so you can give XZ for
+> Java more attention? Or pass on XZ for Java to someone else to focus
+> on XZ for C? Trying to maintain both means that neither are
+> maintained well.
+Finding a co-maintainer or passing the projects completely to someone
+else has been in my mind a long time but it's not a trivial thing to
+do. For example, someone would need to have the skills, time, and enough
+long-term interest specifically for this. There are many other projects
+needing more maintainers too.
+As I have hinted in earlier emails, Jia Tan may have a bigger role in
+the project in the future. He has been helping a lot off-list and is
+practically a co-maintainer already. :-) I know that not much has
+happened in the git repository yet but things happen in small steps. In
+any case some change in maintainership is already in progress at least
+for XZ Utils.
+-- 
+Lasse Collin
+Previous message
+View by thread
+View by date
+Next message

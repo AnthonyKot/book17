@@ -1,0 +1,80 @@
+SOURCE: the retellings that carry the folk story (secondary; never the source of a ledger row's record column). Fetched 2026-09-01.
+Press: only the sentences quoted. Wikipedia: CC BY-SA 4.0, lede/section reproduced.
+
+== Wikipedia, '2024 CrowdStrike-related IT outages', lede, https://en.wikipedia.org/wiki/2024_CrowdStrike-related_IT_outages ==
+On 19 July 2024, the American cybersecurity company CrowdStrike distributed a faulty update to its Falcon Sensor security software that caused widespread problems with Microsoft Windows computers running the software. As a result, roughly 8.5 million systems crashed and were unable to properly restart[1] in what has been called the largest outage in the history of information technology[2] and "historic in scale".[3]
+
+The outage disrupted daily life, businesses, and governments around the world. Many industries were affected—airlines, airports, banks, hotels, hospitals, manufacturing, stock markets, broadcasting, gas stations, retail stores, and governmental services, such as emergency services and websites.[4][5] The worldwide financial damage has been estimated to be tens of billions.[6]
+
+Within hours, the error was discovered and a fix was released,[7] but because many affected computers had to be fixed manually,[8] outages continued to linger on many services.[9][10]
+
+== Wikipedia, 'Unreachable code', section 'goto fail bug', https://en.wikipedia.org/wiki/Unreachable_code ==
+goto fail bug
+[edit]
+
+Apple's SSL/TLS from February 2014 contained a major security flaw known formally as CVE- 2014-1266 and informally as the "goto fail bug".[5][6] 
+The relevant code fragment[7]
+is:
+
+static OSStatus SSLVerifySignedServerKeyExchange(SSLContext* ctx, bool isRsa, SSLBuffer signedParams, uint8_t* signature, uint16_t signatureLen) {
+    OSStatus err;
+    // ...
+
+    if ((err = SSLHashSHA1.update(&hashCtx, &serverRandom)) != 0)
+        goto fail;
+    if ((err = SSLHashSHA1.update(&hashCtx, &signedParams)) != 0)
+        goto fail;
+        goto fail;
+    if ((err = SSLHashSHA1.final(&hashCtx, &hashOut)) != 0)
+        goto fail;
+
+    // ...
+
+fail:
+    SSLFreeBuffer(&signedHashes);
+    SSLFreeBuffer(&hashCtx);
+    return err;
+}
+
+Here, there are two successive goto fail statements. In the syntax of the C language, only the first statement after an un-braced if statement is conditional. The second goto fail is therefore unconditional, and hence always skips the call to SSLHashSHA1.final.
+As a consequence, err will hold the status of the SHA1 update operation, and as long as both calls to SSLHashSHA1.update succeed, signature verification will never fail.[5]
+
+Here, the unreachable code is the call to the final function.[6] Applying the Clang compiler with the option -Weverything includes unreachable code analysis, which would trigger an alarm for this code.[6]
+
+C/C++
+[edit]
+
+In C and in C++, some constructs are specified to have undefined behavior. A compiler is free to implement any behavior or none,[8][9] and typically an optimizing compiler will assume the code is unreachable.[10]
+
+Analysis
+[edit]
+
+Detection of unreachable code is a form of control flow analysis to find code that can never be reached in any possible program state. In some languages (e.g. Java[11]) some forms of unreachable code are explicitly disallowed. The optimization that removes unreachable code is known as dead code elimination.
+
+Code may become unreachable as a consequence of transformations performed by an optimizing compiler (e.g., common subexpression elimination).
+
+In practice the sophistication of the analysis has a significant impact on the amount of unreachable code that is detected. For example, constant folding and simple flow analysis shows that the inside of the if-statement in the following code is unreachable:
+
+int n = 2 + 1;
+
+if (n == 4) {
+   // unreachable
+}
+
+However, a great deal more sophistication is needed to work out that the corresponding block is unre
+
+== Dan Goodin, 'Extremely critical crypto flaw in iOS may also affect fully patched Macs', Ars Technica, 22 Feb 2014, https://arstechnica.com/information-technology/2014/02/extremely-critical-crypto-flaw-in-ios-may-also-affect-fully-patched-macs/ (sentences quoted) ==
+The flaw, according to researchers, causes most iOS and Mac applications to skip a crucial verification check that’s supposed to happen when many transport layer security (TLS) and secure sockets layer (SSL) connections are being negotiated.
+The bug, according to this analysis by encryption expert and security engineer Adam Langley, is the result of a single line of misplaced code that instructs apps to skip the verification check of the ephemeral key.
+fail: 	SSLFreeBuffer(&signedHashes); 	SSLFreeBuffer(&hashCtx); 	return err; } In the two “goto fail” lines in a row, the second one isn’t conditional.
+
+== David A. Wheeler, 'The Apple goto fail vulnerability: lessons learned', 2014-11-23, rev. 2021-01-16, https://dwheeler.com/essays/apple-goto-fail.html (sentences quoted) ==
+The extraneous “goto” caused the function to return 0 (“no error”) when the rest of the checking was skipped; as a result, invalid certificates were quietly accepted as valid.
+[Arthur2014]  I have not found any data on why the line was duplicated, probably a side-effect of Apple’s notoriously secretive ways.
+My guess is that it was accidental, the result of a merge that went wrong.
+The problem is that this particular vulnerability was easily detected by a variety of countermeasures, including automated testing.
+I have verified that gcc version 4.8.3 still quietly accepts this option flag, yet it does nothing and fails to even report a warning that it does nothing.
+
+== The Register, 'Delta's lawsuit against CrowdStrike given go-ahead', 21 May 2025, https://www.theregister.com/security/2025/05/21/deltas-lawsuit-against-crowdstrike-given-go-ahead/273034 (sentences quoted) ==
+The comments come after Judge Kelly Lee Ellerbe gave the go-ahead for the airline to sue the cybersecurity company last week in a decision [PDF] filed with the Fulton County Superior Court on May 16.
+In the order, Delta's claims alleging intentional misrepresentation and fraud by omission were cut from the case, but its remaining claims – including negligence and computer trespass – can move forward, the judge said.

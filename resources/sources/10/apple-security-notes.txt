@@ -1,0 +1,30 @@
+SOURCE: Apple security notes for the fix, fetched 2026-09-01.
+  HT6146  About the security content of iOS 6.1.6      https://support.apple.com/en-us/HT6146
+  HT6147  About the security content of iOS 7.0.6      https://support.apple.com/en-us/HT6147
+  HT6150  About the security content of OS X Mavericks 10.9.2 and Security Update 2014-001  https://support.apple.com/en-us/HT6150
+The pages carry a "Published Date: November 06, 2023" footer (page revision); the update itself shipped 21 Feb 2014
+(Langley, 22 Feb 2014: "Yesterday, Apple pushed..."; CVE record datePublished 2014-02-22). The Data Security entries, verbatim:
+
+== HT6146 (iOS 6.1.6) ==
+Data Security
+Available for: iPhone 3GS, iPod touch (4th generation)
+Impact: An attacker with a privileged network position may capture or modify data in sessions protected by SSL/TLS
+Description: Secure Transport failed to validate the authenticity of the connection. This issue was addressed by restoring missing validation steps.
+CVE-ID
+CVE-2014-1266
+
+== HT6147 (iOS 7.0.6) ==
+Data Security
+Available for: iPhone 4 and later, iPod touch (5th generation), iPad 2 and later
+Impact: An attacker with a privileged network position may capture or modify data in sessions protected by SSL/TLS
+Description: Secure Transport failed to validate the authenticity of the connection. This issue was addressed by restoring missing validation steps.
+CVE-ID
+CVE-2014-1266
+
+== HT6150 (OS X 10.9.2) ==
+Data Security
+Available for: OS X Mavericks 10.9 and 10.9.1
+Impact: An attacker with a privileged network position may capture or modify data in sessions protected by SSL/TLS
+Description: Secure Transport failed to validate the authenticity of the connection. This issue was addressed by restoring missing validation steps.
+CVE-ID
+CVE-2014-1266

@@ -1,0 +1,77 @@
+Lasse Collin, 'XZ Utils review notes', version 1.0, 2024-05-29. URL: https://tukaani.org/xz-backdoor/review.html  Fetched 2026-09-01.
+Excerpts: the passages that name the backdoor-related commits (2024-01 to 2024-03) and the Landlock and m4/.gitignore entries. Full document at the URL.
+
+XZ Utils review notes
+tukaani.org » XZ Utils backdoor » XZ Utils review notes
+XZ Utils review notes
+---
+Lasse Collin
+version 1.0,
+2024-05-29
+Table of Contents
+---
+Changes to translations were checked separately, not per commit basis.
+While the commits weren’t signed,
+I didn’t spot any signs of committer fraud.
+v5.2, v5.4, and v5.6
+---
+Tests: Add two RISC-V Filter test files.
+This is the first commit preparing for the backdoor.
+xz: Update xz -lvv for RISC-V filter.
+---
+Tests: Skip RISC-V test files if decoder was not built.
+This is fine although now that the backdoor has been removed,
+this commit alone doesn’t do anything.
+But I left it there so that it’s ready if proper files along with
+a generator program are added.
+---
+Tests: Use smaller dictionary size in RISC-V test files.
+I had mentioned the dictionary size and that gave a good excuse
+to update something in the backdoor code.
+CI: Use RISC-V filter when building with BCJ support.
+---
+Update m4/.gitignore.
+Modified build-to-host.m4 had the backdoor trigger.
+Ignoring the file here is correct because it is added
+among several other .m4 files
+when running ./autogen.sh or autoreconf -fi.
+---
+Tests: Add a few test files.
+Backdoor files.
+Note that tests/test_files.sh uses globs to pick the files.
+So just adding files means that a decompression test will be done with them.
+---
+Build: Fix Linux Landlock feature test in Autotools and CMake builds.
+This has a . at the beginning of a line in
+CMakeLists.txt that sabotages the Landlock detection.
+This was fixed in CMake: Fix sabotaged Landlock sandbox check..
+xz: Add missing RISC-V on the filter list in the man page
+---
+This has a . at the beginning of a line in
+CMakeLists.txt that sabotages the Landlock detection.
+This was fixed in CMake: Fix sabotaged Landlock sandbox check..
+xz: Add missing RISC-V on the filter list in the man page
+---
+liblzma: Fix false Valgrind error report with GCC.
+It’s one of the backdoor commits.
+liblzma: Fix typos in crc32_fast.c and crc64_fast.c.
+---
+Tests: Update two test files.
+More backdoor commits.
+Translations: Add missing --riscv option to man page translations.
+---
+and simplifying SECURITY.md seemed reasonable too.
+People reporting such bugs don’t need detailed handholding.
+I felt 21–30 days would be appropriate but Jia wanted to keep 90.
+With backdoor like “bugs”,
+fast full disclosure is the only correct way though.
+---
+People reporting such bugs don’t need detailed handholding.
+I felt 21–30 days would be appropriate but Jia wanted to keep 90.
+With backdoor like “bugs”,
+fast full disclosure is the only correct way though.
+Translations
+---
+using diff -Narup,
+I allowed the release to go forward.
+tukaani.org » XZ Utils backdoor » XZ Utils review notes

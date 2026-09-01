@@ -1,0 +1,14 @@
+Brian Krebs, "Capital One Data Theft Impacts 106M People", KrebsOnSecurity, July 30, 2019.
+Source: https://krebsonsecurity.com/2019/07/capital-one-data-theft-impacts-106m-people/
+Fetched 2026-09-01. RETELLING (press). Only the sentences quoted in the chapter or ledger:
+
+"The FBI says Capital One learned about the theft from a tip sent via email on July 17,
+which alerted the company that some of its leaked data was being stored out in the open on
+the software development platform Github."
+
+"None of Erratic's postings suggest Thompson sought to profit from selling the data taken
+from various Amazon cloud instances she was able to access."
+
+[Quoting a researcher, Watson:] "The attacker was a former employee of the web hosting
+company involved, which is what is often referred to as insider threats," Watson said. "She
+allegedly used web application firewall credentials to obtain privilege escalation."

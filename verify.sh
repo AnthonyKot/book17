@@ -27,7 +27,7 @@ import glob, os, re, sys
 bad = 0
 for f in glob.glob('**/*.html', recursive=True):
     if os.path.basename(f).startswith('_'): continue
-    for m in re.findall(r'(?:href|src)="([^"#?:]+)"', open(f, encoding='utf-8').read()):
+    for m in re.findall(r'(?<![\w-])(?:href|src)="([^"#?:]+)"', open(f, encoding='utf-8').read()):
         if m.startswith(('http', '//', 'mailto')): continue
         if not os.path.exists(os.path.normpath(os.path.join(os.path.dirname(f), m))):
             print("  BROKEN  %s -> %s" % (f, m)); bad += 1

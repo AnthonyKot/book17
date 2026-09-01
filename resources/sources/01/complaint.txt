@@ -1,0 +1,149 @@
+United States v. Paige A. Thompson, No. MJ19-0344 (2:19-mj-00344-MAT), W.D. Wash.
+COMPLAINT FOR VIOLATION OF 18 U.S.C. § 1030(a)(2), Document 1, filed 07/29/19.
+Sworn before Magistrate Judge Mary Alice Theiler on July 27, 2019 (p. 12).
+Affiant: Joel Martini, Special Agent, FBI Seattle (¶1).
+Source: https://www.justice.gov/usao-wdwa/press-release/file/1188626/download (scanned PDF, 12 pp.)
+Fetched 2026-09-01. The PDF has no text layer; this excerpt was OCR'd with tesseract and
+hand-cleaned against the page images. The raw OCR is in complaint-ocr-raw.txt. "*****" is the
+affiant's own redaction (p. 6, ¶9). A CHARGING DOCUMENT: these are allegations, not findings.
+
+COUNT 1 (Computer Fraud and Abuse), p. 1
+Between on or about March 12, 2019, and on or about July 17, 2019, at Seattle, within the
+Western District of Washington, and elsewhere, PAIGE A. THOMPSON intentionally accessed a
+computer without authorization, to wit, a computer containing information belonging to
+Capital One Financial Corporation, and thereby obtained information contained in a financial
+record of a financial institution and of a card issuer as defined in Section 1602 of Title
+15, and information from a protected computer, and the value of the information obtained
+exceeded $5,000. All in violation of Title 18, United States Code, Section 1030(a)(2)(A) and
+(C), and (c)(2)(A) and (B)(iii).
+
+¶2 (p. 2). I am the case agent responsible for an investigation of PAIGE A. THOMPSON, also
+known by the alias "erratic," for intruding into servers rented or contracted by a financial
+services company and issuer of credit cards, namely, Capital One Financial Corporation
+("Capital One"), from a company that provides cloud computing services (the "Cloud Computing
+Company"), and for exfiltrating and stealing information, including credit card applications
+and other documents, from Capital One.
+
+¶8 (p. 5). Capital One maintains an e-mail address through which it solicits disclosures of
+actual or potential vulnerabilities in its computer systems, so that Capital One can learn
+of, and attempt to avert, breaches of its systems. Among others who send e-mails to this
+address are individuals who sometimes are called "ethical" or "white hat" hackers.
+
+¶9 (p. 5). On July 17, 2019, an individual — who previously was unknown to Capital One —
+e-mailed this address. [Reproduced e-mail, Wed, Jul 17, 2019 at 1:25 AM, subject "[External
+Sender] Leaked s3 data":] "Hello there, There appears to be some leaked s3 data of yours in
+someone's github / gist: [address redacted] Let me know if you want help tracking them down.
+Thanks,"
+
+¶9 cont. (p. 6). The individual's e-mail stated that there appeared to be leaked data
+belonging to Capital One on GitHub, and provided the address of the GitHub file containing
+this leaked data. The address provided for this file was https://gist.github.com/*****/*****.
+[Throughout this affidavit, I use ***** to substitute for other characters, sometimes fewer,
+but often more, than five characters.] Significantly, one of the terms in this address was
+what I know from Department of Licensing records to be PAIGE A. THOMPSON's full first,
+middle, and last name.
+
+¶10 (p. 6). After receiving this information, Capital One examined the GitHub file, which
+was timestamped April 21, 2019 (the "April 21 File"). Capital One determined that the April
+21 File contained the IP address for a specific server. A firewall misconfiguration permitted
+commands to reach and be executed by that server, which enabled access to folders or buckets
+of data in Capital One's storage space at the Cloud Computing Company.
+
+¶11 (p. 6). Capital One determined that the April 21 File contained code for three commands,
+as well as a list of more than 700 folders or buckets of data.
+ - Capital One determined that the first command, when executed, obtained security
+   credentials for an account known as *****-WAF-Role that, in turn, enabled access to
+   certain of Capital One's folders at the Cloud Computing Company.
+ - Capital One determined that the second command (the "List Buckets Command"), when
+   executed, used the *****-WAF-Role account to list the names of folders or buckets of data
+   in Capital One's storage space at the Cloud Computing Company.
+ - Capital One determined that the third command (the "Sync Command"), when executed, used
+   the *****-WAF-Role to extract or copy data from those folders or buckets in Capital One's
+   storage space for which the *****-WAF-Role account had the requisite permissions.
+
+¶12 (p. 7). Capital One tested the commands in the April 21 File, and confirmed that the
+commands did, in fact, function to obtain Capital One's credentials, to list or enumerate
+folders or buckets of data, and to extract data from certain of those folders or buckets.
+Capital One confirmed that the more-than-700 folders or buckets of data listed in the April
+21 File matched the actual names of folders or buckets of data used by Capital One for data
+stored at the Cloud Computing Company. Capital One reported that its computer logs reflect
+the fact that the List Buckets Command was in fact executed on April 21, 2019, and that the
+timestamp in Capital One's logs matches the timestamp in the April 21 File.
+
+¶13 (pp. 7–8). According to Capital One, its logs show a number of connections or attempted
+connections to Capital One's server from TOR exit nodes, and a number of connections from IP
+addresses beginning with 46.246, all of which Capital One believes relate to activity
+conducted by the same person involved in the April 21, 2019, intrusion, because they involve
+similar unusual communications through the misconfigured firewall to the server discussed
+above. Specifically, according to Capital One, the logs show:
+ - On or about March 12, 2019, IP address 46.246.35.99 attempted to access Capital One's
+   data. I know, from checking publicly-available records, that this IP address is
+   controlled by IPredator, a company that provides VPN services.
+ - On or about March 22, 2019, the *****-WAF-Role account was used to execute the List
+   Buckets Command several times. These commands were executed from IP addresses that I
+   believe to be TOR exit nodes. According to Capital One, the *****-WAF-Role account does
+   not, in the ordinary course of business, invoke the List Buckets Command.
+ - Also on or about March 22, 2019, the *****-WAF-Role account was used to execute the Sync
+   Command a number of times to obtain data from certain of Capital One's data folders or
+   buckets, including files that contain credit card application data. A number of those
+   commands were executed from IP address 46.246.38.224. I know, from checking
+   publicly-available records, that that IP address also is controlled by IPredator.
+ - One of the files copied from Capital One's folders or buckets on March 22, 2019, was a
+   file with the name *****c000.snappy.parquet (the "Snappy Parquet File"), and this was the
+   only time the *****-WAF-Role account accessed the Snappy Parquet File between January 1,
+   2019 and July 20, 2019.
+ - A List Buckets Command was executed on April 21, 2019, from IP address 46.246.35.103. I
+   know, from checking publicly-available records, that the IP address from which this
+   command was executed also is controlled by IPredator. I also believe, based on the
+   timestamp on the April 21, 2019 file, and the time that Capital One reports that the
+   command appears in Capital One's logs, that this was the command that was the source of
+   the April 21 File.
+
+¶14 (p. 8). According to Capital One, the data copied from Capital One's data folders or
+buckets includes primarily data related to credit card applications. Although some of the
+information in those applications (such as Social Security numbers) has been tokenized or
+encrypted, other information including applicants' names, addresses, dates of birth and
+information regarding their credit history has not been tokenized. According to Capital One,
+the data includes data regarding large numbers of applications, likely tens of millions of
+applications. According to Capital One, that data includes approximately 120,000 Social
+Security Numbers and approximately 77,000 bank account numbers.
+
+¶15 (pp. 8–9). [...] The GitLab Net***** Page includes, among other things, a resume for
+"Paige Thompson." That resume indicates that Paige Thompson is a "systems engineer" and
+formerly worked at the Cloud Computing Company from 2015-16.
+
+¶18 (p. 9). I have reviewed postings on the Net***** Slack Channel. Among other things, on or
+about June 26, 2019, a user "erratic" posted a list of files that "erratic" claimed to
+possess. Among those files, two referenced "*****-WAF-Role." Based on my review of the Sync
+Command in the April 21 File, and my training and experience, I know that the Sync Command
+would place extracted files in a directory with the name "*****-WAF-Role." Accordingly, I
+believe that "erratic" was claiming to have files extracted using the extraction command set
+forth in the April 21 File.
+
+¶20 (p. 10). On or about June 27, 2019, another user posted "don't go to jail plz." In
+response, "erratic" posted "Im like > ipredator > tor > s3 on all this shit." [...] I
+understand this to refer to the method PAIGE A. THOMPSON used to commit the intrusion.
+"[E]rratic" also posted "I wanna get it off my server that's why Im archiving all of it lol."
+
+¶25 (p. 11). According to a screenshot that Capital One provided, on June 18, 2019, Twitter
+user "ERRATIC" sent a direct message to the reporting source: "Ive basically strapped myself
+with a bomb vest, fucking dropping capitol ones dox and admitting it. I wanna distribute
+those buckets i think first." [Screenshot also shows a following message: "There ssns...with
+full name and dob", Jun 18, 2019, 12:06 AM.] (p. 12) I understand this post to indicate,
+among other things, that PAIGE A. THOMPSON intended to disseminate data stolen from victim
+entities, starting with Capital One.
+
+¶26–27 (p. 12). On July 26, 2019, I obtained a search warrant to search PAIGE A. THOMPSON's
+residence for evidence in this case. On July 29, 2019, other FBI Special Agents and I
+executed that search warrant. [...] A search of a bedroom believed to belong to PAIGE A.
+THOMPSON resulted in the seizure of numerous digital devices. During the initial search of
+some of these devices, agents observed files and items that referenced Capital One and the
+Cloud Computing Company, other entities that may have been the targets of attempted or
+actual network intrusions, and "erratic," the alias associated with PAIGE A. THOMPSON.
+
+NOTE (what the complaint does not say): the words "SSRF", "server-side request forgery",
+"metadata", "169.254.169.254", "Amazon", "AWS", "S3" (outside quoted chat), "ModSecurity" and
+"Apache" do not appear in the complaint. The cloud provider is "the Cloud Computing Company"
+throughout. The mechanism is described only as "a firewall misconfiguration permitted
+commands to reach and be executed by that server" (¶10) and "unusual communications through
+the misconfigured firewall to the server" (¶13).

@@ -1,0 +1,15 @@
+Federal Reserve Board press release, August 6, 2020, "Federal Reserve Board issues enforcement
+action with Capital One Financial Corporation". Source:
+https://www.federalreserve.gov/newsevents/pressreleases/enforcement20200806a.htm, fetched
+2026-09-01.
+
+The Federal Reserve Board on Thursday announced a cease and desist order against Capital One
+Financial Corporation of McLean, Virginia. The enforcement action is the result of a
+significant data breach from March 2019 at the firm's national bank subsidiaries affecting
+the personal information of Capital One credit card customers and applicants for credit card
+products.
+The Board supervises the bank holding company and is requiring it to enhance its
+risk-management program and related governance and controls, specifically around
+cybersecurity and information security. The Board's action is being taken in conjunction
+with a separate action against the national bank, which is overseen by the Office of the
+Comptroller of the Currency.

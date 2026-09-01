@@ -1,0 +1,32 @@
+Capital One, "Information on the Capital One cyber incident" (facts2019 page). Source:
+https://www.capitalone.com/digital/facts2019/, fetched 2026-09-01. The company's own
+statement; the page has been updated since July 2019 (it carries a January 27, 2021 note and
+a February 7, 2022 note). Excerpted sentences relied on, in page order:
+
+. On February 7, 2022, a U.S. federal court preliminarily approved a class action settlement relating to the cyber incident Capital One announced in July 2019. Please visit
+
+On January 27, 2021, as a result of Capital One’s ongoing analysis of the files stolen by the unauthorized individual in the 2019 Cybersecurity Incident, we discovered approximately 4,700 U.S. credit card customers or applicants whose Social Security Numbers were among the data accessed, but not previously known. Capital One is directly notifying these affected individuals and will make two years of free credit monitoring and identity protection available at no cost to them.
+
+On July 19, 2019, we determined that an outside individual gained unauthorized access and obtained certain types of personal information about Capital One credit card customers and individuals who had applied for our credit card products.
+
+We immediately fixed the issue and promptly began working with federal law enforcement. The outside individual who took the data was captured by the FBI. The government has stated they believe the data has been recovered and that there is no evidence the data was used for fraud or shared by this individual.
+
+Based on our analysis, this event affected approximately 100 million individuals in the United States and approximately 6 million in Canada.
+
+Importantly, no credit card account numbers or log-in credentials were compromised and less than one percent of Social Security numbers were compromised. In addition, the outside individual who took the data was captured by the FBI. The government has stated they believe the data has been recovered and that there is no evidence the data was used for fraud or shared by this individual.
+
+The largest category of information accessed was information on consumers and small businesses as of the time they applied for one of our credit card products from 2005 through early 2019. This information included personal information Capital One routinely collects at the time it receives credit card applications, including names, addresses, zip codes/postal codes, phone numbers, email addresses, dates of birth, and self-reported income.
+
+Customer status data, e.g., credit scores, credit limits, balances, payment history, contact information.
+
+About 140,000 Social Security numbers of our credit card customers.
+
+About 80,000 linked bank account numbers of our secured credit card customers.
+
+For our Canadian credit card customers, approximately 1 million Social Insurance Numbers were compromised in this incident. We have notified all Canadian customers affected.
+
+Like many companies, we have a Responsible Disclosure Program which provides an avenue for ethical security researchers to report vulnerabilities directly to us. The configuration vulnerability was reported to us by an external security researcher through our Responsible Disclosure Program on July 17, 2019. We then began our own internal investigation, leading to the July 19, 2019, discovery of the incident.
+
+On July 19, 2019, we determined that an outside individual gained unauthorized access and obtained certain types of personal information about Capital One credit card customers and individuals who had applied for our credit card products. This occurred on March 22 and 23, 2019.
+
+On February 7, 2022, a U.S. federal court preliminarily approved a class action settlement relating to the cyber incident Capital One announced in July 2019. Please visit www.CapitalOneSettlement.com for additional details.

@@ -1,0 +1,45 @@
+kpcyrd, 'New supply-chain security tool: backseat-signed', rb-general, 3 Apr 2024. URL: https://lists.reproducible-builds.org/pipermail/rb-general/2024-April/003337.html  Fetched 2026-09-01. Also cited: kpcyrd, 'The upstream xz repository and the xz tarballs have been backdoored', 29 Mar 2024, .../2024-March/003316.html (body is the openwall link and 'Exciting times').
+
+    New supply-chain security tool: backseat-signed
+   New supply-chain security tool: backseat-signed
+    kpcyrd 
+    kpcyrd at archlinux.org
+    Wed Apr  3 00:31:11 UTC 2024
+        Previous message (by thread): Arch Linux minimal container userland 100% reproducible - now what?
+        Next message (by thread): New supply-chain security tool: backseat-signed
+           
+                                                        Hello,
+I'm going to keep this short, I've been writing a lot of text recently 
+(which is quite exhausting, on top of my dayjob and all the code I wrote 
+today afterwards. Apologies if you're still waiting for a reply in one 
+of the other threads).
+I figured out a somewhat straight-forward way to check if a given `git 
+archive` output is cryptographically claimed to be the source input of a 
+given binary package in either Arch Linux or Debian (or both).
+I believe this to be the "reproducible source tarball" thing some people 
+have been asking about. As explained in the README, I believe 
+reproducing autotools-generated tarballs isn't worth everybody's time 
+and instead a distribution that claims to build from source should 
+operate on VCS snapshots instead of tarballs with 25k lines of 
+pre-generated shell-script. Building from VCS snapshots is already the 
+case  for a large number of Arch Linux packages (through auto-generated 
+Github tarballs). Some packages have been actively converted to VCS 
+snapshots by Arch Linux staff in response to the xz incident.
+This tool highlights the concept of "canonical sources", which is 
+supposed to give guidance on what to code review. This is also why I 
+think code signing by upstream is somewhat low priority, since the big 
+distros can form consensus around "what's the source code" regardless.
+https://github.com/kpcyrd/backseat-signed
+The README shows how to verify Arch Linux and Debian build cmatrix from 
+the same source code - they may both still apply patches (which would be 
+considered part of the build instructions), but the specified source 
+input is the same. This tarball can also be bit-for-bit reproduced from 
+VCS by taking a `git archive` snapshot of the v2.0 tag in the cmatrix 
+repository.
+(If somebody ever tells you programming in Rust is slower, I wrote the 
+entirety of this codebase within a few hours of a single day)
+Let me know what you think. 🖤
+Happy feet,
+kpcyrd
+	Previous message (by thread): Arch Linux minimal container userland 100% reproducible - now what?
+	Next message (by thread): New supply-chain security tool: backseat-signed

@@ -1,0 +1,42 @@
+SOURCE: David Weston, 'Windows Security best practices for integrating and managing security tools', Microsoft Security Blog, 27 July 2024,
+https://www.microsoft.com/en-us/security/blog/2024/07/27/windows-security-best-practices-for-integrating-and-managing-security-tools/ (live page 403 to curl; Wayback copy used). Vendor technical analysis of the crash dumps and of why security products run in the kernel. Fetched 2026-09-01. Excerpts (crash-dump listings omitted):
+
+Windows is an open and flexible platform used by many of the world’s top businesses for high availability use cases where security and availability are non-negotiable.
+
+To meet those needs:
+
+Windows provides a range of operating modes that customers can choose from. This includes the ability to limit what can run to only approved software and drivers. This can increase security and reliability by making Windows operate in a mode closer to mobile phones or appliances.
+
+Customers can choose integrated security monitoring and detection capabilities that are included with Windows. Or they can choose to replace or supplement this security with a wide variety of choices from a vibrant open ecosystem of vendors.
+
+In this blog post, we examine the recent CrowdStrike outage and provide a technical overview of the root cause. We also explain why security products use kernel-mode drivers today and the safety measures Windows provides for third-party solutions. In addition, we share how customers and security vendors can better leverage the integrated security capabilities of Windows for increased security and reliability. Lastly, we provide a look into how Windows will enhance extensibility for future security products.
+
+CrowdStrike recently published a Preliminary Post Incident Review analyzing their outage. In their blog post, CrowdStrike describes the root cause as a memory safety issue—specifically a read out-of-bounds access violation in the CSagent driver. We leverage the Microsoft WinDBG Kernel Debugger and several extensions that are available free to anyone to perform this analysis. Customers with crash dumps can reproduce our steps with these tools.
+
+[...]
+
+ly, with WER data we only receive a compressed version of state and thus we cannot disassemble backwards to see a larger set of instructions prior to the crash, but we can see in the disassembly that there is a check for NULL before performing a read at the address specified in the R8 register:
+
+6: kd> .trap 0xffff9405
+
+[...]
+
+Why do security solutions leverage kernel drivers?
+
+Many security vendors such as CrowdStrike and Microsoft leverage a kernel driver architecture and there are several reasons for this.
+
+Visibility and enforcement of security related events
+
+Kernel drivers allow for system wide visibility, and the capability to load in early boot to detect threats like boot kits and root kits which can load before user-mode applications. In addition, Microsoft provides a rich set of capabilities such as system event callbacks for process and thread creation and filter drivers which can watch for events like file creation, deletion, or modification. Kernel activity can also trigger call backs for drivers to decide when to block activities like file or process creations. Many vendors also use drivers to collect a variety of network information in the kernel using the NDIS driver class.
+
+Performance
+
+Kernel drivers are often utilized by security vendors for potential performance benefits. For example, analysis or data collection for high throughput network activity may benefit from a kernel driver. There are many scenarios where data collection and analysis can be optimized for operation outside of kernel mode and Microsoft continues to partner with the ecosystem to improve performance and provide best practices to achieve parity outside of kernel mode.
+
+Tamper resistance
+
+A second benefit of loading into kernel mode is tamper resistance. Security products want to ensure that their software cannot be disabled by malware, targeted attacks, or malicious insiders, even when those attackers have admin-level privileges. They also want to ensure that their drivers load as early as possible so that they can observe system events at the earliest possible time. Windows provides a mechanism to launch drivers marked as Early Launch Antimalware (ELAM) early in the boot process for this reason. CrowdStrike signs the above CSboot driver as ELAM, enabling it to load early in the boot sequence.
+
+In the general case, there is a tradeoff that security vendors must rationalize when it comes to kernel drivers. Kernel drivers provide the above properties at the cost of resilience. Since kernel drivers run at the most trusted level of Windows, where containment and recovery capabilities are by nature constrained, security vendors must carefully balance needs like visibility and tamper resistance with the risk of operating within kernel mode.
+
+All code operating at kernel level requires extensive validation because it cannot fail and restart like a normal user application. This is universal across all operating systems.

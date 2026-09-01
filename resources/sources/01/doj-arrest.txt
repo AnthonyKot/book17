@@ -1,0 +1,13 @@
+DOJ / U.S. Attorney's Office W.D. Wash. press release, July 29, 2019, "Seattle Tech Worker Arrested for Data Theft Involving Large Financial Services Company".
+Source: https://www.justice.gov/usao-wdwa/pr/seattle-tech-worker-arrested-data-theft-involving-large-financial-services-company
+Fetched 2026-09-01 (site serves a bot-check redirect; fetched with curl after the redirect).
+
+Used Knowledge of Servers and Cloud Storage to Steal Data from Millions of Credit Applications
+A former Seattle technology company software engineer was arrested today on a criminal complaint charging computer fraud and abuse for an intrusion on the stored data of Capital One Financial Corporation, announced U.S. Attorney Brian T. Moran.  PAIGE A. THOMPSON a/k/a erratic, 33, made her initial appearance in U.S. District Court in Seattle today and was ordered detained pending a hearing on August 1, 2019.
+According to the criminal complaint, THOMPSON posted on the information sharing site GitHub about her theft of information from the servers storing Capital One data. The intrusion occurred through a misconfigured web application firewall that enabled access to the data.  On July 17, 2019, a GitHub user who saw the post alerted Capital One to the possibility it had suffered a data theft.  After determining on July 19, 2019, that there had been an intrusion into its data, Capital One contacted the FBI.  Cyber investigators were able to identify THOMPSON as the person who was posting about the data theft.  This morning agents executed a search warrant at THOMPSON’s residence and seized electronic storage devices containing a copy of the data.
+“Capital One quickly alerted law enforcement to the data theft -- allowing the FBI to trace the intrusion,” said U.S. Attorney Moran.  “I commend our law enforcement partners who are doing all they can to determine the status of the data and secure it.”
+Computer fraud and abuse is punishable by up to five years in prison and a $250,000 fine.
+The charges contained in the complaint are only allegations.  A person is presumed innocent unless and until he or she is proven guilty beyond a reasonable doubt in a court of law.
+The case is being investigated by the FBI.  The case is being prosecuted by Assistant United States Attorneys Steven Masada and Andrew Friedman.
+thompson_complaint.pdf
+Contact

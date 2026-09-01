@@ -1,0 +1,99 @@
+SOURCE: Apple open-source release Security-55471 (OS X 10.9 / iOS 7 era), file libsecurity_ssl/lib/sslKeyExchange.c,
+fetched 2026-09-01 from Apple's own GitHub mirror of opensource.apple.com:
+  https://raw.githubusercontent.com/apple-oss-distributions/Security/Security-55471/libsecurity_ssl/lib/sslKeyExchange.c
+Fixed release Security-55471.14 (OS X 10.9.2):
+  https://raw.githubusercontent.com/apple-oss-distributions/Security/Security-55471.14/libsecurity_ssl/lib/sslKeyExchange.c
+(opensource.apple.com/source/Security/Security-55471/... returned 404 on 2026-09-01; the GitHub mirror is Apple's.)
+File header line 2: "* Copyright (c) 1999-2001,2005-2012 Apple Inc. All Rights Reserved."
+Function SSLVerifySignedServerKeyExchange, lines 575-652 of the vulnerable file, verbatim with line numbers:
+
+575	SSLVerifySignedServerKeyExchange(SSLContext *ctx, bool isRsa, SSLBuffer signedParams,
+576	                                 uint8_t *signature, UInt16 signatureLen)
+577	{
+578	    OSStatus        err;
+579	    SSLBuffer       hashOut, hashCtx, clientRandom, serverRandom;
+580	    uint8_t         hashes[SSL_SHA1_DIGEST_LEN + SSL_MD5_DIGEST_LEN];
+581	    SSLBuffer       signedHashes;
+582	    uint8_t			*dataToSign;
+583		size_t			dataToSignLen;
+584	
+585		signedHashes.data = 0;
+586	    hashCtx.data = 0;
+587	
+588	    clientRandom.data = ctx->clientRandom;
+589	    clientRandom.length = SSL_CLIENT_SRVR_RAND_SIZE;
+590	    serverRandom.data = ctx->serverRandom;
+591	    serverRandom.length = SSL_CLIENT_SRVR_RAND_SIZE;
+592	
+593	
+594		if(isRsa) {
+595			/* skip this if signing with DSA */
+596			dataToSign = hashes;
+597			dataToSignLen = SSL_SHA1_DIGEST_LEN + SSL_MD5_DIGEST_LEN;
+598			hashOut.data = hashes;
+599			hashOut.length = SSL_MD5_DIGEST_LEN;
+600			
+601			if ((err = ReadyHash(&SSLHashMD5, &hashCtx)) != 0)
+602				goto fail;
+603			if ((err = SSLHashMD5.update(&hashCtx, &clientRandom)) != 0)
+604				goto fail;
+605			if ((err = SSLHashMD5.update(&hashCtx, &serverRandom)) != 0)
+606				goto fail;
+607			if ((err = SSLHashMD5.update(&hashCtx, &signedParams)) != 0)
+608				goto fail;
+609			if ((err = SSLHashMD5.final(&hashCtx, &hashOut)) != 0)
+610				goto fail;
+611		}
+612		else {
+613			/* DSA, ECDSA - just use the SHA1 hash */
+614			dataToSign = &hashes[SSL_MD5_DIGEST_LEN];
+615			dataToSignLen = SSL_SHA1_DIGEST_LEN;
+616		}
+617	
+618		hashOut.data = hashes + SSL_MD5_DIGEST_LEN;
+619	    hashOut.length = SSL_SHA1_DIGEST_LEN;
+620	    if ((err = SSLFreeBuffer(&hashCtx)) != 0)
+621	        goto fail;
+622	
+623	    if ((err = ReadyHash(&SSLHashSHA1, &hashCtx)) != 0)
+624	        goto fail;
+625	    if ((err = SSLHashSHA1.update(&hashCtx, &clientRandom)) != 0)
+626	        goto fail;
+627	    if ((err = SSLHashSHA1.update(&hashCtx, &serverRandom)) != 0)
+628	        goto fail;
+629	    if ((err = SSLHashSHA1.update(&hashCtx, &signedParams)) != 0)
+630	        goto fail;
+631	        goto fail;
+632	    if ((err = SSLHashSHA1.final(&hashCtx, &hashOut)) != 0)
+633	        goto fail;
+634	
+635		err = sslRawVerify(ctx,
+636	                       ctx->peerPubKey,
+637	                       dataToSign,				/* plaintext */
+638	                       dataToSignLen,			/* plaintext length */
+639	                       signature,
+640	                       signatureLen);
+641		if(err) {
+642			sslErrorLog("SSLDecodeSignedServerKeyExchange: sslRawVerify "
+643	                    "returned %d\n", (int)err);
+644			goto fail;
+645		}
+646	
+647	fail:
+648	    SSLFreeBuffer(&signedHashes);
+649	    SSLFreeBuffer(&hashCtx);
+650	    return err;
+651	
+652	}
+
+---- unified diff, Security-55471 -> Security-55471.14 (the whole change to this file) ----
+--- Security-55471/libsecurity_ssl/lib/sslKeyExchange.c
++++ Security-55471.14/libsecurity_ssl/lib/sslKeyExchange.c
+@@ -627,7 +627,6 @@
+     if ((err = SSLHashSHA1.update(&hashCtx, &serverRandom)) != 0)
+         goto fail;
+     if ((err = SSLHashSHA1.update(&hashCtx, &signedParams)) != 0)
+-        goto fail;
+         goto fail;
+     if ((err = SSLHashSHA1.final(&hashCtx, &hashOut)) != 0)
+         goto fail;

@@ -1,0 +1,20 @@
+Wikipedia, "Capital One", section "July 2019 data breach" (there is no separate article for
+the breach; the search API returned the company article). CC BY-SA 4.0. Wikitext fetched via
+https://en.wikipedia.org/w/api.php?action=parse&page=Capital_One&prop=wikitext on 2026-09-01
+(article timestamp 2026-08-31). RETELLING, used for the folk story only. Section text with
+markup removed:
+
+In July 2019, in one of the largest data breaches of personal information, Capital One found
+unauthorized access had occurred by an individual who had breached the account and identity
+security of 106 million people in the United States and Canada.
+
+The FBI arrested Paige Thompson, who had previously worked as a software engineer for Amazon
+Web Services, a cloud computing hosting company used by Capital One. Thompson had accessed
+about 140,000 Social Security numbers, a million Canadian Social insurance numbers; 80,000
+bank account numbers, and an unknown number of names and addresses of customers. Capital One
+began offering free credit report monitoring services and identity theft protection to those
+affected by the breach. It was ultimately determined there was no evidence the data was
+shared by Thompson.
+
+In 2022, Thompson was convicted of five felonies and two misdemeanors. She was sentenced to
+time served and five years of probation.

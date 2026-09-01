@@ -1,0 +1,457 @@
+Case 2:19-mj-00344-MAT Document1 Filed 07/29/19 Page 1 of 12
+1 FILED «= ___ ENTERED
+LODGED RECEIVED Honorable Mary Alice Theiler
+) _— —
+3 JUL 29 2018 :
+cL . AT SEATT LE
+4 WESTERN DISTRICT ‘OF WASTING STON
+BY DEPUTY
+5
+6 .
+7 UNITED STATES DISTRICT COURT FOR THE
+g WESTERN DISTRICT OF WASHINGTON
+AT SEATTLE
+9
+10 UNITED STATES OF AMERICA,
+1] Case No. MJ19-0344
+2 Plaintiff,
+13 ) v. COMPLAINT FOR VIOLATION OF
+14 18 U.S.C. § 1030(a)(2)
+PAIGE A. THOMPSON,
+15 a/k/a “erratic”
+16 Defendant.
+17
+18 Before, the Honorable Mary Alice Theiler, United States Magistrate Judge, United
+19 || States Courthouse, 700 Stewart Street, Seattle, Washington.
+20
+1 COUNT 1
+(Computer Fraud and Abuse)
+22
+3 Between on or about March 12, 2019, and on or about July 17, 2019, at Seattle,
+24 within the Western District of Washington, and elsewhere, PAIGE A. THOMPSON
+5 intentionally accessed a computer without authorization, to wit, a computer containing
+6 information belonging to Capital One Financial Corporation, and thereby obtained
+7 information contained in a financial record of a financial institution and of a card issuer
+28
+UNITED STATES ATTORNEY
+THOMPSON COMPLAINT / No. MJ19-344 - 1 700 STEWART STREET, SUITE 5220
+SEATTLE, WASHINGTON 98101
+(206) 553-7970
+Case 2:19-mj-00344-MAT Document1 Filed 07/29/19 Page 2 of 12
+
+1 || as defined in Section 1602 of Title 15, and information from a protected computer, and
+
+2 || the value of the information obtained exceeded $5,000.
+
+3 All in violation of Title 18, United States Code, Section 1030(a)(2)(A) and (C),
+
+4 || and (c)(2)(A) and (B)(iii).
+
+5
+
+6 The undersigned complainant being duly sworn states:
+
+7 1. I, Joel Martini, am a Special Agent with the Federal Bureau of Investigation
+
+8 || (FBD, currently assigned to the Seattle Field Office, and have been so employed since
+
+9 || January 2017. J am assigned to the Cyber Squad, where J investigate computer intrusions
+10 || and other cybercrimes. Prior to my employment as a Special Agent, I worked as a
+11 || Computer Forensic Examiner for the FBI for approximately five years. The facts set
+12 || forth in this Complaint are based upon my personal knowledge, information I have
+13 || received from others during the course of my investigation, and my review of relevant
+14 || documents.
+15 2. I am the case agent responsible for an investigation of PAIGE A.
+16 || THOMPSON, also known by the alias “erratic,” for intruding into servers rented or
+17 || contracted by a financial services company and issuer of credit cards, namely, Capital
+18 || One Financial Corporation (“Capital One”), from a company that provides cloud
+19 || computing services (the “Cloud Computing Company”), and for exfiltrating and stealing
+20 || information, including credit card applications and other documents, from Capital One.
+21 I. SUMMARY OF THE INVESTIGATION
+22 3. The FBI is conducting an investigation into a network intrusion into servers
+23 || rented or contracted by Capital One. Capital One is a financial services company that,
+24 || among other things, issues credit cards. .
+25 4, Evidence linking PAIGE A. THOMPSON to the intrusion includes the fact
+26 || that information obtained from the intrusion has been posted on a GitHub page that
+27 || includes PAIGE A. THOMPSON’: full name — paigea*****thompson — as part of its
+28 || digital address, and that is linked to other pages that belong to PAIGE A. THOMPSON
+
+THOMPSON COMPLAINT / No. MJ19-344 - 2 79 Sra Sas Se 20
+(206) 553-7970
+Case 2:19-mj-00344-MAT Document 1 Filed 07/29/19 Page 3 of 12
+
+1 || and contain her resume. In addition, records obtained from Capitol One indicate that
+
+2 || Internet Protocol addresses used by the intruder are controlled by a company that
+
+3 || provides virtual private network services and that was used by PAIGE A. THOMPSON
+
+4 || to make postings on the internet service GitHub, including very close in time to
+
+5 || intrusions. Moreover, PAIGE A. THOMPSON also has made statements on social media
+
+6 || fora evidencing the fact that she has information of Capital One, and that she recognizes
+
+7 || that she has acted illegally.
+
+8 II. TERMS AND DEFINITIONS
+
+9 5. For the purpose of this Affidavit, I use the following terms as described
+10 || below:
+il a. A server is a computer that provides services for other computers
+12 || connected to it via a network or the internet. The computers that use the server’s services
+13 || are sometimes called clients. Servers can be physically located anywhere with a network
+14 || connection that may be reached by the clients. For example, it is not uncommon for a
+15 || server to be located hundreds (or even thousands) of miles away from client computers.
+16 || A server may be either a physical or virtual machine. A physical server is a piece of
+17 || computer hardware configured as a server with its own power source, central processing
+18 || unit or units, and associated software. A virtual server typically is one of many servers
+19 || that operate on a single physical server. Each virtual server shares the hardware
+20 || resources of the physical server, but the data residing on each virtual server is segregated
+21 || from the data on other virtual servers on the same physical machine.
+22 b. An Internet Protocol address (an “JP address’) is a unique numeric
+23 || address used by devices, such as computers, on the internet. Every device attached to the
+24 || internet is assigned an IP address, so that internet traffic sent from, and directed to, that
+25 || device may be directed properly from its source to its destination. Most internet service
+26 || providers control a range of IP addresses. Generally, a static IP address is permanently
+27 || assigned to a specific location or device, while a dynamic IP address is temporary and
+28 || periodically changes.
+
+THOMPSON COMPLAINT / No. MJ19-344 -3 70S Srey, sume 22
+(206) 553-7970
+Case 2:19-mj-00344-MAT Document1 Filed 07/29/19 Page 4 of 12
+
+l C. The Onion Router (or “TOR”) is an anonymity tool used by
+
+2 || individuals to conceal their identities, including the origin of their internet connection,
+
+3 || that is, their IP addresses. TOR bounces communications through several intermediate
+
+4 || computers (relays), each of which utilizes encryption, thus anonymizing the IP address of
+
+5 || the computer of the individual using TOR.
+
+6 d. A virtual private network (a “VPN”) is a secure connection over a
+
+7 || less secure network, such as the internet. A VPN uses shared public infrastructure, but
+
+8 || maintains privacy through security procedures and tunneling protocols. It encrypts data
+
+9 || at the sending end, decrypts it at the receiving end, and sends the data through a "tunnel"
+10 || that cannot be "entered" by data that is not properly encrypted. A VPN also may encrypt
+11 || the originating and receiving network addresses.
+12 6. Throughout this Affidavit, I also refer to a number of companies and to
+13 || services that they offer: _
+14 a. GitHub is a company that provides webhosting and allows users to
+15 || manage and store revisions of projects. Although used mostly for software development
+16 || projects, GitHub also allows users to manage other types of files.
+17 b. [Predator is a company that offers prepaid VPN service to
+18 || customers, using servers based in Sweden.
+19 c. Meetup is an Internet-based platform designed to let people find and
+20 || build local communities, called “groups.” .
+21 d. Slack is a cloud-based set of team-collaboration software tools and
+22 || online services. Slack allows users to establish “channels,” in which a team can share
+23 || messages, tools, and files.
+24 e. Twitter is company that operates a social networking site that allows
+25 || users to establish accounts, post short messages, and receive other users’ messages.
+26
+27
+28
+
+THOMPSON COMPLAINT / No. MJ19-344 - 4 70 Sree Srey, sur 520
+(206) 553-7970
+Case 2:19-mj-00344-MAT Document1 Filed 07/29/19 Page 5 of 12
+l I. THE INVESTIGATION
+Z|) As The Intrusion and Exfiltration
+3 a Capital One is a bank holding company that specializes in credit cards, but
+4 || that also offers other credit, including automobile loans, as well as a variety of bank
+5 ||accounts. Capital One offers credit cards and other services to customers throughout the
+6 || United States. Capital One supports its services, in part, by renting or contracting for
+7 || computer servers provided by the Cloud Computing Company. The servers on which
+8 || Capital One stores credit card application and other information generally are located in
+9 || states other than the State of Washington, and they store information regarding
+10 || customers, and support services, in multiple states. Deposits of Capital One are insured
+11 || by the Federal Deposit Insurance Corporation. Based upon these facts, Capital One is a
+12 || financial institution and a card issuer, and the computers on which it stores credit card
+13 || applications are protected computers as those terms are defined in 18 U.S.C. § 1030(c).
+14 8. Capital One maintains an e-mail address through which it solicits
+15 || disclosures of actual or potential vulnerabilities in its computer systems, so that Capital
+16 |} One can learn of, and attempt to avert, breaches of its systems. Among others who send
+17 || e-mails to this address are individuals who sometimes are called “ethical” or “white hat”
+18 || hackers.
+19 2. On July 17, 2019, an individual — who previously was unknown to Capital
+20 || One — e-mailed this address.
+2 Capital,’ Responsible Disclosure (Shared) <responsibledisclosure@capitalone.com>
+22 ‘a — . .
+5 [External Sender] Leaked s3 data
+23 [ZEEE eed Wed, Jul 17, 2019 at 1:25 AM
+To: "responsibledisclosure@capitalone.com" <responsibledisclosure@capitalone.com>
+24
+Hello there,
+pi 5 There appears to be some leaked s3 data of yours in someone's github / gist:
+REI © S878 SK NETS ES
+26 ;
+Let me know if you want help tracking them down.
+27 Thanks,
+aS]
+28
+UNITED STATES ATTORNEY
+THOMPSON COMPLAINT / No. MJ19-344 - 5 700 STEWART STREET, SUITE 5220
+SEATTLE, WASHINGTON 98101
+(206) 553-7970
+Case 2:19-mj-00344-MAT Document1 Filed 07/29/19 Page 6 of 12
+
+1 || The individual’s e-mail stated that there appeared to be leaked data belonging to Capital
+
+2 || One on GitHub, and provided the address of the GitHub file containing this leaked data.
+
+3 || The address provided for this file was https://gist.github.com/*****/+****, [Throughout
+
+4 || this affidavit, I use ***** to substitute for other characters, sometimes fewer, but often
+
+5 |j more, than five characters.] Significantly, one of the terms in this address was what I
+
+6 || know from Department of Licensing records to be PAIGE A. THOMPSON ’s full first,
+
+7 || middle, and last name.
+
+8 10. After receiving this information, Capital One examined the GitHub file,
+
+9 || which was timestamped April 21, 2019 (the “April 21 File”). Capital One determined
+10 that the April 21 File contained the IP address for a specific server. A firewall
+11 || misconfiguration permitted commands to reach and be executed by that server, which
+12 || enabled access to folders or buckets of data in Capital One’s storage space at the Cloud
+13 |] Computing Company.
+14 11. | Capital One determined that the April 21 File contained code for three
+15 || commands, as well as a list of more than 700 folders or buckets of data.
+16 ™ Capital One determined that the first command, when executed,
+17 obtained security credentials for an account known as *****-WAF-Role
+18 that, in turn, enabled access to certain of Capital One’s folders at the
+19 Cloud Computing Company.
+20 ™@ Capital One determined that the second command (the “List Buckets
+21 Command”), when executed, used the *****-WAF-Role account to list
+22 the names of folders or buckets of data in Capital One’s storage space at
+23 the Cloud Computing Company.
+24 ™ Capital One determined that the third command (the “Sync Command”),
+25 when executed, used the *****-WAF-Role to extract or copy data from
+26 those folders or buckets in Capital One’s storage space for which the
+27 *****-WAF-Role account had the requisite permissions.
+28
+
+THOMPSON COMPLAINT / No. MJ19-344 - 6 70 Sw Sra STs 520
+| (206) 553-7970
+Case 2:19-mj-00344-MAT Document1 Filed 07/29/19 Page 7 of 12
+J 12. Capital One tested the commands in the April 21 File, and confirmed that
+2 || the commands did, in fact, function to obtain Capital One’s credentials, to list or
+3 || enumerate folders or buckets of data, and to extract data from certain of those folders or
+4 || buckets. Capital One confirmed that the more-than-700 folders or buckets of data listed
+5 || in the April 21 File matched the actual names of folders or buckets of data used by
+6 || Capital One for data stored at the Cloud Computing Company. Capital One reported that
+7 || its computer logs reflect the fact that the List Buckets Command was in fact executed on
+8 || April 21, 2019, and that the timestamp in Capital One’s logs matches the timestamp in
+9 || the April 21 File.
+10 13. According to Capital One, its logs show a number of connections or
+11 || attempted connections to Capital One’s server from TOR exit nodes, and a number of
+12 || connections from IP addresses beginning with 46.246, all of which Capital One believes
+13 || relate to activity conducted by the same person involved in the April 21, 2019, intrusion,
+14 || because they involve similar unusual communications through the misconfigured firewall
+15 || to the server discussed above. Specifically, according to Capital One, the logs show:
+16 @ On or about March 12, 2019, IP address 46.246.35.99 attempted to
+17 access Capital One’s data. I know, from checking publicly-available
+18 records, that this IP address is controlled by Predator, a company that
+19 provides VPN services.
+20 @ On or about March 22, 2019, the *****-WAF-Role account was used to
+21 execute the List Buckets Command several times. These commands
+22 were executed from IP addresses that I believe to be TOR exit nodes.
+23 According to Capital One, the *****-WAF-Role account does not, in
+24 the ordinary course of business, invoke the List Buckets Command.
+25 @ Also on or about March 22, 2019, the *****-WAF-Role account was
+26 used to execute the Sync Command a number of times to obtain data
+27 from certain of Capital One’s data folders or buckets, including files
+28 that contain credit card application data. A number of those commands
+"THOMPSON COMPLAINT/ No, MJ19-344-7 | 70 Sra Sr, Sue 2
+(206) 553-7970
+Case 2:19-mj-00344-MAT Document1 Filed 07/29/19 Page 8 of 12
+
+1 were executed from IP address 46.246.38.224. I know, from checking
+
+2 publicly-available records, that that IP address also is controlled by
+
+3 IPredator.
+
+4 ™ One of the files copied from Capital One’s folders or buckets on March
+
+5 22, 2019, was a file with the name *****c000.snappy.parquet (the
+
+6 “Snappy Parquet File”), and this was the only time the *****-WAF-
+
+7 Role account accessed the Snappy Parquet File between January 1, 2019
+
+8 and July 20, 2019.
+
+9 @ A List Buckets Command was executed on April 21, 2019, from IP
+10 address 46.246.35.103. I know, from checking publicly-available
+11 records, that the IP address from which this command was executed also
+12 is controlled by IPredator. I also believe, based on the timestamp on the
+13 April 21, 2019 file, and the time that Capital One reports that the
+14 command appears in Capital One’s logs, that this was the command that
+15 was the source of the April 21 File.
+16 14. According to Capital One, the data copied from Capital One’s data folders
+17 || or buckets includes primarily data related to credit card applications. Although some of
+18 || the information in those applications (such as Social Security numbers) has been
+19 || tokenized or encrypted, other information including applicants’ names, addresses, dates
+20 || of birth and information regarding their credit history has not been tokenized. According
+21 || to Capital One, the data includes data regarding large numbers of applications, likely tens
+22 || of millions of applications. According to Capital One, that data includes approximately
+23 || 120,000 Social Security Numbers and approximately 77,000 bank account numbers.
+24||B. = Evidence of PAIGE A. THOMPSON ’s Involvement
+25 15. As noted above, the GitHub address where the April 21 File was posted
+26 || includes PAIGE A. THOMPSON’s full name, paigea*****thompson. Clicking on the
+27 ||name paigea*****thompson in the address takes the user to the main GitHub page for a
+28 || PAIGE A***** THOMPSON. The profile on that page contains a link to a GitLab page
+
+THOMPSON COMPLAINT / No. MJ19-344 - 8 70 Sew Sree, Se 522
+(206) 353-7970
+Case 2:19-mj-00344-MAT Document 1 Filed 07/29/19 Page 9 of 12
+1 || at www. gitlab.com/net***** (the “GitLab Net***** Page”). The GitLab Net***** Page
+2 || includes, among other things, a resume for “Paige Thompson.” That resume indicates
+3 || that Paige Thompson is a “systems engineer” and formerly worked at the Cloud
+4 || Computing Company from 2015-16. Based on this evidence, I believe that PAIGE A.
+3 || THOMPSON is the user of the GitHub and GitLab accounts described herein.
+6 -16. An April 19, 2019, post in the GitHub account of “paigea*****thompson”
+7 || includes a “Server List” of IP addresses associated with the account. All of the IP
+8 || addresses in the Server List begin with 46.246. I have confirmed by checking publicly-
+9 || available records that each of the IP addresses in the “Server List” is controlled by
+10 || IPredator, the same VPN provider that controls multiple IP addresses from which Capital
+11 || One reports malicious activity in this case, including malicious activity on April 19,
+12 ||2019.
+13 17. Based on open source research, I am aware of a particular Meetup group
+14 || used by PAIGE A. THOMPSON. The Meetup page for this group indicates that its
+15 || organizer is “Paige Thompson (erratic).” Notably, the alias “erratic” matches the
+16 || username of a Twitter account, discussed below, associated with PAIGE A.
+17 || THOMPSON. Within that Meetup group is a Slack invitation code for the Slack channel
+18 || net***** slack.com (the “Net***** Slack Channel”).
+19 18. Ihave reviewed postings on the Net***** Slack Channel. Among other
+20 || things, on or about June 26, 2019, a user “erratic” posted a list of files that “erratic”
+21 || claimed to possess. Among those files, two referenced “*****-WAF-Role.” Based on
+22 || my review of the Sync Command in the April 21 File, and my training and experience, I
+23 || know that the Sync Command would place extracted files in a directory with the name
+24 || “*##*** WAF-Role.” Accordingly, I believe that, “erratic” was claiming to have files
+25 || extracted using the extraction command set forth in the April 21 File.
+26 19. On or about June 27, 2019, “erratic” posted about several companies,
+27 || government entities, and educational institutions. Among these posts, “erratic” referred
+28 || to “*****_ WAF-Webrole” and indicated that account was associated with Capital One.
+THOMPSON COMPLAINT / No. MJ19-344 - 9 70 Sra Sas Se 520
+(206) 553-7970
+Case 2:19-mj-00344-MAT Document1 Filed 07/29/19 Page 10 of 12
+| || Based on my training and experience, these communications appear to be references by
+2 || “erratic” to other intrusions that “erratic’”’ may have committed.
+3 20. On or about June 27, 2019, another user posted “don’t go to jail plz.” In
+4 || response, “erratic” posted “Im like > ipredator > tor > s3 on all this shit.”
+5
+7 £ sketchy shit
+g don't go to jail plz
+9 3 <erratic> APP 12:01 PM
+10 Wa Wa Wa Wa, Wa Wa Wa Wa Wa Wa Wawaaaaaaaaaaaa
+7 Im like > ipredator > tor > s3 on all this shit ..
+1D | wanna get it off my server thats why Im archiving all of it lol
+13 its all encrypted
+. | just dont want it around though
+| gotta find somewhere to store it
+15
+that infobloxcto one is interesting
+16 ‘
+they have > 500 docker containers
+17
+18117 understand this to refer to the method PAIGE A. THOMPSON used to commit the
+191 intrusion. “(E]rratic” also posted “I wanna get it off my server that’s why Im archiving
+20}! all of it lol.”
+21 21. According to a screenshoot that Capital One provided, and that I have
+g p p
+22 reviewed, on or about June 27, 2019, the user “paige*****” posted, “I’ve also got a leak
+23 proof [Predator router setup if anyone nneds [sic] it,” as well as a GitHub link that
+24 ll included “naigea*****thompson” in the link. I was not able to locate this post on
+251! GitHub myself, although that may be because it since has been deleted.
+26 22. According to a screenshot that Capital One provided, and that I have
+27 reviewed, on or about July 4, 2019, the user “paigea*****” posted a message seeking
+28
+UNITED STATES ATTORNEY
+THOMPSON COMPLAINT / No. MJ19-344 - 10 700 STEWART STREET, SUITE 5220
+SEATTLE, WASHINGTON 98101
+(206) 553-7970
+Case 2:19-mj-00344-MAT Document 1 Filed 07/29/19 Page 11 of 12
+
+| || information about the Snappy Parquet File, one of the files exfiltrated from Capital One
+
+2 |} on March 22, 2019.
+
+3 23. Onor about July 19, 2019, the user “paigea*****” posted information
+
+4 || about one of her pets. Included in the post was an estimate from a veterinarian dated
+
+5 || June 10, 2019, provided to “Paige Thompson” at the same address listed on the “Paige
+
+6 || Thompson” resume described above. Based upon the information in the preceding
+
+7 || paragraphs, I believe that PAIGE A. THOMPSON is the person who posted under the
+
+8 || names “erratic” and “paigea*****” on the Net***** Slack Channel.
+
+9 24. | have learned, from Capital One and through open-source research, of a
+10 || Twitter account name @0xA3A97B6C, with a username “ERRATIC.” I have reviewed
+11 || photographs posted to the account of “ERRATIC,” and they appear to depict the same
+12 || individual who appears in photographs posted on the Net***** Slack Channel under the
+13 |] username “paigea*****.” Based upon the information in the preceding paragraphs, |
+14 || believe that PAIGE A. THOMPSON is the user of the “ERRATIC” Twitter account.
+15 25. | According to a screenshot that Capital One provided, on June 18, 2019,
+
+16 || Twitter user “ERRATIC” sent a direct message to the reporting source: “Ive basically
+17 || strapped myself with a bomb vest, fucking dropping capitol ones dox and admitting it. I
+18 |} wanna distribute those buckets i think first.”
+19
+20 lve basically strapped myself with a bomb vest, fucking
+6 dropping capitol ones dox and admitting it
+22 &) | wanna distribute those buckets i think first
+23 Jun 18, 2019, 12:04 AM
+24
+25 &) There ssns...with full name and dob
+26 Jun 18, 2019, 12:06 AM
+27
+28
+THOMPSON COMPLAINT / No. MJ19-344 - 11 rns er Sa, STE 2
+(206) 553-7970
+Case 2:19-mj-00344-MAT Document1 Filed 07/29/19 Page 12 of 12
+1 || I understand this post to indicate, among other things, that PAIGE A. THOMPSON
+2 || intended to disseminate data stolen from victim entities, starting with Capital One.
+3 || C. The Search of PAIGE A. THOMPSON’s Residence
+4 26. On July 26, 2019, I obtained a search warrant to search PAIGE A.
+5 || THOMPSON’ residence for evidence in this case. On July 29, 2019, other FBI Special
+6 || Agents and I executed that search warrant. Five individuals, including PAIGE A.
+7 || THOMPSON, were present at the residence.
+8 27. A search of a bedroom believed to belong to PAIGE A. THOMPSON
+9 || resulted in the seizure of numerous digital devices. During the initial search of some of
+10 || these devices, agents observed files and items that referenced Capital One and the Cloud
+11 |} Computing Company, other entities that may have been the targets of attempted or actual
+12 || network intrusions, and “erratic,” the alias associated with PAIGE A. THOMPSON.
+13 28. Based on the foregoing, I submit that probable cause exists to believe that
+14 || PAIGE A. THOMPSON has committed a violation of Title 18, United States Code,
+15 |} Section 1030(a)(2).
+16 / A. y
+Lg |
+18 QEL MARTINI, Complainant
+pecial Agent -
+19 Federal Bureau of Investigation
+20
+71 Based on the Complaint and Affidavit sworn to before me, and subscribed in my
+presence, I hereby find that there is probable cause to believe the defendant committed
+22 P
+3 the offense set forth in the Complaint.
+74 Complaint and affidavit sworn to me before this 27 day of July, 2019.
+25
+27
+MARY ALICE THEILER
+28 United States Magistrate Judge
+UNITED STATES ATTORNEY
+THOMPSON COMPLAINT / No. MJ19-344 - 12 700 STEWART STREET, SUITE 5220
+SEATTLE, WASHINGTON 98101
+(206) 553-7970

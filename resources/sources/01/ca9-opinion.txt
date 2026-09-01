@@ -1,0 +1,163 @@
+United States v. Paige A. Thompson, No. 22-30179 (9th Cir. Mar. 17, 2025) (for publication).
+Appeal from W.D. Wash., D.C. Nos. 2:19-cr-00159-RSL-1, Robert S. Lasnik, District Judge.
+Opinion by Judge Forrest; dissent by Judge Sung. Source:
+https://cdn.ca9.uscourts.gov/datastore/opinions/2025/03/17/22-30179.pdf, fetched 2026-09-01;
+text extracted with pdftotext (page numbers are the slip opinion's). Disposition: sentence
+vacated, remanded for resentencing. A court FINDING of fact after a jury trial, not an
+allegation — but note the summary and Part I.A recite the trial record as the panel read it.
+
+--- SUMMARY (pp. 2–3; "This summary constitutes no part of the opinion of the court") ---
+               Opinion by Judge Forrest;
+                Dissent by Judge Sung
+2                        USA V. THOMPSON
+                          SUMMARY *
+                         Criminal Law
+    The panel vacated Paige Thompson’s sentence and
+remanded for resentencing in a case in which Thompson
+committed the second largest data breach in the United
+States at the time, causing tens of millions of dollars in
+damage and emotional and reputational harm to numerous
+individuals and entities.
+    The district court correctly calculated Thompson’s
+sentencing range under the Federal Sentencing Guidelines to
+
+--- OPINION, I. BACKGROUND, A. The Crime (pp. 5–7) ---
+anonymize her activity. Using a programming script, she
+scanned millions of publicly available IP addresses
+associated with AWS for vulnerabilities in their systems.
+6                          USA V. THOMPSON
+    When Thompson found vulnerable accounts, she queried
+them for security credentials and saved those credentials on
+her computer. The credentials allowed Thompson to
+authenticate directly into AWS customers’ cloud-
+computing 1 environments. Once inside, if the credentials
+permitted, Thompson ran a “sync” command to download
+data from customers’ cloud storage. In total, Thompson got
+credentials from at least 200 entities and stole data from at
+least 30 of them. For example, Thompson obtained Capital
+One’s security credentials and downloaded personally
+identifying information (PII) of 98 million Americans.
+Thompson then compressed and stored the data stolen from
+AWS customers on her computer, and she researched
+additional storage options. While Thompson did not sell or
+distribute any stolen information, she did research ways to
+profit from the data, bragged about possessing it, and
+encouraged others to hack vulnerable accounts. She also
+blamed her breaches on the companies’ inadequate
+cybersecurity.
+   In addition to downloading private data, Thompson used
+AWS      customers’    computing      power     to  mine
+cryptocurrency 2—a cyberattack known as “cryptojacking.”
+1
+  Cloud computing allows customers to “access technology services,
+such as computing power, storage, and databases, [over the internet] . . .
+from a cloud provider” “[i]nstead of buying, owning, and maintaining
+physical data centers and servers.” What is cloud computing?, Amazon
+Web       Servs.,    https://aws.amazon.com/what-is-cloud-computing/
+[https://perma.cc/XJ7F-ABA8] (last visited Dec. 2, 2024).
+2
+ Cryptocurrency “is the general term for encrypted, decentralized digital
+money based on blockchain technology.” Bielski v. Coinbase, Inc., 87
+F.4th 1003, 1007 (9th Cir. 2023). Mining cryptocurrency involves a
+“puzzle-solving process” in which high-powered computers solve
+                          USA V. THOMPSON                             7
+Using the stolen security credentials, Thompson created new
+virtual servers in customers’ cloud environments. She
+deployed cryptocurrency miners inside the virtual servers
+and mined cryptocurrency into her own virtual wallet.
+
+--- B. Arrest and Trial (pp. 7–8) ---
+     In June 2019, Thompson decided to “dox” 3 herself by
+sending unsolicited private Twitter messages about her data
+theft to cybersecurity professional Kat Valentine. The
+messages included links to the data and threats to distribute
+it. Valentine reported the data breach to Capital One. Capital
+One confirmed that its customers’ data had been stolen, and
+it contacted the FBI. Less than two weeks later, the FBI
+searched Thompson’s house and arrested her.
+    The Government charged Thompson with one count of
+wire fraud, seven counts of computer fraud and abuse, one
+count of access-device fraud, and one count of aggravated
+identity theft. A magistrate judge detained Thompson
+pending trial, finding that she “pose[d] a risk of
+nonappearance and a risk of physical . . . and financial and
+economic danger.” The district judge later placed Thompson
+“difficult mathematical puzzle[s]” to win cryptocurrency. E. Ohman J v.
+NVIDIA Corp., 81 F.4th 918, 924 (9th Cir. 2023).
+3
+ “Doxing” is the act of revealing a person’s private information online—
+often without consent.
+8                          USA V. THOMPSON
+on pretrial release. Thompson spent approximately 100 days
+in custody.
+
+--- C. Sentencing (pp. 8, 10–11) ---
+imposed the requested alternative sentence offered by
+Probation—time-served and five years of probation, with
+three of those years being home detention. 5 The court also
+ordered Thompson to complete 50 hours of community
+service per year while she was on probation. 6
+    The district court stated that “the question of what is
+justice here is a really, really hard question.” It agreed with
+the Government that others considering the costs and
+benefits of committing crimes like Thompson’s might
+decide that “if [they] can get away with credit for time served
+of 100 days, with the possibility of making a couple hundred
+million dollars . . . to take the chance.” The court also found
+that Thompson committed “a terrible crime” but that she did
+“not do[] it in [a] malicious manner,” such “as somebody
+5
+  The district court stated that home detention was “more of a location
+monitoring than home incarceration, which is a real lockdown kind of
+thing.”
+6
+ At a separate hearing, the district court ordered Thompson to pay over
+$40 million in restitution and to forfeit money and property associated
+with her crimes.
+                        USA V. THOMPSON                          11
+
+--- Majority, on the offense (pp. 13–14) ---
+before she did anything bad, or anything good.”
+    As noted, Thompson committed one of the largest data
+breaches in American history. She hacked into and stole
+dozens of companies’ data, including PII of nearly 100
+million Americans just from Capital One. She also used the
+companies’ own computing power to mine cryptocurrency,
+8
+  The parties do not fully discuss each § 3553(a) factor. Accordingly, we
+limit our discussion to those factors briefed by the parties, and we merge
+the factors where the parties do. Of course, on remand, the district court
+must consider and appropriately weigh each of the § 3553 factors.
+14                     USA V. THOMPSON
+causing their AWS bills to skyrocket while she kept the
+
+--- Dissent (Judge Sung), pp. 28–29 ---
+that her crime was “terrible.” The language cited by the
+majority, read in context, refers to the fact that Thompson
+“was caught before she did anything bad, or anything good”
+with the data she stole. The majority acknowledges that
+while Thompson researched how she could profit from the
+stolen data, she did not sell or distribute any of it prior to her
+arrest. On this record, the district court’s finding that
+Thompson “was caught before she did anything bad, or
+anything good” was not clearly erroneous.
+    Finally, the majority claims that “the district court’s
+finding that Thompson was ‘tortured and tormented about
+what she did’ is not supported by the record.” Majority
+Opinion at 15. While the record includes statements by
+Thompson boasting about her data theft and threatening to
+disseminate sensitive information, the record also supports
+the district court’s finding that she felt “tortured and
+tormented” about her actions. For example, when security
+                       USA V. THOMPSON                        29
+researcher Kat Valentine asked Thompson why she was
+sending information about her data theft to a stranger, she
+replied, “Im ready to check the f*** out . . . I dont care if its
+jail or death. Prefer to die, and something to make it easy.”
+She described her state of mind to Valentine as feeling as if
+she had “basically strapped myself with a bomb vest,
+f***ing dropping capitol ones dox and admitting it.” After
+the data theft, Thompson wrote that she had “gone
+completely insane. theyre gonna lock me up and throw away
+the key. it really is for the best.” The district court, which
+saw the evidence presented at trial, “was intimately familiar

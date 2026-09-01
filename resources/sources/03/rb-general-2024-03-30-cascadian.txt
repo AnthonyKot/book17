@@ -1,0 +1,63 @@
+Vagrant Cascadian, 'Reproducible Builds for recent Debian security updates', rb-general, 30 Mar 2024, with Salvatore Bonaccorso's reply. URLs: https://lists.reproducible-builds.org/pipermail/rb-general/2024-March/003321.html and .../003323.html  Fetched 2026-09-01.
+
+    Reproducible Builds for recent Debian security updates
+   Reproducible Builds for recent Debian security updates
+    Vagrant Cascadian 
+    vagrant at reproducible-builds.org
+    Sat Mar 30 02:38:35 UTC 2024
+        Previous message (by thread): The upstream xz repository and the xz tarballs have been backdoored
+        Next message (by thread): Reproducible Builds for recent Debian security updates
+           
+                                                        Philipp Kern asked about trying to do reproducible builds checks for
+recent security updates to try to gain confidence about Debian's buildd
+infrastructure, given that they run builds in sid chroots which may have
+used or built or run a vulnerable xz-utils...
+So far, I have not found any reproducibility issues; everything I tested
+I was able to get to build bit-for-bit identical with what is in the
+Debian archive.
+I only tested bookworm security updates (not bullseye), and I tested the
+xz-utils update now present in unstable, which took a little trial and
+error to find the right snapshot! The build dependencies for Debian
+bookworm (a.k.a. stable) were *much* easier to satisfy, as it is not a
+moving target!
+Debian bookworm security updates verified:
+  cacti iwd libuv1 pdns-recursor samba composer fontforge knot-resolver
+  php-dompdf-svg-lib squid yard
+Not yet finished building:
+  openvswitch
+Did not yet try some time and disk-intensive builds:
+  chromium firefox-esr thunderbird
+Debian unstable updates verified:
+  xz-utils
+A tarball of build logs (including some failed builds) and .buildinfo
+files is available at:
+  https://people.debian.org/~vagrant/debian-security-rebuilds.tar.zst
+Some caveats:
+Notably, xz-utils has a build dependency that pulls in xz-utils, and the
+version used may have been a vulnerable version (partly vulnerable?),
+5.6.0-0.2.
+The machine where I ran the builds had done some builds using packages
+from sid over the last couple months, so may have at some point run the
+vulnerable xz-utils code, so is not absolutely cleanest of
+checks... but is at least some sort of data point.
+The build environment used tarballs that had usrmerge applied (as it is
+harder to not apply usrmerge these days), while the buildd
+infrastructure chroots do not have usrmerge applied. But this did not
+appear to cause significant problems, although pulled in a few more perl
+dependencies!
+I used sbuild with the --chroot-mode=unshare mode. For the xz-utils
+build I used some of the ideas developed in an earlier verification
+builds experiment:
+  https://salsa.debian.org/reproducible-builds/debian-verification-build-experiment/-/blob/e003ddf19de13db2d512c25417e4bec863c3a082/sbuild-wrap#L71
+Was great to try and apply Reproducible Builds to real-world uses!
+live well,
+  vagrant
+	Previous message (by thread): The upstream xz repository and the xz tarballs have been backdoored
+	Next message (by thread): Reproducible Builds for recent Debian security updates
+           
+                                                        
+
+=== 003323 (Vagrant Cascadian, 30 Mar 2024, reply) ===
+It is such an obvious application for Reproducible Builds that many
+people have worked on for many years. So... I daresay, my pleasure and
+honor. :)

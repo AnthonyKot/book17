@@ -1,0 +1,305 @@
+SOURCE: David Weston (Microsoft VP, Enterprise and OS Security), 'Helping our customers through the CrowdStrike outage', Official Microsoft Blog, 20 July 2024,
+https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/ (live page returned 403 to curl; text taken from the Wayback Machine copy, same URL, 2024). Vendor statement; source of the 8.5 million figure. Fetched 2026-09-01. Full post:
+
+Helping our customers through the CrowdStrike outage - The Official Microsoft Blog
+
+	Skip to content
+
+        Skip to main content
+
+                        Microsoft
+
+                Official Microsoft Blog
+
+                                Official Microsoft Blog
+
+                            Official Microsoft Blog
+
+                         Home 
+
+                                Our Company
+
+            About Microsoft
+
+            Company Timeline
+
+            Global Diversity & Inclusion
+
+            Microsoft on the Issues
+
+            Microsoft Stories
+
+            Official Microsoft Blog
+
+    Regional News Centers
+    Regional News Centers
+
+            Microsoft Asia
+
+            Microsoft Europe
+
+            Microsoft India
+
+            Microsoft Latin America
+
+            Microsoft Middle East & Africa
+
+                                News and Stories
+
+            Accessibility Blog
+
+            AI Blog
+
+            Customer Stories
+
+            Education Stories
+
+            Feature Stories
+
+            Innovation Stories
+
+            Microsoft Conexiones
+
+            Microsoft Life
+
+            Microsoft on the Issues
+
+            Microsoft Research
+
+            Microsoft Podcasts
+
+            Official Microsoft Blog
+
+    Product blogs
+    Product blogs
+
+            Azure
+
+            Devices
+
+            Microsoft 365
+
+            Windows
+
+            Xbox
+
+            Security Blog
+
+            AI for Business
+
+            Microsoft Industry Blogs
+
+                                Press Tools
+
+            Image Gallery
+
+            Press Releases
+
+            Microsoft News on Twitter
+
+            Events
+
+            Executive Biographies
+
+            Microsoft CEO
+
+            Press Contacts
+
+            Board of Directors
+
+            Facts About Microsoft
+
+            Investor Relations
+
+            Worldwide News
+
+            Video & Broll
+
+            Executive Speeches
+
+    Press Kits
+    Press Kits
+
+            Automotive and Mobility
+
+            Dynamics 365
+
+            Healthcare
+
+            Manufacturing
+
+            Microsoft 365
+
+            Mixed Reality
+
+            Philanthropies
+
+            Surface
+
+            Telecom
+
+                            Source
+
+        More
+
+                         All Microsoft
+
+            Global
+
+            Microsoft 365
+
+            Teams
+
+            Copilot
+
+            Windows
+
+            Surface
+
+            Xbox
+
+            Deals
+
+            Small Business
+
+            Support
+
+    Software
+    Software
+
+            Windows Apps
+
+            AI
+
+            Outlook
+
+            OneDrive
+
+            Microsoft Teams
+
+            OneNote
+
+            Microsoft Edge
+
+            Skype
+
+    PCs & Devices  
+    PCs & Devices  
+
+            Computers
+
+            Shop Xbox
+
+            Accessories
+
+            VR & mixed reality
+
+            Certified Refurbished
+
+            Trade-in for cash
+
+    Entertainment
+    Entertainment
+
+            Xbox Game Pass Ultimate
+
+            PC Game Pass
+
+            Xbox games
+
+            PC and Windows games
+
+            Movies & TV
+
+    Business
+    Business
+
+            Microsoft Cloud
+
+            Microsoft Security
+
+            Dynamics 365
+
+            Microsoft 365 for business
+
+            Microsoft Power Platform
+
+            Windows 365
+
+            Microsoft Industry
+
+            Small Business
+
+    Developer & IT  
+    Developer & IT  
+
+            Azure
+
+            Microsoft Developer
+
+            Documentation
+
+            Microsoft Learn
+
+            Microsoft Tech Community
+
+            Azure Marketplace
+
+            AppSource
+
+            Visual Studio
+
+    Other
+    Other
+
+            Microsoft Rewards 
+
+            Free downloads & security
+
+            Education
+
+            Gift cards
+
+            Licensing
+
+            Unlocked stories
+
+                                    View Sitemap
+
+                                        Search
+                                        Search blogs.microsoft.com
+
+                                         No results
+
+                            Cancel
+
+                        0
+                        Cart
+                        0 items in shopping cart
+
+		Helping our customers through the CrowdStrike outage
+
+						Jul 20, 2024
+
+					|					
+	David Weston - Vice President, Enterprise and OS Security
+
+		On July 18, CrowdStrike, an independent cybersecurity company, released a software update that began impacting IT systems globally. Although this was not a Microsoft incident, given it impacts our ecosystem, we want to provide an update on the steps we’ve taken with CrowdStrike and others to remediate and support our customers. 
+
+Since this event began, we’ve maintained ongoing communication with our customers, CrowdStrike and external developers to collect information and expedite solutions. We recognize the disruption this problem has caused for businesses and in the daily routines of many individuals. Our focus is providing customers with technical guidance and support to safely bring disrupted systems back online. Steps taken have included: 
+
+Engaging with CrowdStrike to automate their work on developing a solution. CrowdStrike has recommended a workaround to address this issue and has also issued a public statement. Instructions to remedy the situation on Windows endpoints were posted on the Windows Message Center.  
+
+Deploying hundreds of Microsoft engineers and experts to work directly with customers to restore services.  
+
+Collaborating with other cloud providers and stakeholders, including Google Cloud Platform (GCP) and Amazon Web Services (AWS), to share awareness on the state of impact we are each seeing across the industry and inform ongoing conversations with CrowdStrike and customers. 
+
+Quickly posting manual remediation documentation and scripts found here.
+
+Keeping customers informed of the latest status on the incident through the Azure Status Dashboard here. 
+
+We’re working around the clock and providing ongoing updates and support. Additionally, CrowdStrike has helped us develop a scalable solution that will help Microsoft’s Azure infrastructure accelerate a fix for CrowdStrike’s faulty update. We have also worked with both AWS and GCP to collaborate on the most effective approaches.   
+
+While software updates may occasionally cause disturbances, significant incidents like the CrowdStrike event are infrequent. We currently estimate that CrowdStrike’s update affected 8.5 million Windows devices, or less than one percent of all Windows machines. While the percentage was small, the broad economic and societal impacts reflect the use of CrowdStrike by enterprises that run many critical services. 
+
+This incident demonstrates the interconnected nature of our broad ecosystem — global cloud providers, software platforms, security vendors and other software vendors, and customers. It’s also a reminder of how important it is for all of us across the tech ecosystem to prioritize operating with safe deployment and disaster recovery using the mechanisms that exist. As we’ve seen over the last two days, we learn, recover and move forward most effectively when we collaborate and work together. We appreciate the cooperation and collaboration of our entire sector, and we will continue to update with learnings and next steps.

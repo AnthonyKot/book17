@@ -1,0 +1,39 @@
+Brian Krebs, "What We Can Learn from the Capital One Hack", KrebsOnSecurity, August 2, 2019.
+Source: https://krebsonsecurity.com/2019/08/what-we-can-learn-from-the-capital-one-hack/
+Fetched 2026-09-01. RETELLING (press; "based on interviews with almost a dozen security
+experts, including one who is privy to details about the ongoing breach investigation").
+Only the sentences quoted in the chapter or ledger:
+
+"Since then, many have speculated the breach was perhaps the result of a previously unknown
+'zero-day' flaw, or an 'insider' attack in which the accused took advantage of access
+surreptitiously obtained from her former employer. But new information indicates the methods
+she deployed have been well understood for years."
+
+"According to a source with direct knowledge of the breach investigation, the problem
+stemmed in part from a misconfigured open-source Web Application Firewall (WAF) that Capital
+One was using as part of its operations hosted in the cloud with Amazon Web Services (AWS)."
+
+"The misconfiguration of the WAF allowed the intruder to trick the firewall into relaying
+requests to a key back-end resource on the AWS platform. This resource, known as the
+'metadata' service, is responsible for handing out temporary information to a cloud server,
+including current credentials sent from a security service to access any resource in the
+cloud to which that server has access."
+
+"In Capital One's case, the misconfigured WAF for whatever reason was assigned too many
+permissions, i.e. it was allowed to list all of the files in any buckets of data, and to
+read the contents of each of those files."
+
+"The type of vulnerability exploited by the intruder in the Capital One hack is a well-known
+method called a 'Server Side Request Forgery' (SSRF) attack, in which a server (in this
+case, CapOne's WAF) can be tricked into running commands that it should never have been
+permitted to run, including those that allow it to talk to the metadata service."
+
+[Evan Johnson, Cloudflare, quoted:] "SSRF has become the most serious vulnerability facing
+organizations that use public clouds," Johnson wrote. "The impact of SSRF is being worsened
+by the offering of public clouds, and the major players like AWS are not doing anything to
+fix it. The problem is common and well-known, but hard to prevent and does not have any
+mitigations built into the AWS platform."
+
+[Amazon statement to Krebs:] "The intrusion was caused by a misconfiguration of a web
+application firewall and not the underlying infrastructure or the location of the
+infrastructure."

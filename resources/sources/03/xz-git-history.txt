@@ -1,0 +1,333 @@
+xz git history, from a clone of https://github.com/tukaani-project/xz made 2026-09-01 (HEAD as of that date; master was never rebased, per tukaani.org). Commands and their output. Dates are author dates unless marked committer.
+
+### git log --format='%h %ad %an <%ae> %s' --date=short for the commits named below
+6468f7e41a8e9c611e4ba8d34e2175c5dacdbeb4 2022-01-28 20:47:55 +0800 jiat75 <jiat0218@gmail.com> | committer Lasse Collin 2022-02-07 00:20:01 +0200
+    liblzma: Add NULL checks to LZMA and LZMA2 properties encoders.
+8ace358d65059152d9a1f43f4770170d29d35754 2022-12-16 20:58:55 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2022-12-30 23:34:31 +0800
+    CMake: Update .gitignore for CMake artifacts from in source build.
+e2870db5be1503e6a489fc3d47daf950d6f62723 2024-01-22 23:33:39 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-01-23 23:05:47 +0800
+    Tests: Add two RISC-V Filter test files.
+3060e1070b2421b26c0e17794c1307ec5622f11d 2024-01-23 23:52:14 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-01-23 23:55:44 +0800
+    Tests: Use smaller dictionary size in RISC-V test files.
+4323bc3e0c1e1d2037d5e670a3bf6633e8a3031e 2024-02-15 22:26:43 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-02-15 22:26:43 +0800
+    Update m4/.gitignore.
+cf44e4b7f5dfdbf8c78aef377c10f71e274f63c0 2024-02-23 23:09:59 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-02-23 23:09:59 +0800
+    Tests: Add a few test files.
+2d7d862e3ffa8cec4fd3fdffcd84e984a17aa429 2024-02-24 15:55:08 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-02-24 15:55:08 +0800
+    Bump version and soname for 5.6.0.
+328c52da8a2bbb81307644efdb58db2c422d9ba7 2024-02-26 23:02:06 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-02-26 23:27:44 +0800
+    Build: Fix Linux Landlock feature test in Autotools and CMake builds.
+e5faaebbcf02ea880cfc56edc702d4f7298788ad 2024-03-05 00:27:31 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-03-05 01:54:30 +0800
+    Build: Require attribute no_profile_instrument_function for ifunc usage.
+72d2933bfae514e0dbb123488e9f1eb7cf64175f 2024-03-05 00:34:46 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-03-05 01:54:30 +0800
+    liblzma: Use attribute no_profile_instrument_function with ifunc.
+82ecc538193b380a21622aea02b0ba078e7ade92 2024-03-09 09:20:57 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-03-09 09:20:57 +0800
+    liblzma: Fix false Valgrind error report with GCC.
+a3a29bbd5d86183fc7eae8f0182dace374e778d8 2024-03-09 10:08:32 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-03-09 10:08:32 +0800
+    Tests: Test --single-stream can decompress bad-3-corrupt_lzma2.xz.
+0b4ccc91454dbcf0bf521b9bd51aa270581ee23c 2024-03-09 10:05:32 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-03-09 10:05:32 +0800
+    Tests: Update RISC-V test files.
+6e636819e8f070330d835fce46289a3ff72a7b89 2024-03-09 10:18:29 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-03-09 10:18:29 +0800
+    Tests: Update two test files.
+fd1b975b7851e081ed6e5cf63df946cd5cbdbb94 2024-03-09 11:42:50 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-03-09 11:42:50 +0800
+    Bump version and soname for 5.6.1.
+f9cf4c05edd14dedfe63833f8ccbe41b55823b00 2024-03-30 14:36:28 +0200 Lasse Collin <lasse.collin@tukaani.org> | committer Lasse Collin 2024-03-30 14:36:28 +0200
+    CMake: Fix sabotaged Landlock sandbox check.
+e93e13c8b3bec925c56e0c0b675d8000a0f7f754 2024-04-08 15:32:58 +0300 Lasse Collin <lasse.collin@tukaani.org> | committer Lasse Collin 2024-04-09 17:57:39 +0300
+    Remove the backdoor found in 5.6.0 and 5.6.1 (CVE-2024-3094).
+689ae2427342a2ea1206eb5ca08301baf410e7e0 2024-04-09 17:43:16 +0300 Lasse Collin <lasse.collin@tukaani.org> | committer Lasse Collin 2024-04-09 18:22:27 +0300
+    liblzma: Remove ifunc support.
+6b63c4c6139fa1bb21b570521d3d2b4a608bc34d 2024-01-19 23:08:14 +0800 Jia Tan <jiat0218@gmail.com> | committer Jia Tan 2024-01-19 23:08:14 +0800
+    liblzma: Update website URL.
+de4337fd89ca7db5feb97b5c40143404f6e22986 2024-02-22 15:18:25 +0200 Lasse Collin <lasse.collin@tukaani.org> | committer Lasse Collin 2024-02-22 15:18:25 +0200
+    xz: Landlock: Fix error message if input file is a directory.
+
+
+### tags (git tag --format='%(refname:short) %(taggerdate:short) %(taggername)')
+v5.4.0 2022-12-13 Lasse Collin
+v5.4.1 2023-01-11 Lasse Collin
+v5.4.2 2023-03-18 Jia Tan
+v5.4.3 2023-05-04 Jia Tan
+v5.4.4 2023-08-02 Jia Tan
+v5.4.5 2023-11-01 Jia Tan
+v5.4.6 2024-01-26 Jia Tan
+v5.4.7 2024-05-29 Lasse Collin
+v5.5.0alpha 2023-01-02 Lasse Collin
+v5.5.1alpha 2024-01-26 Jia Tan
+v5.5.2beta 2024-02-15 Jia Tan
+v5.6.0 2024-02-24 Jia Tan
+v5.6.1 2024-03-09 Jia Tan
+v5.6.2 2024-05-29 Lasse Collin
+v5.6.3 2024-10-01 Lasse Collin
+v5.6.4 2025-01-23 Lasse Collin
+
+
+### git cat-file tag v5.6.0 (header only)
+object 2d7d862e3ffa8cec4fd3fdffcd84e984a17aa429
+type commit
+tag v5.6.0
+tagger Jia Tan <jiat0218@gmail.com> 1708762926 +0800
+
+
+### git cat-file tag v5.6.1 (header only)
+object fd1b975b7851e081ed6e5cf63df946cd5cbdbb94
+type commit
+tag v5.6.1
+tagger Jia Tan <jiat0218@gmail.com> 1709972160 +0800
+
+
+### git ls-tree --name-only v5.6.0 m4/  (no build-to-host.m4 in the tree)
+m4/.gitignore
+m4/ax_pthread.m4
+m4/getopt.m4
+m4/posix-shell.m4
+m4/tuklib_common.m4
+m4/tuklib_cpucores.m4
+m4/tuklib_integer.m4
+m4/tuklib_mbstr.m4
+m4/tuklib_physmem.m4
+m4/tuklib_progname.m4
+m4/visibility.m4
+
+
+### git log --all -- m4/build-to-host.m4  (empty: the file was never in git)
+
+
+### git show 4323bc3e -- m4/.gitignore
+commit 4323bc3e0c1e1d2037d5e670a3bf6633e8a3031e
+Author: Jia Tan <jiat0218@gmail.com>
+Date:   Thu Feb 15 22:26:43 2024 +0800
+
+    Update m4/.gitignore.
+
+diff --git a/m4/.gitignore b/m4/.gitignore
+index 985c2800..a7628601 100644
+--- a/m4/.gitignore
++++ b/m4/.gitignore
+@@ -1,3 +1,4 @@
++build-to-host.m4
+ codeset.m4
+ extern-inline.m4
+ fcntl-o.m4
+
+
+### git show 328c52da -- CMakeLists.txt (first hunk; note the line consisting of a single '.')
+commit 328c52da8a2bbb81307644efdb58db2c422d9ba7
+Author: Jia Tan <jiat0218@gmail.com>
+Date:   Mon Feb 26 23:02:06 2024 +0800
+
+    Build: Fix Linux Landlock feature test in Autotools and CMake builds.
+    
+    The previous Linux Landlock feature test assumed that having the
+    linux/landlock.h header file was enough. The new feature tests also
+    requires that prctl() and the required Landlock system calls are
+    supported.
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 76700591..d2b1af7a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -901,10 +901,29 @@ endif()
+ 
+ # Sandboxing: Landlock
+ if(NOT SANDBOX_FOUND AND ENABLE_SANDBOX MATCHES "^ON$|^landlock$")
+-    check_include_file(linux/landlock.h HAVE_LINUX_LANDLOCK_H)
++    # A compile check is done here because some systems have
++    # linux/landlock.h, but do not have the syscalls defined
++    # in order to actually use Linux Landlock.
++    check_c_source_compiles("
++        #include <linux/landlock.h>
++        #include <sys/syscall.h>
++        #include <sys/prctl.h>
++.
++        void my_sandbox(void)
++        {
++            (void)prctl(PR_SET_NO_NEW_PRIVS, 1, 0, 0, 0);
++            (void)SYS_landlock_create_ruleset;
++            (void)SYS_landlock_restrict_self;
++            (void)LANDLOCK_CREATE_RULESET_VERSION;
++            return;
++        }
++
++        int main(void) { return 0; }
++        "
++    HAVE_LINUX_LANDLOCK)
+
+### git show -s f9cf4c05
+f9cf4c05edd14dedfe63833f8ccbe41b55823b00 2024-03-30 14:36:28 +0200 Lasse Collin
+CMake: Fix sabotaged Landlock sandbox check.
+
+It never enabled it.
+
+
+
+### git show --stat e93e13c8
+e93e13c8b3bec925c56e0c0b675d8000a0f7f754 2024-04-08 15:32:58 +0300 Lasse Collin
+Remove the backdoor found in 5.6.0 and 5.6.1 (CVE-2024-3094).
+
+While the backdoor was inactive (and thus harmless) without inserting
+a small trigger code into the build system when the source package was
+created, it's good to remove this anyway:
+
+  - The executable payloads were embedded as binary blobs in
+    the test files. This was a blatant violation of the
+    Debian Free Software Guidelines.
+
+  - On machines that see lots bots poking at the SSH port, the backdoor
+    noticeably increased CPU load, resulting in degraded user experience
+    and thus overwhelmingly negative user feedback.
+
+  - The maintainer who added the backdoor has disappeared.
+
+  - Backdoors are bad for security.
+
+This reverts the following without making any other changes:
+
+6e636819 Tests: Update two test files.
+a3a29bbd Tests: Test --single-stream can decompress bad-3-corrupt_lzma2.xz.
+0b4ccc91 Tests: Update RISC-V test files.
+8c9b8b20 liblzma: Fix typos in crc32_fast.c and crc64_fast.c.
+82ecc538 liblzma: Fix false Valgrind error report with GCC.
+cf44e4b7 Tests: Add a few test files.
+3060e107 Tests: Use smaller dictionary size in RISC-V test files.
+e2870db5 Tests: Add two RISC-V Filter test files.
+
+The RISC-V test files also have real content that tests the filter
+but the real content would fit into much smaller files. A generator
+program would need to be available as well.
+
+Thanks to Andres Freund for finding and reporting it and making
+it public quickly so others could act without a delay.
+See: https://www.openwall.com/lists/oss-security/2024/03/29/4
+
+
+ src/liblzma/check/crc32_fast.c         |   7 +++++--
+ src/liblzma/check/crc64_fast.c         |   4 +++-
+ src/liblzma/check/crc_common.h         |  25 -------------------------
+ tests/files/README                     |  27 ---------------------------
+ tests/files/bad-3-corrupt_lzma2.xz     | Bin 512 -> 0 bytes
+ tests/files/bad-dict_size.lzma         | Bin 41 -> 0 bytes
+ tests/files/good-1-riscv-lzma2-1.xz    | Bin 7424 -> 0 bytes
+ tests/files/good-1-riscv-lzma2-2.xz    | Bin 7432 -> 0 bytes
+ tests/files/good-2cat.xz               | Bin 136 -> 0 bytes
+ tests/files/good-large_compressed.lzma | Bin 35421 -> 0 bytes
+ tests/files/good-small_compressed.lzma | Bin 258 -> 0 bytes
+ tests/test_files.sh                    |  11 -----------
+ 12 files changed, 8 insertions(+), 66 deletions(-)
+
+
+### git show --stat cf44e4b7
+cf44e4b7f5dfdbf8c78aef377c10f71e274f63c0 2024-02-23 23:09:59 +0800 Jia Tan
+Tests: Add a few test files.
+
+
+ tests/files/README                     |  19 +++++++++++++++++++
+ tests/files/bad-3-corrupt_lzma2.xz     | Bin 0 -> 484 bytes
+ tests/files/bad-dict_size.lzma         | Bin 0 -> 41 bytes
+ tests/files/good-2cat.xz               | Bin 0 -> 136 bytes
+ tests/files/good-large_compressed.lzma | Bin 0 -> 35430 bytes
+ tests/files/good-small_compressed.lzma | Bin 0 -> 258 bytes
+ 6 files changed, 19 insertions(+)
+
+
+### git show --stat 6e636819
+6e636819e8f070330d835fce46289a3ff72a7b89 2024-03-09 10:18:29 +0800 Jia Tan
+Tests: Update two test files.
+
+The original files were generated with random local to my machine.
+To better reproduce these files in the future, a constant seed was used
+to recreate these files.
+
+
+ tests/files/bad-3-corrupt_lzma2.xz     | Bin 484 -> 512 bytes
+ tests/files/good-large_compressed.lzma | Bin 35430 -> 35421 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+
+### git show 6b63c4c6 (first hunks)
+commit 6b63c4c6139fa1bb21b570521d3d2b4a608bc34d
+Author: Jia Tan <jiat0218@gmail.com>
+Date:   Fri Jan 19 23:08:14 2024 +0800
+
+    liblzma: Update website URL.
+
+diff --git a/dos/config.h b/dos/config.h
+index cb535783..797f6330 100644
+--- a/dos/config.h
++++ b/dos/config.h
+@@ -143,7 +143,7 @@
+ #define PACKAGE_NAME "XZ Utils"
+ 
+ /* Define to the home page for this package. */
+-#define PACKAGE_URL "https://tukaani.org/xz/"
++#define PACKAGE_URL "https://xz.tukaani.org/xz-utils/"
+ 
+ /* The size of 'size_t', as computed by sizeof. */
+ #define SIZEOF_SIZE_T 4
+diff --git a/src/liblzma/api/lzma.h b/src/liblzma/api/lzma.h
+index de12f225..f6b9469a 100644
+--- a/src/liblzma/api/lzma.h
++++ b/src/liblzma/api/lzma.h
+@@ -8,9 +8,9 @@
+  * format and raw (no headers) streams are supported. Multiple compression
+  * algorithms (filters) are supported. Currently LZMA2 is the primary filter.
+  *
+- * liblzma is part of XZ Utils <https://tukaani.org/xz/>. XZ Utils includes
+- * a gzip-like command line tool named xz and some other tools. XZ Utils
+- * is developed and maintained by Lasse Collin and Jia Tan.
+
+### commits per author per year (git log --author --since --until | wc -l)
+2021: Lasse Collin=32 Jia Tan=0 total=35
+2022: Lasse Collin=260 Jia Tan=37 total=303
+2023: Lasse Collin=164 Jia Tan=313 total=501
+2024: Lasse Collin=462 Jia Tan=100 total=603
+
+### Jia Tan authored commits, total: 450
+
+### last Lasse Collin commits before the 5.6.0 tag
+4c81c961 2024-02-22 CMake: Add LOCALEDIR to the windres workaround.
+de4337fd 2024-02-22 xz: Landlock: Fix error message if input file is a directory.
+120da10a 2024-02-22 liblzma: Disable branchless C version in range decoder.
+
+
+### NEWS for 5.6.2 (git show v5.6.2:NEWS, head)
+
+XZ Utils Release Notes
+======================
+
+5.6.2 (2024-05-29)
+
+    * Remove the backdoor (CVE-2024-3094).
+
+    * Not changed: Memory sanitizer (MSAN) has a false positive
+      in the CRC CLMUL code which also makes OSS Fuzz unhappy.
+      Valgrind is smarter and doesn't complain.
+
+      A revision to the CLMUL code is coming anyway and this issue
+      will be cleaned up as part of it. It won't be backported to
+      5.6.x or 5.4.x because the old code isn't wrong. There is
+      no reason to risk introducing regressions in old branches
+      just to silence a false positive.
+
+    * liblzma:
+
+        - lzma_index_decoder() and lzma_index_buffer_decode(): Fix
+          a missing output pointer initialization (*i = NULL) if the
+          functions are called with invalid arguments. The API docs
+          say that such an initialization is always done. In practice
+          this matters very little because the problem can only occur
+          if the calling application has a bug and these functions
+          return LZMA_PROG_ERROR.
+
+        - lzma_str_to_filters(): Fix a missing output pointer
+          initialization (*error_pos = 0). This is very similar
+          to the fix above.
+
+        - Fix C standard conformance with function pointer types.
+
+        - Remove GNU indirect function (IFUNC) support. This is *NOT*
+          done for security reasons even though the backdoor relied on
+          this code. The performance benefits of IFUNC are too tiny in
+          this project to make the extra complexity worth it.
+
+        - FreeBSD on ARM64: Add error checking to CRC32 instruction

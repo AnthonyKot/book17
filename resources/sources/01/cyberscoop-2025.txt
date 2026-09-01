@@ -1,0 +1,14 @@
+CyberScoop, "Court reimposes original sentence for Capital One hacker", November 5, 2025.
+Source: https://cyberscoop.com/court-reimposes-original-sentence-for-capital-one-hacker/
+Fetched 2026-09-01 via WebFetch (summary; the article body was not saved). RETELLING (press),
+used only for the post-remand status of the sentence. What the fetch reported:
+
+- U.S. District Judge Robert Lasnik reimposed the sentence in November 2025: time served plus
+  five years of supervised release with three years home confinement, 250 hours of community
+  service, and the original $40.7 million restitution order maintained.
+- Quoted from the judge: "The Court cannot find that a term of imprisonment would meet the
+  need for any sentence to provide the defendant with needed medical care, or other
+  correctional treatment in the most effective manner."
+- The article says Lasnik acknowledged his "poor job of articulating the reasons" for the
+  original sentence.
+The resentencing order itself was not fetched; the claim in the chapter is marked accordingly.

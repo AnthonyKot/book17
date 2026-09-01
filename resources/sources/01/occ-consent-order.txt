@@ -1,0 +1,39 @@
+OCC Consent Order #2020-036, In the Matter of Capital One, N.A., McLean, Virginia, and Capital
+One Bank (USA), N.A., Glen Allen, Virginia, docket AA-EC-20-51 (Art. III ¶2 cites AA-EC-20-49
+for the wire). Signed for the Comptroller by Bethany A. Dugan, Deputy Comptroller for Large
+Banks, "Digitally Signed, Date: 2020.08.05"; Board signatures dated July 30 – August 1, 2020.
+Source: https://www.occ.gov/static/enforcement-actions/ea2020-036.pdf (8 pp.), fetched
+2026-09-01; text extracted with pdftotext. Announced in OCC News Release 2020-101, August 6,
+2020 (see occ-news-release.txt).
+
+[Preamble] WHEREAS, the OCC intends to initiate civil money penalty proceedings against the
+Bank pursuant to 12 U.S.C. § 1818(i), through the issuance of a Notice of Assessment of a
+Civil Money Penalty, for engaging in unsafe or unsound practices, including those relating to
+information security, and noncompliance with 12 C.F.R. Part 30;
+
+ARTICLE II — COMPTROLLER'S FINDINGS (pp. 2–3)
+The Comptroller finds, and the Bank neither admits nor denies, the following:
+(1) In or around 2015, the Bank failed to establish effective risk assessment processes
+prior to migrating its information technology operations to the cloud operating environment.
+The Bank also failed to establish appropriate risk management for the cloud operating
+environment, including appropriate design and implementation of certain network security
+controls, adequate data loss prevention controls, and effective dispositioning of alerts.
+(2) The Bank's internal audit failed to identify numerous control weaknesses and gaps in the
+cloud operating environment. Internal audit also did not effectively report on and highlight
+identified weaknesses and gaps to the Audit Committee.
+(3) For certain concerns raised by internal audit, the Board failed to take effective actions
+to hold management accountable, particularly in addressing concerns regarding certain
+internal control gaps and weaknesses.
+(4) By reason of the foregoing conduct, the Bank was in noncompliance with 12 C.F.R. Part 30,
+Appendix B, "Interagency Guidelines Establishing Information Security Standards," and engaged
+in unsafe or unsound practices that were part of a pattern of misconduct.
+(5) The Bank has begun addressing the identified corrective action and has committed to
+providing resources to remedy the deficiencies.
+
+ARTICLE III — ORDER FOR A CIVIL MONEY PENALTY (p. 3)
+(1) The Bank shall make payment of a civil money penalty in the total amount of eighty
+million dollars ($80,000,000), which shall be paid upon the execution of this Order.
+
+NOTE: the order does not mention the 2019 intrusion, the firewall, Amazon, or any date other
+than "in or around 2015". The connection to the breach is made in the OCC news release and in
+the Federal Reserve's companion release of the same day.

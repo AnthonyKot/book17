@@ -33,9 +33,9 @@ for path in sorted(glob.glob(os.path.join(root, "chapters", "*.html"))):
     if walls: probs.append("wall paragraph(s): %s words" % ", ".join(map(str, sorted(walls, reverse=True))))
     if longs: probs.append("%d sentence(s) over %d words" % (longs, SENT_MAX))
     if "ledger" not in " ".join(probs):
-        cells = re.findall(r"(?is)<td[^>]*class=\"verdict\"[^>]*>(.*?)</td>", raw)
+        cells = re.findall(r"(?is)<td[^>]*class=\"verdict[^\"]*\"[^>]*>(.*?)</td>", raw)
         badv = [text(c).strip() for c in cells if text(c).strip().split()[0].upper() if text(c).strip() and text(c).strip().split()[0].upper() not in VERDICTS]
-        if not cells: probs.append("no <td class=\"verdict\"> cells")
+        if not cells: probs.append("no <td class=\"verdict…\"> cells")
         if badv: probs.append("bad verdict(s): %s" % ", ".join(badv[:3]))
         rows = len(cells)
         if cells and not 5 <= rows <= 10: probs.append("%d ledger rows (5-10)" % rows)

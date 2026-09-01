@@ -1,0 +1,19 @@
+OCC News Release 2020-101, August 6, 2020, "OCC Assesses $80 Million Civil Money Penalty
+Against Capital One". Source:
+https://www.occ.gov/news-issuances/news-releases/2020/nr-occ-2020-101.html, fetched 2026-09-01.
+
+WASHINGTON—The Office of the Comptroller of the Currency (OCC) today assessed an $80 million
+civil money penalty against Capital One, N.A., and Capital One Bank (USA), N.A.
+The OCC took these actions based on the bank's failure to establish effective risk assessment
+processes prior to migrating significant information technology operations to the public
+cloud environment and the bank's failure to correct the deficiencies in a timely manner. In
+taking this action, the OCC positively considered the bank's customer notification and
+remediation efforts. While the OCC encourages responsible innovation in all banks it
+supervises, sound risk management and internal controls are critical to ensuring bank
+operations remain safe and sound and adequately protect their customers. The OCC found the
+noted deficiencies to constitute unsafe or unsound practices and resulted in noncompliance
+with 12 C.F.R. Part 30, Appendix B, "Interagency Guidelines Establishing Information Security
+Standards."
+The OCC penalty will be paid to the U.S. Treasury.
+Related Links: Consent Order for the Assessment of a Civil Money Penalty (PDF); Cease and
+Desist Order (PDF).

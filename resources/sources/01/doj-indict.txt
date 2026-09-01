@@ -1,0 +1,14 @@
+DOJ / U.S. Attorney's Office W.D. Wash. press release, August 28, 2019, "Former Seattle Tech Worker Indicted on Federal Charges for Wire Fraud and Computer Data Theft".
+Source: https://www.justice.gov/usao-wdwa/pr/former-seattle-tech-worker-indicted-federal-charges-wire-fraud-and-computer-data-theft
+Fetched 2026-09-01.
+
+Indictment Cites more than 30 Victims of Data Intrusion and Theft
+A former Seattle technology company software engineer was indicted today by a federal grand jury on two counts related to her unauthorized intrusion into stored data of more than 30 different companies, announced U.S. Attorney Brian T. Moran.  PAIGE A. THOMPSON a/k/a erratic, 33, will be arraigned on the indictment in U.S. District Court in Seattle on September 5, 2019.   THOMPSON remains in custody.
+THOMPSON is charged with wire fraud and computer fraud and abuse for the intrusion into data of Capital One and more than 30 other entities.  Law enforcement has identified many of the victims whose data was accessed and is working to notify them.  The indictment describes some of the victims as a state agency outside the State of Washington; a telecommunications conglomerate outside the United States; and a public research university outside the State of Washington.
+According to the indictment, THOMPSON created scanning software that allowed her to identify customers of a cloud computing company who had misconfigured their firewalls, allowing outside commands to penetrate and access their servers.  THOMPSON used this access not only to steal data, but also used stolen computer power to “mine” cryptocurrency for her own benefit, a practice known as “cryptojacking.”
+Law enforcement became aware of THOMPSON’s activity after she shared information with another user on the site GitHub relating to her theft of information from the servers storing Capital One data.  On July 17, 2019, the GitHub user alerted Capital One to the possibility it had suffered a data theft.  After determining on July 19, 2019, that there had been an intrusion into its data, Capital One contacted the FBI.  Cyber investigators confirmed THOMPSON was the person responsible for the data theft.   On July 29, 2019, agents executed a search warrant at THOMPSON’s residence and seized electronic storage devices containing a copy of the data.   Investigators have found no evidence that THOMPSON sold or disseminated any of the information she accessed.
+The charges in the indictment carry penalties of up to 25 years in prison.
+The charges contained in the indictment are only allegations.  A person is presumed innocent unless and until he or she is proven guilty beyond a reasonable doubt in a court of law.
+The case is being investigated by the FBI.  The case is being prosecuted by Assistant United States Attorneys Steven Masada and Andrew Friedman.
+thompson_indictment.pdf
+Contact

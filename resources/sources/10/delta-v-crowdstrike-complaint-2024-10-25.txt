@@ -1,0 +1,148 @@
+SOURCE: Delta Air Lines, Inc. v. CrowdStrike, Inc., Complaint, Superior Court of Fulton County, Georgia, Civil Action File No. 24CV013621, e-filed 25 Oct 2024.
+Copy hosted by Ars Technica: https://cdn.arstechnica.net/wp-content/uploads/2024/10/Delta-v-CrowdStrike-Complaint-10-25-24.pdf  A COMPLAINT: allegations, not findings. PDF gitignored. Fetched 2026-09-01. Excerpts (caption, paras 1-3, para 48, prayer for relief):
+
+Fulton County Superior Court
+                                                                                                ***EFILED***TV
+                                                                                      Date: 10/25/2024 5:00 PM
+                                                                                           Che Alexander, Clerk
+
+                    IN THE SUPERIOR COURT OF FULTON COUNTY
+                                STATE OF GEORGIA
+
+
+                                                  CIVIL ACTION FILE
+                                                     24CV013621
+                                                  NO. _________________
+
+DELTA AIR LINES, INC.,
+                                                  Complaint For:
+       Plaintiff,
+                                                  (1) Computer Trespass (O.C.G.A. §16-9-93)
+v.                                                (2) Trespass to Personalty (O.C.G.A. §51-10-
+                                                      3)
+                                                  (3) Breach of Contract
+CROWDSTRIKE, INC.,                                (4) Intentional Misrepresentation/Fraud by
+                                                      Omission
+       Defendant.                                 (5) Strict-Liability: Product Defect
+                                                  (6) Gross Negligence
+                                                  (7) Deceptive and Unfair Business Practices
+                                                      Act (O.C.G.A. §10-1-391 et seq.)
+                                                  (8) Attorneys’ Fees
+                                                  (9) Punitive Damages
+
+
+
+
+       Plaintiff, Delta Air Lines, Inc. (“Delta”) brings this suit against CrowdStrike, Inc.
+
+(“CrowdStrike”).
+
+                                      INTRODUCTION
+
+       1.      Since its founding, CrowdStrike has advertised itself as the cybersecurity industry
+
+leader. But on July 19, 2024, CrowdStrike forced untested and faulty updates to its customers,
+
+causing more than 8.5 million Microsoft Windows-based computers around the world to crash,
+
+while also preventing many of them from being able to restart (the “Faulty Update”). These
+
+updates were pushed onto customers and their systems even when customers did not enable
+
+automatic update settings. The Faulty Update massively disrupted airlines, railroads, hospitals,
+
+emergency services, government agencies, banks, and hotels, among other businesses and
+organizations, and negatively impacted millions of people across the globe. Commentators have
+
+characterized the Faulty Update as the “worst” and “largest” cyber event in history.
+
+       2.      For Delta, the Faulty Update was catastrophic. Like many of CrowdStrike’s other
+
+customers, Delta did not enable automatic updates. The Faulty Update disabled most of Delta’s
+
+computers running on a Microsoft Windows operating system (“Microsoft OS”), crippled Delta’s
+
+operations for several days, forced thousands of flight cancellations and delays, and adversely
+
+affected more than a million Delta customers. Delta estimates that it suffered over $500 million
+
+in out-of-pocket losses from the Faulty Update, in addition to future revenue and severe harm to
+
+its reputation and goodwill.
+
+       3.      While CrowdStrike widely touts as part of its published “business ethics” that “we
+
+[CrowdStrike] do not cut corners” and that “[w]e are honest with our customers,” nothing could
+
+be further from the truth. CrowdStrike caused a global catastrophe because it cut corners, took
+
+shortcuts, and circumvented the very testing and certification processes it advertised, for its own
+
+benefit and profit. If CrowdStrike had tested the Faulty Update on even one computer before
+
+deployment, the computer would have crashed.
+
+[...]
+
+
+Their systems crashed anyway. Giving one example online:
+
+
+
+
+       48.     As Delta disclosed in its SEC 8K, filed on August 8, 2024, Item 7.01 Regulation
+
+FD Disclosure, Delta experienced operational disruption resulting from the CrowdStrike-caused
+
+outage on July 19.16 The outage disrupted Delta’s operations, causing approximately 7,000 flight
+
+cancellations over five days. 17 “An operational disruption of this length and magnitude is
+
+unacceptable, and our customers and employees deserve better. Since the incident, our people
+
+have returned the operation to an industry-leading position that is consistent with the level of
+
+performance our customers expect from Delta,” said Ed Bastian, Delta’s Chief Executive Officer. 18
+
+“We are pursuing legal claims against CrowdStrike and Microsoft to recover damages caused by
+
+the outage, which total at least $500 million.” 19
+
+
+
+
+16
+
+[...]
+
+       WHEREFORE, Plaintiff Delta is entitled to:
+
+       a.     An award of money damages compensating Delta for the losses it has suffered as a
+
+result of CrowdStrike’s Faulty Update;
+
+       b.     An award of litigation expenses, including attorney fees, pursuant to O.C.G.A. §§
+
+16-9-93, 10-1-399(a), and 13-6-11;
+
+       c.     An award of punitive damages pursuant to O.C.G.A. §§ 10-1-399(a) and 51-12-5.1;
+
+and
+
+       d.     All other necessary and appropriate relief.
+
+
+
+Date: October 25, 2024                          Respectfully submitted,
+
+                                                 /s/ Frank M. Lowrey
+                                                 Frank M. Lowrey
+                                                 Georgia Bar No. 410310
+                                                 Jane “Danny” Vincent
+                                                 Georgia Bar No. 380850
+                                                 Michael R. Baumrind
+                                                 Georgia Bar No. 960296
+                                                 BONDURANT MIXSON & ELMORE, LLP
+                                                 One Atlantic Center
+                                                 Suite 3900
+                                                 1201 West Peachtree Street NW

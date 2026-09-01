@@ -1,0 +1,22 @@
+SOURCE: George Kurtz, 'July 19, 2024 Statement from George Kurtz, Founder and CEO, CrowdStrike', on CrowdStrike's 'Falcon Content Update Remediation and Guidance Hub',
+https://www.crowdstrike.com/en-us/blog/statement-on-falcon-content-update-for-windows-hosts/ (redirects to the hub). Vendor statement. Fetched 2026-09-01.
+
+Sent 2024-07-19 1930 UTC                
+
+                    July 19, 2024 Statement from George Kurtz, Founder and CEO, CrowdStrike
+
+Valued Customers and Partners,
+
+I want to sincerely apologize directly to all of you for the outage. All of CrowdStrike understands the gravity and impact of the situation. We quickly identified the issue and deployed a fix, allowing us to focus diligently on restoring customer systems as our highest priority.
+
+                            The outage was caused by a defect found in a Falcon content update for Windows hosts. Mac and Linux hosts are not impacted. This was not a cyberattack.
+
+We are working closely with impacted customers and partners to ensure that all systems are restored, so you can deliver the services your customers rely on.
+
+CrowdStrike is operating normally, and this issue does not affect our Falcon platform systems. There is no impact to any protection if the Falcon sensor is installed. Falcon Complete and Falcon OverWatch services are not disrupted.
+
+We will provide continuous updates through our Support Portal.
+
+We have mobilized all of CrowdStrike to help you and your teams. If you have questions or need additional support, please reach out to your CrowdStrike representative or Technical Support.
+
+We know that adversaries and bad actors will try to exploit events like this. I encourage everyone to  ...

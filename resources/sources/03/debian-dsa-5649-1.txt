@@ -1,0 +1,26 @@
+Debian Security Advisory DSA-5649-1, xz-utils, 29 Mar 2024, Salvatore Bonaccorso. URL: https://lists.debian.org/debian-security-announce/2024/msg00057.html  Fetched 2026-09-01.
+
+Debian Security Advisory DSA-5649-1                   security@debian.org
+https://www.debian.org/security/                     Salvatore Bonaccorso
+March 29, 2024                        https://www.debian.org/security/faq
+- -------------------------------------------------------------------------
+Package        : xz-utils
+CVE ID         : CVE-2024-3094
+Andres Freund discovered that the upstream source tarballs for xz-utils,
+the XZ-format compression utilities, are compromised and inject
+malicious code, at build time, into the resulting liblzma5 library.
+Right now no Debian stable versions are known to be affected.
+Compromised packages were part of the Debian testing, unstable and
+experimental distributions, with versions ranging from 5.5.1alpha-0.1
+(uploaded on 2024-02-01), up to and including 5.6.1-1. The package has
+been reverted to use the upstream 5.4.5 code, which we have versioned
+5.6.1+really5.4.5-1.
+Users running Debian testing and unstable are urged to update the
+xz-utils packages.
+For the detailed security status of xz-utils please refer to
+its security tracker page at:
+https://security-tracker.debian.org/tracker/xz-utils
+Further information about Debian Security Advisories, how to apply
+these updates to your system and frequently asked questions can be
+found at: https://www.debian.org/security/
+Mailing list: debian-security-announce@lists.debian.org
