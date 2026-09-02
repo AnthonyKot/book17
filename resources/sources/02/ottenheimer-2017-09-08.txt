@@ -1,0 +1,35 @@
+MongoDB blog, Davi Ottenheimer, 'Update: How to Avoid a Malicious Attack That Ransoms Your Data', 2017-09-08 (Wayback capture 2018-07-21; live URL redirects to the blog index)
+URL: https://www.mongodb.com/blog/post/update-how-to-avoid-a-malicious-attack-that-ransoms-your-data
+Fetched: 2026-09-02 (curl via web.archive.org/web/20180721113423id_/ — earlier attempts the same day got 429; this one returned 200)
+
+Davi Ottenheimer
+September 08, 2017
+Company
+
+A New Wave of Ransomware Attacks
+
+Reports have emerged of a new wave of ransomware attackers searching for misconfigured and unmaintained instances of MongoDB. We have been monitoring the situation closely to help investigate and provide assistance.
+
+It is important to note this new wave of attacks does not indicate a new risk, just new targets. However, the new wave displayed some characteristics that merit further investigation: for example, we note that just one threat identity has claimed most of the newly targeted deployments. We’ve reviewed these details to understand where and when users left systems insecure – connected to the Internet with no password on their Administrator account – and who is attacking them.
+
+Here’s What’s Coming
+
+Our approach is to facilitate safe choices for users, within a flexible product serving the many communities developing on and deploying MongoDB.
+
+Helping direct users towards safe network options is why since release 2.6.0 we have made localhost binding the default configuration in our most popular deployment package formats, RPM and deb. This means all networked connections to the database are denied unless explicitly configured by an administrator. Beginning with development release version 3.5.7, localhost-only binding is implemented directly in the MongoDB server, making it the default behavior for all distributions. This will also be incorporated into our upcoming production-ready 3.6 release.
+
+In addition, we added a warning to our download center to ensure users know the network configuration risks with non-packaged distributions.
+
+MongoDB Atlas, our database-as-a-service, further simplifies deployment decisions by providing secure infrastructure by default. Whether users set up a free instance or full production cluster, choosing our cloud option means getting security best practices as a service, which prevents misconfigured instances.
+
+We’re Always Striving to Make Safe Deployment Easier
+
+Our post from earlier this year – titled “How to Avoid a Malicious Attack That Ransoms Your Data” – guided users through the simple steps to prevent or diagnose and respond to such an attack.
+
+If you or someone you love runs MongoDB, please point them to our freely available guides to MongoDB’s built-in security features: access controls, encryption, and detailed auditing. For example, our Security Checklist provides current best practices and links to in-depth documentation to ensure deployments are secured. We made it easy for users to run daily security tests to send alerts on whether their instance is exposed to the public Internet. And we offer even broader training for all features and deployment practices through free online MongoDB University courses such as M310: MongoDB Security, covering native and third-party integration security features and resources.
+
+We thank the responders and researchers working on this and will continue to monitor and investigate.
+
+About the Author - Davi Ottenheimer
+
+Davi leads Product Security at MongoDB.

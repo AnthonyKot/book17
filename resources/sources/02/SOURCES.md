@@ -14,6 +14,7 @@ several of these documents no longer live at their original URL (see "Not fetche
 | `release-notes-3.6-and-2.6-bind.txt` | MongoDB Manual, Release Notes for 3.6 § Security › "Default Bind to Localhost"; 3.6 Compatibility § "Localhost Binding Compatibility Changes"; Release Notes for 2.6 header (2.6.0 dated April 8, 2014); 3.6.x minor-release dates | **Vendor documentation** from the docs *source repo* (branch `v3.6`), because the live release-notes URLs now redirect to the manual front page. Key sentence: "From MongoDB versions 2.6 to 3.4, only the binaries from the official MongoDB RPM … and DEB … packages would bind to localhost by default." | https://raw.githubusercontent.com/mongodb/docs/v3.6/source/release-notes/3.6.txt (+ `3.6-compatibility.txt`, `includes/fact-default-bind-ip-change.rst`, `includes/fact-default-bind-ip.rst`, `includes/fact-bind-to-all-ips.rst`, `release-notes/2.6.txt`) | curl, raw.githubusercontent.com; lines 489–497 of 3.6.txt, lines 16–23 of the compat file, the three includes, lines 1–16 of 2.6.txt |
 | `manual-bindip-and-checklist.txt` | MongoDB Manual (live): Configuration File Options › `net.bindIp` ("Default: localhost"); Security Checklist › "Limit Network Exposure" | **Vendor documentation**, current | https://www.mongodb.com/docs/manual/reference/configuration-options/ ; https://www.mongodb.com/docs/manual/administration/security-checklist/ | curl; the two named entries |
 | `nilsson-2017-01-06.txt` | MongoDB blog, Andreas Nilsson (Director of Product Security), "How to Avoid a Malicious Attack That Ransoms Your Data", 2017-01-06 | **Vendor statement during the wave.** "These attacks are preventable with the extensive security protections built into MongoDB. You need to use these features correctly"; "The most popular installer for MongoDB (RPM) limits network access to localhost by default." | https://www.mongodb.com/blog/post/how-to-avoid-a-malicious-attack-that-ransoms-your-data | curl via Wayback capture `20170115` (live URL — and its `/es/` locale twin — now redirect to a generic security hub page; WebFetch returned that hub page, not the post); whole post |
+| `ottenheimer-2017-09-08.txt` | MongoDB blog, Davi Ottenheimer (Product Security), "Update: How to Avoid a Malicious Attack That Ransoms Your Data", 2017-09-08 | **Vendor statement between the two waves.** "since release 2.6.0 we have made localhost binding the default configuration in our most popular deployment package formats, RPM and deb"; "Beginning with development release version 3.5.7, localhost-only binding is implemented directly in the MongoDB server"; "we added a warning to our download center"; "users left systems insecure – connected to the Internet with no password on their Administrator account" | https://www.mongodb.com/blog/post/update-how-to-avoid-a-malicious-attack-that-ransoms-your-data | curl via Wayback capture `20180721113423` (fetched on the drafting pass, 2026-09-02, after the pitch-step 429s; live URL redirects to the blog index); whole post |
 | `mongodb-newsroom-2017-11-08.txt` | MongoDB, Inc. press release, "MongoDB 3.6 Empowers Enterprises and Developers…", London, 2017-11-08 | **Vendor announcement** of 3.6 GA; § "Secure Data Deployment": "The most popular installer for MongoDB already limits network access by binding to localhost by default. With MongoDB 3.6, this default behavior is implemented directly in the server itself…" | https://www.mongodb.com/company/newsroom/press-releases/mongodb-36-empowers-enterprises-and-developers-to-move-at-the-speed-of-data | curl; dateline + the two security paragraphs |
 | `docker-library-mongo-issue-180.txt` | docker-library/mongo issue #180, "3.5.7 now binds to localhost-only by default" | **Downstream packager's record** of the change reaching them (names SERVER-28229 and commit 60636b4) | https://github.com/docker-library/mongo/issues/180 | curl; opening comment |
 
@@ -45,18 +46,22 @@ several of these documents no longer live at their original URL (see "Not fetche
 ## Not fetched / moved / thin
 
 - **MongoDB blog, "Update: How to Avoid a Malicious Attack That Ransoms Your Data"** (Davi
-  Ottenheimer, September 2017 per Wikipedia and ZDNet 2020) — **not fetched.** The live URL (and its
+  Ottenheimer, 2017-09-08) — **fetched on the drafting pass** (see the vendor table above; the
+  note below records the pitch-step failure). At the pitch step: The live URL (and its
   `/es/` twin) redirects to the blog index; five Wayback captures exist (2018-07-21 … 2019-01-27) but
   web.archive.org answered 429 on every attempt, and WebFetch cannot reach web.archive.org at all.
-  Any claim about what Ottenheimer said rests on ZDNet's paraphrase until this is fetched.
+  Now fetched: the post is the vendor's own statement of the three-default sequence (2.6.0 packages,
+  3.5.7 binary, 3.6 GA) and no longer rests on ZDNet's paraphrase.
 - **Live MongoDB release-notes pages** for 2.6 and 3.6 — the live URLs
   (`/docs/manual/release-notes/3.6/`, `/2.6/`, `/docs/rapid/release-notes/3.6-compatibility/`) all
   redirect to "What is MongoDB?"; the docs *source repo* copies above are used instead.
-- **Shodan's own January 2017 count** — Matherly's numbers that week (1,800 on Jan 4; >52,000
+- **Shodan's own January 2017 count** (retried 2026-09-02 on the drafting pass: a web search finds only
+  press carrying the figures; Shodan's 2018-09-03 post says the attacks "are in the past" and gives no count) — Matherly's numbers that week (1,800 on Jan 4; >52,000
   exposed on Jan 10) survive only as quoted by Bleeping and Krebs; no Shodan blog post from that
   month exists (the `tag/mongobd` index lists 2015 and 2018 posts only). Ledger rows on the
   January exposed count therefore cite the retelling *as the carrier of Shodan's figure*.
-- **A host-count time series after 3.6** — the one thing that would settle "the exposed count fell"
+- **A host-count time series after 3.6** (retried 2026-09-02: Shadowserver's dashboard time-series page
+  is a JavaScript shell to curl and its API answered 403; Shodan's 2018 and 2020 posts give no host count) — the one thing that would settle "the exposed count fell"
   cleanly. Shodan 2020 gives data volume (24 → 12.5 TB), not hosts; ZDNet 2020 gives hosts
   (60,000 → 48,000) with no stated source. Shadowserver's daily open-MongoDB feed would settle it
   and was not obtained (subscriber data).
