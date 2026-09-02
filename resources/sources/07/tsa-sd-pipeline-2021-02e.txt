@@ -1,0 +1,83 @@
+TSA Security Directive Pipeline-2021-02E (July 2024 renewal of the July 2021 directive; SD-02 text as currently public)
+Source: https://www.tsa.gov/sites/default/files/tsa-security-directive-pipeline-2021-02e-and-memo-508c.pdf
+Fetched: 2026-09-02 (tsa.gov returned 403 to curl; identical PDF fetched from the mirror https://www.mangancyber.com/wp-content/uploads/2024/08/tsa-security-directive-pipeline-2021-02e-and-memo-508c.pdf)
+Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
+
+--- header (pdftotext p.1-2) ---
+                                Testing
+
+EFFECTIVE DATE                  July 27, 2024
+
+EXPIRATION DATE                 July 27, 2025
+
+CANCELS AND                     Security Directive Pipeline-2021-02D
+SUPERSEDES
+
+APPLICABILITY                   Owners and Operators of a hazardous liquid and natural gas pipeline
+                                or a liquefied natural gas facility notified by TSA that their pipeline
+                                system or facility is critical
+
+AUTHORITY                       49 U.S.C. 114(d), (f), (l) and (m)
+
+LOCATION                        All locations within the United States
+
+I. PURPOSE AND GENERAL INFORMATION
+
+    The Transportation Security Administration (TSA) is issuing this Security Directive due to
+    the ongoing cybersecurity threat to pipeline systems, under the authority of 49 U.S.C.
+    114(l)(2)(A).1 This Security Directive continues to require performance-based regulatory
+    cybersecurity measures first issued by TSA on July 26, 2021 under the Security Directive
+    Pipeline-2021-02 series.2 In general, this Security Directive is applicable to the same
+    pipeline and liquefied natural gas facilities subject to the requirements of the Security
+    Directive Pipeline-2021-01 series, which first went into effect on May 28, 2021.3 All
+    revisions to this Security Directive series from the most recent version, SD Pipeline-2021-
+    02D, are highlighted in bold.
+
+    The actions required by TSA continue to be necessary to protect the national security,
+    economy, and public health and safety of the United States and its citizens from the impact of
+
+1
+  This Security Directive series is issued under the authority of 49 U.S.C. 114(l)(2)(A), which states:
+“Notwithstanding any other provision of law or executive order (including an executive order requiring a cost-
+benefit analysis), if the Administrator determines that a regulation or security directive must be issued immediately
+
+--- III.C access control ---
+    C. Implement access control measures, including for local and remote access, to secure and
+       prevent unauthorized access to Critical Cyber Systems. These measures must incorporate
+       the following policies, procedures, and controls:
+
+        1. Identification and authentication policies and procedures designed to prevent
+           unauthorized access to Critical Cyber Systems that include—
+
+             a. A schedule for memorized secret authenticator resets; and
+
+             b. Documented and defined mitigation measures for components of Critical Cyber
+                Systems that will not have passwords reset in accordance with the schedule
+                required by the preceding subparagraph (III.C.1.a.) and a timeframe to complete
+                these mitigations.
+
+        2. Multi-factor authentication, or other logical and physical security controls that
+           supplement password authentication to provide risk mitigation commensurate to
+           multi-factor authentication. If an Owner/Operator does not apply multi-factor
+           authentication for access to industrial control workstations in control rooms regulated
+           under 49 CFR parts 192 or 195, the Owner/Operator shall specify what compensating
+           controls are used to manage access.
+
+        3. Policies and procedures to manage access rights based on the principles of least
+           privilege and separation of duties. Where not technically feasible to apply these
+           principles, the policies and procedures must describe the compensating controls that
+           the Owner/Operator will apply.
+
+        4. Enforcement of standards that limit availability and use of shared accounts to those
+           that are critical for operations, and then only if absolutely necessary. When the
+           Owner/Operator uses shared accounts for operational purposes, the policies and
+           procedures must ensure—
+
+             a. Access to shared accounts is limited through account management that uses
+                principles of least privilege and separation of duties; and
+
+             b. Individuals who no longer need access do not have knowledge of the password
+                necessary to access the shared account.
+
+        5. Schedule for review of existing domain trust relationships to ensure their necessity
+           and policies to manage domain trusts.

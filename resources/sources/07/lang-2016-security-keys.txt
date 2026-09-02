@@ -1,0 +1,65 @@
+Lang, Czeskis, Balfanz, Schilder, Srinivas (Google), 'Security Keys: Practical Cryptographic Second Factors for the Modern Web', FC 2016 (preproceedings)
+Source: https://fc16.ifca.ai/preproceedings/25_Lang.pdf
+Fetched: 2026-09-02 (curl)
+Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
+
+ Security Keys: Practical Cryptographic Second
+          Factors for the Modern Web
+
+    Juan Lang, Alexei Czeskis, Dirk Balfanz, Marius Schilder, and Sampath
+                                   Srinivas
+
+                      Google, Inc., Mountain View, CA, USA
+
+
+
+      Abstract. “Security Keys” are second-factor devices that protect users
+      against phishing and man-in-the-middle attacks. Users carry a single de-
+      vice and can self-register it with any online service that supports the
+      protocol. The devices are simple to implement and deploy, simple to
+      use, privacy preserving, and secure against strong attackers. We have
+      shipped support for Security Keys in the Chrome web browser and
+      in Google’s online services. We show that Security Keys lead to both
+      an increased level of security and user satisfaction by analyzing a two
+      year deployment which began within Google and has extended to our
+      consumer-facing web applications. The Security Key design has been
+      standardized by the FIDO Alliance, an organization with more than
+      250 member companies spanning the industry. Currently, Security Keys
+      have been deployed by Google, Dropbox, and GitHub. An updated and
+      extended tech report is available at https://github.com/google/u2f-
+      ref-code/docs/SecurityKeys_TechReport.pdf.
+
+
+1    Introduction
+
+Recent account takeovers [1–3] have once again highlighted the challenge of
+securing user data online: accounts are often protected by no more than a
+weak password [4] and whatever implicit signals (if any) that the online service
+provider has collected to distinguish legitimate users from account hijackers.
+    Academic research has produced numerous proposals to move away from
+passwords, but in practice such efforts have largely been unsuccessful [5, 6]. In-
+stead, many service providers augment password-based authentication with a
+second factor in the form of a one-time passcode (OTP), e.g., [7, 8]. Unfortu-
+nately, OTPs as a second factor are still vulnerable to relatively common attacks
+such as phishing [9]. In addition, OTPs have a number of usability drawbacks
+(see Section 2). These factors limit the success and deployment of OTPs as a
+reliable and secure second factor.
+    Meanwhile, secure authentication factors, which use challenge/response-based
+cryptographic protocols, have their own barriers to deployment. National ID
+cards [10, 11] and smart cards require custom reader hardware and/or driver
+software to be installed prior to use. Depending on the implementation, these
+systems also make it challenging for users to protect their privacy (see Section 2).
+    In this work, we present Security Keys: second factor devices that improve
+the state of the art for practical authentication for real consumers in terms of
+privacy, security, and usability. This is evidenced by the fact that Security Keys
+have been publicly deployed by Google [12], Dropbox [13], and GitHub [14]. Secu-
+rity Keys were designed from the ground up to be practical: simple to implement
+and deploy, straightforward to use, privacy preserving, and secure against strong
+attackers. We have shipped support for Security Keys in the Chrome browser,
+have deployed it within Google’s internal sign-in system, and have enabled Se-
+curity Keys as an available second factor in Google’s web services. In this work,
+we demonstrate that Security Keys lead to both an increased level of security and
+user satisfaction as well as cheaper support cost. The Security Key design has
+been standardized within an industry alliance, the FIDO Alliance [15] as the
+Universal Second Factor (U2F) protocol.
+

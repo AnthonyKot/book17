@@ -1,0 +1,34 @@
+# Progress Software, "MOVEit Transfer and MOVEit Cloud Vulnerability" (www.progress.com/security/moveit-transfer-and-moveit-cloud-vulnerability), Wayback Machine snapshot 2023-08-02 22:03:48. The live URL now redirects to trust.progress.com (no timeline). Fetched 2026-09-02. Verbatim excerpt of the vendor's running update log (newest first).
+
+July 5, in response to customer feedback, the MOVEit team has formalized a regular Service Pack program for all MOVEit products. Customers have shared that a regular cadence and predictable timeline is desired to make it easier to adopt new product
+ updates and fixes. The Service Pack program will enable the delivery of more frequent updates and will provide a more predictable, simple and transparent process for product and security fixes. 
+The first Service Pack is now available and includes product and security fixes for supported versions of MOVEit Transfer. The Service Pack has also been applied to MOVEit Cloud. MOVEit Automation will be included in future Service Pack releases.
+ Today’s release includes improvements to the MOVEit Transfer database, optimization of the installer and fixes for three new CVEs. 
+We expect to release a new Service Pack approximately every two months going forward. All details on major releases, service packs, including today’s release, and hot fixes can be found in the MOVEit Product Hub. Please bookmark that page for future reference. 
+June 18, 2023, We have not seen any evidence that the vulnerability reported on June 15 has been exploited. Taking MOVEit Cloud offline for maintenance was a defensive measure to protect our customers and not done in response to any
+ malicious activity. Because the new vulnerability we reported on June 15 had been publicly posted online, it was important that we take immediate action out of an abundance of caution to quickly patch the vulnerability and disable MOVEit Cloud.
+Our product teams and third-party forensics partner have reviewed the vulnerability and associated patch and have deemed that the issue has been addressed. This fix has been applied to all MOVEit Cloud clusters and is available for MOVEit Transfer
+ customers. 
+A third party publicly disclosed a vulnerability impacting MOVEit Transfer and MOVEit Cloud in a way that did not follow normal industry standards, and in doing put our customers at increased risk of exploitation. Because it is common across the industry
+ that reported vulnerabilities lead to increased attention from both malicious threat actors and cybersecurity researchers trying to uncover new vulnerabilities, we are working closely with our industry partners to take all appropriate steps to
+ address any issues. 
+June 16, 2023, Yesterday we reported the public posting of a new SQLi vulnerability that required us to take down HTTPs traffic for MOVEit Cloud and to ask MOVEit Transfer customers to take down their HTTP and HTTPs traffic to safeguard
+ their environments. We have now tested and deployed a patch to MOVEit Cloud, returning it to full service across all cloud clusters. We have also shared this patch and the necessary deployment steps with all MOVEit Transfer customers. 
+All MOVEit Transfer customers must apply the new patch, released on June 15. 2023. Details on steps to take can be found in the following Knowledge Base Article.
+Knowledge Base Article (June 15 2023)
+All MOVEIt Cloud customers, please see the MOVEit Cloud Status Page for more information.
+The investigation is ongoing, but currently, we have not seen indications that this newly discovered vulnerability has been exploited.
+June 15, 2023, Update: MOVEit Cloud has been patched and fully restored across all cloud clusters. See the MOVEit Cloud Status Page for updates.
+ We are currently rolling out patches for MOVEit Transfer. Please monitor the June 15 MOVEit Transfer Knowledge Base Article for updates. This latest patch was released to address a newly identified vulnerability. We took HTTPs traffic down for MOVEit Cloud in light of the newly published vulnerability and asked all MOVEit Transfer customers to take down their HTTP
+ and HTTPs traffic to safeguard their environments while a patch was created and tested. 
+June 9, 2023, In addition to the ongoing investigation into vulnerability (CVE-2023-34362), we have partnered with
+ third-party cybersecurity experts to conduct further detailed code reviews as an added layer of protection for our customers. As part of these code reviews, cybersecurity firm Huntress has helped us to uncover additional vulnerabilities that could
+ potentially be used by a bad actor to stage an exploit. These newly discovered vulnerabilities are distinct from the previously reported vulnerability shared on May 31, 2023.
+All MOVEit Transfer customers must apply the new patch, released on June 9. 2023. Details on steps to take can be found in the following knowledge base article.
+MOVEit Transfer Knowledge Base Article (June 9, 2023)
+All MOVEIt Cloud customers, please see the MOVEit Cloud Knowledge Base Article for more information.
+MOVEit Cloud Knowledge Base Article (June 9, 2023)
+The investigation is ongoing, but currently, we have not seen indications that these newly discovered vulnerabilities have been exploited.
+May 31, 2023, Progress reported a vulnerability in MOVEit Transfer and MOVEit Cloud (CVE-2023-34362) that could lead
+ to escalated privileges and potential unauthorized access to the environment. Upon discovery, Progress promptly launched an investigation, alerted MOVEit customers of the issue and provided immediate mitigation steps, followed by the development
+ and release of a security patch, all within 48 hours.

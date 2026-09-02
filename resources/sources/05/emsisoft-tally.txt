@@ -1,0 +1,38 @@
+# Emsisoft, "Unpacking the MOVEit Breach: Statistics and Analysis" (blog post 44123), first published 2023-07-18, tally "current as of June 28th, 2024". Fetched 2026-09-02. Verbatim excerpts.
+
+ MOVEit is a file transfer platform made by Progress Software Corporation. The platform is used by thousands of governments, financial institutions and other public and private sector bodies all around the world to send and receive information.
+ In late May 2023, data started to be transferred from hundreds of MOVEit deployments, however, these were not normal file transfers initiated by legitimate users. MOVEit had been hacked and the data was being stolen by a ransomware operation called Cl0p.
+ The current tally of organizations and individuals known to have been impacted by this incident is shown below. The data is sourced from state breach notifications, SEC filings, other public disclosures, as well as Cl0p’s website, and is current as of June 28th, 2024.
+ Organizations: 2,773 
+ Individuals: 95,788,491 
+ The MOVEit breaches to have impacted the most individuals are:
+ Organization Individuals 
+ Maximus 11.3 million 
+ Welltok 10 million 
+ Delta Dental of California and affiliates 6.9 million 
+ Louisiana Office of Motor Vehicles 6 million 
+ Alogent 4.5 million 
+ Colorado Department of Health Care Policy and Financing 4 million 
+ Oregon Department of Transportation 3.5 million 
+ BORN Ontario 3.4 million 
+ Gen Digital (Avast) 3 million 
+ Teachers Insurance and Annuity Association of America 2.6 million 
+ Genworth 2.5 million 
+ Arietis Health 1.9 million 
+ PH Tech 1.7 million 
+ NASCO 1.6 million 
+ State of Maine 1.3 million 
+ Milliman Solutions 1.3 million 
+ Nuance Communications 1.2 million 
+ Wilton Reassurance Company 1.2 million 
+ U.S.-based organizations account for 78.9 percent of known victims, Canada-based 13.5 percent, Germany-based 1.3 percent, and U.K.-based 0.7 percent.
+ The most heavily impacted sectors are education (39.1 percent), health (20.1 percent), and finance and professional services (13.3 percent).
+ While it is impossible to accurately calculate the cost of the MOVEit incident, it is possible to illustrate the potential cost. According to IBM, data breaches cost an average of $165 USD per record. Based on the numbers of individuals confirmed to have been impacted, that puts the cost of the MOVEit incident at $15,805,101,015.
+ Some of the organizations impacted provide services to multiple other organizations, and so the numbers above are likely to increase significantly as those organizations start to file notifications.
+ It should be noted that there will be some overlap in terms of individuals impacted. With so many organizations affected, it is inevitable that some individuals will have been affected more than once, and we have no way to account for this.
+
+ On May 31st, Progress Software issued an advisory and patch for a vulnerability subsequently identified as CVE-2023-34362 and assigned a severity rating of 9.8 out of 10. The company stated the vulnerability “could lead to escalated privileges and potential unauthorized access to the environment.” In other words, it was a vulnerability which could enable hackers to access MOVEit and steal data – something which it later emerged had been happening since at least May 27th.
+ On June 9th, Progress issued a patch for a second vulnerability identified as CVE-2023-35036. On June 15th, patch was issued for a third vulnerability identified as CVE-2023-35708. Both vulnerabilities were critical and could have enabled the MOVEit platform to be further exploited.
+ Cl0p confirmed that it had been responsible for the attack on the MOVEit platform with the below June 6th post on the group’s site on the dark web.
+ As shown in the above screenshot, Cl0p stated that the data which had been stolen from governments, cities and police services had been deleted. On July 17th, 2023, that claim was proven to be inaccurate when the group listed the UK’s Office of Communications (Ofcom) and Ireland’s Commission for Communications Regulation (Comreg).
+ The upstream/downstream in many MOVEit incidents is extremely complex, with some organizations being impacted because they used a vendor which used a contractor which used a subcontractor which used MOVEit. Additionally, some organizations have had MOVEit exposure via multiple vendors. This is especially true in the education sector with some institutions being affected by incidents involving the National Student Clearinghouse, the Teachers Insurance and Annuity Association of America-College Retirement Equities Fund (which was impacted by an incident at a vendor: PBI Research Services), as well as third party health insurance providers and other financial service providers.

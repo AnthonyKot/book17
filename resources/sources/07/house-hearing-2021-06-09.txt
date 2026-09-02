@@ -1,0 +1,164 @@
+House Homeland Security Committee hearing, 'Cyber Threats in the Pipeline: Using Lessons from the Colonial Ransomware Attack to Defend Critical Infrastructure', 9 June 2021 (CHRG-117hhrg45085)
+Source: https://www.govinfo.gov/content/pkg/CHRG-117hhrg45085/html/CHRG-117hhrg45085.htm
+Fetched: 2026-09-02 (curl, govinfo HTML; PDF also fetched)
+Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
+
+--- transcript lines 134,142 (Chairman Thompson, opening) ---
+For nearly a week, 5,500 miles of pipeline supplying 45 percent 
+of the fuel on the East Coast was shut down, and panic buying 
+resulted in fuel shortages in the Southeast. Since pipeline 
+service was restored, we have learned more about what happened. 
+We know hackers exploited an unprotected VPN account that was 
+no longer in use to gain access to Colonial Pipeline's network. 
+We know Colonial Pipeline paid the ransom demand and the FBI 
+has since recovered most of it. We know Colonial Pipeline is 
+hardly alone.
+
+--- transcript lines 984,998 (Blount, prepared statement) ---
+to access. That investigation is on-going, and while we may not have 
+all of the answers today to the questions that you have, we are working 
+hard to get them.
+ Although the investigation is on-going, we believe the attacker 
+exploited a legacy virtual private network (VPN) profile that was not 
+intended to be in use. We are still trying to determine how the 
+attackers gained the needed credentials to exploit it.
+ We have worked with our third-party experts to resolve and 
+remediate this issue; we have shut down the legacy VPN profile, and we 
+have implemented additional layers of protection across our enterprise. 
+We also recently engaged Dragos' Rob Lee, one of the world's leading 
+industrial and critical infrastructure and OT security specialists to 
+work alongside Mandiant and assist with the strengthening of our other 
+cyber defenses. We have also retained John Strand from Black Hills 
+Information Security, another leader in the cybersecurity space, who 
+
+--- transcript lines 1192,1215 (Carmakal, prepared statement: the intrusion) ---
+them become more resilient to future attacks.
+ the cyber intrusion into colonial pipeline
+ On the early morning of May 7, 2021, Mandiant was engaged by Hunton 
+Andrews Kurth LLP, on behalf of Colonial Pipeline, to help respond to 
+the ransomware event that was discovered earlier that day. Prior to 
+that date, Mandiant had not provided cybersecurity consulting services 
+to Colonial Pipeline. Shortly after being called on the morning of May 
+7, we mobilized a team of experienced incident responders and 
+information technology and operational technology security experts to 
+help Colonial Pipeline investigate and contain the incident, eradicate 
+the threat actor, and further enhance the security posture of the 
+network to facilitate the safe restart of the pipeline. Additionally, 
+Mandiant is advising Colonial Pipeline on ways to become more resilient 
+to cyber attacks in the future.
+ The earliest evidence of compromise that we have identified to date 
+occurred on April 29, 2021. On that date, the threat actor had logged 
+into a virtual private network (VPN) appliance using a legacy VPN 
+profile and an employee's username and password. The legacy VPN profile 
+did not require a one-time passcode to be provided. The legacy VPN 
+profile has since been disabled as part of Colonial Pipeline's 
+remediation process.
+ the evolution of disruptive intrusions: ransomware to multifaceted 
+ extortion
+ Cyber intrusions have become increasingly disruptive over the past 
+
+--- transcript lines 1276,1296 (Carmakal, prepared statement: DarkSide RaaS) ---
+profit is shared between its owners and partners, or affiliates, who 
+provide access to organizations, steal sensitive victim data, and 
+deploy the ransomware encryptors. Mandiant currently tracks multiple 
+threat groups that have conducted these intrusions, some of whom have 
+also worked on behalf of ransomware services besides DarkSide. These 
+groups demonstrate varying levels of technical sophistication 
+throughout intrusions.
+ Mandiant has identified multiple DarkSide victims through our 
+incident response engagements and from reports on the DarkSide victim-
+shaming website. Most of the victim organizations were based in the 
+United States and span across multiple sectors, including financial 
+services, legal, manufacturing, professional services, retail, and 
+technology.
+ Following the security incident at Colonial Pipeline and the FBI's 
+public attribution to DarkSide, Mandiant has observed multiple actors 
+cite a May 13, 2021 announcement that appeared to be shared with 
+DarkSide RaaS affiliates by the operators of the service. This 
+announcement stated that they lost access to their infrastructure, 
+including their blog, payment, and content distribution network (CDN) 
+servers, and would be closing their service. The post cited law 
+enforcement pressure and pressure from the United States for this 
+
+--- transcript lines 1420,1452 (Thompson/Carmakal on the legacy VPN profile) ---
+having been in the system over the course of those days.
+ Chairman Thompson. Thank you very much. Mr. Carmakal, just 
+2 quick questions. Would an open VPN system with a normal 
+security or IT security system have been picked up?
+ Mr. Carmakal. Yes, so, let me just provide a little bit of 
+context into what is now believed to be the earliest evidence 
+of compromise. As we conduct investigations, we try to figure 
+out what is the earliest evidence of what the attacker has done 
+within the environment. Based on our investigation, the 
+earliest evidence was a login to the Colonial Pipeline VPN. We 
+do know that an employee's credentials were used. So, a 
+username and a password was used to do that. We did not figure 
+out exactly how the attacker was able to get access to the 
+username, but it is a possibility that the attacker was able to 
+leverage credentials that the employee may have used on another 
+website that was compromised prior to this date. So, it is 
+certainly possible that that is how the attacker got in. 
+Whether or not the vulnerability or the misconfiguration--and 
+let me, you know, clarify it as a misconfiguration--whether it 
+would have been picked up by a vulnerability assessment is hard 
+to tell. But I just want to clarify that what actually occurred 
+was there was a legacy VPN profile that was in place that 
+wasn't believed to be active, and that enabled an attacker to 
+leverage both the user and the password to login.
+ Chairman Thompson. So, how would one correct that problem?
+ Mr. Carmakal. Yes, so, the problem has been corrected at 
+this point in time. The legacy VPN profile has been completely 
+removed. So, a user, whether an attacker or an employee, would 
+not be able to attempt to login to the system without requiring 
+multifactor authentication. So, in addition to a password, you 
+would need a one-time code in order to be able to login to the 
+Colonial Pipeline VPN at this point in time.
+ Chairman Thompson. All right. Do, you just said it was a 
+
+--- transcript lines 1668,1712 (Jackson Lee/Carmakal on MFA and the password) ---
+ Ms. Jackson Lee. Thank you very much. Let me, again, 
+compliment the FBI for being able to secure dollars. This may 
+be your question, I think, Mr. Carmakal. Why wasn't a 
+multifactor authentication used on that VPN? I am going to give 
+you a series of questions, if you want to take quick notes, 
+because my time is running out. Who had a legitimate access to 
+that password? Where else was the password used? Was the 
+password listed in any of the company's on-line documentation?
+ So, it is authentication, legitimate access to that 
+password. So, do you want to start with the authentication?
+ Mr. Carmakal. Sure.
+ Ms. Jackson Lee. If you can be concise and as quickly as 
+possible.
+ Mr. Carmakal. Yes, thanks, ma'am. In terms of multifactor 
+authentication, it was not required for the specific VPN 
+profile that was used for this specific account. It is because 
+the account and the VPN profile wasn't believed to actually be 
+enabled.
+ Ms. Jackson Lee. OK. Can I move to----
+ Mr. Carmakal. So, it was known at the time. Yes?
+ Ms. Jackson Lee. Can I move to the next question?
+ Mr. Carmakal. Yes, ma'am.
+ Ms. Jackson Lee. Who had a legitimate access to the 
+password, sir?
+ Mr. Carmakal. One person, as far as we know.
+ Ms. Jackson Lee. Is that person vetted, from your 
+perspective?
+ Mr. Carmakal. Yes, it was an employee's account.
+ Ms. Jackson Lee. Where else was the password used?
+ Mr. Carmakal. We do not know the exact source of the 
+website that it was used, but presumably it was used on at 
+least one other website because there are passwords that are 
+readily available on the internet, and we did find that it was 
+one of the passwords that was stolen from another website. But 
+we don't know exactly where it came from.
+ Ms. Jackson Lee. Was the password listed in any of the 
+company's on-line documentation?
+ Mr. Carmakal. Not that I am aware of.
+ Ms. Jackson Lee. You started out by saying you can't go it 
+alone. We are ready to help you. I introduced H.R. 2980, which 
+deals with Cybersecurity Vulnerability Mediation Act. The 
+committee was kind enough to pass it out of the committee. 
+Hopefully, it will go to the floor.
+ But the crux of this is that part of it is a reporting 
+feature that really requires companies to the DHS to secure a 
+

@@ -1,0 +1,5 @@
+# Progress Software Corp., Form 8-K Exhibit 99.1, press release "Progress Announces Conclusion of SEC Investigation into MOVEit", 2024-08-07 (EDGAR 0000876167-24-000138). Fetched 2026-09-02. Verbatim excerpt.
+
+Progress Announces Conclusion of SEC Investigation into MOVEit 
+BURLINGTON, Mass., Aug 7, 2024 -- Progress (Nasdaq: PRGS), the trusted provider of AI-powered infrastructure software, today announced that the Securities and Exchange Commission’s Division of Enforcement (SEC) has concluded its fact-finding investigation into the MOVEit vulnerability. The SEC has notified Progress that it does not intend to recommend an enforcement action against the company at this time. As previously disclosed, Progress received a subpoena from the SEC on October 2, 2023, as part of a fact-finding inquiry seeking various documents and information relating to the MOVEit vulnerability. 
+About Progress 

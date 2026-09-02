@@ -1,0 +1,13 @@
+# TechCrunch, Carly Page, "MOVEit, the biggest hack of the year, by the numbers", 2023-08-25. Retelling (folk story source). Fetched 2026-09-02. Short verbatim quotes only.
+
+ The mass-exploitation of MOVEit Transfer software has rapidly cemented itself as the largest hack of the year so far. While the full impact of the attack will likely remain untold for months to come, there are now more than 1,000 known victims of the MOVEit breach, according to cybersecurity company Emsisoft.
+
+The fallout began in May when Progress disclosed a zero-day vulnerability in MOVEit Transfer, its managed file transfer service used by thousands of organizations around the world to move large amounts of often-sensitive data over the internet. The critical-rated vulnerability allowed attackers — specifically the notorious Clop ransomware and extortion gang — to raid MOVEit Transfer servers and steal customers’ sensitive data stored within.
+
+Just as the number of known victim organizations crossed the 1,000 milestone on August 25, the number of impacted individuals also surpassed the 60 million mark.
+
+This figure, published by Emsisoft, is sourced from state breach notifications, SEC regulatory filings and other public disclosures. Emsisoft notes that while there will invariably be some overlap in terms of individuals impacted, the number is only likely to increase as more organizations continue to confirm MOVEit-related data breaches.
+
+In July, U.S. government services contracting giant Maximus became the largest victim of the MOVEit breach after confirming that hackers accessed the protected health information — including Social Security numbers — of as many as 11 million individuals. The Virginia-based firm said at the time that it had not yet determined the exact number of individuals affected.
+
+However, as noted by Emsisoft, only a handful of corporate victims have so far reported the number of individuals known to be affected. Emsisoft said that if the number was scaled, the cost would be at least $65 billion to date.

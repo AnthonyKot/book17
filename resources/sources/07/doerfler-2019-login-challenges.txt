@@ -1,0 +1,98 @@
+Doerfler, Thomas, Marincenko, Ranieri, Jiang, Moscicki, McCoy, 'Evaluating Login Challenges as a Defense Against Account Takeover', WWW '19 (the paper behind the 2019 blog post)
+Source: https://damonmccoy.com/papers/loginchallenges.pdf (author copy; also https://research.google/pubs/pub48119/)
+Fetched: 2026-09-02 (curl)
+Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
+
+--- abstract / intro (pdftotext, two-column layout) ---
+ABSTRACT                                                                             geolocation, browser configuration, and access patterns to detect
+In this paper, we study the efficacy of login challenges at preventing               aberrant login attempts [10]. Google and Microsoft actively deploy
+account takeover, as well as evaluate the amount of friction these                   similar systems that judge IP address reputation, device reputation,
+challenges create for normal users. These secondary authentication                   and automation patterns [18, 23]. Of course, with any risk analysis
+factors—presently deployed at Google, Microsoft, and other major                     scheme there exists a chance for false positives as users travel and
+identity providers as part of risk-aware authentication—trigger in                   acquire new devices, and networks churn due to DHCP lease ex-
+response to a suspicious login or account recovery attempt. Using                    piration. As such, outright blocking any suspicious sign-in would
+Google as a case study, we evaluate the effectiveness of fourteen                    lock a significant volume of legitimate users out of their accounts.
+device-based, delegation-based, knowledge-based, and resource-                          In order to differentiate hijackers from legitimate account holders
+based challenges at preventing over 350,000 real-world hijacking                     in edge cases, risk-aware authentication triggers a challenge to act
+attempts stemming from automated bots, phishers, and targeted                        as a second proof of identity. Challenges can take many forms:
+attackers. We show that knowledge-based challenges prevent as                        proof of access to a registered device, proof of access to a backup
+few as 10% of hijacking attempts rooted in phishing and 73% of                       account, knowledge of a shared secret (e.g., a security question),
+automated hijacking attempts. Device-based challenges provide the                    or merely proof of access to a scarce resource (e.g., a CAPTCHA).
+best protection, blocking over 94% of hijacking attempts rooted in                   This layered authentication approach is distinct from two-factor
+phishing and 100% of automated hijacking attempts. We evaluate                       authentication as challenges appear dynamically in response to
+the usability limitations of each challenge based on a sample of                     a perceived threat, thus reducing overall friction on every user
+1.2M legitimate users. Our results illustrate that login challenges                  sign-in. Additionally, challenges scale to every user by adapting to
+act as an important barrier to hijacking, but that friction in the                   the security posture of each account, taking advantage of recovery
+process leads to 52% of legitimate users failing to sign-in—though                   accounts or trusted devices when available. While ideal from a
+97% of users eventually access their account in a short period.                      deployment standpoint, it remains unclear how well these varied
+                                                                                     challenges protect against hijacking or what friction they create
+KEYWORDS                                                                             for legitimate account holders.
+                                                                                        In this paper, we evaluate the security and usability trade-offs
+account takeover; account recovery; two-factor authentication
+                                                                                     of fourteen challenges based on their real-world performance. We
+ACM Reference Format:                                                                begin by building a ground truth corpus of over 350,000 hijacking
+Periwinkle Doerfler, Maija Marincenko, Juri Ranieri, Yu Jiang, Angelika              attempts from increasingly sophisticated actors including auto-
+Moscicki, Damon McCoy, Kurt Thomas. 2019. Evaluating Login Challenges                mated bots, phishers, and targeted attackers. Then, using login
+as a Defense Against Account Takeover. In Proceedings of the 2019 World
+                                                                                     traces from Google, we examine whether risk-aware authentication
+Wide Web Conference (WWW ’19), May 13–17, 2019, San Francisco, CA, USA.
+                                                                                     triggered a challenge for these hijacking attempts, what challenge
+ACM, New York, NY, USA, 11 pages. https://doi.org/10.1145/3308558.3313481
+                                                                                     the algorithm selected, and ultimately whether the hijacker was
+                                                                                     able to access the account. Additionally, we isolate 1.2 million chal-
+1    INTRODUCTION                                                                    lenges solved by legitimate users to measure how often challenges
+In response to the threat of wide-scale password theft and account                   temporarily locked out account holders. Critically, our evaluation
+takeover [22], identity providers have re-framed password-only au-                   approach is independent of Google’s risk analysis techniques and
+thentication from a binary task of validating password correctness                   generalizes to any identity provider.
+into risk-aware authentication [19]. This approach incorporates mul-                    Our analysis reveals that even weak, knowledge-based chal-
+tiple passive authentication signals with layered proofs of identity.                lenges can offer hijacking protections against automation to billions
+For example, Freeman et al. developed a statistical model of a user’s                of users without requiring any enrollment. That said, the security
+                                                                                     posture of users plays an important role in protecting against more
+This paper is published under the Creative Commons Attribution 4.0 International
+(CC-BY 4.0) license. Authors reserve their rights to disseminate the work on their   sophisticated attacks. Users that established a trusted device or
+personal and corporate Web sites with the appropriate attribution.                   a delegated recovery account received up to 10 times better pro-
+WWW ’19, May 13–17, 2019, San Francisco, CA, USA                                     tections against phishing, and to a lesser extent, targeted attacks.
+© 2019 IW3C2 (International World Wide Web Conference Committee), published
+under Creative Commons CC-BY 4.0 License.                                            We argue that risk-aware authentication and challenges can help
+ACM ISBN 978-1-4503-6674-8/19/05.                                                    extend the viability of passwords in the interim as the community
+https://doi.org/10.1145/3308558.3313481
+considers alternative forms of authentication. For at-risk users look-       As detailed in Table 1, the primary usability concern of device-
+ing to mitigate the risk of remote hijacking entirely, we emphasize       based challenges is both access to a mobile device or phone number
+that security keys offer the best immediate solution.                     and the willingness of users to proactively associate these with
+   We summarize our key findings as follows:                              their account. Sharing a phone number incurs at least some friction
+                                                                          in terms of setup, while registering a device or authenticator app
+      • Knowledge-based challenges, such as recalling a secondary
+                                                                          requires even more steps. Additionally, while the time-sensitive
+        email address, prevented over 73% of automated hijacking
+                                                                          nature of device challenges obviates some classes of attacks, they
+        attempts but only 10% of attacks rooted in phishing.
+                                                                          are nevertheless vulnerable to man-in-the-middle attacks such as
+      • On-device prompts, like those shown during two-factor au-
+                                                                          inline phishing. This stems from the inability of apps that generate
+        thentication, provide the strongest protection. They blocked
+                                                                          a code to observe the domain a victim is visiting, something U2F
+        99% of attacks rooted in phishing and 90% of targeted attacks.
+                                                                          security keys solve. Theft of mobile devices is another risk as it
+      • SMS-based challenges provided weaker protections, prevent-
+                                                                          both locks the victim out of their account and gives attackers access
+
+--- Table 3 region ---
+                            Authenticator OTP                                          100% ± 3%           94% ± 7%             –      0% ± 3%    38% ± 7%            –
+                            Device Prompt                                              100% ± 1%           99% ± 1%      90% ± 9%      0% ± 1%    45% ± 1%     43% ± 9%
+ Device-based               Device SMS OTP                                             100% ± 1%           96% ± 1%      76% ± 6%      0% ± 1%    38% ± 1%     12% ± 6%
+                            Device Settings OTP                                        100% ± 7%          100% ± 5%             –      0% ± 7%    49% ± 5%            –
+                            Security Key                                              100% ± 25%         100% ± 28%             –     0% ± 25%   25% ± 28%            –
+ Delegation-based           OTP to backup email                                            100% ± 1%       92% ± 3%               –   0% ± 1%     38% ± 3%            –
+                            Account creation date                                              –           91% ± 5%    100% ± 22%            –    48% ± 5%     5% ± 22%
+                            Known pre-registered email                                  73% ± 2%           68% ± 1%     79% ± 26%      0% ± 2%    19% ± 1%    21% ± 26%
+ Knowledge-based            Known pre-registered phone number                         100% ± 16%           26% ± 1%     50% ± 20%     0% ± 16%     6% ± 1%    17% ± 20%
+                            Last login location                                       100% ± 28%           10% ± 2%             –     0% ± 28%     1% ± 2%            –
+                            Printed backup code                                                –                  –             –            –           –            –
+                            Security question                                                  –           93% ± 4%             –            –    38% ± 4%            –
+                            OTP to any email address                                               –       61% ± 5%               –         –     33% ± 5%            –
+ Additional resource
+                            OTP to any phone                                               100% ± 1%       45% ± 2%               –   0% ± 1%     16% ± 2%            –
+Table 3: Hijacking attempts from bots, phishers, and targeted attackers prevented by login or recovery challenges along with
+error margins for 95% confidence intervals. Device-based challenges prevent 94% of attacks rooted in phishing and 76% of
+targeted attacks.
+

@@ -1,0 +1,11 @@
+# Wikipedia, "2023 MOVEit data breach" (CC BY-SA 4.0), as fetched 2026-09-02. Lede and impact section verbatim (folk story source).
+
+In May 2023, a critical vulnerability in the MOVEit managed file transfer software was discovered. The discovery of this vulnerability triggered a wave of cyberattacks and data breaches.[1] Exploited by the ransomware group CL0P, the flaw enabled unauthorized access to sensitive databases, leading to the compromise of over 2,700 organizations and exposing the personal data of approximately 93.3 million individuals.[2] The breach had far-reaching effects across sectors like healthcare, finance, and government, emphasizing the systemic risks inherent in the interconnected nature of the digital supply chain.[3]
+
+MOVEit, a managed file transfer software developed by Ipswitch, Inc., a subsidiary of Progress Software, is widely used for securely transmitting large volumes of sensitive data across various industries, including government and highly regulated sectors.[1] On May 28, 2023, a vulnerability in the MOVEit software was reported following unusual activity detected by a customer.[1] This zero-day vulnerability enabled attackers to exploit public-facing servers via SQL injection, facilitating unauthorized file theft.[3] The attacks were conducted using a custom web shell, known as LEMURLOOT, which impersonates legitimate ASP.NET files and can extract Microsoft Azure Storage Blob data.[4]
+
+On May 31 Progress Software released a patch for the vulnerability and stated the vulnerability “could lead to escalated privileges and potential unauthorized access to the environment”.[1]
+
+On June 6, Cl0p claimed responsibility for the attack on its site on the dark web. Cl0p claimed that the data stole from governments had been deleted (this was later disproved).[1]
+
+A running total maintained by cybersecurity company Emsisoft showed that more than 2,500 organizations were known to have been impacted as at October 25, 2023, with more than 80 percent of those organizations being US-based.[11]

@@ -1,0 +1,28 @@
+# Huntress, "MOVEit Transfer Critical Vulnerability Rapid Response" (John Hammond et al.), 2023-06-01, updated through 2023-06-12. Fetched 2026-09-02. Verbatim excerpts (IIS log lines with attacker IPs omitted; see CISA AA23-158A for IOCs).
+
+UPDATED: 1 June 2023 @ 1733 ET - Added shareable Huntress YARA rule for assistance in detection effort
+UPDATED: 1 June 2023 @ 2023 ET - Added Kostas community Sigma rule to assist in detection efforts
+UPDATED: 1 June 2023 @ 2029 ET - Added screenshots for the DLL that creates the human2.aspx file
+UPDATED: 2 June 2023 @ 1210 ET - Added CVE identification
+UPDATED: 2 June 2023 @ 1750 ET - Added registry locations for enriched investigation and analysis
+UPDATED: 5 June 2023 @ 1323 ET - Added video demonstration of proof-of-concept exploitation
+UPDATED 5 June 2023 @ 2116 ET - Added video demonstration of RCE and ransomware
+
+On June 1, 2023, Huntress was made aware of active exploitation attempts against the MOVEit Transfer software application. Previously, on May 31, 2023, the vendor Progress had just released a security advisory expressing there is a critical vulnerability that could lead to unauthorized access.
+
+UPDATE 5 June 2023:
+Huntress has fully recreated the attack chain exploiting MOVEit Transfer software. To the best of our knowledge, currently no one else has publicly done so.
+We have uncovered that the initial phase of the attack, SQL injection, opens the door for even further compromise -- specifically, arbitrary code execution.
+
+UPDATE 12 June 2023:
+A new CVE for our findings has been released as CVE-2023-35036. This refers to different attack vectors for SQL injection and the ability to leak data from the database. Additionally, Rapid7 and Horizon3.ai have publicly released their own recreated proof-of-concept exploit.
+
+There is a severe vulnerability in the MOVEit Transfer web application frontend that offers SQL injection, that can be further abused to gain administrative access, exfiltrate files and gain arbitrary code execution.
+
+Huntress has identified less than ten organizations with this MOVEit Transfer software in our partner base, however, Shodan suggests that there are over 2,500 servers publicly available on the open Internet.
+
+From our few organizations, only one has seen a full attack chain and all the matching indicators of compromise.
+
+moveitisapi.dll is used to perform SQL injection when requested with specific headers, and guestaccess.aspx is used to prepare a session and extract CSRF tokens and other field values to perform further actions.
+
+ Enforces a static password for access, determined by the X-siLock-Comment HTTP header. If this password is not supplied, the server returns a 404 with no further function. This password seems to vary, and for this reason, you will see multiple hashes being shared as IOCs for human2.aspx.

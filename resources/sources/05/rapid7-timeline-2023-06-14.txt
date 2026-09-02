@@ -1,0 +1,26 @@
+# Rapid7, "CVE-2023-34362: MOVEit Vulnerability Timeline of Events", 2023-06-14. Fetched 2026-09-02. Verbatim excerpt.
+
+May 27-28: Rapid7 services teams have so far confirmed indicators of compromise and data exfiltration dating back to at least May 27 and May 28, 2023 (respectively).
+May 31: Progress Software publishes an advisory on a critical SQL injection vulnerability in their MOVEit Transfer solution.
+May 31: Rapid7 begins investigating exploitation of MOVEit Transfer.
+June 1: Rapid7 publishes initial analysis of MOVEit Transfer attacks after responding to incidents across multiple customer environments.
+June 1: The security community publishes technical details and indicators of compromise.
+June 1: Compromises continue; Rapid7 responds to alerts.
+June 1: CISA publishes Security Advisory.
+June 2: CVE-2023-34362 is assigned to the zero-day vulnerability.
+June 2: Mandiant attributes the attack to a threat cluster with unknown motives.
+June 2: Velociraptor releases an artifact to detect exploitation of MOVEit File Transfer critical vulnerability.
+June 4: Rapid7 publishes a method to identify which data was stolen.
+June 4: Nova Scotian government discloses it is investigating privacy breach.
+June 5: Microsoft attributes the attack to Lace Tempest, a Cl0p ransomware affiliate that has previously exploited vulnerabilities in other file transfer solutions (e.g., Accellion FTA, Fortra GoAnywhere MFT).
+June 5: UK companies BA, BBC, and Boots disclose breaches as victims in MOVEit File Transfer.
+June 5: Cl0p ransomware group claims responsibility for the zero-day attack.
+June 6: Security firm Huntress releases a video allegedly reproducing the exploit chain.
+June 6: The Cl0p ransomware group posts a communication on their leak site demanding that victim organizations contact them by June 14 to negotiate extortion fees in exchange for the deletion of stolen data.
+June 7: CISA publishes #StopRansomware Cybersecurity Advisory regarding MOVEit File Transfer Vulnerability CVE-2023-34362.
+June 9: Progress Software updates advisory to include a patch for a second MOVEit Transfer Vulnerability, which was uncovered by Huntress during a third-party code review. The vulnerability is later assigned CVE-2023-35036.
+June 12: Rapid7 releases a full exploit chain for MOVEit Transfer Vulnerability CVE-2023-34362.
+June 15: Progress discovers a new vulnerability, CVE-2023-35708, and publishes advisory.
+July 6: Progress discloses three additional CVEs in MOVEit Transfer. CVE-2023-36934 is a critical, unauthenticated SQL injection vulnerability. CVE-2023-36932 is a high-severity SQL injection vulnerability that could allow authenticated attackers to gain access to the MOVEit Transfer database. CVE-2023-36933 is an exception handling issue that could allow an attacker to crash the application. Mitigation directions and latest versions are in Progress Software's advisory here.
+Mitigation
+All MOVEit Transfer versions before May 31, 2023 are vulnerable to CVE-2023-34362, and all MOVEit Transfer versions before June 9, 2023 are vulnerable to CVE-2023-35036. As noted above, fixed versions of the software are available, and patches should be applied on an emergency basis. 

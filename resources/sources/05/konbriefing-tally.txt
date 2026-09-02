@@ -1,0 +1,12 @@
+# KonBriefing Research, "MOVEit hack victim list" (konbriefing.com/en-topics/cyber-attacks-moveit-victim-list.html), "Last updated December 20, 2023". Fetched 2026-09-02. Verbatim excerpts (headline figures and methodology notes; the per-organisation table is not copied).
+
+2611 organizations
+85.1 - 89.9 m individuals
+Last updated December 20, 2023
+
+Sources: The list is compiled from the following sources
+Leak list, publications by affected companies and organizations, privacy incident reports filed with U.S. states (where published), reports filed with the U.S. Securities and Exchange Commission, reports in the media
+Unconfirmed organziations: So far unconfirmed victims and victims with no media coverage yet have a question mark. They are shown without name and without exact location.
+U.S. colleges and universities listed here generally do not yet have accurate information on whether and to what extent they are affected via NSC, TIAA, or Corebridge. Therefore, the exact status for them is currently "presumably affected".
+Overlapping notifications: There could be overlaps in the numbers of affected individuals. Example: It is unclear whether the 1,500 individuals reported for Rhode Island Government through TIAA/PBI are not already included in the 2,630,717 total individuals reported for TIAA.
+Multiple affected persons: Individuals may be affected by multiple incidents at the same time - they are counted multiple times here. Example: A person from Nova Scotia is affected as a teacher (Nova Scotia Teachers) and as a customer of the water supply (Halifax Water). She is thus counted in both sets. Therefore, strictly speaking, the sum is not the total number of people affected, but the total number of people records affected.

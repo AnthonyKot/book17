@@ -1,0 +1,17 @@
+W3C, 'Web Authentication: An API for accessing Public Key Credentials - Level 3', W3C Recommendation
+Source: https://www.w3.org/TR/webauthn-3/
+Fetched: 2026-09-02 (curl (w3.org returned 403 to a browser UA and 200 to curl's own UA))
+Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
+
+5:Web Authentication:
+9:W3C Recommendation,
+70:Abstract
+72:This specification defines an API enabling the creation and use of strong, attested, scoped, public key-based
+91: A W3C Recommendation is a specification that, after extensive consensus-building, is endorsed by
+575:This specification defines an API enabling the creation and use of strong, attested, scoped, public key-based
+577:created and stored by a WebAuthn Authenticator at the behest of a WebAuthn Relying Party, subject to user consent. Subsequently, the public key credential can only be accessed by origins belonging to that Relying Party.
+578:This scoping is enforced jointly by conforming User Agents and authenticators.
+592:Web Authentication API.
+2277:Web Authentication API.
+5951:Web Authentication Level 2 included provisions for embedding such metadata in the string itself to ensure that it is transported atomically.
+10678:abstract-op for credential record, in § 4

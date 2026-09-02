@@ -1,0 +1,180 @@
+Senate HSGAC hearing, 'Threats to Critical Infrastructure: Examining the Colonial Pipeline Cyber Attack', 8 June 2021, S. Hrg. 117-429 (CHRG-117shrg46569)
+Source: https://www.govinfo.gov/content/pkg/CHRG-117shrg46569/html/CHRG-117shrg46569.htm
+Fetched: 2026-09-02 (curl, govinfo HTML; PDF also fetched)
+Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
+
+--- transcript lines 228,246 (Chairman Peters, opening) ---
+the House of Representatives, uses was hit with a ransomware 
+attack. As I have said before, no one is safe from these 
+attacks, including us.
+ I hope that we will cover four specific areas here today. 
+One is we have to understand that these attacks have real-world 
+consequences. On May 7th, Colonial Pipeline learned they 
+suffered a ransomware attack impacting their information 
+technology (IT), systems by this Russian-based criminal group 
+called ``DarkSide.'' Recent news reports indicate that hackers 
+accessed the Colonial system through a compromised password of 
+a virtual private network (VPN) account. This account did not 
+use multifactor authentication (MAF), which is a very basic 
+cybersecurity best practice. We will talk more about that and 
+why they did not. This easily allowed the hackers to gain 
+access.
+ Colonial moved quickly to disconnect their operational 
+system to prevent hackers from moving laterally and accessing 
+those systems. That, of course, although an appropriate 
+response to a cyber attack made Colonial's critical pipelines 
+
+--- transcript lines 264,274 (Ranking Member Portman, opening) ---
+terms of this incident.
+ However, organizations obviously have to weigh these 
+consequences against keeping the operations offline, in this 
+case limiting 45 percent of the East Coast fuel supply. 
+Colonial Pipeline paid DarkSide a ransom, we are told, of 75 
+bitcoins worth over $4 million at the time. Yesterday the good 
+news is the Department of Justice (DOJ) announced the recovery 
+of 63.7 of those bitcoins, but DOJ will not be able to recover 
+those ransom payments in other cases. We will talk more about 
+that and how they did it and what that means.
+ I appreciate Mr. Blount's transparency in acknowledging 
+
+--- transcript lines 364,376 (Blount, oral statement) ---
+we take very seriously, and we always operate with the 
+interests of our customers, shippers, and country first in 
+mind.
+ Just 1 month ago, we were the victims of a ransomware 
+attack by a cyber criminal group, and that attack encrypted our 
+IT systems. Although the investigation is still ongoing, we 
+believe the attacker exploited the legacy VPN profile that was 
+not intended to be in use.
+ DarkSide demanded a financial payment in exchange for a key 
+to unlock the impacted systems. We had cyber defenses in place, 
+but the unfortunate reality is that those defenses were 
+compromised.
+ The attack forced us to make difficult choices in real time 
+
+--- transcript lines 534,546 (Peters/Blount on the ransom) ---
+ Chairman Peters. That is all very encouraging to hear, and 
+for the record, I am working on legislation right now to make 
+sure that information is indeed being shared with CISA to get a 
+better understanding of what is happening in ransomware, not 
+just with your company but across the board.
+ Reporting indicates and you have affirmed today that you 
+made the decision to pay the ransom of $4.4 million. We are 
+certainly happy to see that a portion of that is being 
+recovered by the Department of Justice now. My question to you, 
+though, is: Prior to making the decision to pay the ransom, had 
+you consulted with anyone in the Federal Government on whether 
+that would be an appropriate response?
+ Mr. Blount. Thank you for that question, Mr. Chairman. It 
+
+--- transcript lines 674,700 (Portman/Blount on MFA and the legacy VPN) ---
+ Mr. Blount. Ranking Member Portman, yes, sir, that is 
+correct.
+ Senator Portman. OK. There are also news reports about how 
+this happened. As I said in my opening statement, there was a 
+compromised password of a virtual private network account. This 
+account apparently did not use multifactor authentication, 
+which, again, is kind of a basic cybersecurity hygiene item 
+that, companies should have in place, making it harder for 
+people to gain access. Prior to the attack, did your company 
+require all employees to use multifactor authentication?
+ Mr. Blount. Ranking Member Portman, in the case of this 
+particular legacy VPN, it did only have single-factor 
+authentication. It was a complicated password, so I want to be 
+clear on that. It was not a ``Colonial 123'' type password. The 
+investigation is ongoing by Mandiant to try to determine how 
+that material was compromised. But in our normal operation, we 
+use an RSA token allowance in order to create authentication 
+difficulties for remote access.
+ Senator Portman. Would your advice going forward be that 
+multifactor authentication ought to be used?
+ Mr. Blount. Ranking Member Portman, that is absolutely the 
+correct advice.
+ Senator Portman. The Transportation Security Administration 
+(TSA) has given the industry a lot of leeway. Critical 
+infrastructure and voluntary compliance has been the approach. 
+They came out late last month, after your attack, with some new 
+directives, and now there is a mandate that reporting cyber 
+
+--- transcript lines 1118,1140 (Hassan/Blount on the legacy VPN and pen testing) ---
+derived around keeping safe and protecting the asset because of 
+what its main benefit is to the United States.
+ Senator Hassan. OK. I understand that, and I appreciate 
+that answer. But, as you have had conversations with other 
+Senators this morning, you have mentioned that you did not have 
+two-step authentication in place. You have mentioned a legacy 
+VPN which, in my understanding, means it was a pretty old VPN. 
+I do not think it is acceptable to understand the critical 
+nature of your product, but then not really have the 
+preparation and the system in place to protect it as if it is 
+critical infrastructure. You really do have an obligation to 
+U.S. communities that you serve and to consumers and to our 
+national security, so I am concerned that it does not seem to 
+have been a formal factor in your analysis of how much to 
+strengthen your systems.
+ Mr. Blount. Senator, we take cybersecurity very seriously. 
+I did reference earlier that the VPN was a legacy VPN----
+ Senator Hassan. Yes.
+ Mr. Blount [continuing]. That we could not see and it did 
+not show up in any pen testing, that is unfortunate. But, 
+again, the safety and the security of the system is highly 
+critical. We have never had our board deny us any funds 
+associated with safety and security, whether it is on the IT 
+
+--- transcript lines 1508,1520 (Hawley/Blount on the TSA review) ---
+their contacts on the TSA side. No one really understood why 
+the word ``refused'' was used.
+ Senator Hawley. So just let me understand your last 
+statement. Are you saying you think that the TSA review would 
+have been redundant, not particularly helpful? You said it is 
+duplicative of things you do on your own end internally.
+ Mr. Blount. Senator, I think in this case it probably would 
+not have resulted in finding that legacy VPN. Again, they do 
+not actually go into the system. It is a questionnaire format 
+type thing. I am not saying it would not be valuable. It very 
+much could be. I think each one of these tests are slightly 
+different, so if there is that one little piece that can make 
+the difference in seeing something, that is helpful. Again, 
+
+--- transcript lines 1534,1560 (Hawley/Blount on cybersecurity spend) ---
+owners, which actually exceeded your net income for that year. 
+That is a pretty good return. What do you invest in 
+cybersecurity every year?
+ Mr. Blount. That is a great question, Senator. We invested 
+over $200 million over the last five years in our IT systems.
+ Senator Hawley. And that is cybersecurity? How about on an 
+annual basis for cybersecurity? $670 million distributed in 
+dividends in 2018 alone, give me a sense of--you are operating 
+not unlike a public utility, right? I mean, we covered the fact 
+you serve 45, 50 percent of customers on the East Coast; you 
+transport 100 million gallons a day. The attack on you led to 
+16,000 gas stations being shut down. So just give me a sense 
+of--given the importance of your company, the size of it, the 
+reliance, what are you doing in terms of your investment for 
+cybersecurity? I know you are paying your investors well.
+ Mr. Blount. Yes, Senator, great question. Our dividend 
+policy is not much different than any other Midstream company, 
+so I want to state that first. Our owners have never denied us 
+any opportunity to spend what we need to spend in order to keep 
+the pipeline safe and secure.
+ Senator Hawley. Which is about what a year?
+ Mr. Blount. Take the average, over $200 million in the last 
+five years.
+ Senator Hawley. OK, I tell you what----
+ Mr. Blount. Over $1.5 billion in system integrity every 
+five years.
+ Senator Hawley. Got it. We will give you this as a question 
+
+--- transcript lines 1692,1702 (Blount on sharing the Mandiant results) ---
+Committee once it is completed?
+ Mr. Blount. Senator, I do not think there are any issues 
+with that. What we have been trying to do all along the way is 
+share the information as we learn it. We have been very 
+straightforward about the legacy VPN. Hopefully that will help 
+out other operators who have similar type legacy assets.
+ We know from working with Mandiant that is not an unusual 
+issue for companies. I think we will continue to communicate as 
+we go through the process with Mandiant, but our ability and 
+desire to sit down with you is ready and available when you 
+would like that.
+

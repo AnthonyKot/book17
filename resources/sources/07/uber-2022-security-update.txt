@@ -1,0 +1,25 @@
+Uber Newsroom, 'Security update', 16 September 2022 (updated 19 Sept 2022) - MFA-fatigue case required by CONTEXT §6
+Source: https://www.uber.com/newsroom/security-update/
+Fetched: 2026-09-02 (curl (uber.com returned 406 without an Accept header))
+Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
+
+September 16, 2022
+Security update
+UT
+Uber Team
+Share this article
+FacebookLinkedinX socialLink
+September 19, 10:45am PT
+While our investigation is still ongoing, we are providing an update on our response to last week’s security incident.
+What happened?
+An Uber EXT contractor had their account compromised by an attacker. It is likely that the attacker purchased the contractor’s Uber corporate password on the dark web, after the contractor’s personal device had been infected with malware, exposing those credentials. The attacker then repeatedly tried to log in to the contractor’s Uber account. Each time, the contractor received a two-factor login approval request, which initially blocked access. Eventually, however, the contractor accepted one, and the attacker successfully logged in.
+From there, the attacker accessed several other employee accounts which ultimately gave the attacker elevated permissions to a number of tools, including G-Suite and Slack. The attacker then posted a message to a company-wide Slack channel, which many of you saw, and reconfigured Uber’s OpenDNS to display a graphic image to employees on some internal sites.
+How did we respond?
+Our existing security monitoring processes allowed our teams to quickly identify the issue and move to respond. Our top priorities were to make sure the attacker no longer had access to our systems; to ensure user data was secure and that Uber services were not affected; and then to investigate the scope and impact of the incident.
+Here are some of the key actions we took, and continue to take: 
+We identified any employee accounts that were compromised or potentially compromised and either blocked their access to Uber systems or required a password reset.
+We disabled many affected or potentially affected internal tools.
+We rotated keys (effectively resetting access) to many of our internal services.
+We locked down our codebase, preventing any new code changes.
+When restoring access to internal tools, we required employees to re-authenticate. We are also further strengthening our multi-factor authentication (MFA) policies.
+We added additional monitoring of our internal environment to keep an even closer eye on any further suspicious activity.

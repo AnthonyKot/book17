@@ -1,0 +1,10 @@
+CNN, Brian Fung and Geneva Sands, 'Ransomware attackers used compromised password to access Colonial Pipeline network, company confirms', 4/5 June 2021 - folk story only; quoted sentences only
+Source: https://edition.cnn.com/2021/06/04/politics/colonial-pipeline-ransomware-attack-password/index.html
+Fetched: 2026-09-02 (curl)
+Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
+
+ Ransomware attackers gained access to Colonial Pipeline’s computer networks in April using a compromised password, according to the company and a cybersecurity firm it hired – leading to the deliberate shutdown of one of America’s most important fuel distribution companies and the panic gas buying that ensued for days.
+ The password had been linked to a disused virtual private networking account used for remote access, FireEye confirmed to CNN, and the account was not guarded by an extra layer of security known as multi-factor authentication. 
+ Bloomberg first reported the password vulnerability following interviews with Charles Carmakal, senior vice president at Mandiant — the forensic division of FireEye — and Joseph Blount, Colonial’s CEO. 
+ The password that was used was part of a batch of leaked passwords found on the dark web, according to Bloomberg’s interview with Carmakal. But it’s unclear how the hackers got the credentials for the remote access account. 
+ “We don’t see any evidence of phishing for the employee whose credentials were used. We have not seen any other evidence of attacker activity before April 29,” Carmakal told Bloomberg. 

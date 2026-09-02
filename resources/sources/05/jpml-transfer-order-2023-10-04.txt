@@ -1,0 +1,87 @@
+# U.S. Judicial Panel on Multidistrict Litigation, In re: MOVEit Customer Data Security Breach Litigation, MDL No. 3083, Transfer Order, Doc. 312, filed 2023-10-04 (pp. 1-3 excerpted; PDF alongside, gitignored). Fetched 2026-09-02.
+
+         Before the Panel: * Plaintiff in the District of Minnesota Bailey action moves under 28
+U.S.C. § 1407 to centralize this litigation regarding a vulnerability in a widely-used file transfer
+software in the District of Minnesota. Plaintiff’s motion includes ten actions pending in five
+districts, as listed on Schedule A. Since the filing of the motion, the Panel has been notified of 91
+related actions in 22 districts. 1
+
+       The parties differ significantly as to whether we should create an MDL, what defendants
+should be included in that MDL, and where any MDL should be centralized. Plaintiffs in 33
+actions and potential tag-along actions support centralization. The following defendants also
+support centralization: Progress Software Corp. and Ipswitch, Inc. (collectively, Progress);
+Pension Benefits Information, LLC, and Berwyn Group (collectively, PBI); 2 Athene Annuity and
+Life Company; F&G Annuities & Life, Inc.; Genworth Financial, Inc.; Milliman, Inc. and
+Milliman Solutions, LLC; and Union Bank and Trust Company. Fidelity Investments Institutional
+Operations Company LLC and FMR LLC do not oppose centralization.
+
+        Several parties oppose centralization, and others oppose transfer of their cases or, more
+broadly, cases brought against certain defendants. Plaintiffs in the Northern District of California
+Berry/Ng action oppose centralization and, alternatively, request exclusion of their putative
+statewide class action from the MDL. Plaintiffs in the Eastern District of Virginia Harding, Hale,
+and Smith and the District of New Jersey Weissman potential tag-along actions oppose
+centralization; at oral argument, certain of these plaintiffs suggested that we create a limited-
+purpose MDL for discovery of claims against only Progress. Plaintiffs in the Eastern District of
+
+
+*
+   Judges David C. Norton and Roger T. Benitez took no part in the decision of this matter.
+Additionally, one or more Panel members who could be members of the putative classes in this
+litigation have renounced their participation in these classes and have participated in this decision.
+1
+ These and any other related actions are potential tag-along actions. See Panel Rules 1.1(h), 7.1
+and 7.2.
+2
+ Defendant PBI is a prominent user of MOVEit software that provides audit and address research
+services, including identifying decedents, lost participants or policyholders, and beneficiaries to
+pensions, insurance companies, third-party administrators, financial institutions, and other entities.
+             Case MDL No. 3083 Document 312 Filed 10/04/23 Page 2 of 6
+
+                                                -2-
+
+
+Virginia King and Manar potential tag-along actions oppose transfer of their actions. Plaintiffs in
+the District of Maryland Hunter and Gregory potential tag-along actions oppose transfer of cases
+against the Johns Hopkins defendants. Plaintiff in the Eastern District of Virginia Behrens
+potential tag-along action opposes centralization and, alternatively, suggests centralization in
+District of Minnesota for cases against only Progress and PBI. Defendant Illinois Department of
+Innovation and Technology opposes transfer of the Central District of Illinois Acevedo potential
+tag-along action, largely on Eleventh Amendment immunity grounds. The Johns Hopkins
+defendants 3 in five District of Maryland potential tag-along actions oppose including the claims
+against them in any MDL and, alternatively, request separation and remand of the claims against
+them or, further, that actions in which they and Progress are defendants proceed in the District of
+Maryland. Plaintiffs in four Southern District of New York potential tag-along actions and
+Defendant Teachers Insurance and Annuity Association of America (TIAA) oppose inclusion of
+the cases against TIAA in any MDL. Plaintiffs in four potential tag-along actions against the
+Milliman defendants oppose inclusion of cases against Milliman in any MDL. Potential tag-along
+plaintiff in the District of Nebraska Jeanfort action opposes centralization of cases that do not
+exclusively name PBI or Progress as defendants. Potential tag-along plaintiffs in the District of
+Oregon Malo action oppose centralization of their claims against Performance Health Technology.
+Defendants Maximus, Inc. and Maximus Federal Services, Inc., oppose centralization (but take no
+position on creating an MDL involving only Progress) and, alternatively, request exclusion of
+cases against them from any MDL. Defendant Prudential opposes centralization and, alternatively,
+suggests separation and remand of the claims against it.
+
+        The parties variously, as their primary or alternative position, support centralization in one
+or more of the following districts: the Northern District of California, the Eastern District of
+Louisiana, the District of Massachusetts, the District of Minnesota, the District of Nebraska, and
+the Eastern District of Virginia. Certain parties ask that we create defendant-specific MDLs for
+their claims against Milliman entities, Maximus entities, Genworth Financial entities, and TD
+Ameritrade.
+
+         After considering the argument of counsel, we find that centralization of these actions in
+the District of Massachusetts will serve the convenience of the parties and witnesses and promote
+the just and efficient conduct of the litigation. All actions can be expected to share factual
+questions arising from allegations that a vulnerability in Progress Software Company’s MOVEit
+Transfer and MOVEit Cloud file transfer services was exploited by a Russian cybergang in May
+2023, which to date is estimated to have compromised the personally identifying information (PII) 4
+of over 55 million people. On May 31, 2023, Progress posted a notice on its website stating it had
+discovered an SQL injection vulnerability in its MOVEit file transfer services and a related breach
+in its network and systems. Plaintiffs are individuals whose PII was potentially compromised who
+
+to share common and complex factual questions as to how the MOVEit vulnerability occurred, the
+circumstances of the unauthorized access and data exfiltration, and Progress’s response to it, as
+well as the response of various downstream MOVEit users and customer-facing defendants with
+whom plaintiffs did business. Centralization offers substantial opportunities to streamline pretrial
+proceedings; reduce duplicative discovery and conflicting pretrial obligations; prevent inconsistent
+rulings on common Daubert challenges and summary judgment motions; and conserve the

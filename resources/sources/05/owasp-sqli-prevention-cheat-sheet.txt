@@ -1,0 +1,10 @@
+# OWASP Cheat Sheet Series, "SQL Injection Prevention Cheat Sheet" (CC BY-SA 4.0). Fetched 2026-09-02. Verbatim excerpts.
+
+Option 1: Use of Prepared Statements (with Parameterized Queries)
+Option 2: Use of Properly Constructed Stored Procedures
+Option 3: Allow-list Input Validation
+Option 4: STRONGLY DISCOURAGED: Escaping All User Supplied Input
+
+Defense Option 1: Prepared Statements (with Parameterized Queries)¶
+When developers are taught how to write database queries, they should be told to use prepared statements with variable binding (aka parameterized queries). Prepared statements are simple to write and easier to understand than dynamic queries, and parameterized queries force the developer to define all SQL code first and pass in each parameter to the query later.
+If database queries use this coding style, the database will always distinguish between code and data, regardless of what user input is supplied. Also, prepared statements ensure that an attacker cannot change the intent of a query, even if SQL commands are inserted by an attacker.

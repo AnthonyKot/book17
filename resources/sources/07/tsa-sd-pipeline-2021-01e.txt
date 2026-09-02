@@ -1,0 +1,32 @@
+TSA Security Directive Pipeline-2021-01E (May 2025 renewal of the 26 May 2021 directive)
+Source: https://www.tsa.gov/sites/default/files/tsa-security-directive-pipeline-2021-01e-and-memo-508c.pdf
+Fetched: 2026-09-02 (tsa.gov returned 403 to curl; text obtained through the r.jina.ai reader proxy)
+Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
+
+SUBJECT  Enhancing Pipeline Cybersecurity 
+EFFECTIVE DATE  May 3, 2025 
+EXPIRATION DATE  May 2, 2026 
+CANCELS AND SUPERSEDES  Security Directive Pipeline-2021-01D 
+APPLICABILITY  Owners and operators of a hazardous liquid and natural gas 
+pipeline or a liquefied natural gas facility notified by TSA 
+that their pipeline system or facility is critical 
+AUTHORITY  49 U.S.C. 114(d), (f), (l) and (m) 
+LOCATION  All locations within the United States 
+I.  PURPOSE AND GENERAL INFORMATION 
+Due to the ongoing cybersecurity threat to pipeline systems and associated infrastructure, the 
+Transportation Security Administration (TSA) is issuing this Security Directive. 1                                                                         
+> 1TSA is issuing this Security Directive under the authority of 49 U.S.C. 114( l)(2)(A), which states:
+> “Notwithstanding any other provision of law or executive order (including an executive order requiring acost-benefit analysis), if the Administrator determines that aregulation or Security Directive must be issued immediately
+> in order to protect transportation security, the Administrator shall issue the regulation or Security Directive without
+> providing notice or an opportunity for comment and without prior approval of the Secretary.”
+All 
+revisions to this Security Directive series from the previous version, Security Directive 
+Pipeline-2021-01 D, are highlighted in bold. 
+This Security Directive continues to require three critical actions. First, it requires TSA-specified Owner/Operators to report cybersecurity incidents to the Department of Homeland 
+Security’s Cybersecurity and Infrastructure Security Agency (CISA). Second, it requires 
+Owner/Operators to designate a Cybersecurity Coordinator and alternate(s) sufficient to 
+ensure either the primary or alternate Cybersecurity Coordinator is available to TSA and 
+CISA at all times (24 hours per day, seven days per week) to coordinate cybersecurity 
+practices and address any incidents that arise. Third, it requires Owner/Operators to review 
+their current activities against TSA’s recommendations for pipeline cybersecurity to assess 2
+cyber risks, identify any gaps, develop remediation measures, and report the results to TSA 
