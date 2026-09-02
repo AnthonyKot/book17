@@ -51,7 +51,7 @@ should not conclude from a ranking.
 |---|---|---|---|
 | 0 | — (Introduction, Methodology) | How the list is made | what a ranking can and cannot tell you |
 | 1 | A01 Broken Access Control | Capital One, 2019 (SSRF → metadata service → over-broad role) | IMDSv2; least privilege for roles |
-| 2 | A02 Security Misconfiguration | MongoDB ransom wave, 2017 (no-auth default, internet-bound) | the default changed to localhost; exposed count fell |
+| 2 | A02 Security Misconfiguration | MongoDB ransom wave, 2017 (no-auth default, internet-bound) | the default changed to localhost; exposed data fell, the host count is contested |
 | 3 | A03 Software Supply Chain Failures | xz-utils backdoor, 2024 (maintainer capture, build-script injection) | reproducible builds; the unfunded-maintainer threat model |
 | 4 | A04 Cryptographic Failures | Adobe, 2013 (encrypted-not-hashed passwords, ECB) | password hashing done right; LinkedIn 2012 as mirror |
 | 5 | A05 Injection | MOVEit Transfer, 2023 (SQLi in a file-transfer product) | parameterised queries; why the bug still ships |
@@ -113,8 +113,10 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   and why "least privilege" is the boring answer that would have stopped it. Must state
   clearly what SSRF is and why OWASP folded it into A01.
 - **2 Security Misconfiguration — MongoDB.** Job: a default, not a bug. The 2017 ransom
-  wave as measured at the time; the default-bind change; the exposed count afterward.
-  The defense chapter with the best numbers in the book — use them.
+  wave as measured at the time; the three defaults (package config from 2.6, binary
+  default from 3.6, the images and old versions that had neither); what fell afterward
+  (Shodan's exposed-data series holds; the host-count series is unsourced — say so).
+  The defense chapter with the best numbers in the book — use them, with their method.
 - **3 Supply Chain — xz.** Job: the two-year capture of a maintainer, told from the
   commits and the mailing list (the book16 dig method). The build-script injection
   explained at the level of "what did the tarball contain that the git tree did not".
@@ -169,3 +171,22 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   closed"). Corrections logged per chapter in drafts/reviews/NN-applied.md. The link
   checker now skips resources/ snapshots (raw HTML saved as evidence is not a page).
   Book published at anthonykot.github.io/book17 with these three chapters.
+- 2026-09-02 — Chapter 2 pitch gate (standard mode): four pitches written from the record
+  (drafts/02.pitches.md); the user chose A ("three defaults, not one"), with D's
+  statement-versus-change sequence folded in as a ledger row. Correction to §3/§6: the
+  record supports "exposed data fell" (Shodan 2015→2020), not "exposed count fell" — the
+  only host-count series (ZDNet 2020, 60,000→48,000) is unsourced. The register now says
+  so rather than promising a number the chapter cannot source.
+- 2026-09-02 — Chapter 5 pitch gate (standard mode): four pitches (drafts/05.pitches.md);
+  the user chose A ("one function, three patches"), anchored on Rapid7's patch diff and
+  Progress's own filings; B's victim-count method and D's 27–31 May timeline fold in as
+  ledger rows. Known gap at pick time: the three Progress Knowledge Base advisories could
+  not be fetched as text by any non-browser route; the chapter quotes them only from a
+  saved copy or marks those claims open.
+- 2026-09-02 — Chapter 7 pitch gate (standard mode): four pitches (drafts/07.pitches.md);
+  the user chose A ("not intended to be in use"), anchored on Carmakal's House statement
+  and Blount's Senate testimony; B (ransom recovery), C (TSA directives) and D (Google's
+  number read carefully) fold in as ledger rows and paragraphs. Known gap at pick time:
+  several .gov documents were fetched through reader proxies and are flagged in
+  SOURCES.md for re-verification; the original 2021 SD-02 is SSI, only the 2024 renewal
+  is public.
