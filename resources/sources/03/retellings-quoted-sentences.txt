@@ -13,6 +13,10 @@ By January 2023, Jia Tan’s code was being integrated into XZ Utils. Over the n
 
 Security researchers agree, at least, that it’s unlikely that Jia Tan is a real person, or even one person working alone. Instead, it seems clear that the persona was the online embodiment of a new tactic from a well-organized group—a tactic that nearly worked. That means we should expect to see Jia Tan return by other names: seemingly polite and enthusiastic contributors to open source projects, hiding a government’s secret intentions in their code commits.
 
+Only some chance detective work carried out by a lone Microsoft engineer, Andres Freund—who’d detected a strange delay in how the remote connection protocol SSH was running in a version of the Linux variant Debian—caught the spy trick before it ended up in many millions of systems worldwide.
+
+Peeling back Jia Tan’s documented history in the open source programming world reveals that they first appeared in November 2021 with the GitHub username JiaT75, then made contributions to other open source projects using the name Jia Tan, or sometimes Jia Cheong Tan, for more than a year before beginning to submit changes to XZ Utils.
+
 === Ars Technica ===
           Researchers have found a malicious backdoor in a compression tool that made its way into widely used Linux distributions, including those from Red Hat and Debian.
 
@@ -24,9 +28,10 @@ The malicious changes were submitted by JiaT75, one of the two main xz Utils dev
 
 [Update: Researchers who spent the weekend reverse engineering the updates say that the backdoor injected malicious code during SSH operations, rather than bypassed authenticatiion.]
 
-=== Wikipedia lede ===
-[see WebFetch summary in SOURCES.md; the CC BY-SA lede as fetched 2026-09-01:]
-On 29 March 2024, a malicious backdoor was discovered in the compression software XZ Utils. ... Microsoft employee Andres Freund identified the exploit. The malicious code was deliberately inserted in February 2024 by someone using the pseudonym "Jia Tan", compromising versions 5.6.0 and 5.6.1. The vulnerability received CVE-2024-3094 and the highest possible CVSS score of 10.0 ... The attacker used "sock puppetry in a pressure campaign against the original maintainer" ...
+=== Wikipedia ===
+Superseded 2026-09-02: the lede and the Background section are saved in full in wikipedia-xz-utils-backdoor-2026-09-02.txt (CC BY-SA 4.0). Phrases the chapter quotes and where they sit on that date:
+- lede: "The backdoor gives an attacker who possesses a specific private key the ability to remotely execute code on an affected system through OpenSSH"; "the exploit was deliberately included into the software in February 2024 by a user going by the name of "Jia Tan", affecting both version 5.6.0 and 5.6.1"; "being the result of a campaign lasting years".
+- Background: "They used sock puppetry in a pressure campaign against the original maintainer of XZ Utils"; "Some of the suspected sock puppets include accounts with usernames like "Jigar Kumar""; "Microsoft employee and developer Andres Freund reported the backdoor after investigating a performance regression in a development version of Debian".
 
 === Malka ===
 In March 2024, a backdoor was discovered in xz, a (de)-compression software that is regularly used at the core of Linux distributions to unpack source tarballs of packaged software. The backdoor had been covertly inserted by a malicious maintainer under the pseudonym of Jia Tan over a period of three years. This event deeply stunned the open source community as the attack was both of massive impact (it allowed remote code execution on all affected machines that had ssh installed) and extremely difficult to detect. In fact, it was only thanks to the diligence (and maybe luck) of Andres Freund – a Postgres developer working at Microsoft – that the catastrophe was avoided: while investigating a seemingly unrelated 500ms performance regression in ssh that he was experiencing on several Debian unstable machines, he was able to trace it back to the liblzma library, identify the backdoor and document it.
@@ -36,3 +41,9 @@ In this article, I'll discuss the inner workings of the xz backdoor and how I th
 In conclusion, at the point in the nixpkgs graph where the xz package is built, the GitHub source archive cannot be used and we have to rely on the maintainer provided tarball, and hence, trust it. That does not mean that further verification cannot be implemented in nixpkgs, though...
 
 [footnote 5] This illustrates the power and limitation of this method: it only detects modifications of the tarball that have an impact on the final result. In the case of the xz backdoor, NixOS executables did not contain the backdoor and as such without any modification we would not have discovered the backdoor. So yes, the title is a little bit catchy, but illustrates the idea.
+
+=== Word-presence checks on the full retellings (curl, 2026-09-02; counts of case-insensitive matches in the article text, navigation stripped) ===
+WIRED (Greenberg, 2,676 words): tarball 0; "git " 0; release 0; signed 0; Landlock 0; sandbox 0; GitHub 3 (the account and its suspension); Microsoft 1 ("a lone Microsoft engineer").
+Ars Technica (Goodin, 1,945 words): tarball 1 (the sentence quoted above, which states the tarball/git distinction); Landlock 0; sandbox 0.
+Wikipedia (full article as served by the API, 1,129 words): tarball 0; Landlock 0; sandbox 0.
+These counts support two ledger rows: WIRED's account contains no tarball/tree distinction; neither Ars nor Wikipedia mentions the Landlock sabotage.

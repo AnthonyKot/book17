@@ -1,0 +1,167 @@
+### git cat-file tag <tag> | grep -E '^tagger|BEGIN PGP SIGNATURE' for v5.4.0..v5.6.2 (run 2026-09-01)
+-- v5.4.0
+tagger Lasse Collin <lasse.collin@tukaani.org> 1670957206 +0200
+-----BEGIN PGP SIGNATURE-----
+-- v5.4.1
+tagger Lasse Collin <lasse.collin@tukaani.org> 1673456042 +0200
+-----BEGIN PGP SIGNATURE-----
+-- v5.4.2
+tagger Jia Tan <jiat0218@gmail.com> 1679153836 +0800
+-----BEGIN PGP SIGNATURE-----
+-- v5.4.3
+tagger Jia Tan <jiat0218@gmail.com> 1683211416 +0800
+-----BEGIN PGP SIGNATURE-----
+-- v5.4.4
+tagger Jia Tan <jiat0218@gmail.com> 1690983762 +0800
+-----BEGIN PGP SIGNATURE-----
+-- v5.4.5
+tagger Jia Tan <jiat0218@gmail.com> 1698841607 +0800
+-----BEGIN PGP SIGNATURE-----
+-- v5.4.6
+tagger Jia Tan <jiat0218@gmail.com> 1706269428 +0800
+-----BEGIN PGP SIGNATURE-----
+-- v5.5.0alpha
+tagger Lasse Collin <lasse.collin@tukaani.org> 1672673109 +0200
+-----BEGIN PGP SIGNATURE-----
+-- v5.5.1alpha
+tagger Jia Tan <jiat0218@gmail.com> 1706269119 +0800
+-----BEGIN PGP SIGNATURE-----
+-- v5.5.2beta
+tagger Jia Tan <jiat0218@gmail.com> 1707933319 +0800
+-----BEGIN PGP SIGNATURE-----
+-- v5.6.0
+tagger Jia Tan <jiat0218@gmail.com> 1708762926 +0800
+-----BEGIN PGP SIGNATURE-----
+-- v5.6.1
+tagger Jia Tan <jiat0218@gmail.com> 1709972160 +0800
+-----BEGIN PGP SIGNATURE-----
+-- v5.6.2
+tagger Lasse Collin <lasse.collin@tukaani.org> 1717000778 +0300
+-----BEGIN PGP SIGNATURE-----
+
+### git log --format='%h %ad %an %s' --date=short -i --grep='website' --until=2024-03-28  (the URL-change commits)
+7f6d9ca3 2024-02-12 Lasse Collin doxygen/footer.html: Add missing closing tags and don't open a new tab.
+22d86192 2024-01-19 Jia Tan xz: Update website URLs in the man pages.
+6b63c4c6 2024-01-19 Jia Tan liblzma: Update website URL.
+fce47580 2024-01-19 Jia Tan Docs: Update website URLs.
+c26812c5 2024-01-19 Jia Tan Build: Update website URL.
+6327a045 2022-12-20 Jia Tan Doxygen: Update Doxyfile.in from 1.4.7 to 1.8.17.
+
+### git show --stat for the four commits of 2024-01-19
+22d86192f8cf00902a1f90ee2a83ca600794459b 2024-01-19 23:08:14 +0800 Jia Tan
+    xz: Update website URLs in the man pages.
+
+ src/xz/xz.1       | 6 +++---
+ src/xzdec/xzdec.1 | 4 ++--
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+6b63c4c6139fa1bb21b570521d3d2b4a608bc34d 2024-01-19 23:08:14 +0800 Jia Tan
+    liblzma: Update website URL.
+
+ dos/config.h           | 2 +-
+ src/liblzma/api/lzma.h | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+fce4758018f3a3589236f3fe7999fd9dd08c77e9 2024-01-19 23:08:14 +0800 Jia Tan
+    Docs: Update website URLs.
+
+ .github/SECURITY.md        |  2 +-
+ COPYING                    |  3 ++-
+ README                     |  4 ++--
+ doc/faq.txt                |  2 +-
+ doc/lzma-file-format.txt   | 18 +++++++++---------
+ windows/README-Windows.txt |  3 ++-
+ 6 files changed, 17 insertions(+), 15 deletions(-)
+
+c26812c5b2c8a2a47f43214afe6b0b840c73e4f5 2024-01-19 23:08:14 +0800 Jia Tan
+    Build: Update website URL.
+
+ CMakeLists.txt | 2 +-
+ configure.ac   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+### git show c26812c5 (Build: Update website URL) diff
+commit c26812c5b2c8a2a47f43214afe6b0b840c73e4f5
+Author: Jia Tan <jiat0218@gmail.com>
+Date:   Fri Jan 19 23:08:14 2024 +0800
+
+    Build: Update website URL.
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 478b879c..d2d29db6 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -59,7 +59,7 @@ include(cmake/tuklib_mbstr.cmake)
+ 
+ set(PACKAGE_NAME "XZ Utils")
+ set(PACKAGE_BUGREPORT "xz@tukaani.org")
+-set(PACKAGE_URL "https://tukaani.org/xz/")
++set(PACKAGE_URL "https://xz.tukaani.org/xz-utils/")
+ 
+ # Get the package version from version.h into PACKAGE_VERSION variable.
+ file(READ src/liblzma/api/lzma/version.h PACKAGE_VERSION)
+diff --git a/configure.ac b/configure.ac
+index 9584c4ac..b40118bc 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -18,7 +18,7 @@
+ AC_PREREQ([2.69])
+ 
+ AC_INIT([XZ Utils], m4_esyscmd([/bin/sh build-aux/version.sh]),
+-	[xz@tukaani.org], [xz], [https://tukaani.org/xz/])
++	[xz@tukaani.org], [xz], [https://xz.tukaani.org/xz-utils/])
+ AC_CONFIG_SRCDIR([src/liblzma/common/common.h])
+ AC_CONFIG_AUX_DIR([build-aux])
+ AC_CONFIG_MACRO_DIR([m4])
+
+### Re-run 2026-09-02 against the same clone (HEAD 28a66a3d, 2026-08-20) — raw receipts for the claims register
+
+### git log --committer='Jia Tan' --reverse --format='%h %cd %cn <%ce> | author %an %ad | %s' --date=short | head -3
+8ace358d 2022-12-30 Jia Tan <jiat0218@gmail.com> | author Jia Tan 2022-12-16 | CMake: Update .gitignore for CMake artifacts from in source build.
+5f7ce42a 2022-12-30 Jia Tan <jiat0218@gmail.com> | author Jia Tan 2022-12-20 | liblzma: Fix lzma_microlzma_encoder() return value.
+799ead16 2022-12-30 Jia Tan <jiat0218@gmail.com> | author Jia Cheong Tan 2022-12-20 | Doxygen: Update .gitignore for generating docs for in source build.
+
+### git log --author='jiat0218@gmail.com' --reverse --format='%h %ad %an <%ae> | committer %cn %cd | %s' --date=short | head -3
+6468f7e4 2022-01-28 jiat75 <jiat0218@gmail.com> | committer Lasse Collin 2022-02-07 | liblzma: Add NULL checks to LZMA and LZMA2 properties encoders.
+aa75c556 2022-06-10 Jia Tan <jiat0218@gmail.com> | committer Lasse Collin 2022-06-10 | Tests: Created tests for hardware functions.
+1e3eb618 2022-06-03 jiat75 <jiat0218@gmail.com> | committer Lasse Collin 2022-06-14 | Added parallel test artifacts to .gitignore
+
+### commits per author, author date in 2023 (git log --since=2023-01-01 --until=2024-01-01 --author=... --format=%h | wc -l)
+Lasse Collin: 164
+Jia Tan: 313
+all: 501
+
+### git log --author='Lasse Collin' --until=2024-02-24 --format='%h %ad %s' --date=short -3  (last Collin commits before the v5.6.0 tag of 2024-02-24)
+4c81c961 2024-02-22 CMake: Add LOCALEDIR to the windres workaround.
+de4337fd 2024-02-22 xz: Landlock: Fix error message if input file is a directory.
+120da10a 2024-02-22 liblzma: Disable branchless C version in range decoder.
+
+### PGP signature block present in each tag object (git cat-file tag X | grep -c 'BEGIN PGP SIGNATURE'); the signatures were not verified against a key
+v5.4.2: tagger Jia Tan ; signature blocks: 1
+v5.4.3: tagger Jia Tan ; signature blocks: 1
+v5.4.4: tagger Jia Tan ; signature blocks: 1
+v5.4.5: tagger Jia Tan ; signature blocks: 1
+v5.4.6: tagger Jia Tan ; signature blocks: 1
+v5.5.1alpha: tagger Jia Tan ; signature blocks: 1
+v5.5.2beta: tagger Jia Tan ; signature blocks: 1
+v5.6.0: tagger Jia Tan ; signature blocks: 1
+v5.6.1: tagger Jia Tan ; signature blocks: 1
+
+### git show --stat --format='%h %ad %an %s' --date=short 22d86192 fce47580  (the two URL commits not shown in full above)
+22d86192 2024-01-19 Jia Tan xz: Update website URLs in the man pages.
+ src/xz/xz.1       | 6 +++---
+ src/xzdec/xzdec.1 | 4 ++--
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+fce47580 2024-01-19 Jia Tan Docs: Update website URLs.
+ .github/SECURITY.md        |  2 +-
+ COPYING                    |  3 ++-
+ README                     |  4 ++--
+ doc/faq.txt                |  2 +-
+ doc/lzma-file-format.txt   | 18 +++++++++---------
+ windows/README-Windows.txt |  3 ++-
+ 6 files changed, 17 insertions(+), 15 deletions(-)
+
+### git log --all --oneline -- m4/build-to-host.m4 | wc -l
+0
+### git ls-tree --name-only v5.6.0 m4/ | grep -c build-to-host
+0

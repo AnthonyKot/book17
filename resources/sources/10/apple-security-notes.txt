@@ -2,8 +2,8 @@ SOURCE: Apple security notes for the fix, fetched 2026-09-01.
   HT6146  About the security content of iOS 6.1.6      https://support.apple.com/en-us/HT6146
   HT6147  About the security content of iOS 7.0.6      https://support.apple.com/en-us/HT6147
   HT6150  About the security content of OS X Mavericks 10.9.2 and Security Update 2014-001  https://support.apple.com/en-us/HT6150
-The pages carry a "Published Date: November 06, 2023" footer (page revision); the update itself shipped 21 Feb 2014
-(Langley, 22 Feb 2014: "Yesterday, Apple pushed..."; CVE record datePublished 2014-02-22). The Data Security entries, verbatim:
+The live pages carry a "Published Date: November 06, 2023" footer (page revision). Release dates are NOT on these pages; see
+apple-security-updates-HT1222-2014.txt (Apple's list: iOS 7.0.6 and 6.1.6 on 21 Feb 2014, OS X 10.9.2 on 25 Feb 2014). The Data Security entries, verbatim:
 
 == HT6146 (iOS 6.1.6) ==
 Data Security

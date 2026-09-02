@@ -1,0 +1,28 @@
+SOURCE: Apple, "Apple security updates" (HT1222), as archived by the Wayback Machine on 5 March 2014:
+  https://web.archive.org/web/20140305id_/http://support.apple.com/kb/HT1222
+Vendor release list (name / released for / release date). Fetched 2026-09-01. The rows around the fix, verbatim (one field per line):
+
+QuickTime 7.7.5
+            Windows 7, Vista, XP SP2 or later
+            25 Feb 2014
+            OS X Mavericks 10.9.2 and Security Update 2014-001
+            OS X Lion v10.7.5, OS X Mountain Lion v10.8.5, OS X Mavericks 10.9 and 10.9.1
+            25 Feb 2014
+            Safari 6.1.2 and Safari 7.0.2
+            OS X Lion v10.7.5, OS X Mountain Lion v10.8.5, OS X Mavericks v10.9.1
+            25 Feb 2014
+            Apple TV 6.0.2
+            Apple TV 2nd generation and later
+            21 Feb 2014
+            iOS 7.0.6
+            iPhone 4 and later, iPod touch (5th generation), iPad 2 and later
+            21 Feb 2014
+            iOS 6.1.6
+            iPhone 3GS, iPod touch (4th generation)
+            21 Feb 2014
+
+Page footer: "Last Modified: Feb 25, 2014"
+
+Corroboration, the 2014 copies of the notes themselves:
+  https://web.archive.org/web/20140222id_/http://support.apple.com/kb/HT6147  footer "Last Modified: Feb 21, 2014" (iOS 7.0.6)
+  https://web.archive.org/web/20140226id_/http://support.apple.com/kb/HT6150  footer "Last Modified: Feb 25, 2014" (OS X 10.9.2)

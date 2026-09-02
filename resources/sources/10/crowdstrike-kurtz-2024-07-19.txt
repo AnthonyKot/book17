@@ -20,3 +20,35 @@ We will provide continuous updates through our Support Portal.
 We have mobilized all of CrowdStrike to help you and your teams. If you have questions or need additional support, please reach out to your CrowdStrike representative or Technical Support.
 
 We know that adversaries and bad actors will try to exploit events like this. I encourage everyone to  ...
+
+
+== Same hub, remediation guidance for Windows hosts (undated on the page; the 19 July 2024 instructions), excerpts on repeated crashes ==
+ng at 04:09 UTC was identified and deprecated on operational systems. When deprecation occurs, a new file is deployed, but the old file can remain in the sensor’s directory.
+
+Out of an abundance of caution, and to prevent Windows systems from further disruption, the impacted version of the channel file was added to Falcon’s known-bad list in the CrowdStrike Cloud.
+
+No sensor updates, new channel files, or code was deployed from the CrowdStrike Cloud.
+
+For operational machines, this is a hygiene action. For impacted systems with strong network connectivity, this action could also result in the automatic recovery of systems in a boot loop.
+
+This was conf
+[...]
+w can be used.
+
+                    Updated 2024-07-21 0932 UTC                
+
+                    How do I Remediate Individual Hosts?
+
+Reboot the host to give it an opportunity to download the reverted channel file. We strongly recommend putting the host on a wired network (as opposed to WiFi) prior to rebooting as the host will acquire internet connectivity considerably faster via ethernet.
+
+If the host crashes again on reboot:
+
+Updated 2024-07-22 1758 UTC
+
+Option 1 – Build automated recovery ISOs with drivers
+
+Follow the instructions for Building CrowdStrike Bootable Recovery Images in this manual (PDF) or log in to view in the support portal. Updated 2024-07-26 2105 UTC
+
+Note: Bitlocker-encrypted hosts may require a recovery key.
+
+Review the following video on CrowdStrike Host Remed

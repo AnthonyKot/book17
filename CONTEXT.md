@@ -161,3 +161,11 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
 - 2026-09-01 — Pilot mode for the pitch gate: the drafting agent writes 2–4 pitches,
   picks one with a stated reason, drafts it, and banks the rest; the user re-picks after
   reading. Standard mode (user picks before drafting) resumes for chapters 2, 4–9.
+- 2026-09-02 — Pilots 1, 3, 10 reviewed by the panel (Gemini flash + pro, consolidated
+  adversarially by codex gpt-5.6-sol) and revised. Common pattern across all three first
+  drafts: sources overstated in the direction of the folk story (identity and motive
+  asserted for the xz account; the SSRF-to-metadata step in Capital One stated as fact
+  when the primary record does not show it; CrowdStrike's fix described as "failing
+  closed"). Corrections logged per chapter in drafts/reviews/NN-applied.md. The link
+  checker now skips resources/ snapshots (raw HTML saved as evidence is not a page).
+  Book published at anthonykot.github.io/book17 with these three chapters.

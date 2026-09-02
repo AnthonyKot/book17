@@ -3,7 +3,7 @@
 #
 #   checks/quotes.py     every OWASP quotation is in the fetched spine      GATING
 #   checks/claims.py     every incident claim marker has a row, and back   GATING (open rows: advisory)
-#   internal links       entirely inside this repo                          GATING
+#   internal links       pages (not resources/ snapshots) inside this repo      GATING
 #   count sync           contents page vs chapters on disk                  GATING
 #   checks/structure.py  TEMPLATE beats, word bounds, wall paragraphs       ADVISORY (--strict gates)
 #
@@ -26,7 +26,7 @@ python3 - <<'PY' || fail=1
 import glob, os, re, sys
 bad = 0
 for f in glob.glob('**/*.html', recursive=True):
-    if os.path.basename(f).startswith('_'): continue
+    if os.path.basename(f).startswith('_') or f.startswith('resources/'): continue
     for m in re.findall(r'(?<![\w-])(?:href|src)="([^"#?:]+)"', open(f, encoding='utf-8').read()):
         if m.startswith(('http', '//', 'mailto')): continue
         if not os.path.exists(os.path.normpath(os.path.join(os.path.dirname(f), m))):

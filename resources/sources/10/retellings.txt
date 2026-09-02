@@ -78,3 +78,14 @@ I have verified that gcc version 4.8.3 still quietly accepts this option flag, y
 == The Register, 'Delta's lawsuit against CrowdStrike given go-ahead', 21 May 2025, https://www.theregister.com/security/2025/05/21/deltas-lawsuit-against-crowdstrike-given-go-ahead/273034 (sentences quoted) ==
 The comments come after Judge Kelly Lee Ellerbe gave the go-ahead for the airline to sue the cybersecurity company last week in a decision [PDF] filed with the Fulton County Superior Court on May 16.
 In the order, Delta's claims alleging intentional misrepresentation and fraud by omission were cut from the case, but its remaining claims – including negligence and computer trespass – can move forward, the judge said.
+
+== David A. Wheeler, same essay, section on whether the line was deliberate — the gotofail.com FAQ as quoted by Wheeler (gotofail.com itself not fetched) ==
+A few do think it was more likely to be on purpose.
+The gotofail.com FAQ author states that,
+“It is hard for me to believe that the second “goto
+fail;” was inserted accidently given that there were no other
+changes within a few lines of it. In my opinion, the bug is too
+easy to exploit for it to have been an NSA plant. My speculation
+is that someone put it in on purpose so they (or their buddy) could
+sell it.”
+[gotofail.com2014].

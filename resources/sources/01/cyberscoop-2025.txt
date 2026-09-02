@@ -11,4 +11,8 @@ used only for the post-remand status of the sentence. What the fetch reported:
   correctional treatment in the most effective manner."
 - The article says Lasnik acknowledged his "poor job of articulating the reasons" for the
   original sentence.
-The resentencing order itself was not fetched; the claim in the chapter is marked accordingly.
+SUPERSEDED 2026-09-02: the judgment itself (Doc. 462, filed 2025-10-29) has since been fetched as
+judgment-2025.txt. It differs from this summary: supervised release of 2 years (count 1) and 1 year
+(counts 2, 4, 5, 8) with 3 years of probation credited, not "five years of supervised release"; the
+residence restriction is a location-monitoring condition, not a term called "home confinement".
+The chapter no longer relies on this file.

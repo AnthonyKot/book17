@@ -1,0 +1,52 @@
+United States v. Paige A. Thompson, No. 2:19-cr-00159-RSL (W.D. Wash.), Document 462,
+JUDGMENT IN A CRIMINAL CASE (form AO 245B), filed 10/29/25, Judge Robert S. Lasnik. Entered
+after the Ninth Circuit's mandate (Doc. 456, 5 Aug 2025) vacating the 2022 sentence; the
+docket's Doc. 461 (same day) is the minute entry "RESENTENCING held on 10/29/2025".
+Source: https://storage.courtlistener.com/recap/gov.uscourts.wawd.277256/gov.uscourts.wawd.277256.462.0.pdf
+(RECAP copy; docket at https://www.courtlistener.com/docket/16134895/united-states-v-thompson/),
+fetched 2026-09-01. Scanned PDF, 8 pp.; OCR'd with tesseract and hand-cleaned; raw OCR in
+judgment-2025-ocr-raw.txt. A COURT JUDGMENT — a finding, not an allegation.
+
+Sheet 1 (p. 1). THE DEFENDANT: was found guilty on count(s) 1, 2, 4, 5, 6, 7, and 8 of the
+Second Superseding Indictment after a plea of not guilty. The defendant is adjudicated guilty
+of these offenses:
+  18 U.S.C. §1343  Wire Fraud  (count 1)
+  18 U.S.C. §1030(a)(2)  Unlawfully Obtaining Information of a Card Issuer  (count 2)
+  18 U.S.C. §1030(a)(2)  Unlawfully Obtaining Information from a Protected Computer  (counts 4, 5, 6, 7)
+  18 U.S.C. §1030(a)(5)  Transmitting a Program, Information, Code, or Command to a Computer,
+                         Intending to Cause Damage  (count 8)
+The defendant has been found not guilty on count(s) 9, 10.
+Date of Imposition of Judgment: 10/29/2025 [handwritten; OCR reads "19/2947 2025"].
+Signature of Judge: Robert S. Lasnik, United States District Judge.
+
+Sheet 2 — Imprisonment (p. 2). The defendant is hereby committed to the custody of the United
+States Bureau of Prisons to be imprisoned for a total term of: Time Served on all counts.
+[handwritten addition, OCR garbled: "Concurrent with each other"]
+
+Sheet 3 — Supervised Release (p. 3). Upon release from imprisonment, you will be on supervised
+release for a term of: Count 1: 2 years. Counts 2, 4, 5 and 8: 1 year. The Court is crediting
+the defendant with the 3 years of probation already served; thus, the remaining length of
+term is imposed as stated.
+
+Sheet 3D — Special Conditions (pp. 5–6), selected:
+ 1.–3. Computer inspection and U.S. Probation and Pretrial Services Computer Monitoring
+       Program; notify the probation officer of all computer software owned or operated.
+ 8.  You must undergo a mental health evaluation as directed by the probation officer …
+ 10. Restitution in the amount of $40,745,000 is due immediately. Any unpaid amount is to be
+     paid during the period of supervision in monthly installments of not less than 10% of
+     his or her gross monthly household income. Interest on the restitution shall be waived.
+ 12. The defendant shall complete 250 hours of community service, as approved and directed by
+     the probation officer, to be completed within the term of supervised release.
+ 13. The defendant shall participate in the location monitoring program with Active Global
+     Positioning Satellite technology for a period of three years, with credit for time
+     served of three years. The defendant is restricted to his/her residence at all times
+     except for employment, religious services, medical, legal reasons, or as otherwise
+     approved by the location monitoring specialist. …
+
+Sheet 5 — Criminal Monetary Penalties (p. 7). Name of Payee: Capital One. Total Loss:
+$40,745,000. Restitution Ordered: $40,745,000. Priority or Percentage: 100%.
+Forfeiture (p. 8): The Court incorporates order of forfeiture docket 399.
+
+NOTE: the 2025 judgment imposes SUPERVISED RELEASE, not probation; the 2022 sentence
+(Doc. 385, not fetched; DOJ release) was probation. The judgment does not use the phrase
+"home confinement"; the residence restriction is condition 13, location monitoring.
