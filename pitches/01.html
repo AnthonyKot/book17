@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 01 — pitches (pilot mode: drafting agent picked; user re-picks after reading) — Ten Ways In</title>
+<meta name="description" content="Candidate angles for chapter 01, with the documents each would rest on.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Ten Ways <span>In</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Chapter 01 · pitches</p>
+<h1>Chapter 01 — pitches (pilot mode: drafting agent picked; user re-picks after reading)</h1>
+<h2>A. Three commands and a role  — CHOSEN</h2>
+<p>Anchor: the criminal complaint (W.D. Wash., MJ19-0344, ¶¶10–14), read alongside the OCC consent order (Art. II). Folk claim tested: "an ex-Amazon engineer got in through a misconfigured WAF" — true in outline, and silent on the two things a defender needed: the firewall's own role could list every bucket in the account, and the anomalous List Buckets call sat in the logs from 22 March until a stranger's e-mail on 17 July. Defense: IMDSv2 (AWS, 19 Nov 2019) as the platform's direct answer to the credential-theft step, and least privilege as the answer to the step after it. Takeaway: the exploit is the boring part; the breach size was set by what one machine's identity was allowed to see.</p>
+<h2>B. The complaint never says SSRF</h2>
+<p>Anchor: the complaint, the DOJ releases and the AWS blog read against Krebs (2 Aug 2019). Folk claim tested: "it was an SSRF to the metadata service" — repeated everywhere, and present in no court document; the chain comes from an anonymous source and from AWS's own framing four months later. Defense: IMDSv2, whose four layers are a map of exactly the mechanisms AWS thought were in play. Takeaway: how a mechanism becomes canon without a document, and what would settle it (trial exhibits).</p>
+<h2>C. Found by a scan, not chosen</h2>
+<p>Anchor: the indictment press release (&gt;30 entities), the verdict release and the Ninth Circuit opinion (credentials from ≥200 entities, data from ≥30, "scanned millions of publicly available IP addresses"). Folk claim tested: "the Capital One hack" as a targeted attack. Defense: the OCC findings as the model of what a regulator expects a cloud migration to include (risk assessment, alert dispositioning). Takeaway: your firewall is being scanned for this class of misconfiguration whether or not anyone has heard of you.</p>
+<h2>D. Alleged, found, vacated</h2>
+<p>Anchor: complaint → indictment → verdict → sentence → Ninth Circuit vacatur → resentencing. Folk claim tested: "she got probation" / "no data was shared". Defense: thin; this angle is about the record itself. Takeaway: how to read a breach through the documents in the order they were produced. Not chosen: it is a chapter about the courts, not about access control.</p>
+<h2>Why A</h2>
+<p>A is the only pitch that covers the whole §6 contract (chain from firewall to role, the consent order, IMDSv2, least privilege, SSRF defined and placed in A01) and yields the ledger with the strongest MISSING rows. B and C are folded into A as ledger rows 1 and 3 and as a paragraph each; they are not lost. D is banked.</p>
+<p class="note">Source: <code>drafts/01.pitches.md</code>; documents indexed in <code>resources/sources/01/SOURCES.md</code>.</p>
+<nav class="chapter-nav">
+  <span></span>
+  <a href="../index.html">Contents</a>
+  <span></span>
+</nav>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Seventeenth in a series built the same way. Corrections welcome.</p></div></footer>
+</body>
+</html>

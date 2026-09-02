@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 10 — pitches (pilot mode: drafting agent picks; user re-picks after reading) — Ten Ways In</title>
+<meta name="description" content="Candidate angles for chapter 10, with the documents each would rest on.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Ten Ways <span>In</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Chapter 10 · pitches</p>
+<h1>Chapter 10 — pitches (pilot mode: drafting agent picks; user re-picks after reading)</h1>
+<h2>Pitch A — "One line too many, one field too few" — CHOSEN</h2>
+<p>Anchor documents: Apple's <code>sslKeyExchange.c</code> at Security-55471 and Security-55471.14 (the diff is one deleted line) and CrowdStrike's Root Cause Analysis of 6 Aug 2024 (21 fields defined, 20 supplied). Folk claim tested: that each was "a single bad line / a single bad update" — true, and it hides that in both cases a check <em>existed</em> and checked the wrong thing (a hash update's return code, not the signature; a pointer for NULL, not an index for range). Defense set against the attack: the fail-open / fail-closed decision, argued as a choice of <em>boundary</em>: Apple failed open at the authentication boundary where closed was right; Windows failed the whole host closed where the failing unit was one telemetry rule, and CrowdStrike's own fix (a bounds check that skips the rule and keeps the host up) is a fail-open at a smaller boundary. Reader's takeaway: "fail closed" is not a property of a system but of a boundary you pick on purpose; find the cleanup label that returns the last status variable, and the config field your interpreter has never been asked for.</p>
+<h2>Pitch B — "The label that lied"</h2>
+<p>Anchor: the Apple diff alone, with Langley's 22 Feb 2014 post and Wheeler's essay as the two rival lesson-lists (code review vs. compiler flags vs. negative tests). Folk claim tested: "the compiler would have caught it" — Langley shows <code>-Wall</code> in GCC 4.8.2 and Clang 3.3 is silent, Wheeler shows gcc's <code>-Wunreachable-code</code> is a silent no-op. Defense: negative testing and a fail-closed idiom (initialise <code>err</code> to failure). Takeaway: a cleanup label reached with a success code is a security decision made by accident. (Banked: covers only half the §6 contract, which requires CrowdStrike.)</p>
+<h2>Pitch C — "Fail closed, at what size?"</h2>
+<p>Anchor: CrowdStrike PIR + RCA and Microsoft's 27 July 2024 post on why security products live in the kernel and "cannot fail and restart like a normal user application". Folk claim tested: "CrowdStrike pushed untested code" — the RCA says it was configuration data, the code defect had shipped in February, twelve automated tests all used a wildcard in the one field that mattered, and the instance was validated but never run. Defense: staged rings and customer control over content, which existed for the sensor (N-1/N-2) and not for content. Takeaway: the thing you can pin is not always the thing that changes. (Banked: covers only half the contract; its material is folded into Pitch A's defense section.)</p>
+<h2>Pitch D — "Two post-mortems, one missing"</h2>
+<p>Anchor: the asymmetry of the record — CrowdStrike published a 12-page RCA with six findings and dates; Apple published two sentences and a one-line diff, and the only accounts of <em>how</em> are outsiders' guesses. Folk claim tested: "it was just a slip in an editor" (Langley) vs. "an NSA plant" — OPEN on the record. Defense: the post-mortem itself as a defense, and what the reader can and cannot do with a vendor that does not write one. Takeaway: grade the post-mortem, not the bug. (Banked: strong for chapter 0's pattern; too meta for a mechanism chapter.)</p>
+<h2>Why A</h2>
+<p>The §6 contract asks for "two failures in opposite directions", the Apple diff, the CrowdStrike out-of-bounds read, and a defense section that shows a case where each of fail-open and fail-closed was the wrong answer. Only A carries all four. It also has the best whiteboard: two drawings, three boxes each, and the same caption under both — "the check that ran was not the check that mattered". B, C and D are each a section of A, and A's ledger can host their best rows (the compiler myth from B; the untested-update allegation from C; the OPEN cause from D).</p>
+<p class="note">Source: <code>drafts/10.pitches.md</code>; documents indexed in <code>resources/sources/10/SOURCES.md</code>.</p>
+<nav class="chapter-nav">
+  <span></span>
+  <a href="../index.html">Contents</a>
+  <span></span>
+</nav>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Seventeenth in a series built the same way. Corrections welcome.</p></div></footer>
+</body>
+</html>

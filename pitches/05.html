@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 05 — pitches (standard mode: user picks; nothing drafted) — Ten Ways In</title>
+<meta name="description" content="Candidate angles for chapter 05, with the documents each would rest on.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Ten Ways <span>In</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Chapter 05 · pitches</p>
+<h1>Chapter 05 — pitches (standard mode: user picks; nothing drafted)</h1>
+<p>Sources for every number below are in <code>resources/sources/05/SOURCES.md</code>. Nothing here rides on memory. Three caveats carried into whichever pitch is chosen: (1) the three Progress advisories could not be fetched as text and must be saved by hand before drafting; (2) CISA AA23-158A is on disk only as WebFetch-quoted sentences; (3) MDL Order 22 recites <em>allegations</em>, not findings.</p>
+<h2>A. One function, three patches</h2>
+<p>Anchor: Rapid7's patch diff of CVE-2023-34362 (<code>UserGetUsersWithEmailAddress()</code> rebuilt from <code>ConcatenateObject</code> string-building to <code>SQLBasicBuilder</code> with bound parameters; the header-to-session function <code>SetAllSessionVarsFromHeaders()</code> deleted), read against Progress's 8-K of 5 June 2023 and its own update log (9 June: third-party code review finds a second SQLi; 15 June: a third; 5 July: "three new CVEs"). Folk claim tested: "a zero-day SQL injection in a file-transfer tool" — HOLDS as a label and hides the two things a defender needs: the injected value did not arrive in a form field but in a session variable the attacker could set through a header-parsing mismatch, and the pre-patch code <em>did</em> escape the address for one clause and passed it raw for another (Rapid7: "in every case the application correctly escapes the arguments" — until it didn't). Defense: parameterised queries as the diff shows them being adopted, then the CISA/FBI Secure-by-Design alert of March 2024 (prepared statements since 2004, "unforgivable" since 2007, "a simple code review would reveal") as the honest answer to why a 2023 product shipped without them — and the fact that one commissioned review found two more within a fortnight. Takeaway: escaping is a per-call-site promise and one missed call site is the whole breach; a query builder is a per-codebase promise, and the fix was exactly that swap.</p>
+<h2>B. The 60 million who never ran MOVEit</h2>
+<p>Anchor: the Emsisoft and KonBriefing tallies read <em>with</em> their own method notes (KonBriefing: "not the total number of people affected, but the total number of people records"; Emsisoft: overlap "we have no way to account for"), TechTarget's "1,690 of the 2,098 known victim organizations were compromised via third parties", and the Genworth 8-K ("the Company does not itself use the MOVEit file transfer system") beside the Maximus 8-K ("at least 8 to 11 million"). Folk claim tested: "Cl0p hacked 2,000 organisations and 60 million people" — OVERSTATED on people (records, double-counted) and MISSING on structure: roughly four in five named victims were downstream of a vendor such as PBI, and Rapid7/Huntress put the directly exposed population at ~2,500 servers. Defense: thin on injection; the real lesson is data minimisation at the interface, which KonBriefing itself says. Takeaway: a victim count is a count of notifications, and most of the notified never had the vulnerable product.</p>
+<h2>C. Alleged, subpoenaed, not found</h2>
+<p>Anchor: the JPML transfer order (4 Oct 2023: 91 actions in 22 districts, "over 55 million people" estimated), Progress's 10-Q and 10-K (58 → ~118 class actions; SEC subpoena 2 Oct 2023; FY2023 cost $1.5M net of $3.7M insurance against Maximus's $15M), MDL Order 22 of 31 July 2025 ("the allegation of a persistent SQL injection vulnerability… clears that hurdle at the pleading stage"; Ch. 93A count survives) and the 8-K of 7 Aug 2024 (SEC declines enforcement). Folk claim tested: "Progress shipped an unforgivable bug and walked away" — half WRONG (118 suits survive dismissal; DC AG investigation open) and half OPEN (no court has found a fact; the document that would settle fault is a judgment that does not yet exist). Defense: the only defense with an institutional owner in the record is CISA's demand that "senior executives… mount a formal review of their code". Takeaway: how to read a breach through filings in the order they were made, and what "survived a motion to dismiss" does and does not mean. Cost: like 01-D, a chapter about courts, and the mechanism section would be thin.</p>
+<h2>D. Four days, and the day before</h2>
+<p>Anchor: CISA AA23-158A and Mandiant ("Beginning on May 27, 2023"; "data theft… within minutes of the deployment of web shells"; "seemingly opportunistic"), Progress's 8-K (support call evening of 28 May, patch 31 May, "all within 48 hours") and its 10-Q ("does not have any on-going telemetry… whether the customer has applied any security patches"). Folk claim tested: "zero-day — nothing could have been done" — HOLDS on the timeline and is therefore the point: most of the data was gone before the advisory existed, so patch speed, firewalling and detection were not defenses in this incident; only the absence of the bug class was. Defense: parameterised queries as the one defense that works before day zero, with the OWASP A05 numbers (SQLi "low frequency/high impact", &gt;14k CVEs) and CWE-89's standing Top-25 place as the measure of how often that defense is skipped. Takeaway: for an internet-facing product you did not write, the question is not "how fast do we patch" but "which classes of bug does the vendor's build system make impossible".</p>
+<h2>Recommendation</h2>
+<p>Pick <strong>A</strong>. It is the only pitch that meets the whole §6 contract on its own: the CVE and the vendor advisory (from the record, once the advisory text is saved by hand), the Cl0p campaign as the regulators reported it (AA23-158A folded into the break section), parameterised queries as a defense with a <em>visible</em> record — the patch diff is the nearest thing this chapter has to a commit — and the "why did it ship" question answered from a regulator's document and from Progress's own admission that one outside review found two more. It also carries the strongest MISSING rows (session-variable input route; escape-one-clause-not-the-other) and passes the whiteboard test in a way no other pitch does. B and D fold into A as ledger rows (victim-count method; the 27–31 May timeline) and a paragraph each. Choosing <strong>B</strong> instead would cost the mechanism: it is a chapter about supply chains, which is chapter 3's job, and its defense record is one analyst's aside. Choosing <strong>C</strong> would cost the same plus fairness risk: every fact about Progress's code in Order 22 is a plaintiff's allegation, so the ledger would be mostly OPEN. Choosing <strong>D</strong> would cost the diff — it argues the defense from the timeline rather than from the code, so the reader learns <em>that</em> parameterisation matters but not what the missing parameterisation looked like.</p>
+<p class="note">Source: <code>drafts/05.pitches.md</code>; documents indexed in <code>resources/sources/05/SOURCES.md</code>.</p>
+<nav class="chapter-nav">
+  <span></span>
+  <a href="../index.html">Contents</a>
+  <span></span>
+</nav>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Seventeenth in a series built the same way. Corrections welcome.</p></div></footer>
+</body>
+</html>

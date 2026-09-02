@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 03 — pitches (pilot mode: drafting agent picked; user re-picks after reading) — Ten Ways In</title>
+<meta name="description" content="Candidate angles for chapter 03, with the documents each would rest on.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Ten Ways <span>In</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Chapter 03 · pitches</p>
+<h1>Chapter 03 — pitches (pilot mode: drafting agent picked; user re-picks after reading)</h1>
+<h2>A. The tarball that was not the tree  ← CHOSEN</h2>
+<p>Anchor: Andres Freund's oss-security post (29 Mar 2024) plus the xz git history itself: <code>git ls-tree v5.6.0 m4/</code> has no build-to-host.m4, the 5.6.0 tarball does, and Lasse Collin's review notes date the preparation to 22 Jan 2024. Folk claim tested: "Jia Tan inserted a backdoor into xz in February 2024" (Wikipedia lede, Wired) — true, and it hides the one fact a defender needed, that the release artefact differed from the reviewed source. Defense: reproducible builds as actually used in the week after (Vagrant Cascadian's Debian rebuilds), what they verified and what they could not, and the tarball-versus-git-archive comparison that would have. Takeaway: the thing you review and the thing you build are not the same object unless you check.</p>
+<h2>B. Two years of good commits</h2>
+<p>Anchor: the xz-devel thread of June 2022 (Kumar, Ens, Collin) and the per-year commit counts from git. Folk claim: "a pressure campaign by sock puppets captured the maintainer". Defense: OWASP's "separation of duty" bullet against a one-and-a-half person project; the unfunded-maintainer threat model. Takeaway: the social record is real but thinner than the retellings; the ledger would carry more OPEN rows than verdicts.</p>
+<h2>C. The dot in the sandbox check</h2>
+<p>Anchor: commit 328c52da (26 Feb 2024) and Collin's fix f9cf4c05 ("It never enabled it."). Folk claim: "the backdoor" was one thing. Defense: the second sabotage shows the category is about the pipeline, not one payload; review that reads diffs for intent. Takeaway: a single character in a build file is a supply-chain change. Too narrow to carry the §6 contract on its own; folded into A as a MISSING row.</p>
+<h2>D. Why sshd</h2>
+<p>Anchor: Freund's observation that OpenSSH does not link liblzma; Debian's systemd-notify patch does; Solar Designer's April update on OpenSSH 9.8 and systemd's dlopen change. Folk claim: "a backdoor in SSH". Defense: the dependency edge that was removed. Takeaway: your transitive graph is your attack surface. Strong defense record, but it does not cover the maintainer capture that §6 requires; folded into A as a MISSING row.</p>
+<h2>Why A</h2>
+<p>The §6 contract asks for the capture told from commits and the mailing list, the injection explained as "what the tarball contained that the git tree did not", and reproducible builds graded honestly. Only A covers all three from documents already in hand. B is the most-told version and would grade mostly OPEN; C and D are the two best MISSING rows and survive inside A. The book16 dig method (quote the commit, not the blog about the commit) gives A its evidence without a court record, which this incident lacks.</p>
+<p class="note">Source: <code>drafts/03.pitches.md</code>; documents indexed in <code>resources/sources/03/SOURCES.md</code>.</p>
+<nav class="chapter-nav">
+  <span></span>
+  <a href="../index.html">Contents</a>
+  <span></span>
+</nav>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Seventeenth in a series built the same way. Corrections welcome.</p></div></footer>
+</body>
+</html>
