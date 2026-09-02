@@ -1,0 +1,56 @@
+# Progress Software, Knowledge Base article "MOVEit Transfer Service Pack (July 2023)" (limited Service Pack; CVE-2023-36934, -36932, -36933), article version ka74Q000000L9OGQA0.
+# URL: community.progress.com Knowledge Base (article urlName not captured in this record; linked from the Progress security page update of 5 July 2023 and Rapid7's update of 7 July 2023)
+# Provenance: the Progress Knowledge Base is a Salesforce Experience Cloud site; the article HTML is an empty JavaScript shell. The article text was recovered on 2026-09-02 from the Wayback Machine's captures of the site's Aura API responses (web.archive.org/web/<timestamp>id_/https://community.progress.com/s/sfsites/aura?r=11&ui-force-components-controllers-recordGlobalValueProvider.RecordGvp.getRecord=1), gzip-decompressed, then the Knowledge__kav record's Title, Summary and Critical_Alert_Information__c fields were HTML-stripped. Each capture is a snapshot of the article as published at that moment; the Revision History inside the article is Progress's own. Tables are flattened to lines; IoC file attachments are not included. Verbatim otherwise.
+
+
+## Wayback capture 2023-07-07 18:20:13 UTC
+
+=== FIELD /context/globalValueProviders/1/values/records/ka74Q000000L9OGQA0/Knowledge__kav/record/fields/Product_Alert_Information__c/value
+Service Pack Content 
+This article contains the details of the limited set of updates from within the MOVEit Transfer July 2023 Service Pack. Customers should upgrade to a supported version as soon as possible in order to take advantage of all of the improvements included in the full Service Pack. This limited Service Pack contains fixes for three newly disclosed CVEs described below. 
+Progress Software highly recommends you apply this Service Pack for product updates and security improvements. For Service Pack content, please review the Service Pack Release Notes and this knowledgebase article carefully to help you plan when it is appropriate to apply to your environments. 
+ NOTE: It is recommended to upgrade to a fully supported MOVEit Transfer version as listed in the product lifecycle . 
+ Vulnerability Descriptions 
+ CVE-2023-36934 (CRITICAL) 
+In Progress MOVEit Transfer versions released before 2020.1.11 (12.1.11), 2021.0.9 (13.0.9), 2021.1.7 (13.1.7), 2022.0.7 (14.0.7), 2022.1.8 (14.1.8), 2023.0.4 (15.0.4), a SQL injection vulnerability has been identified in the MOVEit Transfer web application that could allow an unauthenticated attacker to gain unauthorized access to the MOVEit Transfer database. An attacker could submit a crafted payload to a MOVEit Transfer application endpoint which could result in modification and disclosure of MOVEit database content.
+Discoverer Credit: Guy Lederfein of Trend Micro working with the Zero Day Initiative
+ CVE-2023-36932 (HIGH) 
+In Progress MOVEit Transfer versions released before 2020.1.11 (12.1.11), 2021.0.9 (13.0.9), 2021.1.7 (13.1.7), 2022.0.7 (14.0.7), 2022.1.8 (14.1.8), 2023.0.4 (15.0.4), multiple SQL injection vulnerabilities have been identified in the MOVEit Transfer web application that could allow an authenticated attacker to gain unauthorized access to the MOVEit Transfer database. An attacker could submit a crafted payload to a MOVEit Transfer application endpoint which could result in modification and disclosure of MOVEit database content.
+Discoverer Credit: HackerOne - cchav3z, nicolas_zilio and hoangha2, hoangnx, duongdpt (Q5Ca) with VCSLAB of Viettel Cyber Security
+ CVE-2023-36933 (HIGH) 
+In Progress MOVEit Transfer versions released before 2021.0.9 (13.0.9), 2021.1.7 (13.1.7), 2022.0.7 (14.0.7), 2022.1.8 (14.1.8), 2023.0.4 (15.0.4), it is possible for an attacker to invoke a method which results in an unhandled exception. Triggering this workflow can cause the MOVEit Transfer application to terminate unexpectedly.
+Discoverer Credit: Hackerone - jameshorseman
+ Application of SP for current versions - Supported versions are listed at the following link: https://community.progress.com/s/products/moveit/product-lifecycle . Please note, the license file can remain the same when staying on a major release to apply the patch.
+There are two paths to take depending on if you have applied the remediation and patching steps from the MOVEit Transfer Critical Vulnerability (May 2023) 
+ Have applied May 2023 (CVE-2023-34362) patch and followed the remediation steps: Update with the associated Fixed Version (drop-in DLLs) 
+ Have NOT applied May 2023 (CVE-2023-34362) patch and followed the remediation steps: Follow all the remediation steps in the following article: MOVEit Transfer Critical Vulnerability (May 2023) . Afterwards, update with the associated Fixed Version (drop-in DLLs). 
+ IMPORTANT: Please read the README.txt before attempting the DLL Drop-in Install. 
+ * Do not leave old versions of these DLL files on the system. They must be completely removed, not just renamed. 
+ * When shutting down MOVEit Transfer services (step 1), it is necessary to also stop the IIS services (World Wide Web Publishing Services) to successfully replace the old DLLs. Once the new files are copied to their respective destinations, restart both the MOVEit Transfer and IIS services. 
+ Affected Version 
+ Fixed Version (Drop-In DLLs) 
+ Documentation 
+ Release Notes 
+ MOVEit Transfer 2020.1.6 (12.1.6) or later 
+ MOVEit Transfer 2020.1.11 (12.1.11) 
+ Download the patch at the link in the Fixed Version column and see the readme.txt file in the zip file for instructions 
+ MOVEit Transfer 2020.1.11 Release Notes 
+ MOVEit Transfer 2020.0.x (12.0.x) or older 
+ Must upgrade to a supported version 
+ See MOVEit Transfer Upgrade 
+ and Migration Guide 
+ N/A 
+ Please perform the following to implement the fix: 
+1. Ensure you are on MOVEit Transfer 2020.1.6 (12.1.6) or later version of 2020.1 (12.1) 
+ Installer for MOVEit Transfer 12.1.6 
+ 2. Stop all services and close the Config utility
+3. Unzip the file located at the URL in the table above
+4. Follow the instructions in the README.txt file to identify the locations to place each file
+5. Restart MOVEit services
+ Additional Resources 
+ Progress Security Center
+
+=== FIELD /context/globalValueProviders/1/values/records/ka74Q000000L9OGQA0/Knowledge__kav/record/fields/Summary/value
+In response to recent customer feedback, we are formalizing a regular Service Pack program for MOVEit products, including MOVEit Transfer and MOVEit Automation. These Service Packs will provide a predictable, simple and transparent process for product and security fixes – please refer to our Product Lifecycle for more details (linked below). We have heard from you that a regular cadence and predictable timeline will enable you to better plan your resources and make it easier to adopt new product updates and fixes. As a part of these Service Packs, we will also be optimizing the installation process to make the upgrade process simpler.
+
+
