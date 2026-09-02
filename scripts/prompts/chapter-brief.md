@@ -42,6 +42,12 @@ you need the nav links.
   under 40. No headers inside sections beyond the h2 the template gives.
 - Defense side rests on a document. Where the record is thin, say so in the chapter.
 
+## Save as you go (hard rule)
+Sessions can die at the token limit. Write each artifact to disk the moment it is drafted;
+write the chapter section by section and save after each. After each artifact lands, `git add`
+only your own files (the paths above) and `git commit -m "WIP ch.{{NN}}: <what landed>"`; do
+not push and do not add any other file. The coordinating session squashes and pushes.
+
 ## When done
 Run `./verify.sh {{NN}}` from the repo root and fix anything it reports until the two
 gating checks pass and the structure line for your chapter reads `ok`. Then write a
