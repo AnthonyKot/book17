@@ -1,0 +1,68 @@
+MongoDB blog, Andreas Nilsson, 'How to Avoid a Malicious Attack That Ransoms Your Data', 2017-01-06 (Wayback capture 2017-01-15; live URL now redirects to a security hub page)
+URL: https://www.mongodb.com/blog/post/how-to-avoid-a-malicious-attack-that-ransoms-your-data
+Fetched: 2026-09-02 (curl via web.archive.org/web/20170115id_/)
+
+How to Avoid a Malicious Attack That Ransoms Your Data
+
+MongoDB Security Manual
+< View all blog posts
+
+Andreas Nilsson
+January 06, 2017
+
+Category: Company
+
+Recently, there have been reports of malicious attacks on unsecured instances of MongoDB running openly on the internet. The attacker erased the database and demanded a ransom be paid before restoring it. 
+
+If you believe your database was attacked, see these suggested steps.
+
+These attacks are preventable with the extensive security protections built into MongoDB. You need to use these features correctly, and our security documentation will help you do so. Here are pointers to the relevant documentation and other useful resources: 
+
+Security is addressed in detail in our Security Manual. We also recently expanded our online training on security as part of the MongoDB University curriculum.
+
+Follow the steps in our Security Checklist. It discusses enforcing authentication, enabling access control, limiting network exposure, and other important best practices.
+
+The most popular installer for MongoDB (RPM) limits network access to localhost by default. Use this configuration too if you’re installing via another means.
+
+MongoDB Cloud Manager and MongoDB Ops Manager provide continuous backup with point in time recovery, and users can enable alerts in Cloud Manager to detect if their deployment is internet exposed (see Figure 1 below).
+
+Figure 1: Create a new alert to notify you if a host is exposed to the public internet.
+
+The latest MongoDB 3.4 release enables you to configure authentication to an unprotected system without incurring downtime.
+
+The MongoDB Atlas hosted database service provides multiple levels of security for your database out of the box. These include robust access control, network isolation using Amazon VPCs and VPC Peering, IP whitelists, encryption of data in-flight using TLS/SSL, and optional encryption of the underlying filesystem at-rest.
+
+We encourage users who have experienced a security incident with MongoDB to create a vulnerability report. Instructions on how to do this, or to contact us, are provided here.
+
+If you are interested in learning more about security best practices, please read our Security Architecture White Paper.
+
+Suggested Steps To Diagnose and Respond to an Attack
+
+How can you tell if an attacker has compromised your data?
+
+If access control is configured correctly for the database, attackers should not have been able to gain access to your data. Review our Security Checklist to help catch potential weaknesses.
+
+Verify your databases and collections. In the recent cases we’ve seen, the attacker has dropped databases and/or collections and replaced them with a new one with a ransom demand.
+
+If access control is enabled, audit the system logs for unauthorized access attempts or suspicious activity. 
+
+If you were running an unsecured instance of MongoDB that has been compromised:
+
+If you are a commercial support customer, file an S1 case ASAP and our Technical Services Engineers can guide you through the process below.
+
+Your first priority should be securing your cluster(s) to prevent further unauthorized access. Follow the steps in our Security Checklist.
+
+If you had pre-existing users on the system, verify that no users have been added, removed, or modified by running the usersInfo command. 
+
+Examine logs to find the time of the attack. Look for commands that dropped your data, modified users, or created the ransom demand record.
+
+If you take regular backups of the compromised database, you can restore the most recent backup; you will have to evaluate what data may have changed between the most recent backup and the time of the attack. If you use Ops Manager or Cloud Manager for backup, you may be able to perform a point-in-time restore to immediately before the attack. Check whether you are still within the time window for point-in-time restore (the last 24 hours, unless you have configured it otherwise). If so, ensure you perform the restore before the PIT window elapses. If you are past the PIT window, you will still be able to restore a recent backup.
+
+If you don’t have a backup or are otherwise unable to restore the data, unfortunately your data may be permanently lost.
+
+You should assume that the attacker has a copy of all data from the affected database(s). Follow your internal security procedures for a data breach.
+
+Finally, refer to our security best practices and resources to protect your data in the future.
+
+About the Author - Andreas Nilsson
+

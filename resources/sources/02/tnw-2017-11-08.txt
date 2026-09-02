@@ -1,0 +1,10 @@
+The Next Web, 'MongoDB 3.6 comes hardened against database ransomware by default', 2017-11-08 (Eliot Horowitz quoted)
+URL: https://thenextweb.com/security/2017/11/08/mongodb-3-6-comes-hardened-database-ransomware-default
+Fetched: 2026-09-02 (curl)
+
+One the biggest security news stories of 2017 was of a ransomware variant targeting improperly secured MongoDB instances.
+Here it is in a nutshell: some users of MongoDB accidentally left their databases exposed to the internet without any authentication. Predictably, some online ne’er-do-wells decided to take advantage of this, copying and deleting databases, before leaving a ransom note demanding a small fortune in Bitcoin for safe return of the data.
+Thankfully, that won’t be an issue any more, as of MongoDB 3.6. Speaking to TNW at the company’s MongoDB Europe conference, company founder and CTO Eliot Horowitz explained that MongoDB will no longer come with an unsafe configuration out of the box.
+“On 3.6, localhost only is enabled by default. If you start MongoDB, you have to explicitly turn on networking. If you don’t explicitly turn it on, that entire method of doing ransomware goes away,” he said.
+But what happens when you connect your instance to the internet? “If you explicitly turn it on, but don’t turn on authentication, we can’t help you at that point. But you have to consciously do that, and we’d hope that people think about it a little,” Horowitz explained.
+For those that have already either paid up, or have lost their data entirely, it’s tough luck. But for novices to MongoDB, the additional protections in MongoDB 3.6 will perhaps save them some nasty headaches. Release candidates of the latest version of MongoDB have already been floated. The final release is expected at some point in December.

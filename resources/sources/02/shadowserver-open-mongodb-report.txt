@@ -1,0 +1,8 @@
+Shadowserver Foundation, 'Open MongoDB Report' (scan description page; description last updated 2025-12-29). Not a 2017 count — the description of the instrument only.
+URL: https://www.shadowserver.org/what-we-do/network-reporting/open-mongodb-report/
+Fetched: 2026-09-02 (curl)
+
+DESCRIPTION LAST UPDATED: 2025-12-29
+This report identifies hosts that have the MongoDB NoSQL database running on port 27017/TCP and accessible on the Internet.
+While authentication is available for MongoDB, in many instances this authentication is not enabled. We tag MongoDB with no authentication as mongodb-noauth
+A secondary probe is then performed to determine if a list of databases can be obtained. If an error message is generated in response to this probe, the “visible_databases” field will say “none visible”, but if no error message is generated (indicating that no authentication is in use), the “visible_databases” field will list the first five databases that were returned.

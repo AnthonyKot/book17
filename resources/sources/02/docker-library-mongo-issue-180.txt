@@ -1,0 +1,8 @@
+docker-library/mongo issue #180, '3.5.7 now binds to localhost-only by default' (opening comment)
+URL: https://github.com/docker-library/mongo/issues/180
+Fetched: 2026-09-02 (curl)
+
+3.5.7 now binds to localhost-only by default #180
+We need to figure out a good way to handle https://jira.mongodb.org/browse/SERVER-28229 -- MongoDB as of 3.5.7 now binds to localhost-only (see also mongodb/mongo@60636b4).
+
+There is a new --bind_ip_all flag, but it does pose complications similar to what we've got with our new initdb behavior around configuration files. 😞

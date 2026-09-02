@@ -1,0 +1,74 @@
+Gevers/Merrigan tracking spreadsheet, 'MongoDB ransacking' (Google Sheets; first tab = actor table, exported as CSV). Attacker e-mail addresses, bitcoin addresses and IPs omitted here on purpose; columns kept: actor, first sighted, ransom size, number of transactions, total BTC received, name of replaced DB, victims (OSINT), victims (helped).
+URL: https://docs.google.com/spreadsheets/d/1QonE9oeMOQHVh8heFIyeqrjfKEViL0poLnY8mAakKhM/
+Fetched: 2026-09-02 (curl, /export?format=csv)
+
+Rows in first tab: 109
+Header row (verbatim): ['Actor', 'First\nSighted on', 'Email Address(Sighted As)', 'Bitcoin Address', 'Ransom size', 'Number of Transactions', 'Total\nBTC Recieved', 'Name of replaced DB', 'Known Attacker IPs', 'Victims (OSINT)', 'Victims (helped)', 'Signature Hash', 'Links', 'Found by', 'Note', '']
+
+Harak1r1 |  |  |  |  |  |  | 
+ | 20-12-2016 | 0.2 BTC | 23 | 3.42602434 | WARNING |  | 
+ |  | 0.2 BTC | 6 | 0.8003 |  | 2074 | 
+ |  | 0.2 BTC | 0 | 0 |  |  | 
+ | 8-1-2017 12:30:00 | 0.5BTC | 0 | 0 | README_MISSING_DATABASES | 2553 | 
+ |  | 0.5 BTC | 0 | 0 | README_MISSING_DATABASES |  | 
+ | 1-16-2017 3:38:03 | 0.2BTC | 0 | 0 |  |  | 
+ | 1-6-2017 9:20:00 | 0.15 BTC | 11 | 0.58352161 | PWNED | 252 | 
+ |  |  |  |  | PWNED_SECURE_YOUR_STUFF_SILLY | 2347 | 
+ | 8-1-2017 16:00:00 | 0.5 BTC | 0 | 0 | WARNING |  | 
+ | 1-8-2017 11:00:00 | 0.5 BTC | 0 | 0 | ReadmePlease | 764 | 
+ |  | 0.5 BTC | 0 | 0 | ReadmePlease |  | 
+ |  | 0.5 BTC | 0 | 0 | ReadmePlease |  | 
+ | 6-1-2017 20:02:00 | 0.25 BTC | 10 | 1.999992 | CONTACTME | 4224 | 
+ |  |  |  |  |  |  | 
+Kraken0 | 21-01-2017 17:52:43 | 1 BTC 0.1 BTC 0.2 BTC | 110 | 11.30575012 | PLEASE_READ | 153 | 
+ |  | 0.1 BTC | 0 | 0 | PLEASE_READ |  | 67
+ |  | 0.1 BTC | 0 | 0 | PLEASE_READ |  | 
+ |  | 0.5 BTC | 0 | 0 | PLEASE_READ |  | 
+ |  |  |  |  |  |  | 
+ |  |  |  |  |  |  | 
+ |  | 0.2 BTC |  |  | PLEASE_READ |  | 
+ |  | 0.2 BTC |  |  | PLEASE_READ |  | 
+0wn3d | 5-1-2017 12:50:00 | 0.5 BTC | 11 | 3.3103647 | WARNING_ALERT | 199 | 24
+mongo3l1t3@sigaint.org | 5-1-2017 12:00:00 | 0.2 BTC | 1 | 0.21 | WARNING |  | 7
+China01 | 6-1-2017 13:52:00 | 1 BTC |  |  | to_get_DB_back_send_1BTC_to_1DGztzLNz1euFswtqMDWPMWSgwthdpxRtC | 1 | 
+byterot | 28-07-2015 | 0 |  |  | DELETED_BECAUSE_YOU_DIDNT_PASSWORD_PROTECT_YOUR_MONGODB | 45 | 
+admin_stolen | 7-1-2017 13:00 |  |  |  |  | 34 | 
+pwned | 7-1-2017 17:30 |  |  |  |  |  | 
+mongodbrestore | 7-1-2017 20:02:00 | 0.2 BTC |  |  | PLEASE_READ | 3621 | 
+ | 7-1-2017 20:02:00 | 0.2 BTC |  |  | PLEASE_READ_56b41cc944bd390932e79827 | 68 | 
+bitcoin_cn@n8.gs | 8-1-2017 20:50:00 | 1BTC |  |  | README | 682 | 
+S0mBR4 | 9-1-2017 22:28:00 |  |  |  | LEIA_ME | 1 | 
+ |  |  |  |  | AVISO_LEIA_ME | 4 | 
+atalie99@sigaint.org | 10-1-2017 10:30:00 | 0.1BTC | 90 | 6.05210557 | IHAVEYOURDATA | 8 | 
+bitcoinbaron@protonmail.com | 10-1-2017 14:00:00 | 0.2BTC |  |  | READ_ME | 18 | 
+ | 10-1-2017 |  |  |  | READMEPLS | 5 | 
+baby8@sigaint.org | 10-1-2017 | 0.5BTC |  |  | ENCRYPTED | 43 | 
+harunkus@sigaint.org | 10-1-2017 | 0.1BTC |  |  | READ1 | 4034 | 
+insecuredb@sigaint.org | 11-1-2017 13:00:00 | 0.1BTC |  |  | README_YOU_DB_IS_INSECURE | 1995 | 
+mChac4l | 11-1-2017 22:30:00 |  |  |  | AVISO | 18 | 
+m3lk@sigaint.org | 16-1-2017 07:08:52 | 0.1 BTC | 0 | 0 | WARNING |  | 
+ |  | 0.1 BTC | 0 | 0 |  |  | 
+hacken.m@india.com | 16-1-2017 12:57 | 0.05 BTC | 3 | 0.097 | PLEASE_READ_ME | 5913 | 
+mongobackup7@sigaint.org | 19-1-2017 19:20:54 | 0.1 BTC | 0 | 0 | PLEASE_READ_ME |  | 1
+ |  |  |  |  |  |  | 
+storybehind@sigaint.org | 1-15-2017 17:23:16.775 | 0.2BTC | 0 | 0 | README_MISSING_DATABASES | 2663 | 
+m4l1c3@sigaint.org | 31.01.2017 08:30 | 0.5BTC |  |  | DB_H4CK3D | 6304 | 
+ | 08-02-2017 20:57 | 0.5BTC |  |  | DB_H4CK3D |  | 
+vxware@sigaint.org | 14-03-2017 | 0.2BTC |  |  | PLEASEREAD | 5066 | 
+mongodb@protonmail.ch | 04-04-2017 | 0.1 BTC | 3 | 0.3 | DB_DROPPED | 3205 | 3
+DATA_HAS_BEEN_BACKED_UP |  |  |  |  |  |  | 
+request@tfwno.gf | 15-06-2017 | 0.1 BTC |  |  | REQUEST_YOUR_DATA | 2494 | 
+mongodb@tfwno.gf | 29-07-2017 | 0.2 BTC |  |  |  |  | 
+datarequest@secmail.pro | 17-08-2017 | 0.2 BTC | 0 |  | BACKUP_DB | 107 | 
+cru3lty@safe-mail.net | 09-25-2017 | 0.2 BTC | 7 | 0.60313418 | Warning | 22449 | 
+ |  |  | 3 | 0.6 |  |  | 
+wolsec@secmail.pro | 02-09-2017 | 0.05 BTC | 0 |  | Attention | 3516 | 
+mongodb@tfwno.gf | 02-09-2017 | 0.15 BTC | 0 |  | Attention | 839 | 
+ |  | 0.2 BTC | 2 |  | WE_HAVE_YOUR_DATA |  | 
+butterfly@safe-mail.net | 10-01-2018 | 0.1 BTC | 0 |  | Warning | 8372 | 
+dbbackups@protonmail.com | 10-09-2018 | 0.6 BTC | 3 | 1.8 | Warning |  | 
+mongodb@8chan.co (Mongo Lock) | 10-09-2018 | 0.1 BTC | 0 |  | MONGO_LOCK |  | 
+dbbak_service | 02-01-2019 | 0.6 BTC | 0 |  | Warn.warn | 2521 | 
+hacktheworld.mm@protonmail.com | 07-01-2019 |  |  |  | PLEASE_READ_ME | 405 | 
+mongorestore@secmail.pro | 05-01-2019 | 0.5 BTC |  |  | READMEBITCH | 1 | 
+ |  |  | 283 | 26.86186818 |  | 86993 | 102

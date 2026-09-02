@@ -1,0 +1,17 @@
+The Register, 'MongoDB ransom attacks soar, body count hits 27,000 in hours', 2017-01-09
+URL: https://www.theregister.com/2017/01/09/mongodb/
+Fetched: 2026-09-02 (curl + WebFetch)
+
+ mon 9 Jan 2017 // 02:26 UTC
+MongoDB databases are being decimated in soaring ransomware attacks that have seen the number of compromised systems more than double to 27,000 in a day.
+Criminals are accessing, copying and deleting data from unpatched or badly-configured databases.
+Administrators are being charged ransoms to have data returned. Initial attacks saw ransoms of 0.2 bitcoins (US$184) to attacker harak1r1, of which 22 victims appeared to have paid, up from 16 on Wednesday when the attacks were first reported.
+ REG AD
+However, some payments could be benign transfers designed to make it appear victims are paying.
+ REG AD
+Norway-based security researcher and Microsoft developer Niall Merrigan says the attacks have soared from 12,000 earlier today to 27,633, over the course of about 12 hours.
+Merrigan and his associates have now logged some 15 distinct attackers. One actor using the email handle kraken0 has compromised 15,482 MongoDB instances, demanding 1 bitcoin (US$921) to have files returned. No one appears to have paid. Merrigan says he is investigating "OSINT and finding different IOCs as well the actors involved".
+He credits fellow researcher Victor Gevers with helping victims secure their exposed MongoDB databases, 118 so far, according to the updated working sheet.
+All told, a whopping 99,000 MongoDB installations are exposed, Gevers says.
+MongoDB security is a known problem: up until recently, the software's default configuration is insecure. Shodan founder John Matherly warned in 2015 that some 30,000 exposed MongoDB instances were open to the internet without access controls.
+In the Antipodes, the Australian Communications and Media Authority has been reporting exposed MongoDB installations since July 2015 using intelligence provided by the ShadowServer nonprofit.

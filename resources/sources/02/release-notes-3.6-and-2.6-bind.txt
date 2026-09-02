@@ -1,0 +1,126 @@
+MongoDB Manual, Release Notes for MongoDB 3.6 — 'Security > Default Bind to Localhost' and the 3.6 compatibility page, from the docs source repo (branch v3.6; the live URL now redirects to the manual's front page). Minor-release date list from the same file.
+URL: https://raw.githubusercontent.com/mongodb/docs/v3.6/source/release-notes/3.6.txt (+ /includes/fact-default-bind-ip-change.rst, /release-notes/3.6-compatibility.txt, /includes/fact-default-bind-ip.rst, /includes/fact-bind-to-all-ips.rst)
+Fetched: 2026-09-02 (curl, raw.githubusercontent.com)
+
+== release-notes/3.6.txt, lines 489-497 ==
+Security
+--------
+
+.. _3.6-bind-to-localhost:
+
+Default Bind to Localhost
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/fact-default-bind-ip-change.rst
+
+== includes/fact-default-bind-ip-change.rst ==
+Starting with MongoDB 3.6, MongoDB binaries, :binary:`~bin.mongod` and
+:binary:`~bin.mongos`, bind to ``localhost`` by default.
+From MongoDB versions 2.6 to 3.4, only the binaries from the
+official MongoDB RPM (Red Hat, CentOS, Fedora Linux, and derivatives)
+and DEB (Debian, Ubuntu, and derivatives) packages would bind to 
+``localhost`` by default. To learn more about this change, see 
+:ref:`3.6-bind_ip-compatibility`.
+
+== release-notes/3.6-compatibility.txt, lines 16-23 ==
+.. _3.6-bind_ip-compatibility:
+
+Localhost Binding Compatibility Changes
+---------------------------------------
+
+.. include:: /includes/fact-default-bind-ip.rst
+
+.. include:: /includes/fact-bind-to-all-ips.rst
+
+== includes/fact-default-bind-ip.rst ==
+Starting in MongoDB 3.6, MongoDB binaries, :binary:`~bin.mongod` and
+:binary:`~bin.mongos`, bind to localhost (``127.0.0.1``) by default. If the
+:setting:`net.ipv6` configuration file setting or the ``--ipv6``
+command line option is set for the binary, the binary additionally binds
+to the IPv6 address ``::1``.
+
+Previously, starting from MongoDB 2.6, only the binaries from the
+official MongoDB RPM (Red Hat, CentOS, Fedora Linux, and derivatives)
+and DEB (Debian, Ubuntu, and derivatives) packages bind to localhost by
+default.
+
+When bound only to the localhost, these MongoDB 3.6 binaries can only
+accept connections from clients (including the :binary:`~bin.mongo` shell,
+other members in your deployment for replica sets and sharded clusters)
+that are running on the same machine. Remote clients cannot connect to
+the binaries bound only to localhost.
+
+To override and bind to other ip addresses, you can use the
+:setting:`net.bindIp` configuration file setting or the
+``--bind_ip`` command-line option to specify a list of ip
+addresses.
+
+.. include:: /includes/warning-bind-ip-security-considerations.rst
+
+For example, the following :binary:`~bin.mongod` instance binds to both the
+localhost and the sample ip address ``198.51.100.1``:
+
+.. code-block:: none
+
+   mongod --bind_ip localhost,198.51.100.1
+
+In order to connect to this instance, remote clients must specify the
+ip address ``198.51.100.1`` or the hostname associated with the ip
+address:
+
+.. code-block:: none
+
+   mongo --host 198.51.100.1
+
+   mongo --host My-Example-Associated-Hostname
+
+
+== includes/fact-bind-to-all-ips.rst ==
+To bind to all IPv4 addresses, you can specify the bind ip address of
+``0.0.0.0``. To bind to all IPv4 and IPv6 addresses, you can specify
+the bind ip address of ``0.0.0.0,::`` or alternatively, use the new
+:setting:`net.bindIpAll` setting or the new command-line option
+``--bind_ip_all``.
+
+== 3.6 minor-release dates (headings in 3.6.txt) ==
+16:3.6.23 - Mar 19, 2021
+31:3.6.22 - Feb 8, 2021
+50:3.6.21 - Nov 16, 2020
+71:3.6.20 - Sep 14, 2020
+91:3.6.19 - Jul 23, 2020
+107:3.6.18 - May 1, 2020
+130:3.6.17 - Jan 27, 2020
+147:3.6.16 - Dec 6, 2019
+161:3.6.15 - Nov 6, 2019
+178:3.6.14 - Aug 26, 2019
+204:3.6.13 - Jun 10, 2019
+227:3.6.12 - April 8, 2019
+249:3.6.11 - Mar 1, 2019
+269:3.6.10 - Jan 22, 2019
+287:3.6.9 - Nov 16, 2018
+303:3.6.8 - Sep 19, 2018
+324:3.6.7 - Aug 25, 2018
+341:3.6.6 - Jul 10, 2018
+358:3.6.5 - May 29, 2018
+380:3.6.4 - Apr 13, 2018
+402:3.6.3 - February 23, 2018
+418:3.6.2 - January 10, 2018
+461:3.6.1 - Dec 26, 2017
+
+== release-notes/2.6.txt, header (release date of 2.6.0) ==
+=============================
+Release Notes for MongoDB 2.6
+=============================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: twocols
+
+*April 8, 2014*
+
+MongoDB 2.6 is now available. Key features include aggregation
+enhancements, text-search integration, query-engine improvements, a new

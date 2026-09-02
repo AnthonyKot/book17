@@ -1,0 +1,28 @@
+MongoDB Manual (live), Self-Managed Configuration File Options — net.bindIp
+URL: https://www.mongodb.com/docs/manual/reference/configuration-options/
+Fetched: 2026-09-02 (curl)
+
+net.bindIp
+
+Type: string
+
+Default: localhost
+
+The hostnames and/or IP addresses and/or full Unix domain socket paths on which mongos or mongod should listen for client connections. You may attach mongos or mongod to any interface. To bind to multiple addresses, enter a list of comma-separated values.
+
+Example
+
+localhost,/tmp/mongod.sock
+
+MongoDB Manual (live), Security Checklist for Self-Managed Deployments — 'Limit Network Exposure'
+URL: https://www.mongodb.com/docs/manual/administration/security-checklist/
+Fetched: 2026-09-02 (curl)
+
+➤ Limit Network Exposure
+
+Ensure that MongoDB runs in a trusted network environment and configure firewall or security groups to control inbound and outbound traffic for your MongoDB instances.
+
+Disable direct SSH root access.
+
+Allow only trusted clients to access the network interfaces and ports on which MongoDB instances are available.
+

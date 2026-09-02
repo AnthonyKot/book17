@@ -1,0 +1,14 @@
+MongoDB, Inc. press release, 'MongoDB 3.6 Empowers Enterprises and Developers to Move at the Speed of Data', London, 2017-11-08 — dateline and 'Secure Data Deployment' paragraphs
+URL: https://www.mongodb.com/company/newsroom/press-releases/mongodb-36-empowers-enterprises-and-developers-to-move-at-the-speed-of-data
+Fetched: 2026-09-02 (curl)
+
+London, U.K. – November 8, 2017 – MongoDB, Inc. (Nasdaq: MDB), the company behind the leading modern, general purpose database platform, today announced the release of MongoDB 3.6.
+Secure Data Deployment
+
+MongoDB offers among the most extensive and mature security capabilities of any modern database by providing robust access control, end-to-end encryption and complete database auditing. Some of the most demanding organizations in the most regulated industries, such as Barclays, HSBC, Morgan Stanley and AstraZeneca, use MongoDB for mission-critical use cases.
+
+MongoDB 3.6 continues to build out security protection with two new enhancements:
+
+The most popular installer for MongoDB already limits network access by binding to localhost by default. With MongoDB 3.6, this default behavior is implemented directly in the server itself, so all MongoDB packages across all platforms refuse all external connections to the database unless otherwise explicitly configured by the administrator.
+
+Combined with new IP whitelisting support, administrators can configure MongoDB to only accept external connections on approved IP addresses. These enhancements greatly reduce the risk of unsecured MongoDB instances unintentionally being deployed into production where they might be at risk from malicious actors.

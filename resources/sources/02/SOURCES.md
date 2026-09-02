@@ -1,0 +1,68 @@
+# Sources — chapter 02 (A02 Security Misconfiguration — MongoDB ransom wave, 2017)
+
+All fetched 2026-09-02. The `.txt` files alongside are the passages actually read; the raw HTML/JSON
+copies stayed in the session scratchpad. "Fetched with" records the client that worked, because
+several of these documents no longer live at their original URL (see "Not fetched / moved" at the end).
+
+## Primary — vendor record (the default, and the change to it)
+
+| File | Document | What it is | URL | Fetched with / section used |
+|---|---|---|---|---|
+| `jira-server-4216.txt` | JIRA SERVER-4216, "[SECURITY] mongodb 10gen debian package listens on all interfaces by default", reporter Roman Shtylman, created 2011-11-04, resolved 2014-04-08, fix version 2.6.0-rc0 | **Vendor bug tracker** — the record that the *packaged* default was raised as a security issue and closed with 2.6.0 | https://jira.mongodb.org/browse/SERVER-4216 | curl, REST API (`/rest/api/2/issue/SERVER-4216`); whole description |
+| `jira-server-28229.txt` | JIRA SERVER-28229, "Bind to localhost by default", reporter/assignee Spencer Jackson, created 2017-03-07, resolved 2017-04-28, fix version 3.5.7 | **Vendor bug tracker** — the *binary* default change; the "User Summary as of May 17, 2017" panel is the vendor's own statement of what changed and why | https://jira.mongodb.org/browse/SERVER-28229 | curl, REST API; whole description incl. original spec (3 numbered changes) |
+| `commit-60636b4.txt` | mongodb/mongo commit 60636b4d…, "SERVER-28229: Bind to localhost by default", authored 2017-04-25, committed 2017-04-28 | **Commit** — the closest document to the change: `server_options_helpers.cpp` (empty `bind_ip` now means localhost; new `--bind_ip_all`), `startup_warnings_common.cpp` ("** ATTENTION: The server is bound to localhost."), `listen.cpp` (`127.0.0.1` / `::1`) | https://github.com/mongodb/mongo/commit/60636b4d3ae60a24c080c7250459814eef5e7c87 | curl, GitHub API; source hunks only (test-suite yml edits omitted) |
+| `release-notes-3.6-and-2.6-bind.txt` | MongoDB Manual, Release Notes for 3.6 § Security › "Default Bind to Localhost"; 3.6 Compatibility § "Localhost Binding Compatibility Changes"; Release Notes for 2.6 header (2.6.0 dated April 8, 2014); 3.6.x minor-release dates | **Vendor documentation** from the docs *source repo* (branch `v3.6`), because the live release-notes URLs now redirect to the manual front page. Key sentence: "From MongoDB versions 2.6 to 3.4, only the binaries from the official MongoDB RPM … and DEB … packages would bind to localhost by default." | https://raw.githubusercontent.com/mongodb/docs/v3.6/source/release-notes/3.6.txt (+ `3.6-compatibility.txt`, `includes/fact-default-bind-ip-change.rst`, `includes/fact-default-bind-ip.rst`, `includes/fact-bind-to-all-ips.rst`, `release-notes/2.6.txt`) | curl, raw.githubusercontent.com; lines 489–497 of 3.6.txt, lines 16–23 of the compat file, the three includes, lines 1–16 of 2.6.txt |
+| `manual-bindip-and-checklist.txt` | MongoDB Manual (live): Configuration File Options › `net.bindIp` ("Default: localhost"); Security Checklist › "Limit Network Exposure" | **Vendor documentation**, current | https://www.mongodb.com/docs/manual/reference/configuration-options/ ; https://www.mongodb.com/docs/manual/administration/security-checklist/ | curl; the two named entries |
+| `nilsson-2017-01-06.txt` | MongoDB blog, Andreas Nilsson (Director of Product Security), "How to Avoid a Malicious Attack That Ransoms Your Data", 2017-01-06 | **Vendor statement during the wave.** "These attacks are preventable with the extensive security protections built into MongoDB. You need to use these features correctly"; "The most popular installer for MongoDB (RPM) limits network access to localhost by default." | https://www.mongodb.com/blog/post/how-to-avoid-a-malicious-attack-that-ransoms-your-data | curl via Wayback capture `20170115` (live URL — and its `/es/` locale twin — now redirect to a generic security hub page; WebFetch returned that hub page, not the post); whole post |
+| `mongodb-newsroom-2017-11-08.txt` | MongoDB, Inc. press release, "MongoDB 3.6 Empowers Enterprises and Developers…", London, 2017-11-08 | **Vendor announcement** of 3.6 GA; § "Secure Data Deployment": "The most popular installer for MongoDB already limits network access by binding to localhost by default. With MongoDB 3.6, this default behavior is implemented directly in the server itself…" | https://www.mongodb.com/company/newsroom/press-releases/mongodb-36-empowers-enterprises-and-developers-to-move-at-the-speed-of-data | curl; dateline + the two security paragraphs |
+| `docker-library-mongo-issue-180.txt` | docker-library/mongo issue #180, "3.5.7 now binds to localhost-only by default" | **Downstream packager's record** of the change reaching them (names SERVER-28229 and commit 60636b4) | https://github.com/docker-library/mongo/issues/180 | curl; opening comment |
+
+## Primary — measurements (exposed count, before and after)
+
+| File | Document | What it is | URL | Fetched with / section used |
+|---|---|---|---|---|
+| `shodan-2015-07-18.txt` | Shodan blog, John Matherly, "It's the Data, Stupid!", 2015-07-18 | **Scanner's published measurement**: "nearly 30,000 instances … that don't have any authorization enabled"; "595.2 TB"; 2.4.14 "the last version that still listened to 0.0.0.0 by default"; cites SERVER-4216 and the >2-year delay; cloud concentration; 40 % on 1.8.1 | https://blog.shodan.io/its-the-data-stupid/ | curl + WebFetch; whole body |
+| `shodan-2015-12-15.txt` | Shodan blog, John Matherly, "It's Still the Data, Stupid!", 2015-12-15 | **Scanner's measurement**: "at least 35,000"; "684.8 TB"; "a lot of people are changing the default configuration of MongoDB to something less secure" | https://blog.shodan.io/its-still-the-data-stupid/ | curl + WebFetch; body to the database-name table |
+| `shodan-2020-05-10.txt` | Shodan blog, John Matherly, "Elastic Data Exposure Grows to 3.2 PB", 2020-05-10 | **Scanner's after-measurement**: MongoDB exposed *data* "from 24 TB to 12.5 TB" (2018→2020), "the only database among the 3 … where the amount of exposed data has actually decreased". Data volume, not host count. | https://blog.shodan.io/elastic-data-exposure-grows-to-3-2-pb/ | curl; the MongoDB paragraph |
+| `gevers-merrigan-sheet-excerpt.txt` | "MongoDB ransacking" — the Gevers/Merrigan Google Sheet, first tab (actor table): actor, first sighted, ransom, transactions, BTC received, replaced-DB name, victims (OSINT / helped) | **The contemporaneous tracking document** that every January-2017 count was quoted from. Attacker e-mails, bitcoin addresses and IPs deliberately omitted from the excerpt. Only the first tab exported; the "victims by industry" tab Krebs screenshots was not. Undated cells; no row-level provenance. | https://docs.google.com/spreadsheets/d/1QonE9oeMOQHVh8heFIyeqrjfKEViL0poLnY8mAakKhM/ | curl, `/export?format=csv` (the `htmlview` page is JS-only) |
+| `shadowserver-open-mongodb-report.txt` | Shadowserver, "Open MongoDB Report" (scan description, last updated 2025-12-29) | **Instrument description** only — what "mongodb-noauth" means. No historical count on the page. | https://www.shadowserver.org/what-we-do/network-reporting/open-mongodb-report/ | curl; four descriptive lines |
+
+## Secondary — retellings (folk story only; never the source for a ledger verdict)
+
+| File | Document | Carries | URL | Fetched with |
+|---|---|---|---|---|
+| `krebs-2017-01-10.txt` | Krebs, "Extortionists Wipe Thousands of Databases, Victims Who Pay Up Get Stiffed", 2017-01-10 | "If installed on a server with the default settings … MongoDB allows anyone to browse the databases"; ">52,000 publicly accessible" (Shodan, Jan 10); "at least 29,000 … erased" (Merrigan); Flashpoint "at least 20,000"; note the 1:55 p.m. correction "Clarified the default settings" | https://krebsonsecurity.com/2017/01/extortionists-wipe-thousands-of-databases-victims-who-pay-up-get-stiffed/ | curl via Wayback `20170111111036` after repeated 429s; **live URL returned 502 to both curl and WebFetch** |
+| `register-2017-01-09.txt` | The Register, "MongoDB ransom attacks soar, body count hits 27,000 in hours", 2017-01-09 | "12,000 … to 27,633, over the course of about 12 hours"; "99,000 MongoDB installations are exposed, Gevers says"; "up until recently, the software's default configuration is insecure" | https://www.theregister.com/2017/01/09/mongodb/ | curl + WebFetch |
+| `bleeping-2017-01-03.txt` | Bleeping Computer, Cimpanu, "MongoDB Databases Held for Ransom by Mysterious Attacker", 2017-01-03/04 | Gevers's first sighting (Dec 27); "just over 1,800" (Matherly, Jan 4); "78% … running known vulnerable versions"; "MongoDB, Inc. … has fixed this issue a few months later, but companies keep using the outdated versions … the default MongoDB images on AWS" | https://www.bleepingcomputer.com/news/security/mongodb-databases-held-for-ransom-by-mysterious-attacker/ | curl |
+| `bleeping-2017-01-07.txt` | Bleeping Computer, Cimpanu, "MongoDB Apocalypse Is Here as Ransom Attacks Hit 10,000 Servers", 2017-01-07 (update Jan 9) | "10,500 … about 25% of all MongoDB databases accessible via the Internet"; ~28,000 by Jan 9; Gevers: 84 cases with no "trace of data exfiltration"; Merrigan: "attackers are deleting each others' ransoms" | https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-is-here-as-ransom-attacks-hit-10-000-servers/ | curl + WebFetch |
+| `bleeping-2017-09-04.txt` | Bleeping Computer, Cimpanu, "Massive Wave of MongoDB Ransom Attacks Makes 26,000 New Victims", 2017-09-04 | Second wave: 26,000 (one group 22,449); "over 45,000" cumulative; Gevers's open questions ("Are they running on older version without safe defaults…?") | https://www.bleepingcomputer.com/news/security/massive-wave-of-mongodb-ransom-attacks-makes-26-000-new-victims/ | curl |
+| `zdnet-2017-01-09.txt` | ZDNet, "MongoDB ransacked: Now 27,000 databases hit…", 2017-01-09 | "27,000 … up from an estimated 2,000 on January 3 and 8,542 on January 5"; "more than a quarter of the 99,000" | https://www.zdnet.com/article/mongodb-ransacked-now-27000-databases-hit-in-mass-ransom-attacks/ | curl |
+| `zdnet-2020-07-01.txt` | ZDNet, Cimpanu, "Hacker ransoms 23k MongoDB databases…", 2020-07-01 | The *after* count as a journalist states it: "22,900 … roughly 47% of all MongoDB databases accessible online"; "From the 60,000 MongoDB servers left exposed online in early 2017, the needle has barely moved to 48,000"; "The default MongoDB database setup today comes with secure defaults out of the box" — no source given for 60,000/48,000 | https://www.zdnet.com/article/hacker-ransoms-23k-mongodb-databases-and-threatens-to-contact-gdpr-authorities/ | curl |
+| `tnw-2017-11-08.txt` | The Next Web, "MongoDB 3.6 comes hardened against database ransomware by default", 2017-11-08 | Horowitz: "On 3.6, localhost only is enabled by default … that entire method of doing ransomware goes away"; "MongoDB will no longer come with an unsafe configuration out of the box" | https://thenextweb.com/security/2017/11/08/mongodb-3-6-comes-hardened-database-ransomware-default | curl |
+| `securityweek-2015-12-15.txt` | SecurityWeek, "35,000 MongoDB Instances Exposed Online", 2015-12-15 | MacKeeper context; "port:27017"; "not … a vulnerability … but due to the way developers configure the system" | https://www.securityweek.com/35000-mongodb-instances-exposed-online/ | curl |
+| `wikipedia-mongodb-security.txt` | Wikipedia, "MongoDB" § Security (CC BY-SA), as of 2026-09-02 | The lede-level folk claim: "Because of MongoDB's default security configuration, which allows any user full access to the database…" | https://en.wikipedia.org/wiki/MongoDB | curl + WebFetch |
+
+## Not fetched / moved / thin
+
+- **MongoDB blog, "Update: How to Avoid a Malicious Attack That Ransoms Your Data"** (Davi
+  Ottenheimer, September 2017 per Wikipedia and ZDNet 2020) — **not fetched.** The live URL (and its
+  `/es/` twin) redirects to the blog index; five Wayback captures exist (2018-07-21 … 2019-01-27) but
+  web.archive.org answered 429 on every attempt, and WebFetch cannot reach web.archive.org at all.
+  Any claim about what Ottenheimer said rests on ZDNet's paraphrase until this is fetched.
+- **Live MongoDB release-notes pages** for 2.6 and 3.6 — the live URLs
+  (`/docs/manual/release-notes/3.6/`, `/2.6/`, `/docs/rapid/release-notes/3.6-compatibility/`) all
+  redirect to "What is MongoDB?"; the docs *source repo* copies above are used instead.
+- **Shodan's own January 2017 count** — Matherly's numbers that week (1,800 on Jan 4; >52,000
+  exposed on Jan 10) survive only as quoted by Bleeping and Krebs; no Shodan blog post from that
+  month exists (the `tag/mongobd` index lists 2015 and 2018 posts only). Ledger rows on the
+  January exposed count therefore cite the retelling *as the carrier of Shodan's figure*.
+- **A host-count time series after 3.6** — the one thing that would settle "the exposed count fell"
+  cleanly. Shodan 2020 gives data volume (24 → 12.5 TB), not hosts; ZDNet 2020 gives hosts
+  (60,000 → 48,000) with no stated source. Shadowserver's daily open-MongoDB feed would settle it
+  and was not obtained (subscriber data).
+- **The Gevers/Merrigan sheet's other tabs** (victims by industry, payments) — only the first tab
+  exports as CSV.
+- **GDI Foundation** (gdi.foundation) — the site is a JavaScript shell (768 bytes); no report there.
+- **Victor Gevers's own write-up** — none found beyond tweets; Wikipedia's Gevers stub says only
+  that he runs the GDI Foundation.
+- **OWASP** spine is in `resources/owasp/A02_*.txt` (fetched 2026-09-01 by the coordinating session).

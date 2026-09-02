@@ -1,0 +1,11 @@
+SecurityWeek, '35,000 MongoDB Instances Exposed Online', 2015-12-15
+URL: https://www.securityweek.com/35000-mongodb-instances-exposed-online/
+Fetched: 2026-09-02 (curl)
+
+ December 15, 2015 (3:33 PM ET)
+In July, Matherly reported finding nearly 30,000 instances of the popular NoSQL database management system accessible over the Internet due to configuration issues. The databases identified using the computer search engine Shodan exposed roughly 600 terabytes of data.
+The exposed MacKeeper data was stored in MongoDB databases that Vickery identified using Shodan by conducting a search for “port:27017.” By default, MongoDB runs on TCP port 27017, which allows anyone to easily identify openly accessible databases using the search engine.
+Shortly after the news broke, Matherly decided to conduct another search for MongoDB databases on Shodan to see how many are exposed compared to the scan he conducted in July. He discovered a total of 35,000 publicly available, unauthenticated instances of MongoDB, over 5,000 more than in July.
+Advertisement. Scroll to continue reading.
+According to the expert, the databases, mostly hosted on Amazon, Digital Ocean and Alibaba’s Aliyun platform, expose more than 684 terabytes of data.
+Openly accessible MongoDB instances are a well known issue caused not by a vulnerability in the database management system, but due to the way developers configure the system. MongoDB developers provide instructions on how to properly configure the system and extensive security capabilities are available to users. Furthermore, recent versions of MongoDB are shipped with new defaults that aim to solve this problem.

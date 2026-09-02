@@ -1,0 +1,47 @@
+Shodan blog, John Matherly, 'It's Still the Data, Stupid!', 2015-12-15
+URL: https://blog.shodan.io/its-still-the-data-stupid/
+Fetched: 2026-09-02 (curl + WebFetch)
+
+ 15 December 2015 on research, MongoBD, NoSQL, Cassandra, Riak, Redis, CouchDB
+
+In light of the recent incident of MacKeeper exposing 13 million accounts through a public, unauthenticated MongoDB instances I wanted to quickly revisit my earlier blog post on the subject.
+
+At the moment, there are at least 35,000 publicly available, unauthenticated instances of MongoDB running on the Internet. This is an increase of >5,000 instances since the last article. They're hosted mostly on Amazon, Digital Ocean and Aliyun (cloud computing by Alibaba):
+
+The most popular versions of MongoDB are:
+
+3.0.7: 3,010 
+
+2.4.9: 2,624 
+
+2.4.14: 2,535 
+
+2.4.10: 1,879 
+
+3.0.6: 1,256
+
+By default, newer versions of MongoDB only listen on localhost. The fact that MongoDB 3.0 is well-represented means that a lot of people are changing the default configuration of MongoDB to something less secure and aren't enabling any firewall to protect their database. In the previous article, it looked like the misconfiguration problem might solve itself due to the new defaults that MongoDB started shipping with; that doesn't appear to be the case based on the new information. It could be that users are upgrading their instances but using their existing, insecure configuration files.
+
+In terms of data volume, all of the exposed databases combined account for 684.8 TB of data. And the most popular database names are:
+
+local: 33,947 
+
+admin: 23,970 
+
+db: 8,638 
+
+test: 6,761 
+
+config: 859 
+
+test1: 612 
+
+mydb: 549 
+
+DrugSupervise: 382 
+
+Video: 376 
+
+mean-dev: 252
+
+The database names are mostly the same as before, with the exception of: DrugSupervise and mean-dev. Notably absent is hackedDB which was at #8 last time.

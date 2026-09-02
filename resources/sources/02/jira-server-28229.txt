@@ -1,0 +1,46 @@
+MongoDB JIRA SERVER-28229 (via REST API), 'Bind to localhost by default'
+URL: https://jira.mongodb.org/browse/SERVER-28229
+Fetched: 2026-09-02 (curl, REST API json)
+
+Key: SERVER-28229
+Summary: Bind to localhost by default
+Reporter/assignee: Spencer Jackson / Spencer Jackson
+Created: 2017-03-07T15:32:31.000+0000
+Resolved: 2017-04-28T23:30:12.000+0000
+Status/resolution: Closed / Done
+Fix version(s): ['3.5.7']
+
+Description (as stored, JIRA markup):
+{panel:title=User Summary as of May 17, 2017|borderColor=#ccc|titleBGColor=#6CB33F|bgColor=#EEEEEE}
+MongoDB 3.5.7 introduces a new line of protection from unauthorized access: as of this release, MongoDB servers will only listen for connections on the local host unless explicitly configured to listen on another address. The next production release, 3.6, incorporates this change.
+
+Before changing this new default behavior, users are encouraged to review our [Security Checklist|https://docs.mongodb.com/manual/administration/security-checklist/].
+
+To make MongoDB servers accept connections from remote and local sources, either:
+* Set {{--bind_ip 0.0.0.0}} on the command line, or set the equivalent parameter, {{net.bindIp}}, in your configuration file:
+{noformat}
+net:                                                                                                
+   bindIp: 0.0.0.0
+{noformat}
+Advanced deployments running on hosts with multiple network interfaces may find other values of {{net.bindIp}} useful.
+
+or
+
+* Use the new {{mongod --bind_ip_all}} command line switch, or enable the equivalent parameter, {{net.bindIpAll}}, in your configuration file:
+{noformat}
+net:                                                                                                
+  bindIpAll: true
+{noformat}
+
+When MongoDB is only listening for connections on the local host, remote clients will be unable to connect. Connection attempts from remote clients may see error messages such as "Connection refused". If your MongoDB servers need to accept external network connections, please go through our [Security Checklist|https://docs.mongodb.com/manual/administration/security-checklist/] before following the instructions above.
+
+{panel}
+
+h6. Original description
+
+MongoDB binaries should bind to localhost by default. This will allow small deployments and testing environments to be used from localhost, while not being accessible from the internet.
+
+The following changes shall be made:
+1) All mongod and mongos 3.6 binaries shall bind to 127.0.0.1 by default. When the --ipv6 argument is provided, then the server should additionally bind to the IPv6 address ::1. The server may be instructed to listen to internet traffic by starting it with arguments to --bind_ip that select a routable IP or IPv6 address.
+2) If no explicit bind_ip has been provided, print a startup warning indicating that the server is not responding to external connections, which describes how to fix the problem.
+3) A flag --bind_ip_all will be added to the server. When set, it shall cause the server to bind to all addresses.

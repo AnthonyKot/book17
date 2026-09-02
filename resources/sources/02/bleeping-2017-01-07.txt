@@ -1,0 +1,29 @@
+Bleeping Computer, Catalin Cimpanu, 'MongoDB Apocalypse Is Here as Ransom Attacks Hit 10,000 Servers', 2017-01-07 (update 2017-01-09)
+URL: https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-is-here-as-ransom-attacks-hit-10-000-servers/
+Fetched: 2026-09-02 (curl + WebFetch)
+
+January 7, 2017
+08:00 AM
+2
+UPDATE: Fears that attacks would escalate have been confirmed today, January 9, as security researchers revealed that the number of hijacked MongoDB databases has gone from ~10,000 to ~28,000. Our original article on this topic is available below.
+What started as isolated incidents on Monday has transformed into an all out destruction of thousands of MongoDB servers by the end of the week.
+According to recent statistics compiled by Niall Merrigan and Victor Gerves, two security researchers that have kept a close eye on the attacks, hackers have now hit around 10,500 MongoDB servers. That's about 25% of all MongoDB databases accessible via the Internet.
+#MongoDb ransacking more actors are joining in.. 5 signatures in play and last estimate 10.5K servers compromised
+— Niall Merrigan (@nmerrigan) January 6, 2017
+The attacks don't target all MongoDB databases, but only those left accessible via the Internet and without a password on the administrator account.
+Starting with December 20, a hacker has been accessing some of these open databases, exporting their content, and replacing it with a ransom note.
+The attacks intensified over last weekend, and since Monday, multiple groups have joined the initial hacker. Two days ago there were only three groups, now there are eight.
+Many companies permanently lost their data
+The situation is desperate for MongoDB owners and it doesn't show any sign of stopping. Even worse, groups are re-hacking the same servers and rewriting each other ransom notes, making it impossible to know which group downloaded the victim's data and to whom should victims pay the ransom.
+All groups ask for small ransom fees, ranging from $150 to $500, which encourages victims to pay. Companies that wanted to pay the ransom, sometimes found that the group to whom they paid the ransom was not the one who stole their data, and they were forced to pay a second or third ransom to another group.
+According to Gevers and Merrigan, some of these groups don't even bother exporting the databases and making a copy of the original data, meaning some unlucky companies permanently lost their data.
+Gevers, who's been providing hacked companies with his services, says that in 84 cases he was unable to find "any trace of data exfiltration."
+The MongoDB apocalypse
+"Right now it's bedlem," Merrigan told Bleeping Computer yesterday, "attackers are deleting each others' ransoms as quick as they pop up."
+"It's a very interesting case, and it's like watching a gold rush at this point," he added.
+More hacking groups desperate for money are expected to join the MongoDB "gold rush" in the following days, which may also drive up the number of affected victims.
+In a couple of weeks, it is reasonable to expect that all MongoDB servers exposed to the Internet will lose their data and have their content replaced with a ransom demand.
+In many ways, we may be witnessing the last days of Internet-available MongoDB servers.
+.@0xDUDE @nmerrigan at this rate a majority of open MongoDB installs will be trashed in a week.
+— Kevin Beaumont (@GossiTheDog) January 6, 2017
+It is very hard to believe that after this highly-mediatized rash of ransom attacks any database administrator won't double-check to see if his MongoDB server is available online and if the admin account doesn't use a strong password.

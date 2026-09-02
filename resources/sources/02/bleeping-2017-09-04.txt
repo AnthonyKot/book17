@@ -1,0 +1,41 @@
+Bleeping Computer, Catalin Cimpanu, 'Massive Wave of MongoDB Ransom Attacks Makes 26,000 New Victims', 2017-09-04
+URL: https://www.bleepingcomputer.com/news/security/massive-wave-of-mongodb-ransom-attacks-makes-26-000-new-victims/
+Fetched: 2026-09-02 (curl)
+
+September 4, 2017
+06:34 AM
+0
+Ransom attacks on MongoDB databases rekindled last week and over the weekend with the emergence of three new groups that hijacked over 26,000 servers, with one group hijacking 22,000.
+The attacks, detected by security researchers Dylan Katz and Victor Gevers, are a continuation of the so-called MongoDB Apocalypse that started in late December 2016 and continued through the first months of 2017.
+During those attacks, multiple hacking crews scanned the Internet for MongoDB databases left open for external connections, wiped their content, and replaced it with a ransom demand.
+Most of these exposed databases were test systems, but some contained production data and a few companies ended up paying the ransom only to later find out they've been scammed and the attacker never had their data.
+New wave of MongoDB hijacks discovered
+Several security researchers have tracked the attacks with the help of a Google Docs spreadsheet. In total, attackers ruined over 45,000 databases, if not even more.
+From MongoDB, ransom attacks also spread to other server technologies, such as ElasticSearch, Hadoop, CouchDB, Cassandra, and MySQL servers.
+Over the spring and summer, hacking groups involved in these attacks waned off, and the number of ransomed servers went down.
+Last week, three new groups emerged, identified based on the email address they used in the ransom notes.
+Email address
+ Victims
+ Ransom demand
+ Bitcoin address
+cru3lty@safe-mail.net
+ 22,449
+ 0.2 BTC
+ Bitcoin address
+wolsec@secmail.pro
+ 3,516
+ 0.05 BTC
+ Bitcoin address
+mongodb@tfwno.gf
+ 839
+ 0.15 BTC
+ Bitcoin address
+Fewer attackers but larger impact
+"The amount of (new) attackers went down compared with the beginning of the year, but the destructive reach (in regards to victims) per attack went up in numbers," Gevers told Bleeping Computer in a private conversation. "So it looks like there are fewer attackers but with a larger impact."
+To put it in perspective, it took attackers from the first wave of MongoDB attacks nearly a month to rack up 45,000 ransomed DBs. The Cru3lty group managed half of that only last week.
+Gevers says that he's seen cases where the group hijacks a user's DB, the user restores a database copy from backups, and the group ransoms the server again on the same day because the victim failed to properly secure his DB.
+"Now we need to study exactly what is going on here because we are missing pieces of the puzzle to keep a complete picture," Gevers told Bleeping. "Is this a lack of knowledge? Did they mess up the [MongoDB] security settings without knowing it? Are they running on older version without safe defaults and other vulnerabilities?"
+It's been a busy year for crooks and security researchers alike
+Gevers also said he'll also have to bring in some outside experts to help him analyze this massive wave of MongoDB hijacks.
+This is not because Gevers and fellow security researchers can't investigate the attacks, but because they are already busy finding and reporting other types of vulnerable devices left connected online, such as cryptocurrency miners, Arris modems, or IoT devices.
+Gevers, who is the chairman of the GDI Foundation, a non-profit organization working to secure devices exposed online, has been busy all year securing all sorts of devices, from AWS S3 buckets to Jenkins instances, and from computers infected with EternalBlue to GitHub repos that contain sensitive credentials.

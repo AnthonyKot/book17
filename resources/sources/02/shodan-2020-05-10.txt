@@ -1,0 +1,10 @@
+Shodan blog, John Matherly, 'Elastic Data Exposure Grows to 3.2 PB', 2020-05-10 — the MongoDB paragraph
+URL: https://blog.shodan.io/elastic-data-exposure-grows-to-3-2-pb/
+Fetched: 2026-09-02 (curl)
+
+ 10 May 2020 
+I was surprised to see how much data remains exposed by public HDFS clusters so I decided to revisit the topic. In this blog post I will be looking at 3 databases that I've written about previously: MongoDB, Elastic and HDFS. And with that lets start off with an overview of the data exposure for those technologies:
+
+The above chart compares the amount of data each database exposed in 2018 and in 2020. Note that the size is measured in TB.
+
+MongoDB's exposure in 2018 was already drastically lower than the others due to a series of ransomware attacks. Those attacks are still on-going but the overall exposure of public MongoDB instances has drastically decreased. This is the only database among the 3 I looked at where the amount of exposed data has actually decreased (from 24 TB to 12.5 TB). MongoDB has come a long way since the early days and their security documentation reflects that. If you're not sure where to start I recommend checking it out.

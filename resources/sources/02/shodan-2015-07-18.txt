@@ -1,0 +1,63 @@
+Shodan blog, John Matherly, 'It's the Data, Stupid!', 2015-07-18
+URL: https://blog.shodan.io/its-the-data-stupid/
+Fetched: 2026-09-02 (curl + WebFetch)
+
+ 18 July 2015 on research, MongoBD, NoSQL
+
+I would like to take a moment to discuss databases. Most people use Shodan to find devices that have web servers, but for a few years now I've also been crawling the Internet for various database software. I usually mention this during my talks and I've tried to raise awareness of it over the years with mixed results. At least with MySQL, PostgreSQL and much of the relational database software the defaults are fairly secure: listen on the local interface only and provide some form of authorization by default. This isn't the case with some of the newer NoSQL products that started entering mainstream fairly recently. For the purpose of this article I will talk about one of the more popular NoSQL products called MongoDB, though much of what is being said also applies to other software (I'm looking at you Redis).
+
+Note: This article isn't about the way MongoDB scales.
+
+Firstly, in an effort to make it a bit easier to understand the results for MongoDB I've updated the way they're represented in the search results:
+
+A quick search for MongoDB reveals that there are nearly 30,000 instances on the Internet that don't have any authorization enabled. This was actually a bit surprising since by default MongoDB listens on localhost and has done so for a while based on the oldest Github checkin for their mongodb.conf. This made my results very confusing: how could there be so many open MongoDB installations if the defaults were to listen on localhost?
+
+Configuration History
+
+So I started downloading older versions of MongoDB to figure out when they changed the configuration defaults. It turns out that MongoDB version 2.4.14 seems to be the last version that still listened to 0.0.0.0 by default, which looks like a maintenance release done on April 28, 2015. I'm a bit confused why a configuration file was checked-in to Github September 2013 that listened on localhost by default, but then they kept distributing versions that didn't include that change?! I dug around some more and eventually found the official issue in Jira that tracked this configuration issue:
+
+https://jira.mongodb.org/browse/SERVER-4216
+
+Roman Shtylman actually raised this problem back in February of 2012! It ended up taking a bit more than 2 years to change the settings. Based on the distribution of versions I'm seeing, my guess is that early versions of 2.6 might've also lacked binding to localhost:
+
+The lack of secure defaults explained some of the 30,000 results but just looking at the data made something else obvious.
+
+The Cloud
+
+The vast majority of public MongoDB instances are operating in a cloud: Digital Ocean, Amazon, Linode and OVH round out the most popular destinations for hosting MongoDB without authorization enabled. I've actually observed this trend across the board: cloud instances tend to be more vulnerable than the traditional datacenter hosting. My guess is that cloud images don't get updated as often, which translates into people deploying old and insecure versions of software.
+
+Problem Scope
+
+There's a total of 595.2 TB of data exposed on the Internet via publicly accessible MongoDB instances that don't have any form of authentication. To determine the scale of the problem I downloaded the data using the Shodan command-line tool:
+
+shodan download --limit -1 mongodb "product:MongoDB"
+
+And then I ran a small Python script to aggregate the total size of all exposed databases. I also looked at which database names were most popular:
+
+local: 27,108 
+
+admin: 22,286 
+
+db: 9,895 
+
+test: 6,818 
+
+config: 1,119 
+
+mydb: 498 
+
+Video: 409 
+
+hackedDB: 319 
+
+storage: 315 
+
+trash: 309
+
+Faceting on the database name reveals widespread installations that might've been misconfigured or otherwise exposed. There are a lot of instances that have some sort of administrative database, so the app that uses MongoDB probably has authentication but the database itself doesn't... The name that really sticks out is hackedDB. It's unclear whether those instances have been compromised or whether it's a large deployment of MongoDB servers from a company that uses "hackedDB" as its database name. Or maybe it's a honeypot? The interesting thing to note when looking at the results is that 40% of the instances are running a very old version of MongoDB (1.8.1).
+
+I could go on and on about these sorts of problems because they're everywhere and haven't been resolved for years. Hopefully, more people will start looking at services that are responsible for the actual data and not solely focus on the web interfaces.
+
+ John Matherly's Picture
+
+John Matherly

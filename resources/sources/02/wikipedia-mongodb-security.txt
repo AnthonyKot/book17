@@ -1,0 +1,8 @@
+Wikipedia, 'MongoDB' § Security (CC BY-SA), as read 2026-09-02
+URL: https://en.wikipedia.org/wiki/MongoDB
+Fetched: 2026-09-02 (curl + WebFetch)
+
+395:Because of MongoDB's default security configuration, which allows any user full access to the database, data from tens of thousands of MongoDB installations has been stolen. Furthermore, many MongoDB servers have been held for ransom.[42][43] In September 2017, Davi Ottenheimer head of product security at MongoDB, proclaimed that measures had been taken to defend against these risks.[44]
+396-
+397-Technical criticisms
+398-[edit]

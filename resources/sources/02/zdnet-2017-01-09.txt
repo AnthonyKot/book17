@@ -1,0 +1,19 @@
+ZDNet, 'MongoDB ransacked: Now 27,000 databases hit in mass ransom attacks', 2017-01-09
+URL: https://www.zdnet.com/article/mongodb-ransacked-now-27000-databases-hit-in-mass-ransom-attacks/
+Fetched: 2026-09-02 (curl)
+
+January 9, 2017, 11:20 am ET
+ 2 min read 
+Attackers claim to hold a copy of the data that can be restored for between 0.2BTC and 1BTC, but there’s no guarantee it’s actually available.
+Image: Victor Gevers/Twitter
+Tens of thousands of poorly configured MongoDB databases have been compromised over the past week, with attackers wiping data and demanding up to one bitcoin to return it.
+Victor Gevers, from Netherlands-based GDI Foundation, and Niall Merrigan, a Norway-based developer, have been tracking a surge in attacks on MongoDB installations in which a handful of groups are wiping vulnerable databases and replacing them with an empty database with names such as a ‘WARNING’, ‘PWNED’, and ‘PLEASE_READ’.
+The attackers claim to hold a copy that can be purchased for between 0.2BTC and 1BTC, but there’s no guarantee the data is actually available if a payment is made.
+According to Merrigan, some 27,000 MongoDB servers have been compromised in the past day, up from an estimated 2,000 on January 3 and 8,542 on January 5.
+MongoDB is a popular open-source NoSQL database, widely used for big data and analytics. On the DB-Engines Ranking of database popularity it stands in fourth spot out of 315 systems, behind only Oracle, MySQL, and Microsoft SQL Server.
+At the current count, more than a quarter of the 99,000 MongoDB instances open to the internet have been compromised.
+The ransom attackers are targeting low-hanging fruit, namely MongoDB instances that don’t have password-protected admin accounts.
+The sudden spike in attacks may be attributed to copycat groups jostling for a slice of the action. The first recorded attacks occurred in mid-December with payments appearing to have been made to someone using the name, Harak1r1.
+Now there are over a dozen groups using their own email address and bitcoin wallets, according to a spreadsheet maintained by Gevers and Merrigan. The most active attacker, Kraken0, has compromised 15,482 databases and is demanding 1BTC to return the wiped data.
+The two researchers say they have assisted more than 100 organizations whose database have been hit by ransom attackers.
+Merrigan told Bleeping Computer the MongoDB attacks were a “gold rush”, with different groups replacing each others’ ransom notes.

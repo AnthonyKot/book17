@@ -1,0 +1,17 @@
+MongoDB JIRA SERVER-4216 (via REST API), '[SECURITY] mongodb 10gen debian package listens on all interfaces by default'
+URL: https://jira.mongodb.org/browse/SERVER-4216
+Fetched: 2026-09-02 (curl, REST API json)
+
+Key: SERVER-4216
+Summary: [SECURITY] mongodb 10gen debian package listens on all interfaces by default
+Reporter: Roman Shtylman
+Created: 2011-11-04T17:55:10.000+0000
+Resolved: 2014-04-08T02:49:26.000+0000
+Status/resolution: Closed / Done
+Fix version(s): ['2.6.0-rc0']
+
+Description:
+The default install of mongodb from the repo:
+http://downloads-distro.mongodb.org/repo/debian-sysvinit
+
+Does not have a "bind_ip 127.0.0.1" option set in the mongodb.conf. This leaves a users server vulnerable if they are not aware of this setting. The default should be to lockdown as much as possible and only expose if the user requests it.

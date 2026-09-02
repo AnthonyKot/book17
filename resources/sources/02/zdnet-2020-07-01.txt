@@ -1,0 +1,17 @@
+ZDNet, Catalin Cimpanu, 'Hacker ransoms 23k MongoDB databases and threatens to contact GDPR authorities', 2020-07-01
+URL: https://www.zdnet.com/article/hacker-ransoms-23k-mongodb-databases-and-threatens-to-contact-gdpr-authorities/
+Fetched: 2026-09-02 (curl)
+
+The hacker has attempted to ransom nearly 47% of all MongoDB databases left exposed online.
+July 1, 2020, 9:14 pm ET
+ 2 min read 
+A hacker has uploaded ransom notes on 22,900 MongoDB databases left exposed online without a password, a number that accounts for roughly 47% of all MongoDB databases accessible online, ZDNet has learned today.
+The hacker is using an automated script to scan for misconfigured MongoDB databases, wiping their content, and leaving a ransom note behind asking for a 0.015 bitcoin (~$140) payment.
+The attacker is giving companies two days to pay, and threatens to leak their data and then contact the victim’s local General Data Protection Regulation (GDPR) enforcement authority to report their data leak.
+Image: ZDNet
+Attacks planting this ransom note (READ_ME_TO_RECOVER_YOUR_DATA) have been seen as early as April 2020.
+More than 28,000 servers were ransomed in a series of attacks in January 2017, another 26,000 in September 2017, and then another 3,000 in February 2019.
+Back in 2017, Davi Ottenheimer, Senior Director of Product Security at MongoDB, Inc., blamed the attacks –and rightfully so– on database owners who failed to set a password for their databases, and then left their servers exposed online without a firewall.
+Almost three years later, nothing appears to have changed. From the 60,000 MongoDB servers left exposed online in early 2017, the needle has barely moved to 48,000 exposed servers today, most of which have no authentication enabled.
+Most of the time, these servers get exposed online after administrators follow incorrect MongoDB configuration tutorials, make honest mistakes when configuring their systems, or use server images that come packed with a misconfigured MongoDB system out of the box.
+The default MongoDB database setup today comes with secure defaults out of the box, but despite this, we still have tens of thousands of servers that get exposed online on a daily basis for one reason or another. For server admins looking to secure their MongoDB servers the proper way, the MongoDB Security page is the best place to start for getting the right advice.
