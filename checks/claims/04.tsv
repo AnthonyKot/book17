@@ -3,7 +3,7 @@
 04	04-adobe-announcement	On 3 October 2013 Adobe's CSO wrote that attackers had accessed Adobe customer IDs and encrypted passwords	adobe-announcement-2013-10-03.txt, opening	checked-by:fable:2026-09-03
 04	04-adobe-reuse-advice	Adobe recommended changing the password on any site where the same one was used	adobe-announcement-2013-10-03.txt	checked-by:fable:2026-09-03
 04	04-backup-reason	The old database was kept as a backup measure in case of issues with the new system	irish-dpc-2014-adobe.txt, Storage	checked-by:fable:2026-09-03
-04	04-crossword-record	The grouping-by-ciphertext-then-hints route is what OPC para 17 and DPC describe; no decryption on the record	canada-opc-2014-015.txt para 17; irish-dpc-2014-adobe.txt Passwords	checked-by:fable:2026-09-03
+04	04-crossword-record	OPC and DPC document grouping equal ciphertext values and using hints; that attack did not require the encryption key, and the reports do not say the key was recovered	canada-opc-2014-015.txt para 17; irish-dpc-2014-adobe.txt Passwords	checked-by:codex:2026-09-03
 04	04-dpc-backup-server	Attackers identified and removed data from a backup server	irish-dpc-2014-adobe.txt, How the Breach Occurred	checked-by:fable:2026-09-03
 04	04-dpc-deciphered	DPC: research articles showed some passwords deciphered by reference to hints and repeated passwords	irish-dpc-2014-adobe.txt, Passwords	checked-by:fable:2026-09-03
 04	04-dpc-finding	DPC: the transition could have been achieved more effectively and expeditiously	irish-dpc-2014-adobe.txt, Conclusion and Findings	checked-by:fable:2026-09-03
