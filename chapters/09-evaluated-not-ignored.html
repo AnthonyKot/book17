@@ -22,7 +22,7 @@
 <main class="wrap">
 <p class="kicker">Chapter 9 · A09:2025 Security Logging &amp; Alerting Failures</p>
 <h1>Evaluated, not ignored</h1>
-<p class="lede">The durable Target story is that an alert sounded and nobody looked. John Mulligan, then Target's chief financial officer, gave the Senate a less convenient account. Some intruder activity, he testified, was detected, logged, surfaced to the security operations center, and evaluated. The breach still followed. The useful question is therefore not whether Target owned an alarm. It is what happened between a machine raising an event and a person causing an effective response. The public record does not fully answer that question. Its silence is part of the lesson. <!-- CHECK: 09-lede-evaluated --></p>
+<p class="lede">The durable Target story is that an alert sounded and nobody looked. John Mulligan, speaking for Target in prepared Senate testimony, gave a less convenient account. Some intruder activity, he testified, was detected, logged, surfaced to the security operations center, and evaluated. The breach still followed. The useful question is therefore not whether Target owned an alarm. It is what happened between a machine raising an event and a person causing an effective response. The public record does not fully answer that question. Its silence is part of the lesson. <!-- CHECK: 09-lede-evaluated --></p>
 
 <section class="break">
 <h2>The break</h2>
@@ -34,7 +34,7 @@
 
 <p>Then comes the sentence that changes the chapter. “Some intruder activity was detected,” Mulligan testified. He continued that it was logged, surfaced to the SOC, and evaluated by security professionals. With hindsight and new information, he said, Target was asking questions about the judgments made then. It was also assessing whether different judgments might have produced different outcomes. <!-- CHECK: 09-detected-evaluated --></p>
 
-<p>This is not Target claiming that everything worked. It is narrower and more unsettling. The event crossed the first three boundaries: sensor to record, record to surfaced item, and surfaced item to human evaluation. Whatever failed came during or after judgment. The statement does not identify the evaluator, the available context, the disposition, or the action attached to it. Those omissions prevent a confident diagnosis.</p>
+<p>This is not Target claiming that everything worked. It is narrower and more unsettling. The event crossed the first three boundaries: sensor to record, record to surfaced item, and surfaced item to human evaluation. Whatever failed came during or after judgment. The statement does not identify the evaluator, the available context, the disposition, or the action attached to it. Those omissions prevent a confident diagnosis. <!-- CHECK: 09-testimony-gaps --></p>
 
 <p>The competing public account is stronger. The Senate staff report says FireEye generated urgent alerts as data-exfiltration malware was installed. It says Target's team neither reacted nor enabled automatic deletion. On another page, it describes an alert with the generic label “malware.binary” and raises the possibility that frequent alarms made it look like a false positive. But the report attributes those details to Bloomberg Businessweek. <!-- CHECK: 09-fireeye-account --></p>
 
@@ -61,11 +61,11 @@
 
 <p>OWASP names several of these conditions. It includes cases where <q class="owasp" data-src="A09">Appropriate alerting thresholds and response escalation processes are not in place or effective.</q> It also includes a detected alert that cannot be processed because its playbook is incomplete, obsolete, or absent. That is a broader and more useful model than “logs missing.” It treats the operational route to action as part of the control.</p>
 
-<p>Target's account can be placed on the drawing without guessing at the unseen box. Activity became a logged event. Some activity was detected and surfaced. A security professional evaluated it. The record then jumps to later external notification and investigation. Put a question mark between decision and effective action. Do not label the question mark “ignored.” The fetched documents do not establish that.</p>
+<p>Target's account can be placed on the drawing without guessing at the unseen box. Activity became a logged event. Some activity was detected and surfaced. A security professional evaluated it. The record then jumps to later external notification and investigation. Put a question mark between decision and effective action. Do not label the question mark “ignored.” The fetched documents do not establish that. <!-- CHECK: 09-mechanism-target --></p>
 
 <p>Now add two feedback arrows. From decision, send the reason back to detection engineering: true positive, false positive, duplicate, or insufficient evidence. From action, return proof: host isolated, credential disabled, process stopped, owner reached. Without the first loop, rules do not learn from judgments. Without the second, a ticket can close while exposure continues. The control is not complete merely because the interface records a click.</p>
 
-<p>This example sits awkwardly but usefully under an application-security list. Target's incident spanned an enterprise network and payment environment, not simply one web application's log statement. OWASP itself describes applications, APIs, log management, operations teams, and incident response in the same category. The lens fits because the mechanism is the same: application and infrastructure signals must cross an owned, testable path to response.</p>
+<p>This example sits awkwardly but usefully under an application-security list. The Senate account spans an enterprise network and payment environment, not simply one web application's log statement. OWASP itself describes applications, APIs, log management, operations teams, and incident response in the same category. The lens fits because the mechanism is the same: application and infrastructure signals must cross an owned, testable path to response. <!-- CHECK: 09-category-fit --></p>
 
 <p>The hard engineering problem is therefore a contract between components and people. For one high-consequence detection, you should be able to state what evidence it emits, who owns it, what context travels with it, how quickly it must be judged, what action follows each disposition, and where success is recorded. If one answer is “the SOC will know,” the whiteboard has exposed a missing interface.</p>
 </section>
@@ -74,7 +74,7 @@
 <h2>The defense</h2>
 <p>Target later published a short list of security and technology changes. Under “Enhancing monitoring and logging,” it said it had implemented additional rules and alerts, centralized log feeds, and enabled more logging. The same update named application whitelisting on point-of-sale systems, stronger segmentation, streamlined firewall rules, and reduced vendor access. These are recorded changes, not a recorded result. The fetched Target material does not measure whether its new decision path stopped a later incident. <!-- CHECK: 09-target-changes --></p>
 
-<p>That thin outcome record matters. More rules and more logs could improve coverage, but they could also increase the judging load described in Mulligan's testimony. Central feeds can preserve and correlate evidence, but they do not choose an owner or make a playbook work. OWASP's defense reaches the missing interface: <q class="owasp" data-src="A09">DevSecOps and security teams should establish effective monitoring and alerting use cases including playbooks such that suspicious activities are detected and responded to quickly by the Security Operations Center (SOC) team.</q></p>
+<p>That thin outcome record matters. More rules and more logs could improve coverage, but they could also increase the judging load. Central feeds can preserve and correlate evidence, but they do not choose an owner or make a playbook work. OWASP's defense reaches the missing interface: <q class="owasp" data-src="A09">DevSecOps and security teams should establish effective monitoring and alerting use cases including playbooks such that suspicious activities are detected and responded to quickly by the Security Operations Center (SOC) team.</q></p>
 
 <p>Equifax supplies a physical mirror for the same idea. A House Oversight majority staff report says the certificate on a device inspecting traffic to its ACIS environment expired on January 31, 2016. The device's default allowed encrypted web traffic to continue, but the inspection systems could not analyze it. The monitoring product remained in the path while its view disappeared. <!-- CHECK: 09-equifax-blindness --></p>
 
@@ -113,7 +113,7 @@
 <h2>What you can now see</h2>
 <p>Choose one detection whose failure would matter. Follow a test event all the way through your real system. Do not stop when it appears in a dashboard. Watch which context reaches the alert, which queue receives it, who owns the judgment, which playbook branch opens, and whether the requested action returns evidence of success.</p>
 
-<p>Then inspect the silence around that path. What tells you the sensor has lost visibility, as Equifax's inspection device did? What tells you forwarding has stopped, a queue is unstaffed, or an action failed? The object to test is not an alert rule. It is the closed loop from suspicious activity to verified response. If the test ends with “someone would notice,” you have found the same gap this chapter leaves open.</p>
+<p>Then inspect the silence around that path. What tells you the sensor has lost visibility? What tells you forwarding has stopped, a queue is unstaffed, or an action failed? The object to test is not an alert rule. It is the closed loop from suspicious activity to verified response. If the test ends with “someone would notice,” you have found the same gap this chapter leaves open.</p>
 </section>
 
 <div class="reading">
