@@ -1,0 +1,8 @@
+Source: Catalin Cimpanu, “Ukrainian Police Seize Servers From Where NotPetya Outbreak First Spread,” BleepingComputer, 4 July 2017, updated 5 July
+URL: https://www.bleepingcomputer.com/news/security/ukrainian-police-seize-servers-from-where-notpetya-outbreak-first-spread/
+Fetched: 2026-09-03 (full HTML)
+Use: folk claims only; these are the only sentences to be quoted
+
+While Intellect Service denied any wrongdoing, Microsoft, Bitdefender, Kaspersky, Cisco, and ESET have gone on record saying the M.E.Doc update servers were responsible for the initial NotPetya infections.
+
+Intellect Service can claim it did not intentionally participate in NotPetya's distribution, but that doesn't excuse its poor efforts in securing its update server, or for that matter the M.E.Doc software update mechanism, which didn't use HTTPS or cryptographically-signed binaries.

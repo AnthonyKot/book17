@@ -1,0 +1,10 @@
+Source: Maersk, A View from the Other Side of a Crisis
+URL: https://www.maersk.com/~/media_sc9/maersk/stay-ahead/maersk---a-view-from-the-other-side-of-a-crisis---final.pdf
+Fetched: 2026-09-03 (full 11-page PDF through browser reader; direct curl timed out)
+Locator: PDF p.4, “What we learned from the NotPetya Virus cyber-attack”
+
+In 2017, Maersk was faced with wide-scale disruption from the NotPetya malware virus which left almost all of our systems inoperable and needing to be rebuilt from scratch. Fortunately, as a global company operating a network of terminals and vessels to service our customers across all geographies, we have a team that is well-prepared to handle network disruptions and limit the impact on our customers.
+
+We mobilised all communication channels at our disposal to ensure customers received as clear and transparent communication as possible as the scenario unfolded, and we sought to be highly flexible in our solutions in order to circumnavigate affected systems and maintain a continuity of supply across our network.
+
+Our key lesson from this incident was how crucial our preparation was in mitigating disaster. By having an experienced team already in place, Maersk was one of the first companies to emerge from the cyber-attack, managing to rebuild our network in just 10 days while keeping our customers’ cargo moving – a remarkable feat given the extent of damage caused by NotPetya.

@@ -1,0 +1,14 @@
+Source: A.P. Moller–Maersk, Annual Report 2017
+URL: https://investor.maersk.com/system/files-encrypted/nasdaq_kms/assets/2018/04/25/13-00-21/A.P._Moller_-_Maersk_Annual_Report_2017.pdf
+Fetched: 2026-09-03 (full 151-page PDF)
+Locators: printed p.29 (PDF p.28); printed p.54 (PDF p.53)
+
+[printed p.29]
+
+A.P. Moller - Maersk unfortunately also experienced a setback in 2017 in the form of a cyber-attack, which hampered service delivery and incurred a cost of approx. USD 250-300m. Since the summer, A.P. Moller - Maersk has made significant improvements to its cyber resilience, and A.P. Moller - Maersk will keep strengthening its cyber posture to reflect the changing nature of the operating environment.
+
+[printed p.54, Operational risks — Cyber-attack]
+
+A.P. Moller - Maersk fell in June 2017 victim to a major cyber-attack caused by the NotPetya malware, which affected many companies globally.
+
+As a result, operations in transport and logistics businesses were disrupted, leading to unwarranted impact on customers. The recovery was fast, but within a brief period A.P. Moller - Maersk suffered losses in the order of USD 250-300m covering, among other things, loss of revenue, IT restoration costs and extraordinary costs related to operations. To further enhance cyber resilience, many immediate and long-term initiatives have been implemented and planned to secure the digital business, strengthen the IT infrastructure platform, enhance IT service continuity and recovery as well as reinforce business continuity plans. Additionally, a cyber insurance has been purchased to mitigate some of the potentially negative financial impact of repeated successful cyber-attacks in the future.

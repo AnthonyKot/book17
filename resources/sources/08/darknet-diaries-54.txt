@@ -1,0 +1,8 @@
+Source: Jack Rhysider with Andy Greenberg, “NotPetya,” Darknet Diaries episode 54 transcript, 24 December 2019
+URL: https://darknetdiaries.com/transcript/54/
+Fetched: 2026-09-03 (full transcript HTML)
+Use: folk claims only; these are the only sentences to be quoted
+
+They finally found it in one place; it was in a datacenter in Ghana that had experienced electrical blackouts, just a normal loss of electricity, but the result was that that one domain controller had had its data preserved. It hadn’t been infected by NotPetya ‘cause it wasn’t online.
+
+After about nine days of working on it 24/7, they were able to have a functioning network again. This ultimately cost Maersk 350 million dollars.

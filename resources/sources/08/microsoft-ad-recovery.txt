@@ -1,0 +1,14 @@
+Source: Microsoft Learn, “Active Directory Forest Recovery — Determine how to recover the forest”
+URL: https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-determine-how-to-recover
+Fetched: 2026-09-03 (full HTML; page updated 10 July 2023)
+Sections: opening; Determine which backups to use; Recover the forest in isolation
+
+Recovering an entire Active Directory forest involves restoring at least one Domain Controller (DC) in every domain from an available backup. Recovering the forest restores each domain in the forest to its state at the time of the last trusted backup.
+
+Back up at least two writeable DCs for each domain regularly so you have multiple backups to choose from.
+
+In general, you must determine a tradeoff between the recentness and the safeness of the restored data. Choosing a more recent backup recovers more useful data, but it might increase the risk of reintroducing dangerous data into the restored forest.
+
+A good backup is a backup that can be restored successfully, was taken a few days before the failure, and contains as much useful data as possible.
+
+The preferred scenario is to shut down all writeable DCs before the first restored DC is brought back into production. This ensures that any dangerous data doesn't replicate back into the recovered forest.

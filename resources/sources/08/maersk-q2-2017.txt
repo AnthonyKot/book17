@@ -1,0 +1,36 @@
+Source: A.P. Moller–Maersk, Key Statements Q2 2017, 16 August 2017
+URL: https://investor.maersk.com/static-files/0ed2b2c8-518c-48ce-b009-c7b06308ad71
+Fetched: 2026-09-03 (full 33-page PDF)
+Locator: PDF p.4, slide printed “Interim report Q2 2017 — Page 5,” Cyber-Attack
+
+What happened?
+
+• On June 27th A. P. Moller – Maersk, amongst many global companies, was hit by the malware NotPetya
+
+• The malware entered through a software used for filing tax in Ukraine
+
+• The malware made applications and data unavailable
+
+• The impact was contained to mainly impacting the container related businesses: Maersk Line, APM Terminals, and Damco
+
+What have we done?
+
+• Actions were taken immediately to contain the malware
+
+• Several system had to be shut down for a period for precautionary measures
+
+• A large number of manual work-arounds were put in place to be able to serve our customers best possible
+
+• Today all recoverable applications are up and running
+
+• Full control of vessels was maintained through the incident
+
+What was the impact?
+
+• The system shutdowns resulted in significant interruption and affecting our customers as well as our employees
+
+• No data breach or data-loss to third party
+
+• The financial impact of the attack was limited in Q2. The majority will occur in Q3 2017, mainly stemming from lost volumes during the incident as well as extraordinary costs in IT and operations
+
+• We expect the financial impact of the cyber attack to be in the range of USD 200-300m.

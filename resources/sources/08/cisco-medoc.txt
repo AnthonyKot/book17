@@ -1,0 +1,25 @@
+Source: Cisco Talos, “The MeDoc Connection,” 5 July 2017
+URL: https://blog.talosintelligence.com/the-medoc-connection/
+Fetched: 2026-09-03 (full HTML)
+Sections: Summary; Details; ZvitPublishedObjects.dll Backdoor Analysis; What Now?
+
+The investigation found a supply chain-focused attack at M.E.Doc software that delivered a destructive payload disguised as ransomware. By utilizing stolen credentials, the actor was able to manipulate the update server for M.E.Doc to proxy connections to an actor-controlled server.
+
+After careful research Talos concluded that for the delivery of the Nyetya malware, all installations came through the M.E.Doc update system.
+
+M.E.Doc was quick to accept an offer of assistance. As part of Cisco’s global response to this event, two incident response specialists from the Advanced Services group arrived in Ukraine on the evening of June 29th and an additional incident response specialist supported the investigation from the UK. M.E.Doc was exceptionally open in arranging access to engineers and administrators who walked the team through the system and provided access to log files and code. They also agreed to share the results of our investigation for the purposes of this report.
+
+An unknown actor had stolen the credentials of an administrator at M.E.Doc. They logged into the server, acquired root privileges and then began modifying the configuration file for the NGINX web server.
+
+The NGINX server had been reconfigured so that any traffic to upd.me-doc.com.ua would be proxied through the update server and to a host in the OVH IP space with an IP of 176.31.182.167.
+
+While we didn’t know it at the time, we can now confirm ESET’s research into the backdoor that had been inserted into the M.E.Doc software. The .net code in ZvitPublishedObjects.dll had been modified on multiple occasions to allow for a malicious actor to gather data and download and execute arbitrary code:
+
+Date        M.E.Doc Update Version
+4/14/2017  10.01.175-10.01.176
+5/15/2017  10.01.180-10.01.181
+6/22/2017  10.01.188-10.01.189
+
+This appears to be the mechanism used for delivering the Nyetya malware. The command line arguments perfectly match what was observed in endpoint telemetry when M.E.Doc machines executed the initial sample.
+
+Talos places this attack in the supply-chain category. Rather than targeting organizations directly, an actor compromises trusted hardware and software vendors to deliver compromised assets to a high-priority environment.

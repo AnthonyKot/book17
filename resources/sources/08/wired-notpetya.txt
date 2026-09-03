@@ -1,0 +1,8 @@
+Source: Andy Greenberg, “The Untold Story of NotPetya, the Most Devastating Cyberattack in History,” Wired, 22 August 2018; accessible syndication
+URL: https://www.issp.ca/wired-the-untold-story-of-notpetya
+Fetched: 2026-09-03 (full syndication HTML)
+Use: folk claims only; these are the only sentences to be quoted
+
+Maersk’s 150 or so domain controllers were programmed to sync their data with one another, so that, in theory, any of them could function as a backup for all the others. But that decentralized backup strategy hadn’t accounted for one scenario: where every domain controller is wiped simultaneously.
+
+After a frantic search that entailed calling hundreds of IT admins in data centers around the world, Maersk’s desperate administrators finally found one lone surviving domain controller in a remote office—in Ghana. At some point before NotPetya struck, a blackout had knocked the Ghanaian machine offline, and the computer remained disconnected from the network. It thus contained the singular known copy of the company’s domain controller data left untouched by the malware—all thanks to a power outage.

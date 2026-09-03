@@ -1,0 +1,17 @@
+Source: Gavin Ashton, “Maersk, me & NotPetya,” 21 June 2020
+URL: https://gvnshtn.com/p/maersk-me-and-notpetya
+Fetched: 2026-09-03 (full HTML)
+Sections: notPetya; A bitter pill; Finding our feet
+Context: Ashton identifies himself as Maersk's Identity and Access Management subject-matter expert and later service owner, and says he played a role in recovery and the cybersecurity response. This is a personal account, not an official Maersk post-mortem.
+
+The notPetya malware was unusual in that typically what you will see with malware is a device gets encrypted with a message to go and pay some ransom. A worrying number of organisations do (around 50%), which makes these types of attack even more prevalent as we’re teaching criminals that crime does pay. But notPetya was different, there was nobody to pay, it was designed purely with destruction in mind. And destroy it absolutely did.
+
+With notPetya having established a foothold through the finance package update, notPetya used common pass-the-hash techniques to spread horizontally across the organisation, and vertically up into servers and domain controllers. The lack of standardised and consistently applied privileged access controls, made it trivial for notPetya to wipe Maersk out.
+
+Yes, things like network segmentation would help to slow the spread. Things like a SOC would help us see the activity before the fateful day arrived. Patching would absolutely have helped (seriously, if you are waiting to install critical security patches you are doing it wrong). But ultimately, the fundamental risk we had failed to address was management of privileged access.
+
+In the immediate weeks following The Event, it was all about restoring Active Directory. Considering Active Directory was deployed across hundreds of domain controllers globally, disaster recovery processes had only ever accounted for a loss of a site or datacentre. Nothing in the plans had accounted for “We have lost everything, everywhere, all at once”. After some herculean and hair-raising efforts across Maersk, Microsoft and our partners, we had our directory service back.
+
+This involved some source-code level action, people being put on flights from all over the world with various bits of data and equipment. It reminded me very much of an episode of 24, just without the dramatic incidental music, and obviously it all took much more than 24 hours!
+
+When the very first domain controller came up, it was running on a Surface Pro 4.

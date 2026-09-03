@@ -1,0 +1,23 @@
+Source: United States v. Andrienko et al., No. 2:20-cr-00316-DWA (W.D. Pa.), indictment
+URL: https://www.justice.gov/archives/opa/press-release/file/1328521/dl?inline=
+Fetched: 2026-09-03 (full 50-page PDF)
+Locator: paragraphs 33–38, PDF pages 16–19
+Status: allegations in an indictment, not findings
+
+[p.16]
+
+33. The Conspirators designed NotPetya to masquerade as ransomware, a type of malware that encrypts and blocks access to a victim's computer system and/or files until the victim pays a ransom. In particular, the Conspirators designed the NotPetya malware to emulate already-existing ransomware called "Petya." However, the purported ransomware purpose of NotPetya was a ruse. Unlike Petya—which displayed a ransom note on infected computers demanding money and where, upon payment of the ransom, the computers could be decrypted—the NotPetya malware operated such that, even if victims paid the ransom ($300 worth of bitcoin), the Conspirators would not be able to decrypt and recover the victims' computer files.
+
+34. The Conspirators disseminated the NotPetya malware using a popular Ukrainian accounting software called M.E.Doc that was used to facilitate the communication of tax information to the Ukrainian government. The software was periodically updated through an update server (the "Update Server"). The Conspirators commenced the NotPetya attacks on or about June 27, 2017, when they rerouted internet traffic from (1) computers attempting to update the M.E.Doc software via the Update Server to (2) a France-based server controlled by the Conspirators. This France-based server delivered the malware to the victim computers that connected to it.
+
+[p.17]
+
+37. The M.E.Doc software on customer networks periodically connected to the Update Server to check for new software updates. The Conspirators gained access to the software code for the M.E.Doc software prior to the NotPetya attacks, which allowed the Conspirators to surreptitiously add malicious functionality to the files containing the software updates (the "Update Files"). The Conspirators modified Update Files on or about April 14, 2017; May 15, 2017; and June 21, 2017. Computers receiving M.E.Doc software updates downloaded these Update Files, but the NotPetya malware file was not pushed to these computers by the Conspirators until on or about June 27, 2017.
+
+[pp.18–19]
+
+38. On or about June 27, 2017, from approximately 12:14 p.m. to 3:31 p.m. Moscow Time, the June 21, 2017, Update File delivered the NotPetya malware to computers that attempted to receive the software update from the Update Server.
+
+a. The malware was delivered to these computers while the Conspirators temporarily rerouted network traffic bound for the Update Server to the Conspirators' France-based server controlled by the Conspirators. As a result, computers attempting to receive the software update instead connected to the Conspirators' server in France and downloaded the malware.
+
+b. Once victim computers downloaded the malicious Update File and the Conspirators rerouted the network traffic, victim computers could remotely receive and execute commands from the Conspirators. With these commands, the Conspirators could perform a variety of actions with respect to the victims' computer systems, including obtaining system information and accessing, modifying, creating, and executing files.

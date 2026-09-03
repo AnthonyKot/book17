@@ -1,0 +1,8 @@
+Source: Wikipedia, “Petya (malware family)” (CC BY-SA)
+URL: https://en.wikipedia.org/wiki/Petya_(malware_family)
+Fetched: 2026-09-03 (full HTML)
+Use: folk claims only; these are the only sentences to be quoted
+
+It was believed that the software update mechanism of M.E.Doc—a Ukrainian tax preparation program that, according to F-Secure analyst Mikko Hyppönen, “appears to be de facto” among companies doing business in the country—had been compromised to spread the malware.
+
+It is said to have been the most destructive cyberattack ever.

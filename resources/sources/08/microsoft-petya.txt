@@ -1,0 +1,14 @@
+Source: Microsoft Defender Security Research Team, “New ransomware, old techniques: Petya adds worm capabilities,” 27 June 2017
+URL: https://www.microsoft.com/en-us/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/
+Fetched: 2026-09-03 (full HTML)
+Sections: Delivery and installation; A single ransomware, multiple lateral movement techniques
+
+Initial infection appears to involve a software supply-chain threat involving the Ukrainian company M.E.Doc, which develops tax accounting software, MEDoc. Although this vector was speculated at length by news media and security researchers—including Ukraine’s own Cyber Police—there was only circumstantial evidence for this vector. Microsoft now has evidence that a few active infections of the ransomware initially started from the legitimate MEDoc updater process.
+
+We observed telemetry showing the MEDoc software updater process (EzVit.exe) executing a malicious command-line matching this exact attack pattern on Tuesday, June 27 around 10:30 a.m. GMT.
+
+Given this new ransomware’s added lateral movement capabilities it only takes a single infected machine to affect a network. The ransomware spreading functionality is composed of multiple methods responsible for:
+
+- stealing credentials or re-using existing active sessions
+- using file-shares to transfer the malicious file across machines on the same network
+- using existing legitimate functionalities to execute the payload or abusing SMB vulnerabilities for unpatched machines

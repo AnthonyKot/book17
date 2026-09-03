@@ -1,0 +1,21 @@
+Source: OWASP, A08:2025 Software or Data Integrity Failures
+URL: https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/
+Repository snapshot: resources/owasp/A08_2025-Software_or_Data_Integrity_Failures.txt
+Fetched: 2026-09-01 (spine snapshot); copied for chapter research 2026-09-03
+Sections: Description; How to prevent; Example attack scenario #2
+
+Description.
+
+Software and data integrity failures relate to code and infrastructure that does not protect against invalid or untrusted code or data being treated as trusted and valid. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and content delivery networks (CDNs). An insecure CI/CD pipeline without consuming and providing software integrity checks can introduce the potential for unauthorized access, insecure or malicious code, or system compromise. Another example of this is a CI/CD that pulls code or artifacts from untrusted places and/or doesn’t verify them before use (by checking the signature or similar mechanism). Lastly, many applications now include auto-update functionality, where updates are downloaded without sufficient integrity verification and applied to the previously trusted application. Attackers could potentially upload their own updates to be distributed and run on all installations.
+
+How to prevent.
+
+Use digital signatures or similar mechanisms to verify the software or data is from the expected source and has not been altered.
+
+Ensure that there is a review process for code and configuration changes to minimize the chance that malicious code or configuration could be introduced into your software pipeline.
+
+Ensure that your CI/CD pipeline has proper segregation, configuration, and access control to ensure the integrity of the code flowing through the build and deploy processes.
+
+Example attack scenarios.
+
+Scenario #2 Update without signing: Many home routers, set-top boxes, device firmware, and others do not verify updates via signed firmware. Unsigned firmware is a growing target for attackers and is expected to only get worse. This is a major concern as many times there is no mechanism to remediate other than to fix in a future version and wait for previous versions to age out.

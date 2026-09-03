@@ -1,0 +1,14 @@
+Source: Anton Cherepanov, ESET Research, “TeleBots are back: Supply-chain attacks against Ukraine,” 30 June 2017
+URL: https://www.welivesecurity.com/2017/06/30/telebots-back-supply-chain-attacks-against-ukraine/
+Fetched: 2026-09-03 (full HTML)
+Sections: Diskcoder.C (aka Petya-like) outbreak; Initial infection vector; Conclusions
+
+However, unlike the original Petya ransomware, Diskcoder.C's authors modified the MBR code in such a way that recovery won’t be possible. Specifically, the attacker cannot provide a decryption key and the decryption key cannot be typed in the ransom screen, because the generated key contains non-acceptable characters.
+
+Both Diskcoder.C and Win32/Filecoder.AESNI.C used a supply-chain attack as the initial infection vector. These malware families were spread using Ukrainian accounting software called M.E.Doc.
+
+However, the subsequent Diskcoder.C outbreak suggests that the attackers had access to the update server of the legitimate software. Using access to this server, attackers pushed a malicious update that was applied automatically without user interaction. That’s why so many systems in Ukraine were affected by this attack. However, it seems like the malware authors underestimated the spreading capabilities of Diskcoder.C.
+
+ESET researchers found evidence that supports this theory. Specifically, we identified a malicious PHP backdoor that was deployed under medoc_online.php in one of the FTP directories on M.E.Doc's server. This backdoor was accessible from HTTP; however, it was encrypted, so the attacker would have to have the password in order to use it.
+
+The latest outbreak was directed against businesses in Ukraine, but they apparently underestimated the malware’ spreading capabilities. That’s why the malware went out of control.

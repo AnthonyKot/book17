@@ -1,0 +1,25 @@
+Source: Cyber Police of Ukraine, 5 July 2017
+URL: https://cyberpolice.gov.ua/news/prykryttyam-najmasshtabnishoyi-kiberataky-v-istoriyi-ukrayiny-stav-virus-diskcoderc-881/
+Fetched: 2026-09-03 (full HTML)
+Locator: paragraphs announcing the investigation's findings
+Note: Ukrainian original followed by a working English translation for research. The translation is not an official text and is not intended for direct quotation.
+
+Original:
+
+Експертами було встановлено, що ураження інформаційних систем українських компаній відбулось, через оновлення програмного забезпечення призначеного для звітності та документообігу – “M.E.Doc”.
+
+За отриманими даними (підтверджено правоохоронними органами іноземних держав та міжнародними компаніями, що здійснюють діяльність у сфері інформаційної безпеки), зловмисники здійснили несанкціоноване втручання в роботу одного з персональних комп’ютерів компанії-розробника вказаного програмного забезпечення - ТОВ "Інтелект-Сервіс".
+
+Отримавши доступ до вихідних кодів, вони в одне із оновлень програми вбудували бекдор (backdoor) - програму, яка встановлювала на комп'ютерах користувачів “M.E.Doc” несанкціонований віддалений доступ. Таке оновлення програмного забезпечення ймовірно відбулося ще 15.05.2017 року.
+
+Видалення та шифрування файлів операційних систем, було вчинено з метою видалення слідів попередньої злочинної діяльності (бекдору), та відвернення уваги шляхом імітації вимагання грошових коштів від потерпілих.
+
+Working translation:
+
+Experts established that the information systems of Ukrainian companies were affected through an update to the reporting and document-management software M.E.Doc.
+
+According to the information obtained (confirmed by foreign law-enforcement agencies and international information-security companies), attackers made an unauthorized intrusion into one of the personal computers of the software developer, Intellect-Service LLC.
+
+After obtaining access to the source code, they embedded a backdoor in one of the program updates, giving unauthorized remote access to M.E.Doc users' computers. The report says this update probably occurred as early as 15 May 2017.
+
+The deletion and encryption of operating-system files was done to remove traces of the preceding criminal activity (the backdoor) and to divert attention by imitating extortion of money from victims.

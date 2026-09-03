@@ -1,0 +1,6 @@
+Source: “UK and US blame Russia for ‘malicious’ NotPetya cyber-attack,” BBC News, 15 February 2018
+URL: https://www.bbc.com/news/uk-politics-43062113
+Fetched: 2026-09-03 (full HTML by curl; the feeds.bbci.co.uk URL returned 404)
+Use: folk claim only; this is the only sentence to be quoted
+
+The White House said June's NotPetya ransomware attack caused billions of dollars in damage across Europe, Asia, and the Americas.

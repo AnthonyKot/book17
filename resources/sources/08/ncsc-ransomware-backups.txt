@@ -1,0 +1,22 @@
+Source: UK National Cyber Security Centre, “Mitigating malware and ransomware attacks,” version 3.0
+URL: https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks
+Fetched: 2026-09-03 (full HTML)
+Sections: What are malware and ransomware?; Action 1: make regular backups; Action 4: prepare for an incident
+
+Occasionally malware is presented as ransomware, but after the ransom is paid the files are not decrypted. This is known as wiper malware. For these reasons, it's essential that you always have a recent offline backup of your most important files and data.
+
+Up-to-date backups are the most effective way of recovering from a ransomware attack, you should do the following.
+
+Ensure you create offline backups that are kept separate, in a different location (ideally offsite), from your network and systems, or in a cloud service designed for this purpose, as ransomware actively targets backups to increase the likelihood of payment.
+
+Make multiple copies of files using different backup solutions and storage locations. You shouldn't rely on having two copies on a single removable drive, nor should you rely on multiple copies in a single cloud service.
+
+Make sure that the devices containing your backup (such as external hard drives and USB sticks) are not permanently connected to your network. Attackers will target connected backup devices and solutions to make recovery more difficult.
+
+Exercise your incident management plan. This helps clarify the roles and responsibilities of staff and third parties, and to prioritise system recovery. For example, if a widespread ransomware attack meant a complete shutdown of the network was necessary, you would have to consider:
+
+- how long it would take to restore the minimum required number of devices from images and re-configure for use
+- how you would rebuild any virtual environments and physical servers
+- what processes need to be followed to restore servers and files from your backup solution
+- what processes need to be followed if onsite systems and cloud backup servers are unusable, and you need to rebuild from offline backups
+- how you would continue to operate critical business services
