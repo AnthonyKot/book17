@@ -48,3 +48,19 @@ Found: after lens 1's cut, "That boundary sat on an internet-facing file-transfe
 Changed: antecedent fixed ("The vulnerable page sat on…"); "instances"; the five-CVEs-in-five-weeks sentences split out as a two-sentence paragraph; "recorded here as exploited" → "recorded as exploited in the sources saved for this chapter"; the closing-section sentence now reads "It is an interface that lets the answer differ at each occurrence"; the defense hedge reworded so the two do not echo. No headers added; no paragraph over 150 words; no sentence over 40 (the checker does not split on a period inside closing quotes, so two quotes now end British-style, as chapter 2's do).
 
 Section sizes after the pass: break 827, mechanism 567, defense 650, see 222 — all inside TEMPLATE's ranges. Chapter 2,397 words.
+
+## Lens 5 — The reader's exit
+
+Found: the closing section was already a procedure rather than a moral — start at the final database call, mark every occurrence of one value as raw, escaped or bound, follow it one step further back than its variable name, and treat an API that makes the bound shape awkward as part of the finding. It passes the "can do it this week" test as written.
+
+Changed: only the opening — it now sets the time frame ("This week, open one function…") and names the obvious candidate ("a lookup by email address"), so the reader's first move maps directly onto `UserGetUsersWithEmailAddress()`. 233 words (cap 250).
+
+## Pending fact-checks
+
+1. Break section, third-party share: TechTarget attributes "1,690 of the 2,098 known victim organizations were compromised via third parties" to "Callow" and the saved excerpt never gives his affiliation; the tally in the same article is Emsisoft's. The sentence now credits TechTarget. To close: confirm Callow's affiliation from the full article and restore "Emsisoft's analyst" if it holds.
+
+## Result
+
+- Argument as left: MOVEit's SQL injection was not a missing escape but an escape repeated per use with one use missed, reached through session state; bound parameters change that promise, and the four further SQL-injection CVEs Progress patched in five weeks show that fixing a function and removing a class are different jobs.
+- Word count 2,302 → 2,408. Lede 120. Ledger 5 rows, verdicts unchanged.
+- `./verify.sh 05`: 3 OWASP quotations, 0 not found; 51 markers, 51 rows, 0 mismatches, 0 open; 0 broken links; structure ok; PASS.

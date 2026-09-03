@@ -126,7 +126,7 @@ DoReadQuery(where.GetQuery(), where.Parameters, ref results, true);</code></pre>
 
 <section class="see">
 <h2>What you can now see</h2>
-<p>Open one function in a system you run that accepts a value from outside and searches the database with it. Do not begin with the input validator. Begin at the final database call. Does that call receive one completed SQL string, or a statement and a separate parameter collection?</p>
+<p>This week, open one function in a system you run that takes a value from outside and searches the database with it; a lookup by email address is the obvious candidate. Do not begin with the input validator. Begin at the final database call. Does that call receive one completed SQL string, or a statement and a separate parameter collection?</p>
 
 <p>If it receives one string, follow a single value backward through every appearance in that statement. A value used in an equality test and three pattern tests has four contexts, even when it came from one field. Mark each occurrence as raw, escaped, or bound. The dangerous finding is not a missing escape. It is an interface that lets the answer differ at each occurrence.</p>
 
