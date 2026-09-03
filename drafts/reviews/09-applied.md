@@ -17,3 +17,5 @@ Against `drafts/reviews/09-codex.md`; findings are numbered in its ranked order.
 - Split the former `09-equifax-counts` register entry into `09-equifax-timing` and `09-equifax-inventory`, matching the two distinct incident claims now made in separate paragraphs.
 - Synchronized all six chapter ledger rows word-for-word with `drafts/09.ledger.md` (apart from HTML markup).
 - Kept the existing chapter filename to avoid an unauthorized `index.html` edit; the document title, description, and H1 carry the corrected title.
+- Remaining OPEN is ledger row 4 only: whether Target received and dispositioned the particular FireEye alerts. The row names the internal records that would settle it; no claims-register row remains open.
+- Final `./verify.sh 09`: PASS; 3 OWASP quotations / 0 missing, 26 claim markers / 26 rows / 0 mismatches / 0 open, 0 broken links, and structure `ok (2348 words)`.
