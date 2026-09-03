@@ -15,4 +15,5 @@ Against `drafts/reviews/09-codex.md`; findings are numbered in its ranked order.
 ## Extra corrections
 
 - Split the former `09-equifax-counts` register entry into `09-equifax-timing` and `09-equifax-inventory`, matching the two distinct incident claims now made in separate paragraphs.
+- Synchronized all six chapter ledger rows word-for-word with `drafts/09.ledger.md` (apart from HTML markup).
 - Kept the existing chapter filename to avoid an unauthorized `index.html` edit; the document title, description, and H1 carry the corrected title.
