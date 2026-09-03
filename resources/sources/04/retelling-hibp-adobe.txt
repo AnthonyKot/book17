@@ -1,0 +1,9 @@
+Source: Have I Been Pwned, Adobe Data Breach
+URL: https://haveibeenpwned.com/Breach/Adobe
+Fetched: 2026-09-03
+Retelling excerpt: only the sentences proposed as folk claims
+
+In October 2013, 153 million Adobe accounts were breached with each containing an internal
+ID, username, email, encrypted password and a password hint in plain text.
+
+The password cryptography was poorly done and many were quickly resolved back to plain text.

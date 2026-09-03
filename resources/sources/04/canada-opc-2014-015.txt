@@ -1,0 +1,38 @@
+Source: Office of the Privacy Commissioner of Canada, PIPEDA Report of Findings 2014-015
+URL: https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2014/pipeda-2014-015/
+Fetched: 2026-09-03
+Excerpt: paragraphs 16-20 and 31-37
+
+16. Concerning the complainant's allegation of inadequate safeguards, our Office, along
+with the ODPCI, identified a number of concerns in the design and management of Adobe's
+computer systems. Specifically, we were concerned by the following: password management,
+outdated software, redundant systems containing personal information, insecure and
+inadequate logging, retention of data for longer than necessary, and a failure to isolate
+corporate computer systems from the engineering network.
+
+17. As a specific example of concern to us, we noted that password management was greatly
+hampered by the use of a deprecated encryption format and plain-text password hints.
+
+Since the plain text hints sometimes contained the password itself (or a very obvious hint)
+and the encryption format used by Adobe scrambled identical passwords in the same way, it
+would be relatively easy to obtain access to several different accounts where the same
+password was used by starting with the hint/password obtained from one account.
+
+19. Adobe was very forthcoming to our Office in further describing the details of its
+technological systems and operations, some of which had been inherited as a result of
+absorbing other companies. Aspects of the inherited systems and operations appear to have
+contributed to the security safeguard problems.
+
+32. Our analysis of critical aspects of Adobe's systems and operational practices in place
+at the time of the Data Breach concluded that the security safeguards were not appropriate
+for protecting the personal information at issue.
+
+36. That being said, we are satisfied with the measures that Adobe has taken since the
+incident, and after exchanges with our Office and the ODPCI, to address the security
+safeguards issues towards preventing any recurrence. Many of these measures are of a
+commercially sensitive nature and thus cannot be mentioned in this report.
+
+But we can note that these measures include: Adobe's enhancements to both its user-password
+management process and its server authentication system, as well as the decommissioning of
+the server affected by the Data Breach and a reduction in the retention period for customers'
+payment data.

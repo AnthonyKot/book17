@@ -1,0 +1,14 @@
+Source: Adobe, Important Customer Security Announcement
+Author: Brad Arkin, Chief Security Officer
+URL: https://blog.adobe.com/en/publish/2013/10/03/important-customer-security-announcement
+Fetched: 2026-09-03
+Excerpt: opening disclosure and response
+
+Our investigation currently indicates that the attackers accessed Adobe customer IDs and
+encrypted passwords on our systems.
+
+As a precaution, we are resetting relevant customer passwords to help prevent unauthorized
+access to Adobe ID accounts. If your user ID and password were involved, you will receive an
+email notification from us with information on how to change your password. We also recommend
+that you change your passwords on any website where you may have used the same user ID and
+password.

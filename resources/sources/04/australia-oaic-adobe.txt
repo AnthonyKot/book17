@@ -1,0 +1,35 @@
+Source: Office of the Australian Information Commissioner, Adobe own-motion investigation
+URL: https://www.oaic.gov.au/privacy/privacy-assessments-and-decisions/privacy-decisions/Investigation-inquiry-reports/adobe-systems-software-ireland-ltd-own-motion-investigation-report
+Fetched: 2026-09-03
+Excerpt: Overview; NPP 4 conclusion; Rectification
+
+While Adobe generally took a sophisticated and layered approach to information security and
+the protection of its IT systems, it failed to implement consistently strong security
+measures across its various internal systems.
+
+In particular, a backup server stored a database of unencrypted credential information
+(email addresses and password hints) of over 1.7 million Australian users, directly linked
+to the encrypted password for each user. The type of encryption used, together with
+plaintext password hints, allowed security experts with access to the database, which became
+widely available on the internet after the breach, to identify the 100 most common passwords
+and customer accounts associated with those passwords.
+
+The requirements of NPP 4 will not be satisfied if an organisation has adequate security
+measures in place to protect personal information stored in one area of its systems, but
+does not implement these measures in relation to all of the personal information that it
+holds.
+
+The passwords stored on the system compromised in the breach were each encrypted,
+apparently using the same key, rather than being individually salted then hashed. Hashing
+and salting is a basic security step that Adobe could reasonably have implemented to better
+protect the passwords in its backup system.
+
+Adobe also took steps to mitigate against the risk of future data breaches of this nature,
+including in relation to network monitoring, the storage of payment card information and
+passwords, two-factor authentication, decommissioning the affected server and abolishing the
+use of password hints.
+
+The Commissioner was satisfied that Adobe responded quickly and effectively when it
+discovered the attack on its systems, working to secure its servers, contain and respond to
+the data breach, and to implement steps to mitigate against future data breaches of this
+nature.

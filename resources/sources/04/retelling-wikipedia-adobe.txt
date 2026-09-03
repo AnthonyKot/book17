@@ -1,0 +1,7 @@
+Source: Wikipedia, Adobe Inc., Customer data breach
+URL: https://en.wikipedia.org/wiki/Adobe_Inc.
+Fetched: 2026-09-03
+Retelling excerpt: only the sentence proposed as a folk claim
+
+LastPass, a password security firm, said that Adobe failed to use best practices for
+securing the passwords and has not salted them.

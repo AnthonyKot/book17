@@ -1,0 +1,27 @@
+Source: Frank Stajano et al., Pico without public keys
+URL: https://uhra.herts.ac.uk/id/eprint/13828/1/2014_StajanoLomChr_postquantum_2.pdf
+Fetched: 2026-09-03
+Excerpt: accepted manuscript, pp. 1-3, Introduction: a motivating story
+
+In 2013, an Adobe authentication server was famously broken into. Consequently, every one
+of the 150+ million customers whose credentials were leaked was forced to change their
+password. Why? There are several reasons, some resulting from Adobe's carelessness and
+others that are more fundamental.
+
+To begin with, although the passwords were encrypted, password hints were stored in
+plaintext next to each password.
+
+If my password was insufficiently original, so that several other people among those 150
+millions of victims also happened to choose it, then chances are that someone else provided
+a stupid hint for it. If so, because the passwords were encrypted with ECB and without
+salt, the attacker could read off the stupid hint from one of them and apply it to all the
+other passwords that encrypted to the same ciphertext.
+
+Reversibly encrypted with 3DES, not salted and hashed as they should have been. To add the
+insult to the injury, the encryption was performed by treating each block independently,
+in ECB mode.
+
+Thanks to the salt it will appear in the credentials database as thousands of different
+salted hashes, so that the attackers can't tell that thousands of people share that same
+password, nor which ones of them do. It is true, however, that the attackers can still try
+the most likely guesses that fit the policy.

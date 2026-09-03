@@ -1,0 +1,22 @@
+Source: OWASP Top 10:2025, A04 Cryptographic Failures
+URL: https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/
+Fetched: 2026-09-03
+Excerpt: Description; How to prevent
+
+Description.
+
+Are initialization vectors ignored, reused, or not generated sufficiently secure for the
+cryptographic mode of operation? Is an insecure mode of operation such as ECB in use? Is
+encryption used when authenticated encryption is more appropriate?
+
+Are deprecated hash functions such as MD5 or SHA1 in use, or are non-cryptographic hash
+functions used when cryptographic hash functions are needed?
+
+How to prevent.
+
+Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS
+compliant tokenization or even truncation. Data that is not retained cannot be stolen.
+
+Store passwords using strong adaptive and salted hashing functions with a work factor (delay
+factor), such as Argon2, yescrypt, scrypt or PBKDF2-HMAC-SHA-512. For legacy systems using
+bcrypt, get more advice at OWASP Cheat Sheet: Password Storage

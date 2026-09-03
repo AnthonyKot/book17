@@ -1,0 +1,11 @@
+Source: Benjamin Harsha et al., Bicycle attacks considered harmful
+URL: https://par.nsf.gov/servlets/purl/10200731
+Fetched: 2026-09-03
+Excerpt: section 7, Background on LinkedIn Password Breach, printed p. 12
+
+In 2012 hackers were able to compromise LinkedIn's systems and stole over 177.5+ million
+unsalted SHA-1 password hashes as well as other confidential user data.
+
+Because the passwords were stored in unsalted form and LinkedIn was not using
+key-stretching tools such as PBKDF2 or Argon2 at the time of the breach the passwords were
+significantly easier to crack.

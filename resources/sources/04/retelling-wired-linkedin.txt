@@ -1,0 +1,8 @@
+Source: WIRED, Was Your LinkedIn Password Leaked?, Ruth Suehle
+URL: https://www.wired.com/2012/06/linkedin-data-breach/
+Fetched: 2026-09-03
+Retelling excerpt: only the sentence proposed as a folk claim
+
+Earlier today, news spread that LinkedIn had experienced a significant data breach with a
+loss of as many as 6.5 million hashed (encrypted) passwords, as many as 300,000 of which had
+been decrypted and posted online.

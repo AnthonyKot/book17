@@ -1,0 +1,19 @@
+Source: LinkedIn, LinkedIn summarizes password theft and member security efforts
+URL: https://news.linkedin.com/2012/06/linkedin-summarizes-password-theft-and-member-security-efforts
+Published: 2012-06-12
+Fetched: 2026-09-03
+Excerpt: Member Commitment and Response; Technology Expertise
+
+Since LinkedIn became aware on the morning of June 6 of the theft of approximately 6.5
+million passwords, we have communicated to our members and the media regularly through
+various channels, including the company blog, email, social media, and the LinkedIn
+homepage.
+
+The LinkedIn technology team has completed a long-planned transition from a password
+database system that hashed passwords, i.e. provided one layer of encoding, to a system
+that both hashes and salts the passwords, i.e. provides an extra layer of protection.
+
+For security reasons, we cannot discuss certain details of our ongoing security upgrades.
+
+We can confirm that all member passwords now are not only hashed, but also salted, to
+provide an additional layer of security.
