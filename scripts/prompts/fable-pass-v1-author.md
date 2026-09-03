@@ -1,8 +1,8 @@
 # Fable pass — author's review-and-edit of chapter {{NN}} of *Ten Ways In* (repo ~/book17)
 
 The chapter `chapters/{{NN}}-*.html` has been drafted, panel-reviewed and revised; all checks
-pass. This is the pass a human author does last: read it as a reader, then edit it in place
-so it is the best chapter it can be **without adding a single fact**.
+pass. This is the pass a human author does last: read it as a reader, then write the post
+it should have been, **without adding a single fact**.
 
 Read first: `CONTEXT.md` §1 (thesis), §4 (ledger vocabulary) and §5 (voice and sourcing
 standard) — skip the rest — then the chapter `chapters/{{NN}}-*.html` in full,
@@ -11,7 +11,7 @@ fact you use. The chapter is a finished, panel-checked draft: every fact in it h
 That is your raw material, not your constraint.
 ## What to do, in order
 1. **Argument.** One argument a reader can restate in a sentence. The lede promises what
-   the ending delivers. Each section earns its place on TEMPLATE.md's beats or is cut.
+   the ending delivers. Each section earns its place or is cut.
 2. **Mechanism in the reader's hands.** After the mechanism section a developer can draw
    the bug on a whiteboard. Code and pseudocode are honest about what they abridge. Cut
    what explains without showing.

@@ -1,8 +1,7 @@
 # Fable pass v4 — the line editor (chapter {{NN}} of *Ten Ways In*, repo ~/book17)
 
 You are a line editor with a style sheet. The chapter's argument and structure are
-settled; your job is the sentences. Target: 20–30% shorter with nothing lost, and stay
-above 2,200 words.
+settled; your job is the sentences. Target: 20–30% shorter than the chapter with nothing lost.
 
 Read first: `CONTEXT.md` §1 (thesis), §4 (ledger vocabulary) and §5 (voice and sourcing
 standard) — skip the rest — then the chapter `chapters/{{NN}}-*.html` in full,
