@@ -61,7 +61,7 @@ should not conclude from a ranking.
 | 9 | A09 Security Logging and Alerting Failures | Target, 2013 (alerts fired, not acted on); Equifax's expired cert | dwell-time trend; what changed |
 | 10 | A10 Mishandling of Exceptional Conditions | Apple goto fail, 2014 (failed open); CrowdStrike, 2024 (failed closed) | which way to fail, and why both answers are wrong somewhere |
 
-Order = OWASP order. Chapter 0 is written *last* (it must report the pattern of the
+Numbering = OWASP order; reading order on the site (index and prev/next) is set in `scripts/nav.py` ORDER (decided 2026-09-03, see §8). Chapter 0 is written *last* (it must report the pattern of the
 other ten, not predict it). Pilots: chapters 1, 3, 10 — chosen because their sources are
 three different kinds (court/regulator record; git history and mailing list; code plus
 vendor post-mortem), so the pilots test the whole method.
@@ -242,3 +242,7 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   a per-CWE average and the risk score has five terms); codex fetched the methodology page
   into `resources/owasp/0x02_*.txt` so the corrected quotations are gated. Receipt in
   `drafts/reviews/00-applied.md`. All eleven chapters now panel-revised.
+- 2026-09-03 (night) — Reading order decoupled from numbering. The index and the chapter
+  prev/next links follow the author's launch order from `drafts/reviews/virality-order.md`
+  (0, 7, 8, 4, 10, 1, 9, 2, 3, 6, 5), with chapter 0 first as the introduction; chapter
+  numbers stay the OWASP category numbers. `scripts/nav.py` carries the ORDER list.
