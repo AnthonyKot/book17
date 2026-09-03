@@ -63,3 +63,32 @@ user satisfaction as well as cheaper support cost. The Security Key design has
 been standardized within an industry alliance, the FIDO Alliance [15] as the
 Universal Second Factor (U2F) protocol.
 
+
+--- §§4.1–4.2, system and authentication design (pdftotext, read 2026-09-03) ---
+
+Security Keys are intended to be used in the context of a web application in
+which the server wishes to verify the user's identity. At a high level, Security Keys
+support the following commands which are provided to web pages as browser
+APIs (see Section 5).
+
+– Register: Given this command, the Security Key generates a fresh asymmet-
+  ric key pair and returns the public key. The server associates this public key
+  with a user account.
+– Authenticate: Given this command, the Security Key tests for user presence
+  and exercises its private key to provide a response. The server can verify
+  that the response is valid, and thus authenticate the user.
+
+Authentication. During authentication (see Figure 3), the relying party re-
+quests that the Security Key exercise a particular key which has previously been
+registered for a user account. Specifically, the relying party sends the desired
+key's handle and a challenge to the web browser. The browser generates the
+client data (see above) and sends the hash of the client data along with the
+key handle and the web origin to the Security Key. If the Security Key does
+not recognize the key handle, or doesn't agree that it is associated with the web
+origin that requested the signature, it rejects the request. Otherwise, it produces
+a signature of the client data. The Security Key signs two additional attributes:
+whether a Test of User Presence (TUP) succeeded, and a counter value.
+
+The browser passes the signature, along with the TUP and the counter value,
+to the server. The server then checks the signature against the public key it has
+registered and authenticates the user if the signature matches.
