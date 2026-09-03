@@ -52,7 +52,7 @@
 
 <p>The account of the destruction is separate. Ashton attributes movement into servers and controllers to pass-the-hash and weakly controlled privileged access. Microsoft's incident analysis lists credential or session reuse, file shares, legitimate execution features and SMB vulnerabilities as lateral paths. <!-- CHECK: 08-controller-loss-path --> Neither says Active Directory replication spread NotPetya at Maersk.</p>
 
-<p>Recovery did not happen at one magic moment. A later Maersk paper says almost all its systems became inoperable and needed rebuilding. It says the network was rebuilt in ten days while customers' cargo kept moving. Maersk's annual report put the loss at approximately USD 250–300 million, covering lost revenue, IT restoration and extraordinary operating costs. <!-- CHECK: 08-ten-days-cost --></p>
+<p>Recovery did not happen at one magic moment. Maersk's <cite>A View from the Other Side of a Crisis</cite> says almost all its systems became inoperable and needed rebuilding. It says the network was rebuilt in ten days while customers' cargo kept moving. Maersk's annual report put the loss at approximately USD 250–300 million, covering lost revenue, IT restoration and extraordinary operating costs. <!-- CHECK: 08-ten-days-cost --></p>
 
 <p>Darknet Diaries gives the folk figures as a functioning network after “about nine days” and a cost of USD 350 million. Its approximate timing is compatible with Maersk's “just 10 days,” although the two accounts use different terms for the milestone. The cost is less ambiguous: Maersk's own annual account reports a lower range. <!-- CHECK: 08-folk-numbers --></p>
 </section>
@@ -108,7 +108,7 @@
 <tr><td>BleepingComputer says M.E.Doc's update servers caused the initial infections.</td><td>Cisco, “Summary” and backdoor analysis: all installations it traced came through M.E.Doc's update system. Microsoft reports supporting updater telemetry. <!-- CHECK: 08-ledger-updater --></td><td class="verdict v-holds">HOLDS</td></tr>
 <tr><td>BleepingComputer says the updater lacked HTTPS and cryptographically signed binaries.</td><td>No fetched primary specification, binary or forensic report establishes the signing state. Cisco does not say whether clients verified signatures. <!-- CHECK: 08-ledger-signing --></td><td class="verdict v-open">OPEN</td></tr>
 <tr><td>BBC calls the event the “NotPetya ransomware attack.”</td><td>DOJ indictment ¶33 alleges that ransom was a ruse and files could not be recovered after payment. ESET's code analysis independently found recovery impossible. <!-- CHECK: 08-ledger-ransomware --></td><td class="verdict v-wrong">WRONG</td></tr>
-<tr><td>Darknet Diaries says Maersk had a functioning network after about nine days.</td><td>Maersk's later retrospective says the network was rebuilt in “just 10 days” while cargo kept moving. The approximate timing is compatible; the different terms do not establish conflicting finish lines. <!-- CHECK: 08-ledger-days --></td><td class="verdict v-holds">HOLDS</td></tr>
+<tr><td>Darknet Diaries says Maersk had a functioning network after about nine days.</td><td>Maersk, <cite>A View from the Other Side of a Crisis</cite>, p.4 (“What we learned from the NotPetya Virus cyber-attack”): the network was rebuilt in “just 10 days” while cargo kept moving. The approximate timing is compatible. <!-- CHECK: 08-ledger-days --></td><td class="verdict v-holds">HOLDS</td></tr>
 <tr><td>Darknet Diaries says NotPetya ultimately cost Maersk USD 350 million.</td><td>Maersk, <cite>Annual Report 2017</cite>, printed pp.29 and 54: approximately USD 250–300 million. <!-- CHECK: 08-ledger-cost --></td><td class="verdict v-wrong">WRONG</td></tr>
 </tbody>
 </table></div>
@@ -126,7 +126,7 @@
 <li>OWASP Top 10:2025, <a href="https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/">A08:2025 Software or Data Integrity Failures</a>.</li>
 <li>Primary allegation: US Department of Justice, <a href="https://www.justice.gov/archives/opa/press-release/file/1328521/dl?inline="><cite>United States v. Andrienko et al.</cite>, indictment</a>, ¶¶33–38.</li>
 <li>Incident response: Cisco Talos, <a href="https://blog.talosintelligence.com/the-medoc-connection/">“The MeDoc Connection”</a>.</li>
-<li>Company record: A.P. Moller–Maersk, <a href="https://investor.maersk.com/system/files-encrypted/nasdaq_kms/assets/2018/04/25/13-00-21/A.P._Moller_-_Maersk_Annual_Report_2017.pdf"><cite>Annual Report 2017</cite></a>, printed pp.29 and 54; and <a href="https://www.maersk.com/~/media_sc9/maersk/stay-ahead/maersk---a-view-from-the-other-side-of-a-crisis---final.pdf">“What we learned from the NotPetya Virus cyber-attack”</a>.</li>
+<li>Company record: A.P. Moller–Maersk, <a href="https://investor.maersk.com/system/files-encrypted/nasdaq_kms/assets/2018/04/25/13-00-21/A.P._Moller_-_Maersk_Annual_Report_2017.pdf"><cite>Annual Report 2017</cite></a>, printed pp.29 and 54; and <a href="https://www.maersk.com/~/media_sc9/maersk/stay-ahead/maersk---a-view-from-the-other-side-of-a-crisis---final.pdf"><cite>A View from the Other Side of a Crisis</cite></a>, p.4 (“What we learned from the NotPetya Virus cyber-attack”).</li>
 <li>Participant's retelling: Gavin Ashton, <a href="https://gvnshtn.com/p/maersk-me-and-notpetya">“Maersk, me &amp; NotPetya”</a>.</li>
 <li>The folk story: Andy Greenberg, <a href="https://www.issp.ca/wired-the-untold-story-of-notpetya">“The Untold Story of NotPetya”</a>, <cite>Wired</cite>.</li>
 </ul>
@@ -135,7 +135,7 @@
 <nav class="chapter-nav">
   <a href="07-colonial-pipeline.html">← Previous</a>
   <a href="../index.html">Contents</a>
-  <a href="10-goto-fail-crowdstrike.html">Next →</a>
+  <a href="09-evaluated-not-ignored.html">Next →</a>
 </nav>
 </main>
 <footer class="site-footer"><div class="wrap"><p>Seventeenth in a series built the same way. Corrections welcome.</p></div></footer>
