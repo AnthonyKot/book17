@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Evaluated, not ignored — Ten Ways In</title>
-<meta name="description" content="Target's alerts existed; the missing link was turning a surfaced event into an effective response.">
+<title>Between alert and action — Ten Ways In</title>
+<meta name="description" content="Target's record ends between an unspecified evaluation and effective response; the reported FireEye alerts remain a separate, secondhand account.">
 <link rel="stylesheet" href="../static/style.css">
 <script src="../static/theme.js"></script>
 </head>
@@ -21,8 +21,8 @@
 </header>
 <main class="wrap">
 <p class="kicker">Chapter 9 · A09:2025 Security Logging &amp; Alerting Failures</p>
-<h1>Evaluated, not ignored</h1>
-<p class="lede">The durable Target story is that an alert sounded and nobody looked. John Mulligan, speaking for Target in prepared Senate testimony, gave a less convenient account. Some intruder activity, he testified, was detected, logged, surfaced to the security operations center, and evaluated. The breach still followed. The useful question is therefore not whether Target owned an alarm. It is what happened between a machine raising an event and a person causing an effective response. The public record does not fully answer that question. Its silence is part of the lesson. <!-- CHECK: 09-lede-evaluated --></p>
+<h1>Between alert and action</h1>
+<p class="lede">The durable Target story is that an alert sounded and nobody looked. John Mulligan, speaking for Target in prepared Senate testimony, gave a narrower account. Target then believed some unspecified intruder activity was detected, logged, surfaced to the security operations center, and evaluated. He did not identify that activity as the reported FireEye alerts. The useful question is what happened between a machine raising an event and a person causing an effective response. The public record does not fully answer it. Its silence is part of the lesson. <!-- CHECK: 09-lede-evaluated --></p>
 
 <section class="break">
 <h2>The break</h2>
@@ -32,9 +32,9 @@
 
 <p>Target's own description shows the scale of the judging problem. Mulligan said its systems logged more than one billion technology activities on an average day. Tools narrowed those activities to a few hundred events for the security operations center. Reviews of those events produced dozens of cases for further assessment each day. Logging was abundant, filtering was already happening, and people were already reviewing selected events. <!-- CHECK: 09-soc-volume --></p>
 
-<p>Then comes the sentence that changes the chapter. “Some intruder activity was detected,” Mulligan testified. He continued that it was logged, surfaced to the SOC, and evaluated by security professionals. With hindsight and new information, he said, Target was asking questions about the judgments made then. It was also assessing whether different judgments might have produced different outcomes. <!-- CHECK: 09-detected-evaluated --></p>
+<p>Then comes the sentence that changes the question. “We now believe that some intruder activity was detected,” Mulligan testified. He continued that it was logged, surfaced to the SOC, and evaluated by security professionals. He did not identify the activity as the FireEye alerts reported elsewhere. With hindsight and new information, he said, Target was asking about the judgments made then and whether different judgments might have produced different outcomes. <!-- CHECK: 09-detected-evaluated --></p>
 
-<p>This is not Target claiming that everything worked. It is narrower and more unsettling. The event crossed the first three boundaries: sensor to record, record to surfaced item, and surfaced item to human evaluation. Whatever failed came during or after judgment. The statement does not identify the evaluator, the available context, the disposition, or the action attached to it. Those omissions prevent a confident diagnosis. <!-- CHECK: 09-testimony-gaps --></p>
+<p>This is not Target claiming that everything worked. In its retrospective account, some unspecified activity crossed three boundaries: sensor to record, record to surfaced item, and surfaced item to human evaluation. The statement does not identify the activity, evaluator, available context, disposition, or attached action. It cannot show whether this event was one of the reported FireEye alerts. Those omissions prevent a confident diagnosis. <!-- CHECK: 09-testimony-gaps --></p>
 
 <p>The competing public account is stronger. The Senate staff report says FireEye generated urgent alerts as data-exfiltration malware was installed. It says Target's team neither reacted nor enabled automatic deletion. On another page, it describes an alert with the generic label “malware.binary” and raises the possibility that frequent alarms made it look like a false positive. But the report attributes those details to Bloomberg Businessweek. <!-- CHECK: 09-fireeye-account --></p>
 
@@ -42,13 +42,13 @@
 
 <p>The same report says Symantec antivirus detected malicious behavior around November 28 and implicated the server FireEye had flagged. It later says the FireEye system reportedly decoded the destination servers where stolen payment-card data sat for days. Again, “reportedly” is doing work. These details belong to the report's reconstruction, with the source chain left visible. <!-- CHECK: 09-other-signals --></p>
 
-<p>CBS compressed the Businessweek account further: the attack “could have been prevented” if Target had reacted to its system's warnings. The Senate report's own conclusion is more conditional. Target “could have potentially blocked” the malware's effect through automatic deletion or follow-up. Mulligan's testimony is more conditional still: different judgments may have led to different outcomes. Possibility became certainty as the story travelled. <!-- CHECK: 09-prevention-claim --></p>
+<p>CBS broadened the Businessweek account: the attack “could have been prevented” if Target had reacted to its system's warnings. The Senate report makes a narrower counterfactual. Target “could have potentially blocked” the malware's effect through automatic deletion or follow-up. Mulligan narrows it again: different judgments may have led to different outcomes. The escalation is from a possible changed outcome or blocked malware effect to possible prevention of the attack as a whole. <!-- CHECK: 09-prevention-claim --></p>
 
 <p>There is one firm endpoint. Mulligan said the Justice Department notified Target on the evening of December 12 about suspicious activity involving cards used at its stores. He said Target immediately opened an internal investigation. That external notification arrived after the internally generated activity had been detected and evaluated, according to the same testimony. <!-- CHECK: 09-doj-notice --></p>
 
 <p>Nor was this a company with no named controls. Mulligan listed firewalls, malware detection, intrusion detection and prevention, and data-loss-prevention tools. He also said Target's systems had been certified compliant with the Payment Card Industry Data Security Standards in September 2013. His point was not that certification disproved the breach. It was that the layers and assessment existed, yet the systems were breached. <!-- CHECK: 09-existing-controls --></p>
 
-<p>The honest folk-story verdict therefore splits. The system warned: that HOLDS. The HVAC credential account describes reported entry but leaves out the alert-to-judgment route: MISSING. Certain prevention is OVERSTATED. The claim that nobody acted cannot be settled from the fetched record. Target says activity was evaluated; the Senate report repeats Businessweek's claim that the team did not react. What the evaluators decided, and why no effective response followed, remains OPEN. <!-- CHECK: 09-decision-path-open --></p>
+<p>The honest folk-story verdict therefore splits. The Senate reconstruction says the system warned: that HOLDS within its published account. Treating the HVAC entry as the breach's whole explanation is MISSING what followed. Preventability of the attack is OVERSTATED from narrower counterfactuals. Whether Target received and dispositioned the particular FireEye alerts remains OPEN. Mulligan's unspecified evaluated activity and the secondhand non-reaction claim can both be true. <!-- CHECK: 09-decision-path-open --></p>
 </section>
 
 <section class="mechanism">
@@ -61,7 +61,7 @@
 
 <p>OWASP names several of these conditions. It includes cases where <q class="owasp" data-src="A09">Appropriate alerting thresholds and response escalation processes are not in place or effective.</q> It also includes a detected alert that cannot be processed because its playbook is incomplete, obsolete, or absent. That is a broader and more useful model than “logs missing.” It treats the operational route to action as part of the control.</p>
 
-<p>Target's account can be placed on the drawing without guessing at the unseen box. Activity became a logged event. Some activity was detected and surfaced. A security professional evaluated it. The record then jumps to later external notification and investigation. Put a question mark between decision and effective action. Do not label the question mark “ignored.” The fetched documents do not establish that. <!-- CHECK: 09-mechanism-target --></p>
+<p>Mulligan's account places facts beside one another without connecting them. Target then believed some unspecified intruder activity became a logged event, was surfaced, and was evaluated. The account later reaches external notification and investigation. Put a question mark between that evaluation and effective action. Do not use it to confirm or clear the FireEye non-reaction claim. The fetched sources never identify the two events as the same. <!-- CHECK: 09-mechanism-target --></p>
 
 <p>Now add two feedback arrows. From decision, send the reason back to detection engineering: true positive, false positive, duplicate, or insufficient evidence. From action, return proof: host isolated, credential disabled, process stopped, owner reached. Without the first loop, rules do not learn from judgments. Without the second, a ticket can close while exposure continues. The control is not complete merely because the interface records a click.</p>
 
@@ -80,7 +80,7 @@
 
 <p>The report says Equifax lacked that visibility for nineteen months. When the certificate was updated on July 29, 2017, a countermeasures team detected a suspicious request almost immediately. Employees could analyze the current packet, but the report says they could not determine what the actor had done before that date from this missing traffic view. This was not an alert waiting for judgment. It was a dependency silently preventing the sensor from seeing. <!-- CHECK: 09-equifax-restored --></p>
 
-<p>The popular sentence that the certificate had expired for nine months is therefore WRONG against the House report's discovery clock. GAO supplies the likely source of confusion: it says the certificate expired about ten months before the breach began. Those are different intervals with different endpoints. The House report also records at least 324 expired SSL certificates, 79 on devices monitoring highly business-critical domains. “The certificate” hides an inventory and ownership failure. <!-- CHECK: 09-equifax-counts --></p>
+<p>The popular sentence that the certificate had expired for nine months is WRONG against the saved reports. The House report dates expiry to January 31, 2016 and intrusion onset to May 13, 2017, more than fifteen months later. It labels the interval from expiry to discovery as nineteen months. GAO relays Equifax officials' conflicting claim that expiry occurred about ten months before the breach. The origin of Wikipedia's nine-month figure remains unknown. The House report also records at least 324 expired SSL certificates, 79 on devices monitoring highly business-critical domains. <!-- CHECK: 09-equifax-counts --></p>
 
 <p>Logs still mattered after discovery. GAO says Equifax officials reported that undamaged electronic logs helped reconstruct attacker commands and determine which data was compromised. Those same officials described new vulnerability-management processes and continuous network monitoring. GAO immediately limits the claim: it did not independently assess those efforts. The record supports adoption and forensic value, not a demonstrated prevention result. <!-- CHECK: 09-equifax-gao --></p>
 
@@ -99,11 +99,11 @@
 <div class="ledger-wrap"><table class="ledger">
 <thead><tr><th>Folk story (source)</th><th>Record (document, page/section)</th><th>Verdict</th></tr></thead>
 <tbody>
-<tr><td>Target's own security system produced warnings during the attack. (CBS News)</td><td>Mulligan's prepared Senate statement, pp. 2–4, says some intruder activity was detected, logged, surfaced, and evaluated.</td><td class="verdict v-holds">HOLDS</td></tr>
-<tr><td>The attack could have been prevented if Target had reacted to the warnings. (CBS News, retelling Businessweek)</td><td>Senate staff report, p. 10, says Target “could have potentially blocked” the effect; Mulligan says different judgments “may” have changed outcomes.</td><td class="verdict v-overstated">OVERSTATED</td></tr>
-<tr><td>“Target Hackers Broke in Via HVAC Company.” (KrebsOnSecurity)</td><td>Senate staff report, pp. 4–5, reports stolen contractor credentials as entry. Mulligan's statement adds the later detected, surfaced, and evaluated activity.</td><td class="verdict v-missing">MISSING</td></tr>
-<tr><td>Target's team had ample time but did not act. (Wikipedia, citing Businessweek)</td><td>Senate staff report, pp. 1, 4–5, relies on published accounts and attributes non-reaction to Businessweek. Mulligan says activity was evaluated. Recipients, judgments, and reasons remain unavailable.</td><td class="verdict v-open">OPEN</td></tr>
-<tr><td>Equifax's inspection certificate had been expired for nine months. (Wikipedia)</td><td>House Oversight staff report, pp. 48–49, says nineteen months before discovery. GAO, pp. 13–15, says about ten months before the breach began: a different interval.</td><td class="verdict v-wrong">WRONG</td></tr>
+<tr><td>Target's own security system produced warnings during the attack. (CBS News)</td><td>Senate staff report, pp. 4–5 and 10, attributes to Businessweek urgent FireEye alerts and a warning sent to Target staff.</td><td class="verdict v-holds">HOLDS</td></tr>
+<tr><td>The attack could have been prevented if Target had reacted to the warnings. (CBS News, retelling Businessweek)</td><td>Senate staff report, p. 10, says Target “could have potentially blocked” the malware's effect. Mulligan's statement, p. 3, says different judgments “may” have changed outcomes. Neither addresses prevention of the attack as a whole.</td><td class="verdict v-overstated">OVERSTATED</td></tr>
+<tr><td>The Target breach was an HVAC-company break-in. (KrebsOnSecurity headline as a compact retelling)</td><td>Senate staff report, pp. 4–5, reports stolen contractor credentials as entry. Its pp. 4–5 and 10 also recount later FireEye warnings; Mulligan's statement, p. 3, says Target then believed some unspecified intruder activity was evaluated.</td><td class="verdict v-missing">MISSING</td></tr>
+<tr><td>Target's team received the FireEye warning, had ample time, but did not act to prevent the theft. (Wikipedia, citing Businessweek)</td><td>Senate staff report, pp. 1, 4–5, attributes non-reaction to Businessweek. Mulligan's statement, p. 3, concerns unspecified activity and does not resolve that account. Target's SOC alert and case records, or its completed forensic report showing receipt, disposition, rationale, and follow-up for those FireEye alerts, would settle it.</td><td class="verdict v-open">OPEN</td></tr>
+<tr><td>Equifax's inspection certificate had been expired for nine months. (Wikipedia)</td><td>House Oversight staff report, pp. 48–49 and 84, dates expiry to January 31, 2016 and intrusion onset to May 13, 2017, over fifteen months later; it calls the discovery interval nineteen months. GAO-18-559, pp. 13–15, instead relays Equifax officials' conflicting claim of about ten months before the breach.</td><td class="verdict v-wrong">WRONG</td></tr>
 <tr><td>The Equifax monitoring problem was “the certificate.” (Wikipedia)</td><td>House Oversight staff report, p. 84, records at least 324 expired certificates, including 79 on devices monitoring highly business-critical domains.</td><td class="verdict v-missing">MISSING</td></tr>
 <tr><td>“Orgs are detecting cybercriminals faster than ever.” (The Register)</td><td>M-Trends 2024 shows the long median decline, but most 2023 cases were externally notified. M-Trends 2026 records an increase from 11 days to 14 as case mix changed.</td><td class="verdict v-overstated">OVERSTATED</td></tr>
 </tbody>

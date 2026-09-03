@@ -1,0 +1,7 @@
+# Chapter 09 — panel findings applied (2026-09-03)
+
+Against `drafts/reviews/09-codex.md`; findings are numbered in its ranked order.
+
+1. **Title and core argument joined unconnected events (blocker) — applied.** Retitled the chapter “Between alert and action.” Every use of Mulligan's testimony now preserves Target's retrospective “we now believe” position, calls the evaluated activity unspecified, and separates it from the reported FireEye alerts. The lede, break, mechanism, ledger, and claims register no longer use evaluation to negate the secondhand non-reaction account.
+2. **CBS modal claim described as certainty — applied.** Replaced the false possibility-to-certainty contrast with the supported escalation in scope: CBS applies possible prevention to the whole attack, while the Senate staff report discusses possibly blocking the malware's effect and Mulligan discusses possibly different outcomes. The OVERSTATED row now states that distinction.
+3. **Equifax timing sources presented as reconcilable — applied.** The chapter now distinguishes the House report's onset and discovery clocks. It attributes GAO's roughly ten-month figure to Equifax officials and exposes its conflict with the House report's exact expiry and onset dates, which are over fifteen months apart. The unsupported speculation that GAO explains Wikipedia's nine-month wording is gone; that origin is explicitly unknown.
