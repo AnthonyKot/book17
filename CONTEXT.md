@@ -190,7 +190,7 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   several .gov documents were fetched through reader proxies and are flagged in
   SOURCES.md for re-verification; the original 2021 SD-02 is SSI, only the 2024 renewal
   is public.
-- 2026-09-03 — Chapters 2, 5, 7 drafted and wired (pre-review for 5 and 7). All three
+- 2026-09-03 — Chapters 2, 5, 7 drafted, panel-revised and wired (receipts in drafts/reviews/NN-applied.md; ch. 5's ledger shrank from eight rows to five after unearned rows were cut). All three
   evening drafting agents died at the token limit; recovered state was committed as-is.
   Ch. 2 revised by a Claude agent against the panel (drafts/reviews/02-applied.md): the
   3.6 GA date now rests on the r3.6.0 tag and the announce post, the ledger is ten rows.
