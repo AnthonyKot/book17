@@ -44,7 +44,8 @@ adjacent `.txt` files retain only the relevant passages, not a second complete c
 
 - Original URL: https://blog.strava.com/press/heatmap-updates/
 - Fetched archive URL: https://arquivo.pt/wayback/20180719020035id_/https://blog.strava.com/press/heatmap-updates/
-- What it is: vendor follow-up / change announcement dated 2018-03-13.
+- What it is: vendor follow-up / change announcement preserved in an archive capture
+  dated 2018-07-19; the saved page does not retain a publication date.
 - Page or section used: full post; monthly privacy refresh, low-activity threshold,
   street-detail login, opt-out, private-activity, and Privacy Zone statements.
 - Fetch extent: full archived page fetched from Arquivo.pt and converted to plain text.
