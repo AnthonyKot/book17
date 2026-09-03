@@ -1,6 +1,6 @@
 # Sources — chapter 08 (A08 Software or Data Integrity Failures — NotPetya; Maersk)
 
-Fetched 2026-09-03 for the pitch stage; no chapter has been drafted. “Full” means the
+Fetched 2026-09-03 for the pitch and chapter stages. “Full” means the
 whole HTML page or PDF was fetched and inspected, not that the excerpt file reproduces
 the whole work. The indictment records allegations, not findings. NotPetya and Maersk's
 enterprise network are outside the web-application scope from which the OWASP Top 10 is

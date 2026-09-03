@@ -11,3 +11,12 @@ Against `drafts/reviews/08-codex.md`.
 7. **Stale navigation — applied within the authorized scope; remainder rejected by scope.** Chapter 8's “Next” link now points to the existing chapter 9. The requested changes to chapters 7, 9 and 10 and to `index.html` were not made because the revision brief expressly forbids edits outside the chapter-8 file set.
 8. **Lede receipt too broad — applied.** The Ashton-supported Surface and worldwide-loss facts remain under `08-lede-controller`; Wired's synchronization report now has its own `08-lede-sync` marker and checked row. The availability-versus-recovery sentence is presented as architectural analysis, not as Ashton's claim.
 9. **Maersk white paper misnamed — applied.** Prose, ledger, reading list and all affected TSV citations now identify the publication as *A View from the Other Side of a Crisis*, p.4, with “What we learned from the NotPetya Virus cyber-attack” identified as its section.
+
+10. **Embedded diagram requested — rejected-with-reason.** The mechanism already supplies the four nodes, their order and two verification questions at each boundary. The panel's proposed signature arrow would blur the distinct signing-authority and client-verification steps, so no diagram was added.
+
+## Extra corrections
+
+- Tightened every ledger record cell to one named document, as required by `CONTEXT.md` §4. The two `OPEN` rows now name the document that would settle each gap.
+- Rewrote `drafts/08.ledger.md` to match the chapter's seven rows and verdicts: 3 `HOLDS`, 0 `OVERSTATED`, 2 `WRONG`, 0 `MISSING`, 2 `OPEN`.
+- Corrected the stale `SOURCES.md` note that said no chapter had been drafted.
+- Chapter-local verification is green: 2 OWASP quotations, 33 markers / 33 rows / 0 mismatches / 0 open register statuses, 0 broken links, and structure `ok (2280 words)`. Overall `./verify.sh 08` remains red only because `index.html` links 8 of the 10 chapter files; that file is expressly outside this revision's allowed scope.
