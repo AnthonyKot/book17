@@ -1,0 +1,6 @@
+SOURCE: Wikipedia, “2017 Equifax data breach,” “Discovery”
+URL: https://en.wikipedia.org/wiki/2017_Equifax_data_breach
+FETCHED: 2026-09-03
+EXTENT: One sentence only; this is the only wording quoted as a folk claim.
+
+The certificate had been expired for nine months.

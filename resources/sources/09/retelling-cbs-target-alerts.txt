@@ -1,0 +1,6 @@
+SOURCE: CBS News, “Did Target ignore data breach warnings?”
+URL: https://www.cbsnews.com/news/target-ignored-systems-hacking-warnings-report-says/
+FETCHED: 2026-09-03
+EXTENT: One sentence only; this is the only wording quoted as a folk claim.
+
+A new report from Bloomberg Businessweek said the attack could have been prevented if Target had reacted to warnings from its own cyber security system.

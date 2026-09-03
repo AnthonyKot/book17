@@ -1,0 +1,18 @@
+SOURCE: Mandiant, M-Trends 2024 Special Report: Executive Edition
+URL: https://services.google.com/fh/files/misc/m-trends-2024-executive-edition.pdf
+FETCHED: 2026-09-03
+PAGE: 2, “By the Numbers—The Data of M-Trends”
+
+The metrics reported in M-Trends 2024 are based on Mandiant Consulting investigations of targeted attack activity conducted between January 1, 2023 and December 31, 2023.
+
+Dwell time is the number of days an attacker is on a system from compromise to detection, and in 2023 the global median dwell time is 10 days, down from 16 days in 2022.
+
+For ransomware cases, the global median dwell time is 5 days compared to 9 days in the previous year.
+
+54% of organizations first learned of a compromise from an external source, while 46% first identified evidence of a compromise internally. 63% of notifications were external in 2022, suggesting organizations are improving at detecting malicious behavior.
+
+In 70% of ransomware cases, organizations learned of intrusions from external sources. Of those external sources, 76% were adversary notifications and 24% were external partners.
+
+Engage with red teams to test defenses and identify gaps, and measure the time it takes security teams to identify and respond to compromises.
+
+Use tabletop and other exercises to establish protocols, and ensure all employees involved in an incident response are ready to react—especially when it comes to being notified of a compromise externally.

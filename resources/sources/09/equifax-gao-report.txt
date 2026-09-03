@@ -1,0 +1,24 @@
+SOURCE: U.S. Government Accountability Office, GAO-18-559, Data Protection: Actions Taken by Equifax and Federal Agencies in Response to the 2017 Breach
+URL: https://www.gao.gov/assets/gao-18-559.pdf
+FETCHED: 2026-09-03
+PAGES: 13–18
+
+[pp. 13–15]
+
+The attack lasted for about 76 days before it was discovered.
+
+Equifax officials stated that, on July 29, 2017—approximately 2.5 months after the attackers began extracting sensitive information on May 13, 2017—security personnel conducting routine checks of the operating status and configuration of IT systems detected the intrusion on the online dispute portal.
+
+According to Equifax officials, the misconfiguration was due to an expired digital certificate. The certificate had expired about 10 months before the breach occurred, meaning that encrypted traffic was not being inspected throughout that period. As a result, during that period, the attacker was able to run commands and remove stolen data over an encrypted connection without detection.
+
+Equifax officials stated that, after the misconfiguration was corrected by updating the expired digital certificate and the inspection of network traffic had restarted, the administrator recognized signs of an intrusion, such as system commands being executed in ways that were not part of normal operations.
+
+[pp. 15–16]
+
+Equifax officials stated that the company’s investigation was facilitated by the use of electronic logs that had not been damaged or erased by the attackers on the affected systems. These logs recorded commands that were issued by the attackers throughout the attack, such as commands to retrieve or display the contents of data repositories. By examining the logs, Equifax worked to reconstruct the sequence of specific actions that the attackers had taken and, consequently, determine what specific data had been compromised.
+
+[pp. 17–18]
+
+Equifax officials stated that system-level remediation measures were implemented to address the factors that led to the breach. For example, to work toward addressing concerns about identifying vulnerable servers, Equifax reportedly is implementing a new management process to identify and patch software vulnerabilities and confirm that vulnerabilities have been addressed. Also, to help ensure that detection of malicious activity is not hindered in the future, Equifax officials said they have developed new policies to protect data and applications and implemented new tools for continuous monitoring of network traffic.
+
+We did not independently assess Equifax’s efforts to address the identified factors.

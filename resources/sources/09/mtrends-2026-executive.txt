@@ -1,0 +1,26 @@
+SOURCE: Mandiant, M-Trends 2026 Report: Executive Edition
+URL: https://services.google.com/fh/files/misc/m-trends-2026-executive-edition-en.pdf
+FETCHED: 2026-09-03
+PAGES: 2–3, 8
+
+[p. 2, Foreword]
+
+A major takeaway from our 2025 incident engagements is that a subset of adversaries are remaining undetected on networks for longer periods of time, often by establishing persistence in edge devices that typically lack standard telemetry. Mandiant responded to enough of these types of incidents in 2025 that global median dwell time has risen to 14 days from 11 days in the previous reporting period, driven largely by long-term espionage and DPRK IT worker operations.
+
+[p. 3, “By the Numbers”]
+
+The metrics reported in M-Trends 2026 are based on Mandiant Consulting investigations of targeted attack activity conducted between Jan. 1, 2025 and Dec. 31, 2025.
+
+Across all 2025 investigations, 52% of the time organizations first detected evidence of malicious activity internally (an increase from 43% in 2024), while 34% of the time they were notified by an external entity (down from 43%). Adversaries informed organizations of a compromise 14% of the time.
+
+In ransomware cases, adversaries notified the target 44% of the time, internal identification occurred 41% of the time, and external entities notified 15% of the time. A much higher percentage of adversary notifications is consistent with the ransomware business model.
+
+Global median dwell time rose to 14 days from 11 days in 2024. Comparing the distribution from 2024 to 2025 reveals a marginal decrease in incidents discovered in a week or less, and a shift toward longer dwell times (between one week and six months). This shift likely reflects the quantity of cyber espionage and North Korean IT worker incidents in which threat clusters prioritize maintaining stealthy, long-term access; both of these categories had a median dwell time of 122 days.
+
+[p. 8, “Multi-Year Intrusions Highlighting Extreme Persistence”]
+
+Current logging strategies fail to capture the full scope of these intrusions. With cases involving BRICKSTORM (a stealthy backdoor) averaging 393 days of dwell time, standard 90-day log retention leaves organizations unable to identify the initial access vector. Furthermore, reliance on EDR creates blind spots, as actors target network edge appliances and authentication protocols that sit outside the reach of endpoint agents.
+
+Expand Log Retention and Scope: Given the lengthy dwell times for certain sophisticated threat actors, standard 90-day retention policies are insufficient for scoping intrusions. Organizations should prioritize forwarding logs to centralized, long-term storage, specifically capturing data from blind spots like network edge devices, hypervisors, and authentication protocols that standard EDR tools often miss.
+
+Secure Log Integrity: To counter anti-forensics techniques like local log wiping and timestomping, prioritize forwarding logs to a centralized location immediately. This ensures evidence is preserved even if the host is compromised. Additionally, configure repositories to alert on unexpected log termination, which allows operations teams to identify when an attacker is intentionally disabling security controls to hide their tracks.

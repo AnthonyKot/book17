@@ -1,0 +1,32 @@
+SOURCE: U.S. House Committee on Oversight and Government Reform, The Equifax Data Breach
+URL: https://oversight.house.gov/wp-content/uploads/2018/12/Equifax-Report.pdf
+FETCHED: 2026-09-03
+PAGES: 3–4, 26, 48–49, 84
+
+[p. 3, Executive Summary]
+
+Equifax did not see the data exfiltration because the device used to monitor ACIS network traffic had been inactive for 19 months due to an expired security certificate. On July 29, 2017, Equifax updated the expired certificate and immediately noticed suspicious web traffic.
+
+After updating the security certificate, Equifax employees identified suspicious traffic from an IP address originating in China. The suspicious traffic exiting the ACIS application potentially contained image files related to consumer credit investigations. Equifax discovered it was under active attack and immediately launched an incident response effort.
+
+[p. 4, Executive Summary]
+
+Equifax should have addressed at least two points of failure to mitigate, or even prevent, this data breach. First, a lack of accountability and no clear lines of authority in Equifax’s IT management structure existed, leading to an execution gap between IT policy development and operation. This also restricted the company’s implementation of other security initiatives in a comprehensive and timely manner. As an example, Equifax had allowed over 300 security certificates to expire, including 79 certificates for monitoring business critical domains.
+
+[p. 26, “Anatomy of the Equifax Data Breach”]
+
+The company’s failure to implement basic security protocols, including file integrity monitoring and network segmentation, allowed the attackers to access and remove large amounts of data. The attackers were able to exfiltrate this data because the digital certificate allowing Equifax to monitor encrypted network traffic flowing through the ACIS environment expired 19 months prior to the discovery of the breach.
+
+[pp. 48–49, “Expired SSL Certificates”]
+
+The default setting for this device allowed web traffic to continue through to the ACIS system, even when the SSL certificate was expired. When this occurs, traffic flowing to and from the internet is not analyzed by the intrusion detection or prevention systems because these security tools cannot analyze encrypted traffic.
+
+According to documents obtained, the SSL certificate installed on the SSLV device monitoring the ACIS domain ai.equifax.com expired on January 31, 2016. As a result, Equifax did not have visibility into the network traffic in the ACIS environment for nineteen months.
+
+Almost immediately, the Equifax Countermeasures team detected a suspicious request from an IP address originating in China. The team analyzed the full suspicious packet and other recent requests.
+
+Equifax employees were unable to determine what this actor did prior to July 29, including any details on the requests made to the ACIS application, because of the expired SSL certificate.
+
+[p. 84, “Equifax’s Certificate Management Process”]
+
+At the time of the breach, however, Equifax had allowed at least 324 of its SSL certificates to expire. Seventy-nine of the expired certificates were for devices monitoring highly business critical domains. Had Equifax implemented a certificate management process with defined roles and responsibilities, the SSL certificate on the device monitoring the ACIS platform would have been active when the intrusion began on May 13, 2017. The company would have been able to see the suspicious traffic to and from the ACIS platform much earlier – potentially mitigating or preventing the data breach.

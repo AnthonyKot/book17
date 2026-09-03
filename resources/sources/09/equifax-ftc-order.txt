@@ -1,0 +1,14 @@
+SOURCE: Federal Trade Commission, Stipulated Order for Permanent Injunction and Monetary Judgment, FTC v. Equifax Inc.
+URL: https://www.ftc.gov/system/files/documents/cases/172_3203_equifax_order_signed_7-23-19.pdf
+FETCHED: 2026-09-03
+PAGES: 14–18
+
+[Section II, Mandated Information Security Program]
+
+Establishing patch management policies and procedures that require confirmation that any directives to apply patches or remediate vulnerabilities are received and completed and that include timelines for addressing vulnerabilities that account for the severity and exploitability of the risk implicated;
+
+Identifying and documenting a comprehensive information technology (“IT”) asset inventory that includes hardware, software, and location of the assets;
+
+Designing and implementing protections such as network intrusion protection, host intrusion protection, and file integrity monitoring, across Defendant’s network and IT assets, including Defendant’s legacy technologies;
+
+Test and monitor the effectiveness of the safeguards at least once every twelve months and, as they relate to a Covered Incident, promptly (not to exceed sixty days) following verification of such an incident, and modify the Information Security Program based on the results.

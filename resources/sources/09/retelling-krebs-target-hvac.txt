@@ -1,0 +1,6 @@
+SOURCE: KrebsOnSecurity, “Target Hackers Broke in Via HVAC Company”
+URL: https://krebsonsecurity.com/2014/02/target-hackers-broke-in-via-hvac-company/
+FETCHED: 2026-09-03
+EXTENT: Headline only; this is the only wording quoted as a folk claim.
+
+Target Hackers Broke in Via HVAC Company

@@ -1,0 +1,6 @@
+SOURCE: The Register, “Mandiant: Orgs are detecting cybercriminals faster than ever”
+URL: https://www.theregister.com/2024/04/23/mandiant_orgs_are_sniffing_out_cybercrims_faster_than_ever/
+FETCHED: 2026-09-03
+EXTENT: Headline only; this is the only wording quoted as a folk claim.
+
+Mandiant: Orgs are detecting cybercriminals faster than ever

@@ -1,0 +1,22 @@
+SOURCE: OWASP, A09:2025 Security Logging & Alerting Failures
+URL: https://owasp.org/Top10/2025/A09_2025-Security_Logging_and_Alerting_Failures/
+FETCHED: 2026-09-03 (from repository snapshot fetched 2026-09-01)
+SECTIONS: Description; How to prevent
+
+[Description]
+
+Without logging and monitoring, attacks and breaches cannot be detected, and without alerting it is very difficult to respond quickly and effectively during a security incident.
+
+Appropriate alerting thresholds and response escalation processes are not in place or effective. Alerts are not received or reviewed within a reasonable amount of time.
+
+Too many false positive alerts make it impossible to distinguish important alerts from unimportant ones, resulting in them being recognized too late or not at all (physical overload of the SOC team).
+
+Detected alerts cannot be processed correctly because the playbook for the use case is incomplete, out of date, or missing.
+
+[How to prevent]
+
+If your application or its users behave suspiciously, issue an alert. Create guidance for your developers on this topic so they can code against this or buy a system for this.
+
+DevSecOps and security teams should establish effective monitoring and alerting use cases including playbooks such that suspicious activities are detected and responded to quickly by the Security Operations Center (SOC) team.
+
+Establish or adopt an incident response and recovery plan, such as National Institute of Standards and Technology (NIST) 800-61r2 or later. Teach your software developers what application attacks and incidents look like, so they can report them.

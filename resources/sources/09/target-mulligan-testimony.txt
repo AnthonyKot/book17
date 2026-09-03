@@ -1,0 +1,12 @@
+SOURCE: John Mulligan, Target, prepared statement to the Senate Commerce Committee
+URL: https://www.commerce.senate.gov/services/files/C2103BD3-8C40-42C3-973B-BD08C7DE45EF
+FETCHED: 2026-09-03
+PAGES: 2–4
+
+Like any large business, we log a significant number of technology activities in our system—more than 1 billion on average each day. These activities range from relatively insignificant, such as a team member logging onto a laptop, to more significant, such as removal of a virus from a computer. Using technology tools, those activities are narrowed to a few hundred events that are surfaced to the professionals staffing our Security Operations Center (SOC). As a result of their review of these events, dozens of cases are opened daily for additional assessment.
+
+It appears that intruders entered our system on November 12. We now believe that some intruder activity was detected by our computer security systems, logged and surfaced to the SOC and evaluated by our security professionals. With the benefit of hindsight and new information, we are now asking hard questions regarding the judgments that were made at that time and assessing whether different judgments may have led to different outcomes.
+
+On the evening of December 12, we were notified by the Justice Department of suspicious activity involving payment cards used at Target stores. We immediately started our internal investigation.
+
+Prior to the data breach, we had in place multiple layers of protection, including firewalls, malware detection software, intrusion detection and prevention capabilities, and data loss prevention tools. We performed internal and external validation and benchmarking assessments. And, in September 2013, our systems were certified compliant with the Payment Card Industry Data Security Standards, meaning that we met approximately 300 independent requirements of the assessment. Yet the reality is that our systems were breached.

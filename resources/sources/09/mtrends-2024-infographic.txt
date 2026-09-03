@@ -1,0 +1,25 @@
+SOURCE: Mandiant, M-Trends 2024 infographic
+URL: https://services.google.com/fh/files/misc/mtrends_2024_infographic.pdf
+FETCHED: 2026-09-03
+PAGE: 1, “When Are Attackers Found?” and “How Are Attackers Found?”
+
+When Are Attackers Found
+
+Global Median Dwell Time
+
+The number of days an attacker is present in a compromised environment before they are detected. The median represents a value at the midpoint of a dataset sorted by magnitude.
+
+2011  2012  2013  2014  2015  2016  2017  2018  2019  2020  2021  2022  2023
+416   243   229   205   146   99    101   78    56    24    21    16    10
+
+With 23% of intrusions related to ransomware — only 1-point less than last reporting period.
+
+How Are Attackers Found
+
+Internal detection is when an organization independently discovers it has been compromised.
+
+External notification is when an outside entity informs an organization it has been compromised.
+
+Companies were notified of ransomware-related intrusions by an external entity 70% of the time.
+
+Organizations were mainly notified by adversaries in 76% of investigations due to fully executed ransomware attacks detected by ransomware notes. External partners make up the remaining 24% of ransomware investigations.

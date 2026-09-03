@@ -1,0 +1,26 @@
+SOURCE: U.S. Senate Committee on Commerce, Science, and Transportation, A “Kill Chain” Analysis of the 2013 Target Data Breach
+URL: https://www.commerce.senate.gov/wp-content/uploads/media/doc/2014%200325%20Target%20Kill%20Chain%20Analysis.pdf
+FETCHED: 2026-09-03
+PAGES: 1, 4–5, 10, 12
+
+[p. 1, Executive Summary]
+
+This report presents an explanation of how the Target breach occurred, based on media reports and expert analyses that have been published since Target publicly acknowledged this breach on December 19, 2013. Although the complete story of how this breach took place may not be known until Target completes its forensic examination of the breach, facts already available in the public record provide a great deal of useful information about the attackers’ methods and Target’s defenses.
+
+This report analyzes what has been reported to date about the Target data breach, using the “intrusion kill chain” framework, an analytical tool introduced by Lockheed Martin security researchers in 2011, and today widely used by information security professionals in both the public and the private sectors.
+
+Target appears to have failed to respond to multiple automated warnings from the company’s anti-intrusion software that the attackers were installing malware on Target’s system.
+
+[pp. 4–5, “The Malware” and “The Attackers”]
+
+According to a Bloomberg Businessweek report, Target’s FireEye malware intrusion detection system triggered urgent alerts with each installation of the data exfiltration malware. However, Target’s security team neither reacted to the alarms nor allowed the FireEye software to automatically delete the malware in question. Target’s Symantec antivirus software also detected malicious behavior around November 28, implicating the same server flagged by FireEye’s software.
+
+The attackers reportedly first gained access to Target’s system by stealing credentials from an HVAC and refrigeration company, Fazio Mechanical Services, based in Sharpsburg, Pennsylvania. This company specializes as a refrigeration contractor for supermarkets in the mid-Atlantic region and had remote access to Target’s network for electronic billing, contract submission, and project management purposes.
+
+[p. 10, “Exploitation”]
+
+Target could have potentially blocked the effect of the exfiltration malware on its servers by either allowing its FireEye software to delete any detected malware, or, if not choosing the automatic option, by following up on the several alerts that were triggered at the time of malware delivery. According to Businessweek, the FireEye software sent an alert with the generic name “malware.binary” to Target security staff. It is possible that Target staff could have viewed this alert as a false positive if the system was frequently alarming.
+
+[p. 12, “Actions on Objectives”]
+
+Target’s FireEye software reportedly did detect the data exfiltration malware and decoded the destination of servers on which data for millions of stolen credit cards were stored for days at a time. Acting on this information could have stopped the exfiltration, not only at this last stage, but especially during the “delivery” step on the kill chain.

@@ -1,0 +1,11 @@
+SOURCE: Federal Trade Commission, Complaint for Permanent Injunction and Other Relief, FTC v. Equifax Inc.
+URL: https://www.ftc.gov/system/files/documents/cases/172_3203_equifax_complaint_7-22-19.pdf
+FETCHED: 2026-09-03
+PAGES: 5–7
+STATUS NOTE: These are allegations in a complaint, not findings.
+
+16. The ACIS Dispute Portal contained a vulnerable version of Apache Struts. However, Defendant failed to apply the patch to the ACIS Dispute Portal for months. Although Defendant’s security team issued an order to patch all vulnerable systems within 48 hours, Defendant failed to send the email ordering a patch to the employee responsible for maintaining the ACIS Dispute Portal. As a result, Defendant failed to notice or remediate the unpatched ACIS Dispute Portal.
+
+17. On or about March 15, 2017, Defendant performed an automated vulnerability scan intended to search for vulnerable instances of Apache Struts that remained on Defendant’s network. But Defendant used a scanner that was not configured to correctly search all of Defendant’s potentially vulnerable assets. As a result, the automated scanner did not identify any systems vulnerable to 2017-CVE-5638 and the ACIS Dispute Portal remained unpatched.
+
+18. Defendant failed to discover the unpatched vulnerability for more than four months. On or about July 29, 2017, Defendant’s security team identified some suspicious traffic on the ACIS Dispute Portal after replacing expired security certificates.

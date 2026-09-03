@@ -1,0 +1,20 @@
+SOURCE: Target, “Updates on Target’s security and technology enhancements”
+URL: https://corporate.target.com/news-features/article/2014/04/updates-on-target-s-security-and-technology-enhanc
+FETCHED: 2026-09-03
+SECTION: Security enhancements announced 29 April 2014
+
+Enhancing monitoring and logging
+
+We’ve implemented additional rules, alerts, centralized log feeds and enabled additional logging capabilities.
+
+Installation of application whitelisting point-of-sale systems
+
+This includes deployment to all registers, point-of-sale servers and development of whitelisting rules.
+
+Implementation of enhanced segmentation
+
+We’ve developed of point-of-sale management tools, reviewed and streamlined network firewall rules and developed a comprehensive firewall governance process.
+
+Reviewing and limiting vendor access
+
+We’ve decommissioned vendor access to the server impacted in the breach and disabled select vendor access points including FTP and telnet protocols.

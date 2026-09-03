@@ -1,0 +1,6 @@
+SOURCE: Wikipedia, “History of Target Corporation,” “2013 security breach”
+URL: https://en.wikipedia.org/wiki/History_of_Target_Corporation
+FETCHED: 2026-09-03
+EXTENT: One sentence only; the pitch quotes only a phrase from this sentence.
+
+According to Bloomberg Businessweek, Target's computer security team was notified of the breach via the FireEye security service they employed, had ample time to disrupt the theft of credit cards and other customer data, but did not act to prevent theft from being carried out.
