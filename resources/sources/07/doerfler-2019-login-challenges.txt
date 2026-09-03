@@ -96,3 +96,22 @@ Table 3: Hijacking attempts from bots, phishers, and targeted attackers prevente
 error margins for 95% confidence intervals. Device-based challenges prevent 94% of attacks rooted in phishing and 76% of
 targeted attacks.
 
+--- §5.3 and Table 7, overall success (pdftotext, read 2026-09-03) ---
+
+                                                Success rate
+ Source of initial failure             Same session Within one week
+ Two-factor authentication                   88.2%              98.4%
+ Login challenge                             47.8%              97.3%
+ Login challenge, device-based               59.3%              97.9%
+ Account recovery                            49.7%              93.8%
+ Account recovery, device-based              46.6%              94.6%
+ Password-only                               89.5%              95.8%
+
+Table 7: Success rates of users who fail a challenge to gain
+access to their account within one week. Login challenges
+and two-factor authentication exhibit less user friction than
+passwords.
+
+We present our results in Table 7. We find that two-factor authen-
+tication exhibits similar user friction compared to password-only
+authentication. This holds both per-session and overall.
