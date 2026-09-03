@@ -150,7 +150,6 @@ Only the sentences actually eligible for quotation will be saved from these sour
 
 ## Not fetched / not available
 
-- Bloomberg Businessweek, “Missed Alarms and 40 Million Stolen Credit Card Numbers: How Target Blew It” (13 March 2014), formerly at `http://www.businessweek.com/articles/2014-03-13/target-missed-alarms-in-epic-hack-of-credit-card-data`: the current Bloomberg page was not returned as usable article text. The Senate report cites it for the FireEye details, and CBS quotes its editor; no Bloomberg wording will be quoted unless a fetchable copy is later obtained.
+- Bloomberg Businessweek, “Missed Alarms and 40 Million Stolen Credit Card Numbers: How Target Blew It” (13 March 2014), formerly at `http://www.businessweek.com/articles/2014-03-13/target-missed-alarms-in-epic-hack-of-credit-card-data`: a browser search did not return the article, and `curl -L` with a browser user agent redirected to the Bloomberg Businessweek landing page with HTTP 403. The Senate report cites it for the FireEye details, and CBS quotes its editor; no Bloomberg wording will be quoted unless a fetchable copy is later obtained.
 - The standalone Senate-hosted Target report and Mulligan testimony rejected direct `curl` requests with HTTP 403. Both were readable through the browser document reader; the report is independently available inside the fully fetched GovInfo hearing PDF.
 - CBS and Time pages rejected direct `curl` requests with HTTP 406. CBS was fetched partly through the browser document reader. The Time retelling was not selected and will not be quoted.
-
