@@ -17,3 +17,5 @@ Against `drafts/reviews/05-codex.md`, with the independent Flash and Pro reports
 
 - Ledger row 1 originally combined Wikipedia and TechCrunch. It now tests only TechCrunch’s specific zero-day claim, satisfying CONTEXT §4’s one-retelling-per-row rule; its TSV source list now includes the retelling.
 - Rewrote `drafts/05.ledger.md` to match the chapter table exactly: 5 rows — 2 HOLDS, 1 OVERSTATED, 0 WRONG, 1 MISSING, 1 OPEN.
+- Remaining OPEN: ledger row 4, whether the deduplicated population exceeded 60 million. The claims register itself has no `open` rows.
+- Final verification: 2 OWASP quotations with 0 missing; 51 claim markers and 51 rows with 0 mismatches and 0 open; 0 broken links; structure `ok (2302 words)`; `PASS`.
