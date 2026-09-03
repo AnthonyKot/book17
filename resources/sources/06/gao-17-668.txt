@@ -1,0 +1,29 @@
+Source: https://www.gao.gov/assets/gao-17-668.pdf
+Fetched: 2026-09-03
+Excerpt: report pp. 13–18 and 29–31 (selected passages)
+
+[Report p. 13]
+
+IoT devices pose numerous risks by how they are designed, manufactured, and configured. According to DOD officials, there is little incentive for manufacturers to design security functions into the software or hardware of their products, resulting in little thought or effort given to security.
+
+[Report p. 14]
+
+Whether on personal or DOD-issued devices, the potential of such applications to collect location and photographic data on DOD personnel or units and communicate this data to third parties has raised DOD operations security risks. DOD’s 2016 DOD Policy Recommendations for the Internet of Things (IoT) also laid out operations security implications of IoT devices, particularly with the expanded aggregation of information. Specifically, it discussed how information collected through various IoT devices and then aggregated could inform adversaries about DOD capabilities or deployments. For example, an adversary could gather information related to which people were present or which organizations were working overtime.
+
+[Report p. 17]
+
+While DOD has conducted some assessments to examine security risks with IoT devices, threat-based comprehensive operations security surveys (hereinafter referred to as “operations security surveys”) that could examine such risks are not being conducted. DOD requires different types of assessments to protect DOD information residing on and outside the department’s networks. Some of these assessments can be used to identify and examine security risks related to IoT devices. Such assessments include mission assurance assessments, specific threat assessments from the intelligence community—such as the Defense Intelligence Agency’s April 2016 Threats via the Internet of Things—and operations security surveys.
+
+[Report p. 18]
+
+According to DOD Directive 5205.02E, DOD Operations Security Program, DOD components must conduct operations security surveys, at a minimum, every 3 years. Also, DOD’s Operations Security Program Manual 5205.02-M requires a threat analysis that includes identifying potential adversaries and their associated capabilities to collect, analyze, and exploit critical information as an essential step in the operations security process. This could potentially include information collected by IoT devices. The Under Secretary of Defense for Intelligence is also required to report annually to the Secretary of Defense on the status of the DOD operations security program. According to DOD officials, IoT devices pose significant risks to operations security. Officials cited the geolocation capability of some IoT devices as a particular concern—specifically, how the location of troops or personnel could be revealed.
+
+[Report p. 30]
+
+DOD could capitalize on this progress by further addressing challenges we found in the following areas: the lack of operations security surveys that could identify and mitigate security risks of IoT; insufficient DOD policies and guidance for specific IoT devices and applications of concern (e.g., smart televisions and smartphone applications); and the need for DOD core security policies (e.g., cybersecurity, operations security, physical security, information security) that provide clear guidance on the IoT or IoT devices. By addressing these challenges, DOD could better ensure that it is identifying security issues with IoT devices and more effectively safeguarding and maintaining the security of DOD information.
+
+The Under Secretary of Defense for Intelligence, in coordination with the DOD Chief Information Officer, the Under Secretaries of Defense for Policy; Acquisition, Technology, and Logistics; and Personnel and Readiness; and with military service and agency stakeholders, should conduct operations security surveys that identify IoT security risks and protect DOD information and operations, in accordance with DOD guidance, or address operations security risks posed by IoT devices through other DOD risk assessments.
+
+[Report p. 31]
+
+DOD concurred with our recommendation to conduct operations security surveys that identify IoT security risks and protect DOD information and operations, in accordance with DOD guidance, or address operations security risks posed by IoT devices through other DOD risk assessments. The department stated that it will take action in accordance with its existing policies for operations security.

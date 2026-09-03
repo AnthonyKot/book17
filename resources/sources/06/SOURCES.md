@@ -89,8 +89,8 @@ adjacent `.txt` files retain only the relevant passages, not a second complete c
 
 - URL: https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-hassan_0.pdf
 - What it is: peer-reviewed paper, 27th USENIX Security Symposium (2018).
-- Page or section used: paper pp. 7–10, especially §§7.1, 7.3, and 9 (“Ethics and
-  Disclosure”).
+- Page or section used: proceedings pp. 507–510, especially §§7.1, 7.3, and 9 (“Ethics
+  and Disclosure”).
 - Fetch extent: full 17-page PDF fetched and text-extracted.
 - Serves: B, C.
 - Saved excerpt: `hassan-fitness-trackers.txt`.
@@ -146,4 +146,3 @@ Only the sentence or title that may be quoted in a pitch is retained from each r
 - Direct `curl` fetches of the Medium engineering post and the Defense Department PDF
   returned HTTP 403. Both documents were fetched in full through the text browser; no
   factual claim depends on the blocked route.
-

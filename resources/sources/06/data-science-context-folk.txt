@@ -1,0 +1,5 @@
+Source: https://datascienceincontext.com/wp-content/uploads/2022/07/Data-Science-in-Context-V.995-Web-Beta.pdf
+Fetched: 2026-09-03
+Retelling excerpt: printed p. 134 (PDF p. 135), two sentences used as folk claim only
+
+Clearly, soldiers were making these tracks and inadvertently revealing the locations. Strava did nothing wrong; they displayed anonymized tracks for opted-in users who hadn't realized this compromised military security.

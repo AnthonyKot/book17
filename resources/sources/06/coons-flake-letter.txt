@@ -1,0 +1,35 @@
+Source: https://www.coons.senate.gov/news/press-releases/sens-coons-flake-press-strava-ceo-on-privacy-data-security-failures-after-fitness-tracking-app-reveals-sensitive-information-of-us-military-service-members
+Fetched: 2026-09-03
+Excerpt: letter dated 2018-02-14 (selected substantive paragraphs and questions)
+
+We write regarding Strava’s privacy and data-security practices in light of recent news reports indicating that the company publicly shares personal consumer data that may put its users at risk.
+
+Strava collects geo-location information from personal fitness trackers and from its downloadable mobile app to reveal a user’s workout history, location, and movements. It then matches that information with biographical information, such as a user’s first and last name and profile picture, and makes all of it available to other app users.
+
+Since November 2017, the company has shared online a comprehensive “heat map” of its users’ movements over the past two years. The heat map is available not only to other app users, but to the general public on the Internet. While Strava has explained that the heat map contains aggregated and anonymized location information, the data posted can be easily cross-referenced with other publicly available information to identify individual users. This information could jeopardize users’ personal safety in various ways, including revealing a user’s daily activities, frequented locations, and sensitive health information. The implications of making this information widely available could even impact national security by revealing the whereabouts of sensitive locations.
+
+Unfortunately, it seems that Strava has failed to demonstrate that it takes these concerns seriously. In particular, Strava’s fitness app makes it very difficult to opt out of unwanted data-sharing. While the app’s services offer useful information to the user, it seems that many consumers are either confused by Strava’s opt-out provisions or simply unaware of what information is being tracked. To be meaningful, privacy terms and opt-out privacy requirements must be clear and understandable.
+
+On January 29, 2018, you issued a response to questions of public safety associated with the heat map. Specifically, you stated: “In building [the fitness app], we respected activity and profile privacy selections, including the ability to opt out of heatmaps altogether… Please know that we are taking this matter seriously and understand our responsibility related to the data you share with us.”
+
+You also included a list of action items that Strava is undertaking in response to what it has learned. These include “reviewing features that were originally designed for athlete motivation and inspiration to ensure they cannot be compromised by people with bad intent,” “increas[ing] awareness of [Strava’s] privacy and safety tools,” and “simplifying [Strava’s] privacy and safety features to ensure [users] know how to control [their] own data.”
+
+We therefore request that Strava provide answers to the following questions:
+
+1. Please identify Strava’s privacy terms and policies for use of its fitness tracking application as communicated to the consumer at the time of purchase or download.
+
+2. Please provide a comprehensive list of the actions Strava took while creating and maintaining its fitness tracking app that “respected activity and profile privacy selections” of its users.
+
+3. In light of Strava’s commitment to “understand [its] responsibility related to the data [users] share with [it],” please describe how Strava collects, stores, and shares consumer data.
+
+4. Is Strava’s fitness tracking app able to operate without a third-party GPS location service provider?
+
+5. What steps, if any, has Strava taken in fulfilling its commitment to implement the following relevant action items:
+
+   a. Reviewing features that were originally designed for athlete motivation and inspiration to ensure they cannot be compromised by people with bad intent;
+
+   b. Increasing public awareness of the company’s privacy and safety tools; and
+
+   c. Simplifying the company’s privacy and safety features to ensure consumers know how to control their data.
+
+6. Please describe the different privacy settings Strava currently offers to consumers who use its fitness tracking app, including the actions the user must take to opt-out of each data-sharing opportunity and the information that is made public under each setting.

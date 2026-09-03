@@ -1,0 +1,42 @@
+Source: https://medium.com/strava-engineering/the-global-heatmap-now-6x-hotter-23fc01d301de
+Fetched: 2026-09-03
+Excerpt: opening; Input Data and Filtering; Heat Rasterization; Heat Normalization
+
+Building the Global Heatmap
+
+Drew Robb
+
+Nov 1, 2017
+
+Our Global Heatmap is the largest, richest, and most beautiful dataset of its kind. It is a visualization of two years of trailing data from Strava’s global network of athletes. To give a sense of scale, the new heatmap consists of:
+
+* 700 million activities
+* 1.4 trillion latitude/longitude points
+* 7.7 trillion pixels rasterized
+* 5 terabytes of raw input data
+* A total distance of 16 billion km (10 billion miles)
+* A total recorded activity duration of 100 thousand years
+
+Beyond simply including more data, a total rewrite of the heatmap code permitted major improvements in rendering quality. Highlights include twice the resolution, rasterizing activity data as paths instead of as points, and an improved normalization technique that ensures a richer and more beautiful visualization.
+
+Input Data and Filtering
+
+The raw input activity streams data comes from a Spark/S3/Parquet data warehouse. Several algorithms clean up and filter this data.
+
+Most importantly, the heatmap only contains public activities and respects all privacy settings.
+
+Additional filters remove erroneous data. Activities at higher than reasonable running speeds are excluded from the running heat layer because they are most likely mislabeled. There is also a higher speed threshold for bike rides to filter data from cars and airplanes.
+
+Heat Rasterization
+
+The old heatmap rasterized each GPS point as exactly one pixel. This simple approach was often hindered because activities can record at most one data point per second. This frequently caused visible artifacts in areas of low heat because the speed and record rate of activities often led to multi pixel gaps. It also caused a bias in heat where activities generally move slower (consider uphill vs downhill). Since the new heatmap renders an additional zoom level (pushing the highest spatial resolution of a single pixel from 4 meters to 2 meters), the problem was made even more visible. The new heatmap instead draws each activity as a pixel-perfect path connecting subsequent GPS points.
+
+Heat Normalization
+
+Normalization is the function that maps raw heat counts for each pixel after rasterization from the unbounded domain [0, Inf) to the bounded range [0, 1] of the color map. The choice of normalization has huge impact on how the heatmap appears visually.
+
+A slick normalization technique is to use the CDF (cumulative distribution function) of the raw values. That is, the normalized value of a given pixel is the percentage of pixels with a lower heat value. This method yields maximal contrast by ensuring that there are an equal number of pixels of each color. In photo processing, this technique is known as Histogram equalization. We use this technique with a slight modification to prevent quantization artifacts in areas of very low raw heat.
+
+An advantage of this approach is that the heatmap has perfectly uniform distribution over the colormap. In some sense, this causes the heatmap to convey maximum information about relative heat values. We also subjectively find that it looks really nice.
+
+A disadvantage of this approach is that the heatmap is not absolutely quantitative. The same color only locally represents the same level of heat data.

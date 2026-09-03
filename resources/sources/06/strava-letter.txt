@@ -1,0 +1,35 @@
+Source: https://blog.strava.com/press/a-letter-to-the-strava-community/
+Fetched: 2026-09-03 via https://arquivo.pt/wayback/20200219080522id_/https://blog.strava.com/press/a-letter-to-the-strava-community/
+Excerpt: full substantive letter (navigation omitted)
+
+A Letter to the Strava Community
+
+An update on the global heatmap from James Quarles, Strava CEO.
+
+Dear Strava Community,
+
+I’d like to take a moment to address the recent attention focused on Strava and our global heatmap. Our heatmap provides a visualization of activities around the world, and many of you use it to find places to be active in your hometown or when you travel. In building it, we respected activity and profile privacy selections, including the ability to opt out of heatmaps altogether. However, we learned over the weekend that Strava members in the military, humanitarian workers and others living abroad may have shared their location in areas without other activity density and, in doing so, inadvertently increased awareness of sensitive locations.
+
+Many team members at Strava and in our community, including me, have family members in the armed forces. Please know that we are taking this matter seriously and understand our responsibility related to the data you share with us.
+
+Here’s what we are doing in response to what we’ve learned:
+
+* We are committed to working with military and government officials to address potentially sensitive data
+* We are reviewing features that were originally designed for athlete motivation and inspiration to ensure they cannot be compromised by people with bad intent.
+* We continue to increase awareness of our privacy and safety tools.
+* Our engineering and user-experience teams are simplifying our privacy and safety features to ensure you know how to control your own data.
+
+There are steps you can take right now with regard to data privacy, while remaining active on Strava:
+
+* Read our post that details the privacy options available on Strava.
+* Take the time to update your privacy settings to make sure they reflect your intended experience.
+* Reach out to our Community Support team if you have any questions or want help.
+* Continue to support each other in line with our community standards.
+
+Thank you for being part of the Strava community and helping us continue to grow responsibly around the globe.
+
+Sincerely,
+
+James Quarles
+
+CEO

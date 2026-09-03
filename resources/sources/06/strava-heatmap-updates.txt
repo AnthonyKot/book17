@@ -1,0 +1,27 @@
+Source: https://blog.strava.com/press/heatmap-updates/
+Fetched: 2026-09-03 via https://arquivo.pt/wayback/20180719020035id_/https://blog.strava.com/press/heatmap-updates/
+Excerpt: full substantive post (navigation omitted)
+
+Heatmap Updates
+
+We’re always improving Strava to benefit our community and recently made updates to the Global Heatmap.
+
+The heatmap is a one-of-a-kind resource that athletes all over the world use to discover new places to be active. That kind of resource requires trillions of data points to create, and we are eager to introduce new ways we are protecting that data and the athletes who provide it:
+
+* The heatmap is now updated monthly – both to reflect newly added data to make it more useful to the world’s athletes, but also to quickly respect changes to an athlete’s privacy settings
+* After opting out, an athlete’s contributions to the heatmap will be removed at the next monthly update
+* The heatmap shows the last two years of data
+* Roads and trails with very little activity will not show “heat” until several different athletes upload activities in that area
+* The heatmap remains available to the public, but only registered Strava athletes may zoom in to street-level details of activity on the heatmap.
+
+These updates build upon a foundation of privacy controls that accompanied the original launch of the Global Heatmap, which include:
+
+* Strava does not track athletes without their knowledge
+* We do not background track athlete locations when they are not using the app
+* Any athlete can opt out of the heatmap by enabling the “Hide anonymized data in Metro and Heatmaps” privacy setting
+* The heatmap reflects aggregated, public activities
+* The heatmap is a snapshot of historic data and not updated in real time
+* Private activities do not appear on the heatmap
+* When an athlete creates a Privacy Zone, all of their activities within that zone are hidden on the heatmap. Other athletes recording on Strava within an athlete’s Privacy Zone may create “heat” on the map through that zone.
+
+In addition to the recent updates to the Global Heatmap, we remain committed to respecting the privacy of our athletes and addressing concerns regarding potentially sensitive information. The Global Heatmap is an incredible resource for discovering new places to be active, and we will keep making improvements that benefit the Strava community.

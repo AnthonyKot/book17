@@ -1,0 +1,21 @@
+Source: https://media.defense.gov/2018/Aug/06/2001951064/-1/-1/1/GEOLOCATION-DEVICES-APPLICATIONS-SERVICES.PDF
+Fetched: 2026-09-03
+Excerpt: substantive text of both pages
+Source URL is indexed in SOURCES.md.
+Subject: Use of Geolocation-Capable Devices, Applications, and Services
+
+The rapidly evolving market of devices, applications, and services with geolocation capabilities (e.g., fitness trackers, smartphones, tablets, smartwatches, and related software applications) presents significant risk to Department of Defense (DoD) personnel both on and off duty, and to our military operations globally.
+These geolocation capabilities can expose personal information, locations, routines, and numbers of DoD personnel, and potentially create unintended security consequences and increased risk to the joint force and mission.
+
+Effective immediately, DoD personnel are prohibited from using geolocation features and functionality on both non-government and government-issued devices, applications, and services while in locations designated as operational areas (OAs).
+
+Combatant Commanders or their designees may authorize the use of geolocation capabilities on non-government devices, applications, and services in OAs after conducting a threat-based comprehensive Operations Security (OPSEC) survey, in accordance with DoD Directive 5205.02E, “DoD Operations Security Program.”
+
+For all other locations, installations, and activities, the heads of DoD Components will consider the inherent risks associated with geolocation capabilities on devices, applications, and services, both non-government and government-issued, by personnel both on and off duty.
+
+When information derived from these capabilities poses a threat to personnel and operations, commanders and supervisors at all levels:
+
+* Will provide OPSEC training and guidance, in accordance with DoD Directive 5205.02E, commensurate with the risk and local operating conditions.
+* Should apply a tiered structure for categorizing location and operations sensitivity while incorporating risk factors to ensure restrictions are consistently and rationally applied.
+
+No later than 30 days from the date of this memorandum the DoD Chief Information Officer (CIO) and the Under Secretary of Defense for Intelligence (USD(I)) will jointly develop geolocation risk management guidance and training to inform commanders and heads of DoD Components when making risk decisions regarding these devices.
