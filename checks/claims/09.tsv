@@ -1,4 +1,4 @@
-chapter	claim id	one-line claim as made in prose	source (URL or citation with page/section)	status
+# chapter	claim id	one-line claim as made in prose	source (URL or citation with page/section)	status
 09	09-lede-evaluated	Mulligan testified that some Target intruder activity was detected, logged, surfaced to the SOC, and evaluated.	John J. Mulligan prepared Senate statement, pp. 2–4; https://www.commerce.senate.gov/services/files/C2103BD3-8C40-42C3-973B-BD08C7DE45EF	checked-by:codex:2026-09-03
 09	09-entry-date	Mulligan's testimony said intruders appeared to enter Target's system on November 12, 2013.	John J. Mulligan prepared Senate statement, pp. 2–4; https://www.commerce.senate.gov/services/files/C2103BD3-8C40-42C3-973B-BD08C7DE45EF	checked-by:codex:2026-09-03
 09	09-hvac-entry	Krebs foregrounded the HVAC company; the Senate staff report said the attackers reportedly used credentials stolen from Fazio Mechanical Services.	KrebsOnSecurity headline; Senate Commerce staff report, pp. 4–5; https://www.commerce.senate.gov/wp-content/uploads/media/doc/2014%200325%20Target%20Kill%20Chain%20Analysis.pdf	checked-by:codex:2026-09-03
