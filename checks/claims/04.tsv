@@ -19,6 +19,7 @@
 04	04-linkedin-2012	LinkedIn became aware on 6 June 2012 of the theft of approximately 6.5 million passwords	linkedin-statement-2012-06-12.txt	checked-by:fable:2026-09-03
 04	04-linkedin-2016	May 2016: 2012 data resurfaced; emails, hashed passwords, member IDs; not a new breach; salted hashes and optional 2FA now	linkedin-notice-2016.txt	checked-by:fable:2026-09-03
 04	04-linkedin-transition	LinkedIn completed a long-planned transition from hashed to hashed-and-salted passwords	linkedin-statement-2012-06-12.txt, Technology Expertise	checked-by:fable:2026-09-03
+04	04-lede-crossword	The stolen database made equal passwords look equal and included plain-text hints for a small percentage of users	australia-oaic-adobe-extended.txt, Security of Passwords; irish-dpc-2014-adobe.txt, Hints	checked-by:codex:2026-09-03
 04	04-new-system-2010	Adobe introduced a replacement authentication system in April 2010	australia-oaic-adobe-extended.txt, Security of Passwords	checked-by:codex:2026-09-03
 04	04-new-system-shape	Adobe described salted SHA-256 iterated more than 1,000 times; the report does not give enough construction detail to assess it against today's recommended schemes	australia-oaic-adobe-extended.txt, Security of Passwords; owasp-a04-2025.txt, How to prevent	checked-by:codex:2026-09-03
 04	04-nist-hints	NIST: verifiers shall not permit a hint accessible to an unauthenticated claimant	nist-sp800-63b-password-verifiers.txt, 3.1.1.2	checked-by:fable:2026-09-03
@@ -30,7 +31,7 @@
 04	04-oaic-current-def	Current password data means a password valid against Adobe's production authentication system	australia-oaic-adobe-extended.txt, Rectification	checked-by:fable:2026-09-03
 04	04-oaic-entry-route	OAIC: the attacker compromised a public-facing web server and used it to access other Adobe servers; the report does not identify how that server was compromised	australia-oaic-adobe-extended.txt, Background entry route	checked-by:codex:2026-09-03
 04	04-oaic-finding	OAIC: breach of NPP 4; measures in one area do not satisfy NPP 4 if not applied to all personal information	australia-oaic-adobe-extended.txt NPP 4 conclusion; australia-oaic-adobe.txt NPP 4 paragraph	checked-by:fable:2026-09-03
-04	04-oaic-new-system	OAIC: new system introduced April 2010; SHA-256, salted, iterated more than 1,000 times	australia-oaic-adobe-extended.txt, Security of Passwords	checked-by:fable:2026-09-03
+04	04-oaic-new-system	OAIC separately reports the replacement's April 2010 introduction and quotes Adobe saying that for more than a year its authentication system used salted SHA-256 iterated more than 1,000 times	australia-oaic-adobe-extended.txt, Security of Passwords	checked-by:codex:2026-09-03
 04	04-oaic-rectification	OAIC lists network monitoring, storage changes, two-factor, decommissioning the affected server, abolishing hints	australia-oaic-adobe.txt, Rectification	checked-by:fable:2026-09-03
 04	04-oaic-resets	Passwords reset on 3-4 October 2013 for users whose current password data was in the database	australia-oaic-adobe-extended.txt, Rectification	checked-by:fable:2026-09-03
 04	04-oaic-same-ciphertext	OAIC: common passwords shared by different users had the same ciphertext representation	australia-oaic-adobe-extended.txt, Security of Passwords	checked-by:fable:2026-09-03
