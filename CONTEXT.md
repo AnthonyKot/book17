@@ -238,3 +238,7 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   methodology) and the ten ledgers; its tally sentence is recomputed from the chapters' verdict
   cells before each publish. Book-level read-through begun: titles normalised to Title Case,
   the "You know the headline" opener kept only in ch. 10.
+- 2026-09-03 (night) — Chapter 0 panel-revised: the ranking arithmetic was wrong (incidence is
+  a per-CWE average and the risk score has five terms); codex fetched the methodology page
+  into `resources/owasp/0x02_*.txt` so the corrected quotations are gated. Receipt in
+  `drafts/reviews/00-applied.md`. All eleven chapters now panel-revised.
