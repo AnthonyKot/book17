@@ -209,3 +209,14 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   fable-pass-v1..v5`) applied one each to chapters 1, 2, 3, 7, 10 → `posts/NN-vK.md`,
   chapters untouched. The user picks the winning brief; it then runs on the rest. Ch. 5
   received the earlier in-place five-lens edit instead (`drafts/reviews/05-fable.md`).
+- 2026-09-03 (evening) — Chapters 4 and 6 drafted and wired during an OpenAI outage
+  (codex unreachable). Ch. 4 (Adobe, pitch A) was drafted by the coordinating session
+  from the pitch-step excerpts plus two extended regulator excerpts fetched via WebFetch.
+  Ch. 6 (Strava, pitch D) was drafted by agy gemini-3.8-flash-high from the chapter brief
+  in six minutes and then reviewed by the coordinating session in place of the panel:
+  invented scene detail (analyst's name and age, "bare sand", "barbed-wire fences",
+  invented counts), an unsupported signer and two unsupported dates, wrong textbook
+  authors, and two ledger rows with no named retelling were removed or re-sourced; row 5
+  regraded OVERSTATED. Both chapters carry `NN-*-date`-style open claims where a date
+  rests on SOURCES.md rather than a saved excerpt. Panel review (`review.sh`) still owed
+  for both once codex is back.
