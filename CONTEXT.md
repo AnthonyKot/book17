@@ -231,3 +231,10 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   ("evaluated, not ignored"), anchored on Mulligan's Senate statement and the Senate staff
   report's timeline; B (Equifax certificate) is the mirror, C (dwell time) the defense, D
   (the report's Businessweek dependence) a caveat and OPEN row.
+- 2026-09-03 (night) — Chapters 8 and 9 (codex drafts from the user's pick A each) panel-
+  revised: ch. 9's thesis "evaluated, not ignored" was found to link events the sources never
+  connect; retitled "Between Alert and Action". Chapter 0 written by the coordinating session
+  from the OWASP Introduction (the saved Methodology file is a 404; the Introduction carries the
+  methodology) and the ten ledgers; its tally sentence is recomputed from the chapters' verdict
+  cells before each publish. Book-level read-through begun: titles normalised to Title Case,
+  the "You know the headline" opener kept only in ch. 10.
