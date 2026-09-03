@@ -1,0 +1,7 @@
+# Chapter 08 — panel findings applied (2026-09-03)
+
+Against `drafts/reviews/08-codex.md`.
+
+1. **Cisco access distortion — applied.** Re-read `cisco-medoc.txt`. The chapter now says M.E.Doc gave responders access to engineers and administrators, logs and code; it no longer turns access to people into inspection of their accounts. The `08-cisco-access` register summary now receipts the whole marked paragraph.
+2. **Replication presented as the incident mechanism — applied.** Re-read Ashton, Microsoft's incident analysis, Microsoft's forest-recovery guide and Wired. The lede, break and closing exercise now separate current-state replication from NotPetya's lateral movement through credential, session and privileged-access paths. Microsoft's warning about dangerous directory data replicating back remains explicitly general recovery guidance.
+3. **Wired caveat omitted from ledger row 1 — applied.** The complete folk claim now includes Wired's simultaneous-loss caveat. Against Ashton's matching planning account, the verdict is `HOLDS`, not `OVERSTATED`; the prose ledger and `drafts/08.ledger.md` are synchronized.

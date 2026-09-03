@@ -22,7 +22,7 @@
 <main class="wrap">
 <p class="kicker">Chapter 8 · A08:2025 Software or Data Integrity Failures</p>
 <h1>The backup that was not a backup</h1>
-<p class="lede">The familiar Maersk story ends with one domain controller spared by a power cut in Ghana. The firmer first-person record begins one step later. Gavin Ashton, then working on identity and access management at Maersk, says the first restored controller ran on a Surface Pro 4. Its unlikely hardware matters less than what had failed: a worldwide set of synchronized machines had preserved availability, not recovery. <!-- CHECK: 08-lede-controller --></p>
+<p class="lede">The familiar Maersk story ends with one domain controller spared by a power cut in Ghana. The firmer first-person record begins one step later. Gavin Ashton, then working on identity and access management at Maersk, says the first restored controller ran on a Surface Pro 4 after controllers had been lost worldwide. <!-- CHECK: 08-lede-controller --> Wired reports that the controllers synchronized their data. <!-- CHECK: 08-lede-sync --> That made each a current peer, not a time-separated recovery copy. The unlikely hardware matters because recovery had to begin somewhere outside the live fleet.</p>
 
 <section class="break">
 <h2>The break</h2>
@@ -30,7 +30,7 @@
 
 <p>The folk version reduces the entrance to an update server. BleepingComputer wrote that M.E.Doc's update servers “were responsible for the initial NotPetya infections.” On that narrow point, later technical records agree. Cisco Talos concluded after its incident response that every installation it traced came through M.E.Doc's update system. Microsoft reported telemetry in which the legitimate updater process executed a malicious command on 27 June. <!-- CHECK: 08-updater-holds --></p>
 
-<p>Yet “the update server did it” compresses a staged mechanism into one bad download. Cisco says M.E.Doc let its responders inspect engineers' accounts, logs and code. Their report found that an unknown actor had stolen an administrator's credentials, obtained root privileges and changed the NGINX server configuration. Traffic for M.E.Doc's update host was proxied onward to another server. <!-- CHECK: 08-cisco-access --></p>
+<p>Yet “the update server did it” compresses a staged mechanism into one bad download. Cisco says M.E.Doc gave its responders access to engineers and administrators, who walked them through the system, plus logs and code. Their report found that an unknown actor had stolen an administrator's credentials, obtained root privileges and changed the NGINX server configuration. Traffic for M.E.Doc's update host was proxied onward to another server. <!-- CHECK: 08-cisco-access --></p>
 
 <p>Cisco also confirmed earlier research into a backdoor inserted in M.E.Doc software. It identified modified code in update versions dated April, May and June. The code could gather data and download and execute arbitrary code. Its command-line arguments matched Cisco's endpoint telemetry when M.E.Doc machines executed the initial NotPetya sample. <!-- CHECK: 08-cisco-backdoor --></p>
 
@@ -48,7 +48,9 @@
 
 <p>Wired's oral-history retelling supplies the famous missing scene. It says a controller in Ghana had been knocked offline by a blackout and therefore escaped NotPetya. It calls Maersk's synchronizing controllers a “decentralized backup strategy.” Those details came from Wired's interviews. The fetched Maersk publications do not confirm Ghana or the blackout, and Ashton's account does not name either. <!-- CHECK: 08-ghana-open --></p>
 
-<p>The distinction matters even if Wired's scene is exact. A live controller can replace another controller after an ordinary outage because both carry current directory state. That same synchronization keeps them inside one failure domain. If destructive state or trusted malicious execution reaches every live peer, replication can preserve the problem as efficiently as it preserves legitimate change.</p>
+<p>The distinction matters even if Wired's scene is exact. Wired says the controllers synchronized data, so in theory each could replace the others. It immediately adds that this arrangement had not accounted for every controller being wiped simultaneously. <!-- CHECK: 08-controller-sync --> A live controller carries current directory state; it is not a time-separated recovery copy.</p>
+
+<p>The account of the destruction is separate. Ashton attributes movement into servers and controllers to pass-the-hash and weakly controlled privileged access. Microsoft's incident analysis lists credential or session reuse, file shares, legitimate execution features and SMB vulnerabilities as lateral paths. <!-- CHECK: 08-controller-loss-path --> Neither says Active Directory replication spread NotPetya at Maersk.</p>
 
 <p>Recovery did not happen at one magic moment. A later Maersk paper says almost all its systems became inoperable and needed rebuilding. It says the network was rebuilt in ten days while customers' cargo kept moving. Maersk's annual report put the loss at approximately USD 250–300 million, covering lost revenue, IT restoration and extraordinary operating costs. <!-- CHECK: 08-ten-days-cost --></p>
 
@@ -101,7 +103,7 @@
 <div class="ledger-wrap"><table class="ledger">
 <thead><tr><th>Folk story (source)</th><th>Record (document, page/section)</th><th>Verdict</th></tr></thead>
 <tbody>
-<tr><td>Wired calls the mutually synchronizing domain controllers a “decentralized backup strategy.”</td><td>Ashton, “Finding our feet”: recovery plans covered a site or datacentre, not every controller at once. Microsoft distinguishes live controllers from a trusted backup. <!-- CHECK: 08-ledger-replicas --></td><td class="verdict v-overstated">OVERSTATED</td></tr>
+<tr><td>Wired says the synchronizing controllers could, “in theory,” back up one another, but not survive every controller being wiped together.</td><td>Ashton, “Finding our feet”: recovery plans covered a site or datacentre, not every controller at once, and Maersk had lost them everywhere. <!-- CHECK: 08-ledger-replicas --></td><td class="verdict v-holds">HOLDS</td></tr>
 <tr><td>Wired says a blackout left one controller alive in Ghana.</td><td>Ashton confirms the directory restoration and the first controller on a Surface Pro 4, but not the place or blackout. The fetched Maersk reports do not settle either detail. <!-- CHECK: 08-ledger-ghana --></td><td class="verdict v-open">OPEN</td></tr>
 <tr><td>BleepingComputer says M.E.Doc's update servers caused the initial infections.</td><td>Cisco, “Summary” and backdoor analysis: all installations it traced came through M.E.Doc's update system. Microsoft reports supporting updater telemetry. <!-- CHECK: 08-ledger-updater --></td><td class="verdict v-holds">HOLDS</td></tr>
 <tr><td>The update-server shorthand makes 27 June sound like one poisoned download.</td><td>DOJ indictment ¶¶34, 37–38, as allegations: earlier modified update files preceded temporary rerouting and final delivery. Cisco reports changed code and server configuration. <!-- CHECK: 08-ledger-stages --></td><td class="verdict v-missing">MISSING</td></tr>
@@ -116,7 +118,7 @@
 <h2>What you can now see</h2>
 <p>Choose one updater or deployment agent in a system you run and draw its promotion path. Start where a change is approved. End where a client executes it. Put the build, artifact store, signing authority and delivery service between them. Then mark the first point at which an attacker controlling one box could make unreviewed bytes look approved.</p>
 
-<p>Do the same drawing once more for recovery, but add time. Find the copy that remains usable if today's trusted machines faithfully synchronize today's destructive state. If the answer is another live replica, you have availability. You have not yet drawn recovery. The lesson from Maersk is not to hope for a disconnected controller. It is to decide which state must survive outside the production trust boundary, then prove you can restore it.</p>
+<p>Do the same drawing once more for recovery, but add time. Find the copy that remains usable if destructive code can reach every current peer through the same administrative paths. If the answer is another live replica, you have availability. You have not yet drawn recovery. The lesson from Maersk is not to hope for a disconnected controller. It is to decide which state must survive outside the production trust boundary, then prove you can restore it.</p>
 </section>
 
 <div class="reading">
