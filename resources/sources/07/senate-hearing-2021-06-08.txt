@@ -178,3 +178,69 @@ we go through the process with Mandiant, but our ability and
 desire to sit down with you is ready and available when you 
 would like that.
 
+
+--- Added 2026-09-03 at the claims-register stage: three passages the excerpt above cut short, taken from the govinfo hearing PDF (senate-hrg.pdf, pdftotext -layout; line numbers are to that text) ---
+
+--- PDF text lines 514-526 (Peters/Blount: the $4.4 million and the decision to pay) ---
+the decision to pay the ransom of $4.4 million. We are certainly
+happy to see that a portion of that is being recovered by the De-
+partment of Justice now. My question to you, though, is: Prior to
+making the decision to pay the ransom, had you consulted with
+anyone in the Federal Government on whether that would be an
+appropriate response?
+   Mr. BLOUNT. Thank you for that question, Mr. Chairman. It was
+our understanding that the decision was solely ours as a private
+company to make the decision about whether to pay or not to pay.
+Considering the consequences of potentially not bringing the pipe-
+line back on as quickly as I possibly could, I chose the option to
+make the ransom payment in order to get all the tools necessary
+and the optionality of those tools to bring the pipeline on as quick
+
+--- PDF text lines 1423-1454 (Hawley/Blount: the TSA review Colonial had not yet taken up) ---
+   I am curious as to, given this, given your market power, given
+the reliance of consumers, given the sheer number of consumers
+you serve, why didn't you take up the Transportation Security Ad-
+ministration's offer to do a comprehensive cybersecurity review of
+the pipeline?
+   Mr. BLOUNT. Senator, thank you for asking that question. We in-
+deed were in contact with them about setting that up. Obviously,
+COVID got in the way in the early days of that. We were getting
+ready to move at the end of the year into a new facility, so I think
+the conversation was that we want to do it, the VADR program is
+a good program, but we will schedule that later on. We do have
+that scheduled at the end of July.
+   Senator HAWLEY. So it was a COVID issue, basically? Or it was
+a moving issue, you were moving to a new headquarters? I am
+looking at the Washington Post article here that reports that the
+TSA had tried to schedule a voluntary in-depth cybersecurity re-
+view but that Colonial just could not get it done. Any regret not
+doing that in retrospect?
+   Mr. BLOUNT. Senator, anything that you could do is always help-
+ful. If we look at that test, it is a great test, but it is not dissimilar
+to a lot of the tests that we already do in our system. Again, we
+have a good working relationship with TSA. I am a little surprised
+by the statement that I heard about refusal, actually investigated
+it on my end from my CIO and their contacts on the TSA side. No
+one really understood why the word ``refused'' was used.
+   Senator HAWLEY. So just let me understand your last statement.
+Are you saying you think that the TSA review would have been re-
+dundant, not particularly helpful? You said it is duplicative of
+things you do on your own end internally.
+   Mr. BLOUNT. Senator, I think in this case it probably would not
+have resulted in finding that legacy VPN. Again, they do not actu-
+ally go into the system. It is a questionnaire format type thing. I
+
+--- PDF text lines 1615-1627 (Ossoff/Blount: sharing the Mandiant review) ---
+   Senator OSSOFF. Thank you, Mr. Blount. As you and I discussed
+last week, your team, I believe in collaboration with Mandiant, is
+conducting a comprehensive review of the threat, the nature of the
+attack, what might have been done to mitigate the risk, the efforts
+to thwart the attack once it was discovered. Is that correct?
+   Mr. BLOUNT. Yes, Senator, that is correct.
+   Senator OSSOFF. What impediment would there be, if any, to
+sharing the results of that review and the conclusions of that inves-
+tigation, including at the technical level with this Committee once
+it is completed?
+   Mr. BLOUNT. Senator, I do not think there are any issues with
+that. What we have been trying to do all along the way is share
+the information as we learn it. We have been very straightforward

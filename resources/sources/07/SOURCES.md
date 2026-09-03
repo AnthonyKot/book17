@@ -51,7 +51,7 @@ congress.gov event LC67088) was identified but not fetched — no Colonial witne
 |---|---|---|---|---|
 | `wikipedia-colonial.txt` | Wikipedia, "Colonial Pipeline ransomware attack" (CC BY-SA) | https://en.wikipedia.org/wiki/Colonial_Pipeline_ransomware_attack | Yes | "compromised password for an inactive VPN account, which did not have multi-factor authentication"; "started from a breached employee personal password"; "recovered 63.7 of the bitcoins (about 84%)" |
 | `cnn-2021-06-04.txt` | CNN, Fung and Sands, "Ransomware attackers used compromised password to access Colonial Pipeline network, company confirms", 4 June 2021 | https://edition.cnn.com/2021/06/04/politics/colonial-pipeline-ransomware-attack-password/index.html | Yes (quoted sentences only) | "using a compromised password"; "batch of leaked passwords found on the dark web, according to Bloomberg's interview with Carmakal"; "We don't see any evidence of phishing" |
-| — | Bloomberg, Turton and Mehrotra, "Hackers Breached Colonial Pipeline Using Compromised Password", 4 June 2021 — the origin of the "one password" headline and of the Carmakal interview | https://www.bloomberg.com/news/articles/2021-06-04/hackers-breached-colonial-pipeline-using-compromised-password | **No** — 403 to WebFetch, robot wall to the proxy. Its content is reached only through CNN's attribution and Wikipedia's citation |
+| `bloomberg-2021-06-04.txt` | Bloomberg, Turton and Mehrotra, "Hackers Breached Colonial Pipeline Using Compromised Password", 4 June 2021 — the origin of the "one password" headline and of the Carmakal interview | https://www.bloomberg.com/news/articles/2021-06-04/hackers-breached-colonial-pipeline-using-compromised-password | **Partial** (2026-09-03): bloomberg.com 403 direct; the Wayback Machine 2021 snapshot returned the headline, byline, timestamp and the opening two paragraphs ("a single compromised password"; entry 29 April "through a virtual private network account"; "no longer in use at the time of the attack but could still be used"). The rest is paywalled in the snapshot, so the "batch of leaked passwords found on the dark web" sentence and the "no evidence of phishing" quotation remain cited through CNN |
 | — | Krebs on Security, "A Closer Look at the DarkSide Ransomware Gang", 11 May 2021 | https://krebsonsecurity.com/2021/05/a-closer-look-at-the-darkside-ransomware-gang/ | Still 502 direct at drafting (2026-09-02); fetched from the Wayback Machine (web.archive.org/web/2024id_/…). Excerpt of the three sentences used: `krebs-2021-darkside.txt`. Retelling only |
 | — | OWASP A07:2025 page | `resources/owasp/A07_*.txt` (fetched 2026-09-01 by the coordinating session) | Yes | "Has missing or ineffective multi-factor authentication"; prevention #1 "implement and enforce use of multi-factor authentication" |
 
@@ -85,5 +85,14 @@ more directly (curl with a browser UA, and WebFetch) and once through the Waybac
 | TSA SD Pipeline-2021-02E PDF (tsa.gov) | 403 | 200, PDF | Confirmed; identical to the mirror copy. 2024 wording; the 2021 SD-02 is SSI |
 | Krebs, "A Closer Look at the DarkSide Ransomware Gang" | 502 | 200 | Fetched; retelling only |
 
-No claim in `checks/claims/07.tsv` rests on an unconfirmed proxy copy. The Bloomberg
-article remains unfetched (paywall/403) and is cited only through CNN's attribution.
+No claim in `checks/claims/07.tsv` rests on an unconfirmed proxy copy.
+
+## Claims-register stage (2026-09-03)
+
+- Bloomberg: one direct attempt (403 robot wall) and one Wayback fetch (200, opening only — see
+  `bloomberg-2021-06-04.txt`). The headline and the "no longer in use ... but could still be used"
+  sentence are now on disk; the dark-web sentence is still cited through CNN and the chapter says so.
+- `senate-hearing-2021-06-08.txt` extended with three passages from the govinfo PDF (Peters/Blount
+  on the $4.4 million, Hawley/Blount on the TSA review Colonial had scheduled for late July 2021,
+  Ossoff/Blount on sharing the Mandiant review). The chapter's wording on the TSA review was
+  corrected against them: the review was one Colonial had not yet taken up, not a pre-attack review.

@@ -1,0 +1,15 @@
+Bloomberg, William Turton and Kartikay Mehrotra, 'Hackers Breached Colonial Pipeline Using Compromised Password', 4 June 2021 (datePublished 2021-06-04T19:58Z) - the origin of the "one password" folk story; retelling only
+Source: https://www.bloomberg.com/news/articles/2021-06-04/hackers-breached-colonial-pipeline-using-compromised-password
+Fetched: 2026-09-03. bloomberg.com direct: HTTP 403 ("Are you a robot?") to curl with a browser UA; WebFetch cannot reach web.archive.org. The Wayback Machine copy (web.archive.org/web/2021id_/<url>; CDX lists the first 200 capture as 20210604202419) returned the page: JSON-LD headline, authors and datePublished as above, and the article opening. The body beyond the opening is behind the paywall in the snapshot; the "batch of leaked passwords found on the dark web" sentence and the "We don't see any evidence of phishing" quotation are therefore still cited only through CNN (cnn-2021-06-04.txt).
+Excerpt: everything of the article body present in the snapshot.
+
+--- headline (JSON-LD) ---
+Hackers Breached Colonial Pipeline Using Compromised Password
+
+--- subhead (list item in the page header) ---
+Investigators suspect hackers got password from dark web leak
+
+--- opening paragraphs ---
+The hack that took down the largest fuel pipeline in the U.S. and led to shortages across the East Coast was the result of a single compromised password, according to a cybersecurity consultant who responded to the attack.
+
+Hackers gained entry into the networks of Colonial Pipeline Co. on April 29 through a virtual private network account, which allowed employees to remotely access the company's computer network, said Charles Carmakal, senior vice president at cybersecurity firm Mandiant, part of FireEye Inc., in an interview. The account was no longer in use at the time of the attack but could still be used to access Colonial's network, he said.
