@@ -99,19 +99,30 @@
 <div class="ledger-wrap"><table class="ledger">
 <thead><tr><th>Folk story (source)</th><th>Record (document, page/section)</th><th>Verdict</th></tr></thead>
 <tbody>
-<tr><td>…</td><td>…</td><td class="verdict">HOLDS</td></tr>
+<tr><td>Target's own security system produced warnings during the attack. (CBS News)</td><td>Mulligan's prepared Senate statement, pp. 2–4, says some intruder activity was detected, logged, surfaced, and evaluated.</td><td class="verdict v-holds">HOLDS</td></tr>
+<tr><td>The attack could have been prevented if Target had reacted to the warnings. (CBS News, retelling Businessweek)</td><td>Senate staff report, p. 10, says Target “could have potentially blocked” the effect; Mulligan says different judgments “may” have changed outcomes.</td><td class="verdict v-overstated">OVERSTATED</td></tr>
+<tr><td>“Target Hackers Broke in Via HVAC Company.” (KrebsOnSecurity)</td><td>Senate staff report, pp. 4–5, reports stolen contractor credentials as entry. Mulligan's statement adds the later detected, surfaced, and evaluated activity.</td><td class="verdict v-missing">MISSING</td></tr>
+<tr><td>Target's team had ample time but did not act. (Wikipedia, citing Businessweek)</td><td>Senate staff report, pp. 1, 4–5, relies on published accounts and attributes non-reaction to Businessweek. Mulligan says activity was evaluated. Recipients, judgments, and reasons remain unavailable.</td><td class="verdict v-open">OPEN</td></tr>
+<tr><td>Equifax's inspection certificate had been expired for nine months. (Wikipedia)</td><td>House Oversight staff report, pp. 48–49, says nineteen months before discovery. GAO, pp. 13–15, says about ten months before the breach began: a different interval.</td><td class="verdict v-wrong">WRONG</td></tr>
+<tr><td>The Equifax monitoring problem was “the certificate.” (Wikipedia)</td><td>House Oversight staff report, p. 84, records at least 324 expired certificates, including 79 on devices monitoring highly business-critical domains.</td><td class="verdict v-missing">MISSING</td></tr>
+<tr><td>“Orgs are detecting cybercriminals faster than ever.” (The Register)</td><td>M-Trends 2024 shows the long median decline, but most 2023 cases were externally notified. M-Trends 2026 records an increase from 11 days to 14 as case mix changed.</td><td class="verdict v-overstated">OVERSTATED</td></tr>
 </tbody>
 </table></div>
 
 <section class="see">
 <h2>What you can now see</h2>
-<p>…</p>
+<p>Choose one detection whose failure would matter. Follow a test event all the way through your real system. Do not stop when it appears in a dashboard. Watch which context reaches the alert, which queue receives it, who owns the judgment, which playbook branch opens, and whether the requested action returns evidence of success.</p>
+
+<p>Then inspect the silence around that path. What tells you the sensor has lost visibility, as Equifax's inspection device did? What tells you forwarding has stopped, a queue is unstaffed, or an action failed? The object to test is not an alert rule. It is the closed loop from suspicious activity to verified response. If the test ends with “someone would notice,” you have found the same gap this chapter leaves open.</p>
 </section>
 
 <div class="reading">
 <h2>Reading</h2>
 <ul>
-<li>…</li>
+<li>OWASP Top 10:2025, <a href="https://owasp.org/Top10/2025/A09_2025-Security_Logging_and_Alerting_Failures/">A09:2025 Security Logging &amp; Alerting Failures</a>.</li>
+<li>Primary: U.S. Senate Commerce Committee, <a href="https://www.commerce.senate.gov/wp-content/uploads/media/doc/2014%200325%20Target%20Kill%20Chain%20Analysis.pdf"><cite>A “Kill Chain” Analysis of the 2013 Target Data Breach</cite></a>; John J. Mulligan, <a href="https://www.commerce.senate.gov/services/files/C2103BD3-8C40-42C3-973B-BD08C7DE45EF">prepared Senate statement</a>; Target, <a href="https://corporate.target.com/news-features/article/2014/04/updates-on-target-s-security-and-technology-enhanc">security and technology enhancements</a>.</li>
+<li>Primary mirror and measurement: House Oversight Committee, <a href="https://oversight.house.gov/wp-content/uploads/2018/12/Equifax-Report.pdf"><cite>The Equifax Data Breach</cite></a>; Mandiant, <a href="https://services.google.com/fh/files/misc/m-trends-2024-executive-edition.pdf"><cite>M-Trends 2024 Executive Edition</cite></a>.</li>
+<li>The folk stories: KrebsOnSecurity, <a href="https://krebsonsecurity.com/2014/02/target-hackers-broke-in-via-hvac-company/">“Target Hackers Broke in Via HVAC Company”</a>; CBS News, <a href="https://www.cbsnews.com/news/target-ignored-systems-hacking-warnings-report-says/">“Did Target ignore data breach warnings?”</a>; The Register, <a href="https://www.theregister.com/2024/04/23/mandiant_orgs_are_sniffing_out_cybercrims_faster_than_ever/">“Mandiant: Orgs are detecting cybercriminals faster than ever”</a>.</li>
 </ul>
 </div>
 
