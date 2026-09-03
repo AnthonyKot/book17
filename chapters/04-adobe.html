@@ -108,7 +108,7 @@ dave@…          e2a311d0ff1c5a17                    (none)</code></pre>
 
 <section class="see">
 <h2>What you can now see</h2>
-<p>Find one migration in a system you run that everyone calls finished. A password store moved to a proper hash, a secrets system replaced, a card-number table tokenised. Then ask a single question of it: where is the old copy? Not the old code, the old data. A backup taken before the cut-over, a replica that was never torn down, a nightly export that still runs, a dump on a share "in case of issues with the new system".</p>
+<p>Find one migration in a system you run that everyone calls finished. A password store moved to a proper hash, a secrets system replaced, a card-number table tokenized. Then ask a single question of it: where is the old copy? Not the old code, the old data. A backup taken before the cut-over, a replica that was never torn down, a nightly export that still runs, a dump on a share "in case of issues with the new system".</p>
 <p>If you can name the copy and the date it was destroyed, the migration is finished. If you can only name the new system, you have Adobe's finding: more than three years after the replacement arrived, a retained database still held current passwords in reversible form. That database is what was taken. Then look for the hint column, or its modern equivalent: any field stored in the clear that helps a reader guess the protected one. The record shows that the clue beside the ciphertext, not the cipher, is what turned a dump into a crossword.</p>
 </section>
 
