@@ -11,6 +11,8 @@ Effective immediately, DoD personnel are prohibited from using geolocation featu
 
 Combatant Commanders or their designees may authorize the use of geolocation capabilities on non-government devices, applications, and services in OAs after conducting a threat-based comprehensive Operations Security (OPSEC) survey, in accordance with DoD Directive 5205.02E, “DoD Operations Security Program.”
 
+Combatant Commanders or their designees may authorize the use of geolocation capabilities on government-issued devices, applications, and services in OAs based upon mission necessity, taking into account the potential OPSEC risks.
+
 For all other locations, installations, and activities, the heads of DoD Components will consider the inherent risks associated with geolocation capabilities on devices, applications, and services, both non-government and government-issued, by personnel both on and off duty.
 
 When information derived from these capabilities poses a threat to personnel and operations, commanders and supervisors at all levels:

@@ -26,7 +26,7 @@ adjacent `.txt` files retain only the relevant passages, not a second complete c
   Normalization.”
 - Fetch extent: full page fetched through the text browser; direct `curl` returned HTTP
   403. The excerpt preserves the parts used.
-- Serves: A, B, C.
+- Serves: A, B, C, D.
 - Saved excerpt: `strava-building-heatmap.txt`.
 
 ### James Quarles / Strava — “A Letter to the Strava Community”
@@ -37,7 +37,7 @@ adjacent `.txt` files retain only the relevant passages, not a second complete c
 - Page or section used: full letter, especially the description of privacy selections,
   the acknowledgement of sensitive-location awareness, and the four response actions.
 - Fetch extent: full archived page fetched from Arquivo.pt and converted to plain text.
-- Serves: A, C.
+- Serves: A, C, D.
 - Saved excerpt: `strava-letter.txt`.
 
 ### Strava — “Heatmap Updates”
@@ -122,8 +122,8 @@ Only the sentence or title that may be quoted in a pitch is retained from each r
 - URL: https://datascienceincontext.com/wp-content/uploads/2022/07/Data-Science-in-Context-V.995-Web-Beta.pdf
 - What it is: popular/educational retelling in an authors’ manuscript for Cambridge
   University Press (2022).
-- Page or section used: printed p. 134 (PDF p. 135), §10.1.4, two sentences on Strava.
-- Fetch extent: full 294-page PDF fetched; only the two sentences used are retained.
+- Page or section used: printed p. 134 (PDF p. 135), §10.1.4, one sentence on Strava.
+- Fetch extent: full 294-page PDF fetched; only the sentence used is retained.
 - Serves: C.
 - Saved excerpt: `data-science-context-folk.txt`.
 
@@ -146,3 +146,8 @@ Only the sentence or title that may be quoted in a pitch is retained from each r
 - Direct `curl` fetches of the Medium engineering post and the Defense Department PDF
   returned HTTP 403. Both documents were fetched in full through the text browser; no
   factual claim depends on the blocked route.
+- ZDNet’s 2018 article at
+  `https://www.zdnet.com/article/pentagon-bans-military-from-using-devices-with-gps/`
+  was considered as a folk retelling, but its site blocked the text browser with
+  `robots.txt`; it was not used, and the fetchable Ars Technica headline supplies D’s
+  folk claim instead.
