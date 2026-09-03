@@ -1,0 +1,20 @@
+MongoDB 3.6.0 general-availability date — two records: the git tag r3.6.0 in mongodb/mongo (GitHub API) and the mongodb-announce post 'MongoDB 3.6 Released' (Eliot Horowitz, 5 Dec 2017).
+URLs: https://api.github.com/repos/mongodb/mongo/git/refs/tags/r3.6.0 ; https://api.github.com/repos/mongodb/mongo/git/tags/8a3014cad306d7ef4f4dadd7d41405874ae074dc ; https://github.com/mongodb/mongo/releases/tag/r3.6.0 ; https://groups.google.com/g/mongodb-announce/c/IDlWs6RTnm8
+Fetched: 2026-09-03 (tag: curl, GitHub API, verbatim JSON fields below; announce post: WebFetch — groups.google.com is a JavaScript shell to curl — the date, author, subject and first sentence were returned verbatim, the rest summarised)
+
+== git tag r3.6.0 (annotated tag object) ==
+ref: refs/tags/r3.6.0
+tag: r3.6.0
+tagger: Ramon Fernandez <ramon@mongodb.com> 2017-12-01T17:19:42Z
+message: "'3.6.0'\n"
+tagged commit: a57d8e71e6998a2d0afde7edc11bd23e5661c915 ("SERVER-31967 Update README for MongoDB 3.6", author/committer Ramon Fernandez, 2017-12-01T17:04:06Z)
+
+== mongodb-announce, 'MongoDB 3.6 Released' ==
+Date: December 5, 2017, 4:35:09 PM (as rendered by Google Groups)
+Author: Eliot Horowitz
+Subject: MongoDB 3.6 Released
+First sentence (verbatim): "MongoDB 3.6 is now generally available for production deployments."
+Download link given in the post: https://www.mongodb.com/download-center#production
+
+== for contrast: the announcement day ==
+Press release, London, 8 Nov 2017: "today announced the release of MongoDB 3.6" (mongodb-newsroom-2017-11-08.txt). TNW the same day: "Release candidates of the latest version of MongoDB have already been floated. The final release is expected at some point in December." (tnw-2017-11-08.txt). Docs source 3.6.txt lists 3.6.1 as Dec 26, 2017 and has no dated 3.6.0 heading (release-notes-3.6-and-2.6-bind.txt).

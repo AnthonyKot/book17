@@ -26,3 +26,15 @@ Disable direct SSH root access.
 
 Allow only trusted clients to access the network interfaces and ports on which MongoDB instances are available.
 
+
+MongoDB Manual (live), Self-Managed Configuration File Options — security.authorization
+URL: https://www.mongodb.com/docs/manual/reference/configuration-options/
+Fetched: 2026-09-03 (curl; tags stripped, whitespace collapsed)
+
+security.authorization Type : string Default : disabled Enable or disable Role-Based Access Control (RBAC) to govern each user's access to database resources and operations. Set this option to one of the following: Value Description enabled A user can access only the database resources and actions for which they have been granted privileges. disabled A user can access any database and perform any action. See Role-Based Access Control in Self-Managed Deployments for more information.
+
+MongoDB Manual (live), Security Checklist for Self-Managed Deployments — 'Enable Access Control and Enforce Authentication'
+URL: https://www.mongodb.com/docs/manual/administration/security-checklist/
+Fetched: 2026-09-03 (curl; tags stripped)
+
+Enable Access Control and Enforce Authentication Enable access control and specify an authentication mechanism. MongoDB Community supports the following authentication mechanisms: SCRAM ( Default ) X.509 Certificate Authentication.
