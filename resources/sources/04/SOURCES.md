@@ -163,10 +163,12 @@ Only the quoted folk-claim sentences are saved from these sources.
 ## Added on the drafting pass (2026-09-03)
 
 - `australia-oaic-adobe-extended.txt` — a second, fuller excerpt of the OAIC report (Background timeline
-  30 Aug–17 Sep 2013, discovery on 17 Sep, announcement 3 Oct; the backup-database contents; the
+  30 Aug–17 Sep 2013, discovery on 17 Sep, announcement 3 Oct; the compromised public-facing web
+  server used to reach other Adobe servers; the backup-database contents; the
   Australian user counts; Triple DES and the same-ciphertext sentence; the new system introduced April
   2010 with salted, iterated SHA-256; the NPP 4 finding; the 3–4 Oct password resets). Fetched via
-  WebFetch with a verbatim-quotation prompt; the page itself was not saved.
+  WebFetch; the page itself was not saved. The entry-route sentence was re-fetched directly from the
+  official page on 2026-09-03 during panel revision.
 - `canada-opc-2014-015-extended.txt` — ¶¶6, 10–12, 34–37 of the PIPEDA finding (the "sophisticated,
   long-term intrusion" description, the data types, "over one million Canadian customers", the
   findings). Same method.

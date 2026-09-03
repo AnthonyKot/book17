@@ -8,6 +8,9 @@ Between 30 August 2013 and 17 September 2013, 'an unauthorised third party illeg
 Adobe became aware of the unauthorised access on 17 September 2013 when an attempt by the attacker to decrypt card numbers that were a part of the customer order information was discovered by Adobe.
 On 3 October 2013, Adobe reported on its website that it had been the target of a cyber-attack.
 
+Background — entry route
+Adobe’s subsequent investigation into the attack discovered that the attacker had compromised a public-facing web server and used this compromised web server to access other servers on Adobe’s network. The attacker transferred data out of Adobe’s network.
+
 Background — what was taken
 The attacker took a copy of a backup database containing the personal information of customers, consisting of: customer usernames (Adobe IDs), email addresses, encrypted passwords (a small number of unencrypted passwords, held in a separate database, may also have been compromised), plain text password hints, names, addresses and telephone numbers of some users, encrypted payment card numbers and payment card expiration dates.
 

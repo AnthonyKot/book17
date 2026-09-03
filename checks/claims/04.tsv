@@ -15,11 +15,11 @@
 04	04-folk-wired	WIRED: 6.5 million hashed (encrypted) LinkedIn passwords, 300,000 decrypted and posted	retelling-wired-linkedin.txt	checked-by:fable:2026-09-03
 04	04-harsha-count	Harsha et al.: over 177.5+ million unsalted SHA-1 hashes stolen in 2012	harsha-linkedin-background.txt, section 7	checked-by:fable:2026-09-03
 04	04-harsha-sha1	Harsha et al.: unsalted SHA-1 hashes; no key stretching such as PBKDF2 or Argon2; significantly easier to crack	harsha-linkedin-background.txt, section 7	checked-by:fable:2026-09-03
-04	04-hashed-store-not-taken	No report says the hashed store was taken; all say the copy came from the backup of the old system	irish-dpc-2014-adobe.txt How the Breach Occurred; australia-oaic-adobe-extended.txt Background	checked-by:fable:2026-09-03
+04	04-hashed-store-not-taken	The available record does not say the hashed store was taken; the Irish and Australian reports identify the compromised data as coming from the backup system	irish-dpc-2014-adobe.txt How the Breach Occurred; australia-oaic-adobe-extended.txt Background	checked-by:codex:2026-09-03
 04	04-linkedin-2012	LinkedIn became aware on 6 June 2012 of the theft of approximately 6.5 million passwords	linkedin-statement-2012-06-12.txt	checked-by:fable:2026-09-03
 04	04-linkedin-2016	May 2016: 2012 data resurfaced; emails, hashed passwords, member IDs; not a new breach; salted hashes and optional 2FA now	linkedin-notice-2016.txt	checked-by:fable:2026-09-03
 04	04-linkedin-transition	LinkedIn completed a long-planned transition from hashed to hashed-and-salted passwords	linkedin-statement-2012-06-12.txt, Technology Expertise	checked-by:fable:2026-09-03
-04	04-new-system-2010	Adobe's authentication system had hashed and salted passwords since April 2010	australia-oaic-adobe-extended.txt, Security of Passwords	checked-by:fable:2026-09-03
+04	04-new-system-2010	Adobe introduced a replacement authentication system in April 2010	australia-oaic-adobe-extended.txt, Security of Passwords	checked-by:codex:2026-09-03
 04	04-new-system-shape	Adobe's new system: SHA-256, salted, iterated more than 1,000 times	australia-oaic-adobe-extended.txt, Security of Passwords	checked-by:fable:2026-09-03
 04	04-nist-hints	NIST: verifiers shall not permit a hint accessible to an unauthenticated claimant	nist-sp800-63b-password-verifiers.txt, 3.1.1.2	checked-by:fable:2026-09-03
 04	04-nist-salt-cost	NIST: salt prevents accounts sharing the same hash; cost factor makes each guess more expensive, guessing attack high or prohibitive	nist-sp800-63b-password-verifiers.txt, 3.1.1.2	checked-by:fable:2026-09-03
@@ -28,6 +28,7 @@
 04	04-oaic-backup-contents	The attacker took a copy of a backup database containing usernames, emails, encrypted passwords, plain-text hints, names, addresses, encrypted card numbers	australia-oaic-adobe-extended.txt, Background what was taken	checked-by:fable:2026-09-03
 04	04-oaic-counts	1,787,100 Australians current password data; 218,750 obsolete; 36 plain text; 135,288 payment	australia-oaic-adobe-extended.txt, Australian users	checked-by:fable:2026-09-03
 04	04-oaic-current-def	Current password data means a password valid against Adobe's production authentication system	australia-oaic-adobe-extended.txt, Rectification	checked-by:fable:2026-09-03
+04	04-oaic-entry-route	OAIC: the attacker compromised a public-facing web server and used it to access other Adobe servers; the report does not identify how that server was compromised	australia-oaic-adobe-extended.txt, Background entry route	checked-by:codex:2026-09-03
 04	04-oaic-finding	OAIC: breach of NPP 4; measures in one area do not satisfy NPP 4 if not applied to all personal information	australia-oaic-adobe-extended.txt NPP 4 conclusion; australia-oaic-adobe.txt NPP 4 paragraph	checked-by:fable:2026-09-03
 04	04-oaic-new-system	OAIC: new system introduced April 2010; SHA-256, salted, iterated more than 1,000 times	australia-oaic-adobe-extended.txt, Security of Passwords	checked-by:fable:2026-09-03
 04	04-oaic-rectification	OAIC lists network monitoring, storage changes, two-factor, decommissioning the affected server, abolishing hints	australia-oaic-adobe.txt, Rectification	checked-by:fable:2026-09-03
@@ -43,4 +44,4 @@
 04	04-opc-mechanism	OPC: hints sometimes contained the password; format scrambled identical passwords the same way; easy to reach several accounts from one hint	canada-opc-2014-015.txt, para 17	checked-by:fable:2026-09-03
 04	04-stajano-ecb	Stajano et al.: reversibly encrypted with 3DES, not salted and hashed, in ECB mode	stajano-pico-adobe.txt, pp. 1-3	checked-by:fable:2026-09-03
 04	04-stajano-salt-limit	Stajano: with salt attackers cannot tell who shares a password, but can still try likely guesses	stajano-pico-adobe.txt	checked-by:fable:2026-09-03
-04	04-three-years	The old store ran more than three years after the replacement went live (April 2010 to the Aug-Sep 2013 intrusion)	australia-oaic-adobe-extended.txt, Background and Security of Passwords (arithmetic on the two dates)	checked-by:fable:2026-09-03
+04	04-three-years	Credential data remained reachable on the backup system more than three years after the replacement system was introduced (April 2010 to the Aug-Sep 2013 intrusion)	australia-oaic-adobe-extended.txt, Background and Security of Passwords (arithmetic on the two dates)	checked-by:codex:2026-09-03

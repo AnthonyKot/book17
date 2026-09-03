@@ -1,0 +1,7 @@
+# Chapter 04 — panel findings applied (2026-09-03)
+
+Against `drafts/reviews/04-codex.md`; findings are numbered in the consolidated review's ranked order. Every changed factual claim was checked against the saved excerpt named here.
+
+1. **Entry route (critical) — applied.** OAIC's full Background section was re-read on the official page. The chapter now says the attacker compromised a public-facing web server and used it to reach other Adobe servers, while preserving the unknown: the report does not identify the vulnerability or technique used against that server. The exact sentence is now saved in `australia-oaic-adobe-extended.txt`, the source index records the addition, and new checked claim `04-oaic-entry-route` receipts the prose.
+2. **Retained data described as running old code (high) — applied.** Replaced "old code still running," "store online," and "ran beside" language with what the regulators establish: credential data remained reachable on a retained, redundant backup system. The chapter now expressly says the record does not show that the old authentication code served logins. Claim `04-three-years` was rewritten and re-checked against the OAIC dates.
+3. **Defense outcome exceeded remediation evidence (high) — applied.** Removed the declaration that the reversible store no longer existed. The measurable record is now limited to decommissioning the affected server and abolishing password hints; whether another copy remained is expressly open.
