@@ -14,5 +14,11 @@ Against `drafts/reviews/00-codex.md`; findings are recorded in that report's ran
 10. **OPEN-row “first step” pattern (medium) — applied.** Recast the examples as causal gaps at different stages: two ingress questions, defect provenance, and post-detection alert disposition. Removed the unsupported generalization about trials and named the distinct documents that would close each gap.
 11. **“Almost every” defense lacks outcomes (medium) — applied.** Replaced the selected four-chapter sample with a chapter-by-chapter count. Chapters 2, 3, 7, 8 and 9 contain scoped measurements; Chapters 1, 4, 5, 6 and 10 document designs, adoption or code changes without tied before-and-after outcomes. The prose separates measured observation from causal proof.
 12. **Manual-testing absolute (medium) — applied.** Restored OWASP's “tend to” qualifier and updated claim `00-manual-vs-auto` after reading the saved Introduction.
+13. **Wrong contributor count (low) — applied.** The rewritten omnibus claim no longer carries the erroneous “thirteen” count. The chapter and dedicated `00-contributors` row retain the source-supported twelve named organizations plus anonymous donors.
+14. **Malformed Apple punctuation (low) — applied.** The final imported row now formats the deleted `<code>goto fail;</code>` line cleanly and removes the stray period.
 
 ## Extra corrections
+
+- Corrected the tally command in `drafts/00.ledger.md`: its old glob included Chapter 0 itself. It now counts only Chapters 1–10, as the Chapter 0 override requires.
+- Recomputed the source ledgers: 75 rows = 22 HOLDS, 25 OVERSTATED, 10 MISSING, 11 OPEN and 7 WRONG. The `<!-- TALLY -->` sentence already matched and claim `00-tally` is now checked by codex.
+- Added the archived OWASP `0x02` methodology/risk page to the chapter's Reading list.
