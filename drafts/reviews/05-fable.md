@@ -40,3 +40,11 @@ Read every marked sentence against its excerpt. Findings and changes:
 - **Row 5 record cell** now quotes Rapid7 exactly ("several parts of an exploit chain that were not fully mitigated by the first patch") rather than paraphrasing, since the OVERSTATED verdict rests on that sentence. Fairness to Progress: its position (the June flaws were distinct) stays in the cell.
 - Verdicts unchanged: HOLDS 2, OVERSTATED 1, MISSING 1, OPEN 1. `drafts/05.ledger.md` synced (rows 1, 4, 5).
 - Checked and left alone: the 8-K timeline, Mandiant attribution wording, Emsisoft/KonBriefing method sentences, the five-CVE count (34362, 35036, 35708, 36934, 36932 across 31 May–6 July), the 10-K counts, the SEC letter, Order 22's status as allegations, all Rapid7 diff claims, the CISA Secure by Design paraphrases.
+
+## Lens 4 — Prose
+
+Found: after lens 1's cut, "That boundary sat on an internet-facing file-transfer service" had lost its antecedent; TechTarget says "instances", the chapter said "servers"; a few phrases were padded ("not merely", "permits reviewers to answer differently", "the large people number"); every break paragraph ran 70–120 words with no short one; two "public record does not…" hedges in different sections said the same thing in the same words.
+
+Changed: antecedent fixed ("The vulnerable page sat on…"); "instances"; the five-CVEs-in-five-weeks sentences split out as a two-sentence paragraph; "recorded here as exploited" → "recorded as exploited in the sources saved for this chapter"; the closing-section sentence now reads "It is an interface that lets the answer differ at each occurrence"; the defense hedge reworded so the two do not echo. No headers added; no paragraph over 150 words; no sentence over 40 (the checker does not split on a period inside closing quotes, so two quotes now end British-style, as chapter 2's do).
+
+Section sizes after the pass: break 827, mechanism 567, defense 650, see 222 — all inside TEMPLATE's ranges. Chapter 2,397 words.
