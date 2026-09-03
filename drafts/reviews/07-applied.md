@@ -11,5 +11,10 @@ Against `drafts/reviews/07-codex.md`; findings are numbered in the consolidated 
 7. **Hassan ledger row. Applied.** Removed the row. The saved exchange places Hassan's sentence inside discussion of the legacy VPN, so the chapter cannot fairly enlarge it into a company-wide claim and then mark that enlargement `OVERSTATED`. Her exchange with Blount remains in the narrative with its checked claim row.
 8. **“Inactive account” verdict. Applied.** Changed `MISSING` to `WRONG` in both ledgers. The 29 April login directly contradicts “inactive”; the record's useful distinction is between a profile believed disabled and one shown to reject a login.
 9. **Wikipedia/OT verdict. Applied.** Changed `WRONG` to `OVERSTATED` in both ledgers and narrowed the narrative. “Computerized equipment managing the pipeline” can encompass business IT, but it invites an operational-control inference that CISA's time-bounded advisory does not support.
+10. **Misattached claim marker. Applied.** Removed `07-carmakal-one-person` from the lede and attached `07-carmakal-misconfiguration` to the believed-disabled claim instead. Finding 3's revised first sentence separately carries the login, shutdown, and restart markers it needs.
 
 ## Extra corrections
+
+- Updated `07-cnn-folk` to remove the press-interview claim cut under finding 1; the row now describes only CNN's folk account as it remains in the prose.
+- Ledger totals after review: 9 rows — 3 `HOLDS`, 4 `OVERSTATED`, 1 `WRONG`, 0 `MISSING`, 1 `OPEN`. The remaining `OPEN` is the CNN/Bloomberg dark-web-batch route; Mandiant's final findings would settle it. The incident claims register has no open rows.
+- No consolidated finding was rejected. The consolidated report had already rejected two Flash suggestions. “In the Senate, the chairman” identifies the chamber, while the saved passage names Chairman Peters. The saved TSA-review excerpt supplies `VADR` but not its expanded name, so adding that expansion would assert beyond the excerpt; the sourced description “offered review” remains.
