@@ -95,6 +95,8 @@ was not decryption”; C, “Hashing is not encryption — and not enough.”
   ECB/hint mechanism and the effect and limit of salting.
 - Fetch extent: full 18-page PDF fetched; saved excerpt is pp. 1–3 only.
 - Saved excerpt: `stajano-pico-adobe.txt`.
+- Ledger role: its "motivating story" is also a named academic retelling; only that
+  incident-summary claim appears on the folk-story side.
 - Pitches served: B, C.
 
 ### Harsha et al. — “Bicycle attacks considered harmful”
