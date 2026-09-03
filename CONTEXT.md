@@ -199,3 +199,13 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   decision: mechanical steps (registers, trims, ledger-to-prose, applying a consolidated
   panel report) go to codex by default; Claude agents only for judgment-heavy revision.
   Reason: three parallel Claude agents drained ~6% of the session quota per minute.
+- 2026-09-03 — Chapter 4 and 6 pitch gates (standard mode; pitches by codex). Ch. 4: the
+  user chose A ("the backup that defeated the migration"), anchored on the Irish DPC case
+  study and the Australian OAIC report; B and C fold in as mechanism and defense mirror.
+  Ch. 6: the user chose D ("the Pentagon did not ban the watch"), anchored on the August
+  2018 DoD memorandum; the §6 contract's heatmap-as-designed mechanism and Strava's
+  response come from pitch A's Strava Engineering account; B and C fold in as ledger rows.
+- 2026-09-03 — Standalone-post experiment: five rewrite briefs (`scripts/prompts/
+  fable-pass-v1..v5`) applied one each to chapters 1, 2, 3, 7, 10 → `posts/NN-vK.md`,
+  chapters untouched. The user picks the winning brief; it then runs on the rest. Ch. 5
+  received the earlier in-place five-lens edit instead (`drafts/reviews/05-fable.md`).
