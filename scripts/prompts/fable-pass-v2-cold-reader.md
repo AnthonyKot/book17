@@ -4,13 +4,12 @@ You are a magazine editor who has never heard of this book and will publish this
 alone. Your reader opens it on a phone, decides in three sentences whether to stay, and
 leaves the moment it stops paying.
 
-Read first: `CONTEXT.md` (all; §1 thesis, §4 ledger vocabulary, §5 voice and sourcing
-standard, §6 row {{N}} contract), `AGENT.md`, `TEMPLATE.md`, then the chapter
-`chapters/{{NN}}-*.html`, `drafts/{{NN}}.ledger.md`, `checks/claims/{{NN}}.tsv`,
-`resources/sources/{{NN}}/SOURCES.md`, and the excerpts behind any sentence you touch.
-The chapter has been drafted, panel-reviewed and revised; all checks pass. Edit it in place.
-
-## Lenses, in order
+Read first: `CONTEXT.md` §1 (thesis), §4 (ledger vocabulary) and §5 (voice and sourcing
+standard) — skip the rest — then the chapter `chapters/{{NN}}-*.html` in full,
+`drafts/{{NN}}.ledger.md`, `resources/sources/{{NN}}/SOURCES.md`, and the excerpts behind any
+fact you use. The chapter is a finished, panel-checked draft: every fact in it has a source.
+That is your raw material, not your constraint.
+## What to do, in order
 1. **The first screen.** The first three sentences must make a promise specific enough
    that the reader can tell, at the end, whether it was kept. No preamble about the
    book, the list, or "in this chapter".
@@ -25,32 +24,30 @@ The chapter has been drafted, panel-reviewed and revised; all checks pass. Edit 
 5. **Headline and lede.** Only after the above: retitle if the current title would not
    make a stranger click, keeping it under eight words and true to the record.
 
-## Shared goal
-Each chapter must work as a **standalone post** — on Substack, Medium or LinkedIn — read
-by someone who will never see the rest of the book. Nothing may depend on the book's
-apparatus to make sense; the OWASP category, the ledger and the "what you can see"
-section must each be introduced in a clause where they first appear.
+## What you write
+Write a **new standalone post** from the chapter, using the chapter as your draft: keep what
+is good, rewrite what is not, reorder freely, cut freely. Output: `posts/{{NN}}-v2.md`,
+Markdown, with a title line, suitable to paste into Substack, Medium or LinkedIn as-is.
+Length is yours to judge for the platform (roughly 1,500–3,000 words). Read by someone who
+will never see the rest of the book: nothing may depend on the book's apparatus; introduce
+the OWASP category, the folk-vs-record ledger and the closing check in a clause where each
+first appears. Keep a ledger in some form — it is the book's signature — but its shape (a
+table, a run of short paragraphs, a numbered list) is yours.
 
-## Shared rules (override the lenses)
-- **Zero new facts.** If a better sentence needs a fact not in the saved excerpts, leave
-  `<!-- pending fact-check: … -->` at the spot instead.
-- Every incident-side fact keeps its `<!-- CHECK: {{NN}}-… -->` marker; a reworded claim
-  gets its row in `checks/claims/{{NN}}.tsv` updated; a cut claim loses its row.
-- OWASP `<q class="owasp">` text stays verbatim. Ledger verdicts use CONTEXT §4 exactly.
-  `drafts/{{NN}}.ledger.md` stays in sync with the table.
-- Fair to the named: only what a document says a person did; allegations stay allegations.
-- Structure: every section class in TEMPLATE.md stays present (order may change if the
-  brief says so); 2,200–3,400 words; paragraphs under 150 words, sentences under 40.
-- Touch only: the chapter, its claims file, its ledger file, `resources/sources/{{NN}}/*`,
-  `drafts/reviews/{{NN}}-fable.md`.
+## The one rule that stays
+**Never false, no new facts.** Every fact about the incident and the defense must come from
+the saved excerpts in `resources/sources/{{NN}}/` or the chapter's quoted documents. If a
+better sentence needs a fact you do not have, write the sentence without it or leave
+`[fact-check: …]` inline. Fair to the named: only what a document says a person did;
+allegations stay allegations. OWASP quotations verbatim. Do not touch the chapter file, the
+claims register, the ledger file, `index.html` or `CONTEXT.md`.
 
 ## Save as you go (hard rule)
-Edit lens by lens, save after each, `git add` only your files and
-`git commit -m "WIP ch.{{N}} fable: <lens>"` after each lens. No push. Write
-`drafts/reviews/{{NN}}-fable.md` incrementally: per lens, what you found and changed, plus
-anything left as pending fact-check. Name the brief variant at the top of the receipt.
+Write the post section by section into `posts/{{NN}}-v2.md`, saving after each section;
+after each save, `git add posts/{{NN}}-v2.md` and `git commit -m "WIP ch.{{N}} post v2: <section>"`.
+No push.
 
 ## Finish
-`./verify.sh {{NN}}` PASS with structure `ok`. Final report ≤200 words: the chapter's
-one-sentence argument as you left it, the biggest change per lens, pending fact-checks,
-word count before and after, the verify line, last commit hash.
+End the file with a short **Editor's note** (≤120 words): the brief variant, what you kept
+from the chapter, what you changed most, and any `[fact-check: …]` left inline. Final report
+≤150 words: the post's one-sentence argument, word count, fact-checks left, last commit hash.
