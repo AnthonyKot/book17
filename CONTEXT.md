@@ -218,5 +218,9 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   invented counts), an unsupported signer and two unsupported dates, wrong textbook
   authors, and two ledger rows with no named retelling were removed or re-sourced; row 5
   regraded OVERSTATED. Both chapters carry `NN-*-date`-style open claims where a date
-  rests on SOURCES.md rather than a saved excerpt. Panel review (`review.sh`) still owed
-  for both once codex is back.
+  rests on SOURCES.md rather than a saved excerpt. Panel review ran the same evening once
+  codex returned: both BLOCK (ch. 4: the OAIC report does name the entry route, a
+  compromised public-facing web server; ch. 6: the title argued against a headline about
+  GPS, not watches); codex applied both reports (`drafts/reviews/04-applied.md`,
+  `06-applied.md`); the memo's letterhead and date line were captured, closing the open
+  claim.
