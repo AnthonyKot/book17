@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The backup that was not a backup — Ten Ways In</title>
+<meta name="description" content="NotPetya entered through trusted update machinery, while Maersk discovered that synchronized replicas and recovery copies solve different failures.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Ten Ways <span>In</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Chapter 8 · A08:2025 Software or Data Integrity Failures</p>
+<h1>The backup that was not a backup</h1>
+<p class="lede">The familiar Maersk story ends with one domain controller spared by a power cut in Ghana. The firmer first-person record begins one step later. Gavin Ashton, then working on identity and access management at Maersk, says the first restored controller ran on a Surface Pro 4. Its unlikely hardware matters less than what had failed: a worldwide set of synchronized machines had preserved availability, not recovery. <!-- CHECK: 08-lede-controller --></p>
+
+<section class="break">
+<h2>The break</h2>
+<p>On 27 June 2017, NotPetya hit A.P. Moller–Maersk and other companies. Maersk's first investor account said the malware entered through software used to file taxes in Ukraine. Applications and data became unavailable, with the main impact falling on its container businesses. Several systems were shut down as a precaution. <!-- CHECK: 08-maersk-entry --></p>
+
+<p>The folk version reduces the entrance to an update server. BleepingComputer wrote that M.E.Doc's update servers “were responsible for the initial NotPetya infections.” On that narrow point, later technical records agree. Cisco Talos concluded after its incident response that every installation it traced came through M.E.Doc's update system. Microsoft reported telemetry in which the legitimate updater process executed a malicious command on 27 June. <!-- CHECK: 08-updater-holds --></p>
+
+<p>Yet “the update server did it” compresses a staged mechanism into one bad download. Cisco says M.E.Doc let its responders inspect engineers' accounts, logs and code. Their report found that an unknown actor had stolen an administrator's credentials, obtained root privileges and changed the NGINX server configuration. Traffic for M.E.Doc's update host was proxied onward to another server. <!-- CHECK: 08-cisco-access --></p>
+
+<p>Cisco also confirmed earlier research into a backdoor inserted in M.E.Doc software. It identified modified code in update versions dated April, May and June. The code could gather data and download and execute arbitrary code. Its command-line arguments matched Cisco's endpoint telemetry when M.E.Doc machines executed the initial NotPetya sample. <!-- CHECK: 08-cisco-backdoor --></p>
+
+<p>A later US indictment supplies a more exact sequence, but it records allegations, not findings. It alleges that the accused gained access to M.E.Doc's code and modified update files on three dates before the main attack. Customer computers downloaded those files, while NotPetya itself was held back until 27 June. <!-- CHECK: 08-indictment-staging --></p>
+
+<p>The indictment alleges that the June update file installed command capability. For several hours on 27 June, traffic bound for the update server was temporarily rerouted to a server controlled by the accused in France. Computers with the altered update could then receive and execute commands, including the command that delivered NotPetya. The compromised update was therefore both a trusted foothold and a later delivery path. <!-- CHECK: 08-indictment-reroute --></p>
+
+<p>Once inside a network, NotPetya did not depend on every machine contacting M.E.Doc. Microsoft described several lateral-movement methods: stealing credentials or reusing active sessions, copying through file shares, and using legitimate execution features or SMB vulnerabilities. Ashton writes, in a participant's personal account rather than a company post-mortem, that it moved through Maersk into servers and domain controllers. <!-- CHECK: 08-lateral-movement --></p>
+
+<p>The label “ransomware” also hides something useful. The BBC called the event the “NotPetya ransomware attack.” The indictment alleges that the ransom was a ruse and that the accused could not decrypt victims' files even after payment. ESET independently examined the disk code and found that its changes made recovery impossible. The payment screen imitated ransomware; the recovery bargain did not exist. <!-- CHECK: 08-ransomware-ruse --></p>
+
+<p>Maersk's immediate problem was operational, not lexical. Its Q2 presentation says teams used many manual workarounds to serve customers and retained full control of vessels. It also said there had been no third-party data breach or data loss. Systems were not one thing: customer service, vessel control, applications, data and identity each had different continuity needs. <!-- CHECK: 08-continuity --></p>
+
+<p>Identity became a prerequisite for rebuilding the rest. Ashton says Maersk's disaster-recovery planning had covered the loss of a site or datacentre. It had not covered losing every domain controller everywhere at once. Restoring Active Directory required work across Maersk, Microsoft and partners. Only then did that first controller come up on the Surface. <!-- CHECK: 08-ashton-recovery --></p>
+
+<p>Wired's oral-history retelling supplies the famous missing scene. It says a controller in Ghana had been knocked offline by a blackout and therefore escaped NotPetya. It calls Maersk's synchronizing controllers a “decentralized backup strategy.” Those details came from Wired's interviews. The fetched Maersk publications do not confirm Ghana or the blackout, and Ashton's account does not name either. <!-- CHECK: 08-ghana-open --></p>
+
+<p>The distinction matters even if Wired's scene is exact. A live controller can replace another controller after an ordinary outage because both carry current directory state. That same synchronization keeps them inside one failure domain. If destructive state or trusted malicious execution reaches every live peer, replication can preserve the problem as efficiently as it preserves legitimate change.</p>
+
+<p>Recovery did not happen at one magic moment. A later Maersk paper says almost all its systems became inoperable and needed rebuilding. It says the network was rebuilt in ten days while customers' cargo kept moving. Maersk's annual report put the loss at approximately USD 250–300 million, covering lost revenue, IT restoration and extraordinary operating costs. <!-- CHECK: 08-ten-days-cost --></p>
+
+<p>Darknet Diaries gives the folk figures as a functioning network after “about nine days” and a cost of USD 350 million. “About nine” may describe a milestone before the ten-day rebuild, but it cannot establish that both phrases mean the same thing. The cost is less ambiguous: Maersk's own annual account reports a lower range. <!-- CHECK: 08-folk-numbers --></p>
+</section>
+
+<section class="mechanism">
+<h2>The mechanism</h2>
+<p>OWASP defines the category this way: <q class="owasp" data-src="A08">Software and data integrity failures relate to code and infrastructure that does not protect against invalid or untrusted code or data being treated as trusted and valid.</q> The important verb is “treated.” An updater is supposed to cross a boundary safely. It takes bytes from elsewhere and gives them the authority of locally installed software.</p>
+
+<p>Draw these four boxes clearly on a whiteboard: source code, build artifact, update service, client. Draw arrows from code to artifact, artifact to service, and service to client. At each arrow, ask two different questions. Did these bytes arrive unchanged? Were these the bytes the authorized publisher meant to release? A protected connection can answer the first question while data travels. It does not by itself answer the second.</p>
+
+<p>A digital signature binds an artifact to a signing key. The publisher calculates a digest of the release and signs that digest with a private key. The updater has the corresponding public key. It calculates the digest again, verifies the signature, and installs only after both checks succeed. A changed byte produces a different digest. A fake publisher lacks the private key needed to make the altered artifact verify.</p>
+
+<p>That is the clean model, but it has a boundary of its own. If an attacker can change code before an authorized build is signed, the signature faithfully authenticates malicious code. The same is true if the signing key or signing service is compromised. Signatures are still valuable. They force an attacker toward a smaller, more controlled part of the release system, and they let a client reject artifacts changed after approval.</p>
+
+<p>The M.E.Doc record shows why all four boxes matter. Cisco found stolen administrator credentials, changed web-server configuration and modified application code. The indictment alleges earlier altered update files followed by temporary rerouting on 27 June. A design that checks only which hostname answered has confused the update service with the release artifact. A design that signs whatever the build emits has moved the question upstream, not answered it. <!-- CHECK: 08-four-box-record --></p>
+
+<p>BleepingComputer reported that M.E.Doc used neither HTTPS nor cryptographically signed binaries. The fetched primary and incident-response documents do not establish that signing state. Cisco's account does establish several compromised control points, but it never says whether the client verified signatures. That claim therefore remains open. A binary, updater specification or forensic report from the period would settle it. <!-- CHECK: 08-signing-open --></p>
+
+<p>This is also where two OWASP categories can appear to overlap. Cisco called the incident a supply-chain attack because a trusted software vendor delivered a compromised asset to its customers. In the 2025 list, A03 covers failures in managing software dependencies and the broader supply chain. A08 looks lower, at the missing integrity decision where a client accepts code or data as valid.</p>
+
+<p>For this chapter, A08 is a lens rather than a perfect jurisdiction. M.E.Doc was accounting software and Maersk's damaged estate was an enterprise network, not a tested web application. The whiteboard still transfers. Every plugin loader, package installer, CI deployment agent and auto-updater makes the same promotion: remote bytes become trusted instructions. The review question is not merely “Where did we download it?” It is “What evidence must be true before we execute it?”</p>
+</section>
+
+<section class="defense">
+<h2>The defense</h2>
+<p>OWASP's first prevention is direct: <q class="owasp" data-src="A08">Use digital signatures or similar mechanisms to verify the software or data is from the expected source and has not been altered.</q> The client must enforce that rule before execution. Logging a bad signature and continuing is not an integrity boundary. Neither is hiding an unsigned download behind a familiar product name.</p>
+
+<p>For NotPetya, however, the defense record is thin. None of the fetched primary records says whether the affected M.E.Doc updater required signatures. None shows M.E.Doc adopting a new signing system afterward or measures what it stopped. It would therefore be false to say that signature verification certainly would have blocked this exact chain. The record does not locate the signing key, approval step or build boundary because it does not establish that they existed. <!-- CHECK: 08-defense-thin --></p>
+
+<p>That uncertainty does not make the control ceremonial. It makes the design question more exact. Keep signing authority separate from the update host. Record which reviewed source produced each artifact. Restrict who and what can request a signature. Let clients trust a deliberately distributed verification key, not whatever key arrives beside the update. These controls defend the arrows before and after signing, not only the final download.</p>
+
+<p>OWASP also tells teams to review code and configuration changes, and to segregate and control access to the delivery pipeline. Those controls meet Cisco's findings more completely than signatures alone. Cisco reported both modified code and server configuration after an administrator's credentials were stolen. The defense is a chain of independently enforced decisions because the attack record is a chain of compromised decisions. <!-- CHECK: 08-pipeline-defense --></p>
+
+<p>Prevention and recovery solve different moments. Once destructive code runs with enough reach, another live copy is not necessarily a way back. A replica answers, “Can another machine serve the latest state?” A backup answers, “Can we recover a known earlier state after the latest state becomes dangerous?” That time boundary is as important as the network boundary.</p>
+
+<p>The UK National Cyber Security Centre says recent offline backups are essential because some malware merely presents itself as ransomware. Its guidance says copies should be separate, ideally offsite, and not permanently connected to the network. It also recommends multiple locations and exercises that assume both onsite systems and cloud backup servers are unusable. This is a documented defense prescription, not a claim about what Maersk had. <!-- CHECK: 08-ncsc-backups --></p>
+
+<p>Microsoft's Active Directory forest-recovery guide makes the object concrete. Recovery starts by restoring at least one domain controller in each domain from an available backup. A more recent backup contains more useful state, but can also reintroduce dangerous state. Microsoft therefore prefers bringing the first restored controller up while other writable controllers are shut down, preventing unsafe data from replicating back. <!-- CHECK: 08-ad-guidance --></p>
+
+<p>The survivor in Wired's Ghana account behaved like an isolated copy at the critical moment. That does not turn it into a designed backup. The record does not show a chosen restore point, a tested recovery image, a retention policy or planned isolation. Ashton instead says the plans covered losing one site or datacentre, not every controller. Accident supplied distance; recovery work still had to turn the surviving state into a directory service. <!-- CHECK: 08-survivor-not-backup --></p>
+
+<p>Maersk's published aftermath is broader and less specific. Its annual report says immediate and long-term initiatives were implemented or planned across cyber resilience, infrastructure, IT continuity, recovery and business continuity. It does not name an offline-backup architecture or report a restoration test. That is enough to document investment, not enough to award a defensive success. <!-- CHECK: 08-maersk-aftermath --></p>
+
+<p>The strongest measured defense in Maersk's record was organizational continuity during recovery. Its early report says manual workarounds served customers and vessel control continued. Its later account says cargo kept moving while the network was rebuilt in ten days. Those claims do not make the interruption small; the annual report's USD 250–300 million range prevents that reading. They show that business continuity can preserve selected outcomes while technical recovery remains unfinished. <!-- CHECK: 08-continuity-defense --></p>
+</section>
+
+<h2>The ledger</h2>
+<div class="ledger-wrap"><table class="ledger">
+<thead><tr><th>Folk story (source)</th><th>Record (document, page/section)</th><th>Verdict</th></tr></thead>
+<tbody>
+<tr><td>Wired calls the mutually synchronizing domain controllers a “decentralized backup strategy.”</td><td>Ashton, “Finding our feet”: recovery plans covered a site or datacentre, not every controller at once. Microsoft distinguishes live controllers from a trusted backup. <!-- CHECK: 08-ledger-replicas --></td><td class="verdict v-overstated">OVERSTATED</td></tr>
+<tr><td>Wired says a blackout left one controller alive in Ghana.</td><td>Ashton confirms the directory restoration and the first controller on a Surface Pro 4, but not the place or blackout. The fetched Maersk reports do not settle either detail. <!-- CHECK: 08-ledger-ghana --></td><td class="verdict v-open">OPEN</td></tr>
+<tr><td>BleepingComputer says M.E.Doc's update servers caused the initial infections.</td><td>Cisco, “Summary” and backdoor analysis: all installations it traced came through M.E.Doc's update system. Microsoft reports supporting updater telemetry. <!-- CHECK: 08-ledger-updater --></td><td class="verdict v-holds">HOLDS</td></tr>
+<tr><td>The update-server shorthand makes 27 June sound like one poisoned download.</td><td>DOJ indictment ¶¶34, 37–38, as allegations: earlier modified update files preceded temporary rerouting and final delivery. Cisco reports changed code and server configuration. <!-- CHECK: 08-ledger-stages --></td><td class="verdict v-missing">MISSING</td></tr>
+<tr><td>BleepingComputer says the updater lacked HTTPS and cryptographically signed binaries.</td><td>No fetched primary specification, binary or forensic report establishes the signing state. Cisco does not say whether clients verified signatures. <!-- CHECK: 08-ledger-signing --></td><td class="verdict v-open">OPEN</td></tr>
+<tr><td>BBC calls the event the “NotPetya ransomware attack.”</td><td>DOJ indictment ¶33 alleges that ransom was a ruse and files could not be recovered after payment. ESET's code analysis independently found recovery impossible. <!-- CHECK: 08-ledger-ransomware --></td><td class="verdict v-wrong">WRONG</td></tr>
+<tr><td>Darknet Diaries says Maersk had a functioning network after about nine days.</td><td>Maersk's later retrospective says the network was rebuilt in ten days while cargo kept moving. “Functioning” and “rebuilt” are different thresholds. <!-- CHECK: 08-ledger-days --></td><td class="verdict v-overstated">OVERSTATED</td></tr>
+<tr><td>Darknet Diaries says NotPetya ultimately cost Maersk USD 350 million.</td><td>Maersk, <cite>Annual Report 2017</cite>, printed pp.29 and 54: approximately USD 250–300 million. <!-- CHECK: 08-ledger-cost --></td><td class="verdict v-wrong">WRONG</td></tr>
+</tbody>
+</table></div>
+
+<section class="see">
+<h2>What you can now see</h2>
+<p>Choose one updater or deployment agent in a system you run and draw its promotion path. Start where a change is approved. End where a client executes it. Put the build, artifact store, signing authority and delivery service between them. Then mark the first point at which an attacker controlling one box could make unreviewed bytes look approved.</p>
+
+<p>Do the same drawing once more for recovery, but add time. Find the copy that remains usable if today's trusted machines faithfully synchronize today's destructive state. If the answer is another live replica, you have availability. You have not yet drawn recovery. The lesson from Maersk is not to hope for a disconnected controller. It is to decide which state must survive outside the production trust boundary, then prove you can restore it.</p>
+</section>
+
+<div class="reading">
+<h2>Reading</h2>
+<ul>
+<li>OWASP Top 10:2025, <a href="https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/">A08:2025 Software or Data Integrity Failures</a>.</li>
+<li>Primary allegation: US Department of Justice, <a href="https://www.justice.gov/archives/opa/press-release/file/1328521/dl?inline="><cite>United States v. Andrienko et al.</cite>, indictment</a>, ¶¶33–38.</li>
+<li>Incident response: Cisco Talos, <a href="https://blog.talosintelligence.com/the-medoc-connection/">“The MeDoc Connection”</a>.</li>
+<li>Company record: A.P. Moller–Maersk, <a href="https://investor.maersk.com/system/files-encrypted/nasdaq_kms/assets/2018/04/25/13-00-21/A.P._Moller_-_Maersk_Annual_Report_2017.pdf"><cite>Annual Report 2017</cite></a>, printed pp.29 and 54; and <a href="https://www.maersk.com/~/media_sc9/maersk/stay-ahead/maersk---a-view-from-the-other-side-of-a-crisis---final.pdf">“What we learned from the NotPetya Virus cyber-attack”</a>.</li>
+<li>Participant's retelling: Gavin Ashton, <a href="https://gvnshtn.com/p/maersk-me-and-notpetya">“Maersk, me &amp; NotPetya”</a>.</li>
+<li>The folk story: Andy Greenberg, <a href="https://www.issp.ca/wired-the-untold-story-of-notpetya">“The Untold Story of NotPetya”</a>, <cite>Wired</cite>.</li>
+</ul>
+</div>
+
+<nav class="chapter-nav">
+  <a href="07-colonial-pipeline.html">← Previous</a>
+  <a href="../index.html">Contents</a>
+  <a href="10-goto-fail-crowdstrike.html">Next →</a>
+</nav>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Seventeenth in a series built the same way. Corrections welcome.</p></div></footer>
+</body>
+</html>
