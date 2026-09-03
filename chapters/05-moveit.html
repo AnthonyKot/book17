@@ -49,24 +49,30 @@
 <h2>The mechanism</h2>
 <p>OWASP defines the category this way: <q class="owasp" data-src="A05">An injection vulnerability is an application flaw that allows untrusted user input to be sent to an interpreter (e.g. a browser, database, the command line) and causes the interpreter to execute parts of that input as commands.</q> The interpreter here is a SQL database. Its grammar gives quotation marks, operators and keywords structural meaning. If an application makes one string from its SQL and a caller’s text, the database must decide which characters are instructions and which are data.</p>
 
-<p>The smallest unsafe shape is <code>query = prefix + input + suffix</code>. Escaping tries to rewrite every meaningful character in <code>input</code> for one exact context. That promise is local. Change the surrounding quotes, use the value twice, switch database engines, or forget one occurrence, and the promise must be proved again. A parameterized query changes the interface. The application sends a statement containing placeholders and supplies the values separately. The driver presents those values as data, not as more statement text.</p>
+<p>The smallest unsafe shape is <code>query = prefix + input + suffix</code>. OWASP’s list of when an application is vulnerable includes this line: <q class="owasp" data-src="A05">Dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter.</q> Context-aware is the load-bearing phrase. Escaping rewrites the meaningful characters in <code>input</code> for one exact context: inside these quotes, in this clause, for this engine. Change the surrounding quotes, use the value twice, switch engines, or forget one occurrence, and the promise must be proved again. A parameterized query changes the interface. The application sends a statement containing placeholders and supplies the values separately; the driver presents them as data, never as more statement text.</p>
 
-<p>Rapid7’s diff turns that distinction into something you can draw. In the old <code>UserGetUsersWithEmailAddress()</code>, one format argument held an escaped email and another held the raw email. <!-- CHECK: 05-diff-old-arguments --> This pseudocode abridges Rapid7’s published decompilation. It preserves the format slots and the final call while omitting unrelated clauses.</p>
-<pre><code>// abridged pseudocode: build one completed SQL string
-object sql = string.Format(
-    "... Email='{2}' OR " +
-    BuildLikeForSQL("Email", "{1},%", false) + " ...",
-    InstID,                         // {0}
-    EscapeLikeForSQL(EmailAddress), // {1}
-    EmailAddress);                  // {2}, raw
+<p>Rapid7’s diff turns that distinction into something you can draw. In the old <code>UserGetUsersWithEmailAddress()</code>, one format argument held an escaped email and another held the raw email. <!-- CHECK: 05-diff-old-arguments --> The pseudocode below abridges Rapid7’s published decompilation: it keeps the <code>SELECT</code>, every use of the address and the final call, and drops two optional clauses and the decompiler’s late-binding scaffolding.</p>
+<pre><code>// abridged pseudocode: one completed SQL string, then one call
+string sql = string.Format(
+    "SELECT Username, Permission, LoginName, Email FROM users " +
+    "WHERE InstID={0} AND Deleted=0 AND (" +
+    "Email='{2}' OR " +                                    // raw
+    BuildLikeForSQL("Email", "{1},%",   false) + " OR " +  // escaped
+    BuildLikeForSQL("Email", "%,{1}",   false) + " OR " +  // escaped
+    BuildLikeForSQL("Email", "%,{1},%", false) +           // escaped
+    ") ORDER BY LoginName",
+    InstID,                          // {0}
+    EscapeLikeForSQL(EmailAddress),  // {1}
+    EmailAddress);                   // {2}
 
 DoReadQuery(sql, ref results, true);</code></pre>
 
-<p>Follow the subscripts, not the surrounding decompiler noise. The <code>LIKE</code> branch consumes <code>{1}</code>, the escaped value. The equality branch spells <code>Email='{2}'</code> and consumes the raw value. <!-- CHECK: 05-diff-clause-mismatch --> The developer did treat the address as hostile. The treatment covered one use and not the other, inside the same statement. Rapid7 reported that naive attempts through the paths it first traced failed because arguments were escaped. The route through session state reached the use that was not. <!-- CHECK: 05-rapid7-naive-failed --></p>
+<p>Follow the subscripts. The three <code>LIKE</code> branches consume <code>{1}</code>, the escaped value. The equality branch spells <code>Email='{2}'</code> and consumes the raw one. <!-- CHECK: 05-diff-clause-mismatch --> That is the whiteboard: one address, four slots in one string, an escaper in front of the pattern slots and nothing in front of the equality. The developer did treat the address as hostile. The treatment covered one kind of use and not the other, inside the same statement. Rapid7 reported that naive injection attempts along the paths it first traced failed, because in every case the application escaped the arguments; the path it eventually found ran through session state to this same function. <!-- CHECK: 05-rapid7-naive-failed --></p>
 
-<p>The replacement keeps query construction and values apart. This pseudocode abridges the patched side of the same diff. It retains the clauses, their named placeholders, the bindings, and the call that consumes both collections. <!-- CHECK: 05-diff-new-builder --></p>
+<p>The replacement keeps query construction and values apart. This pseudocode abridges the patched side of the same diff: it keeps the four clauses, their named placeholders, the bindings and the call that consumes both collections, and drops the column list, the <code>InstID</code> and <code>Deleted</code> conditions and the ordering. <!-- CHECK: 05-diff-new-builder --></p>
 <pre><code>// abridged pseudocode: attach clauses, then bind their values
 var where = SelectBuilder();
+var escaped = EscapeLikeForSQL(EmailAddress);
 var clauses = new List&lt;string&gt; {
     "Email=" + ParameterName("Email"),
     BuildLikeForSQL("Email", ParameterName("FirstEmail"), false, false),
@@ -82,9 +88,9 @@ where.AddAndToWhere("(" + string.Join(" OR ", clauses) + ")");
 
 DoReadQuery(where.GetQuery(), where.Parameters, ref results, true);</code></pre>
 
-<p>The final call is the whiteboard boundary. Before the patch, <code>DoReadQuery</code> received one completed string. After it, the call receives a query and a parameter collection. <!-- CHECK: 05-diff-call-boundary --> The pattern values still need handling for the meaning of <code>LIKE</code>, but they no longer become SQL syntax merely by entering the statement. Four named bindings make four data flows visible. A reviewer can count them against the placeholders.</p>
+<p>The final call is the whiteboard boundary. Before the patch, <code>DoReadQuery</code> received one completed string. After it, the call receives a query and a parameter collection. <!-- CHECK: 05-diff-call-boundary --> The pattern values still need handling for the meaning of <code>LIKE</code>, but they no longer become SQL syntax merely by entering the statement. Four named bindings make four data flows visible; a reviewer can count them against four placeholders.</p>
 
-<p>The removed header function explains why “sanitize the form” is too narrow. It turned a special request header into session values; a later page loaded its package information from that session; four application calls led to the vulnerable user lookup. <!-- CHECK: 05-rapid7-call-path --> None of those facts makes headers inherently dangerous. They show why trust must follow the value, not the widget that normally supplies it. Once external influence crosses into session state, its polite internal name does not make it internal data.</p>
+<p>The removed header function explains why “sanitize the form” is too narrow. It turned a special request header into session values; a later page loaded its package information from that session; four application calls led to the vulnerable user lookup. <!-- CHECK: 05-rapid7-call-path --> None of that makes headers dangerous in themselves. It shows that trust must follow the value, not the widget that normally supplies it. A value that crossed from a request header into session state is still the caller’s value, whatever the variable holding it is now called.</p>
 </section>
 
 <section class="defense">
