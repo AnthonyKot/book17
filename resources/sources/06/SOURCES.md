@@ -117,7 +117,7 @@ Only the sentence or title that may be quoted in a pitch is retained from each r
 - Serves: B.
 - Saved excerpt: `wikipedia-folk.txt`.
 
-### Baumer et al. — *Data Science in Context*
+### Spector, Norvig, Wiggins and Wing — *Data Science in Context*
 
 - URL: https://datascienceincontext.com/wp-content/uploads/2022/07/Data-Science-in-Context-V.995-Web-Beta.pdf
 - What it is: popular/educational retelling in an authors’ manuscript for Cambridge
