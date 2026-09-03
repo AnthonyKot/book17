@@ -1,0 +1,32 @@
+# chapter	claim id	claim as made in prose	source	status
+# Chapter 0 quotes the OWASP Introduction (resources/owasp/0x00_2025-Introduction.txt, which carries the Methodology; 0x10_2025-Methodology.txt is a saved 404) and the ten chapters of this book.
+00	00-2-8-million	Contributors donated data for over 2.8 million applications	0x00, Thank you to our data contributors	checked-by:fable:2026-09-03
+00	00-248-of-968	248 CWEs within the 10 categories; 968 in the MITRE dictionary; cap of 40 per category	0x00, How the categories are structured	checked-by:fable:2026-09-03
+00	00-589	From ~30 CWEs in 2017 to almost 400 in 2021 to 589 in this edition	0x00, How the categories are structured	checked-by:fable:2026-09-03
+00	00-a03-survey	A03 was overwhelmingly voted a top concern; fewest occurrences in data but highest average exploit and impact	0x00, What's changed, A03	checked-by:fable:2026-09-03
+00	00-a09-survey	A09 will always be underrepresented in the data and was voted in from the survey	0x00, What's changed, A09	checked-by:fable:2026-09-03
+00	00-alerting-rename	A09 renamed to emphasise alerting; great logging with no alerting is of minimal value	0x00, What's changed, A09	checked-by:fable:2026-09-03
+00	00-automated-limit	Results are largely limited to what the industry can test in an automated fashion	0x00, Why we use a community survey	checked-by:fable:2026-09-03
+00	00-boundaries-in-chapters	Capital One route was SSRF (ch. 1); MOVEit input via session state (ch. 5); CrowdStrike fault an out-of-bounds read not listed under A10 (ch. 10)	chapters/01-broken-access-control.html mechanism; chapters/05-moveit.html break; chapters/10-goto-fail-crowdstrike.html mechanism	checked-by:fable:2026-09-03
+00	00-contributors	Twelve named contributors (Accenture Prague, Bugcrowd, Contrast Security, CryptoNet Labs, Intuitor SoftTech, Orca Security, Probely, Semgrep, Sonar, usd AG, Veracode, Wallarm) plus anonymous donors	0x00, Thank you to our data contributors (12 named entries plus "Anonymous (multiple)")	checked-by:fable:2026-09-03
+00	00-cve-scores	~175k CVE records mapped to CWEs; exploit/impact averaged from CVSS v2 and v3; v4 not usable	0x00, How the data is used for selecting categories	checked-by:fable:2026-09-03
+00	00-data-informed	The list is data-informed, not blindly data-driven	0x00, Methodology	checked-by:fable:2026-09-03
+00	00-defense-thin	Vendors published designs without outcomes: IMDSv2 (1), 3.6 default (2), CrowdStrike reviews (10), Strava threshold (6)	chapters 01, 02, 06, 10 defense sections	checked-by:fable:2026-09-03
+00	00-eighth	The 2025 edition is the 8th installment	0x00 Introduction, opening	checked-by:fable:2026-09-03
+00	00-had-to-stop	The authors say they had to stop grouping at some point	0x00, How the categories are structured	checked-by:fable:2026-09-03
+00	00-injection-range	Injection ranges from XSS (high frequency/low impact) to SQL injection (low frequency/high impact)	0x00, What's changed, A05	checked-by:fable:2026-09-03
+00	00-looking-into-past	Data is looking into the past; some risks may never be testable	0x00, Methodology	checked-by:fable:2026-09-03
+00	00-manual-vs-auto	Manual testers list a weakness once, automated frameworks list every instance	0x00, How the categories are structured	checked-by:fable:2026-09-03
+00	00-missing-rhyme	MISSING rows: Adobe backup (4), Maersk synchronised controllers (8), xz tarball (3), MongoDB package default (2), Target evaluated alerts (9)	chapters 02, 03, 04, 08, 09 ledgers and ledes	checked-by:fable:2026-09-03
+00	00-movements	A02 up from #5 to #2; A04 #2 to #4; A05 #3 to #5; A06 #4 to #6	0x00, What's changed	checked-by:fable:2026-09-03
+00	00-new-and-expanded	A03 expands A06:2021; A10 is new for 2025	0x00, What's changed, A03 and A10	checked-by:fable:2026-09-03
+00	00-open-rhyme	OPEN rows on the first step: Capital One SSRF (1), Colonial password source (7), Apple line origin (10), Target evaluators (9)	chapters 01, 07, 09, 10 ledgers	checked-by:fable:2026-09-03
+00	00-overlap	Ten categories without overlap is basically impossible	0x00, What's changed	checked-by:fable:2026-09-03
+00	00-prevalence	The unit is the application; frequency of instances is ignored	0x00, How the categories are structured	checked-by:fable:2026-09-03
+00	00-ssrf-rolled	SSRF rolled into A01	0x00, What's changed, A01	checked-by:fable:2026-09-03
+00	00-tally	Row counts across the ten ledgers (see TALLY comment; recomputed from chapters/[0-9]*.html verdict cells)	chapters/01–10 ledger tables; script in checks/tally-ledgers note in drafts/00.ledger.md	checked-by:fable:2026-09-03
+00	00-three-prevalences	A01 3.73%, A02 3.00%, A04 3.80% of applications tested had one or more CWEs in the category	0x00, What's changed, A01/A02/A04	checked-by:fable:2026-09-03
+00	00-two-from-survey	12 categories ranked on data; two promoted by the community survey; eight of ten from data	0x00, Methodology and Why we use a community survey	checked-by:fable:2026-09-03
+00	00-vocabulary	The five verdicts and their meanings	CONTEXT.md §4; every chapter ledger	checked-by:fable:2026-09-03
+00	00-what-it-is	The 2025 list ranks ten categories across applications tested by thirteen named contributors, by share of applications with at least one finding, weighted by CVE exploit/impact, with two seats from a survey	resources/owasp/0x00_2025-Introduction.txt: Introduction, Methodology, How the data is used, Why we use a community survey, Thank you to our data contributors	checked-by:fable:2026-09-03
+00	00-wrong-words	The WRONG rows: encrypted/hashed (ch. 4), ransomware/wiper (ch. 8), inactive account (ch. 7), invalid certificates (ch. 10), nine/nineteen months (ch. 9)	chapters 04, 07, 08, 09, 10 ledgers	checked-by:fable:2026-09-03
