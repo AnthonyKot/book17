@@ -130,7 +130,7 @@ DoReadQuery(where.GetQuery(), where.Parameters, ref results, true);</code></pre>
 
 <p>If it receives one string, follow a single value backward through every appearance in that statement. A value used in an equality test and three pattern tests has four contexts, even when it came from one field. Mark each occurrence as raw, escaped, or bound. The dangerous finding is not a missing escape. It is an interface that lets the answer differ at each occurrence.</p>
 
-<p>Then follow the value one step farther back than its name suggests. Session variables, cached objects and internal request headers can still contain caller-controlled data. Trust is a property of the route a value travelled, not of the variable holding it now.</p>
+<p>Then follow the value one step farther back than its name suggests. Session variables, cached objects and internal request headers can still contain caller-controlled data. Trust is a property of the route a value traveled, not of the variable holding it now.</p>
 
 <p>The useful end state fits in one line: the query text contains placeholders, and the values cross the driver boundary separately. If your ordinary database API makes that shape awkward, the API is part of the finding. Change the default path before auditing every exception. That is how one missed clause becomes difficult to write, instead of merely easier to catch.</p>
 </section>
