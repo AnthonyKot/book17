@@ -159,3 +159,14 @@ Only the quoted folk-claim sentences are saved from these sources.
 - **LinkedIn's first 6 June 2012 blog post.** The historical blog URL referenced by
   contemporary coverage no longer resolved as an accessible original in search. The
   company's 12 June consolidated statement and current 2016 notice were fetched instead.
+
+## Added on the drafting pass (2026-09-03)
+
+- `australia-oaic-adobe-extended.txt` — a second, fuller excerpt of the OAIC report (Background timeline
+  30 Aug–17 Sep 2013, discovery on 17 Sep, announcement 3 Oct; the backup-database contents; the
+  Australian user counts; Triple DES and the same-ciphertext sentence; the new system introduced April
+  2010 with salted, iterated SHA-256; the NPP 4 finding; the 3–4 Oct password resets). Fetched via
+  WebFetch with a verbatim-quotation prompt; the page itself was not saved.
+- `canada-opc-2014-015-extended.txt` — ¶¶6, 10–12, 34–37 of the PIPEDA finding (the "sophisticated,
+  long-term intrusion" description, the data types, "over one million Canadian customers", the
+  findings). Same method.

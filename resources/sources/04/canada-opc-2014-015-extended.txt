@@ -1,0 +1,11 @@
+Source: Office of the Privacy Commissioner of Canada, PIPEDA Report of Findings 2014-015
+URL: https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2014/pipeda-2014-015/
+Fetched: 2026-09-03 (second pass, via WebFetch with a verbatim-quotation prompt; paragraph numbers as given by the page)
+Excerpt: paragraphs 6, 10, 11, 12, 34-37
+
+6. He complained to our Office, and we accepted his complaint on November 8, 2013.
+10. Adobe described a sophisticated, long-term intrusion of its computer systems.
+11. The attackers were able to access personal information of Adobe customers including the following types of information: usernames, encrypted passwords, password hints in plain text, names, addresses, email addresses, encrypted payment card numbers, and other information and data related to customer orders.
+12. Adobe estimated that over one million Canadian customers were affected, although not all of them had each data element of the aforementioned types of personal information accessed.
+34-35. Adobe's safeguards were not appropriate to the sensitivity of the information and did not sufficiently protect the complainant's personal information.
+37. The complaint is well-founded and resolved.

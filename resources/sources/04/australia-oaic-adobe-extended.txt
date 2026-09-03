@@ -1,0 +1,29 @@
+Source: Office of the Australian Information Commissioner, Adobe Systems Software Ireland Ltd: own-motion investigation report
+URL: https://www.oaic.gov.au/privacy/privacy-assessments-and-decisions/privacy-decisions/Investigation-inquiry-reports/adobe-systems-software-ireland-ltd-own-motion-investigation-report
+Fetched: 2026-09-03 (second pass, via WebFetch with a verbatim-quotation prompt; sentences below were returned as exact quotations; section headings as given by the page)
+Excerpt: Background; Security of Passwords and Password Hints; NPP 4 conclusion; Rectification
+
+Background — timeline
+Between 30 August 2013 and 17 September 2013, 'an unauthorised third party illegally accessed certain customer order information'.
+Adobe became aware of the unauthorised access on 17 September 2013 when an attempt by the attacker to decrypt card numbers that were a part of the customer order information was discovered by Adobe.
+On 3 October 2013, Adobe reported on its website that it had been the target of a cyber-attack.
+
+Background — what was taken
+The attacker took a copy of a backup database containing the personal information of customers, consisting of: customer usernames (Adobe IDs), email addresses, encrypted passwords (a small number of unencrypted passwords, held in a separate database, may also have been compromised), plain text password hints, names, addresses and telephone numbers of some users, encrypted payment card numbers and payment card expiration dates.
+
+Background — Australian users
+135,288 Australian users whose encrypted payment card numbers and other payment information were involved in the data breach; 1,787,100 Australian active and inactive users whose current password data was involved; 218,750 Australian active and inactive users whose obsolete password data was involved; 36 Australian users who may have had plain text passwords exposed.
+
+Security of Passwords and Password Hints
+The system involved in the attack used Triple DES encryption to protect all password information stored.
+The choice of a block cipher encryption algorithm meant that common passwords shared by different users had the same ciphertext representation.
+Adobe also stored customer 'password hints' in the backup system in plain text rather than in an encrypted format.
+For more than a year, Adobe's authentication system has cryptographically hashed customer passwords using the SHA-256 algorithm, including salting the passwords and iterating the hash more than 1,000 times.
+Adobe introduced a new system in April 2010 as a more secure means of authenticating users than the encrypted passwords stored in the backup system.
+
+NPP 4 conclusion
+The Commissioner found that Adobe breached NPP 4 by failing to take reasonable steps to protect all of the personal information it held from misuse and loss and from unauthorised access, modification or disclosure.
+
+Rectification
+Resetting passwords (on 3-4 October 2013) for users whose Adobe ID and current password data (i.e. a password that was valid against Adobe's production authentication system) were in the database taken.
+Adobe also took steps to mitigate against the risk of future data breaches of this nature, including in relation to network monitoring, the storage of payment card information and passwords, two-factor authentication, decommissioning the affected server and abolishing the use of password hints.
