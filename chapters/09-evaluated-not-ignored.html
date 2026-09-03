@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evaluated, not ignored — Ten Ways In</title>
+<meta name="description" content="Target's alerts existed; the missing link was turning a surfaced event into an effective response.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Ten Ways <span>In</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Chapter 9 · A09:2025 Security Logging &amp; Alerting Failures</p>
+<h1>Evaluated, not ignored</h1>
+<p class="lede">The durable Target story is that an alert sounded and nobody looked. John Mulligan, then Target's chief financial officer, gave the Senate a less convenient account. Some intruder activity, he testified, was detected, logged, surfaced to the security operations center, and evaluated. The breach still followed. The useful question is therefore not whether Target owned an alarm. It is what happened between a machine raising an event and a person causing an effective response. The public record does not fully answer that question. Its silence is part of the lesson. <!-- CHECK: 09-lede-evaluated --></p>
+
+<section class="break">
+<h2>The break</h2>
+<p>The sequence begins before any alert. Mulligan's prepared statement says intruders appeared to enter Target's system on November 12, 2013. It does not make the entry route the whole story. The statement was testimony, not a forensic report, and it carefully described what Target then believed. <!-- CHECK: 09-entry-date --></p>
+
+<p>A famous headline supplied the compact alternative: KrebsOnSecurity called its account “Target Hackers Broke in Via HVAC Company.” The Senate Commerce Committee's majority staff report likewise said the attackers reportedly first gained access with credentials stolen from Fazio Mechanical Services. The report described that company as an HVAC and refrigeration contractor with remote access for business functions. That account explains a door. It does not explain why later layers failed to end the intrusion. <!-- CHECK: 09-hvac-entry --></p>
+
+<p>Target's own description shows the scale of the judging problem. Mulligan said its systems logged more than one billion technology activities on an average day. Tools narrowed those activities to a few hundred events for the security operations center. Reviews of those events produced dozens of cases for further assessment each day. Logging was abundant, filtering was already happening, and people were already reviewing selected events. <!-- CHECK: 09-soc-volume --></p>
+
+<p>Then comes the sentence that changes the chapter. “Some intruder activity was detected,” Mulligan testified. He continued that it was logged, surfaced to the SOC, and evaluated by security professionals. With hindsight and new information, he said, Target was asking questions about the judgments made then. It was also assessing whether different judgments might have produced different outcomes. <!-- CHECK: 09-detected-evaluated --></p>
+
+<p>This is not Target claiming that everything worked. It is narrower and more unsettling. The event crossed the first three boundaries: sensor to record, record to surfaced item, and surfaced item to human evaluation. Whatever failed came during or after judgment. The statement does not identify the evaluator, the available context, the disposition, or the action attached to it. Those omissions prevent a confident diagnosis.</p>
+
+<p>The competing public account is stronger. The Senate staff report says FireEye generated urgent alerts as data-exfiltration malware was installed. It says Target's team neither reacted nor enabled automatic deletion. On another page, it describes an alert with the generic label “malware.binary” and raises the possibility that frequent alarms made it look like a false positive. But the report attributes those details to Bloomberg Businessweek. <!-- CHECK: 09-fireeye-account --></p>
+
+<p>That attribution matters because the report announces its own limits. It says its explanation is based on published media reports and expert analyses. It adds that the complete story might not be known until Target finished its forensic examination. The staff report is a useful government synthesis, not an independent finding that resolves every disputed step. Its crucial alert narrative rests on a publication that could not be fetched for this chapter. <!-- CHECK: 09-report-status --></p>
+
+<p>The same report says Symantec antivirus detected malicious behavior around November 28 and implicated the server FireEye had flagged. It later says the FireEye system reportedly decoded the destination servers where stolen payment-card data sat for days. Again, “reportedly” is doing work. These details belong to the report's reconstruction, with the source chain left visible. <!-- CHECK: 09-other-signals --></p>
+
+<p>CBS compressed the Businessweek account further: the attack “could have been prevented” if Target had reacted to its system's warnings. The Senate report's own conclusion is more conditional. Target “could have potentially blocked” the malware's effect through automatic deletion or follow-up. Mulligan's testimony is more conditional still: different judgments may have led to different outcomes. Possibility became certainty as the story travelled. <!-- CHECK: 09-prevention-claim --></p>
+
+<p>There is one firm endpoint. Mulligan said the Justice Department notified Target on the evening of December 12 about suspicious activity involving cards used at its stores. He said Target immediately opened an internal investigation. That external notification arrived after the internally generated activity had been detected and evaluated, according to the same testimony. <!-- CHECK: 09-doj-notice --></p>
+
+<p>Nor was this a company with no named controls. Mulligan listed firewalls, malware detection, intrusion detection and prevention, and data-loss-prevention tools. He also said Target's systems had been certified compliant with the Payment Card Industry Data Security Standards in September 2013. His point was not that certification disproved the breach. It was that the layers and assessment existed, yet the systems were breached. <!-- CHECK: 09-existing-controls --></p>
+
+<p>The honest folk-story verdict therefore splits. The system warned: that HOLDS. The HVAC credential account describes reported entry but leaves out the alert-to-judgment route: MISSING. Certain prevention is OVERSTATED. The claim that nobody acted cannot be settled from the fetched record. Target says activity was evaluated; the Senate report repeats Businessweek's claim that the team did not react. What the evaluators decided, and why no effective response followed, remains OPEN.</p>
+</section>
+
+<section class="mechanism">
+<h2>The mechanism</h2>
+<p>…</p>
+</section>
+
+<section class="defense">
+<h2>The defense</h2>
+<p>…</p>
+</section>
+
+<h2>The ledger</h2>
+<div class="ledger-wrap"><table class="ledger">
+<thead><tr><th>Folk story (source)</th><th>Record (document, page/section)</th><th>Verdict</th></tr></thead>
+<tbody>
+<tr><td>…</td><td>…</td><td class="verdict">HOLDS</td></tr>
+</tbody>
+</table></div>
+
+<section class="see">
+<h2>What you can now see</h2>
+<p>…</p>
+</section>
+
+<div class="reading">
+<h2>Reading</h2>
+<ul>
+<li>…</li>
+</ul>
+</div>
+
+<nav class="chapter-nav">
+  <a href="08-the-backup-that-was-not-a-backup.html">← Previous</a>
+  <a href="../index.html">Contents</a>
+  <a href="10-goto-fail-crowdstrike.html">Next →</a>
+</nav>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Seventeenth in a series built the same way. Corrections welcome.</p></div></footer>
+</body>
+</html>
