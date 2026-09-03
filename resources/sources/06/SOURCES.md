@@ -80,7 +80,8 @@ adjacent `.txt` files retain only the relevant passages, not a second complete c
 - What it is: two-page policy memorandum from the Deputy Secretary of Defense, dated
   2018-08-03.
 - Page or section used: pp. 1–2, in full.
-- Fetch extent: full PDF fetched and text-extracted through the browser; direct `curl`
+- Fetch extent: full two-page PDF fetched and text-extracted through the browser; the
+  Deputy Secretary header and date line are preserved in the excerpt. Direct `curl`
   returned HTTP 403.
 - Serves: A, C, D.
 - Saved excerpt: `dod-geolocation-memo.txt`.
@@ -137,6 +138,12 @@ Only the sentence or title that may be quoted in a pitch is retained from each r
 - Saved excerpt: `ars-folk.txt`.
 
 ## Not fetched / not available
+
+- The chapter source inventory and every saved excerpt above were searched and re-read on
+  2026-09-03 for follow-up measurement of sensitive-site visibility or compliance with the
+  August 2018 DoD directive. None appears in this collected corpus. This records the scope
+  of the chapter's negative evidence claim; it is not a claim about everything either
+  organization may have published.
 
 - Both live `blog.strava.com/press/` URLs above now redirect to the generic
   `stories.strava.com` homepage. Direct live-page fetches were tried with `curl`; the

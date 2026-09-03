@@ -1,7 +1,14 @@
 Source: https://media.defense.gov/2018/Aug/06/2001951064/-1/-1/1/GEOLOCATION-DEVICES-APPLICATIONS-SERVICES.PDF
 Fetched: 2026-09-03
-Excerpt: substantive text of both pages
+Excerpt: header and substantive text of both pages
 Source URL is indexed in SOURCES.md.
+
+DEPUTY SECRETARY OF DEFENSE
+1010 DEFENSE PENTAGON
+WASHINGTON, DC 20301-1010
+
+AUG 03 2018
+
 Subject: Use of Geolocation-Capable Devices, Applications, and Services
 
 The rapidly evolving market of devices, applications, and services with geolocation capabilities (e.g., fitness trackers, smartphones, tablets, smartwatches, and related software applications) presents significant risk to Department of Defense (DoD) personnel both on and off duty, and to our military operations globally.
