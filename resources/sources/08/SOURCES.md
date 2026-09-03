@@ -67,5 +67,9 @@ verdicts. Press excerpts contain only the sentences proposed for quotation.
   BleepingComputer claim; until a M.E.Doc specification, binary, or forensic report settles
   it, the signing state is OPEN.
 - M.E.Doc / Intellect Service's contemporary forum posts and denials linked by the press
-  now return dead pages or archive blocks. They were tried through the live links from
-  BleepingComputer and the Cyber Police page; none yielded a usable first-party statement.
+  did not yield a usable first-party statement. The live notice at
+  https://www.me-doc.com.ua/1111193340-budte-bditelny-virusnaya-ataka-na-korporativnyy-sektor,
+  the Facebook post at https://www.facebook.com/medoc.ua/posts/1904044929883085, and the
+  Cyber Police page's archived denial at
+  https://web.archive.org/web/20170628185144/http%3A//www.me-doc.com.ua/1111193342 were
+  each tried through the source page and returned cache misses.
