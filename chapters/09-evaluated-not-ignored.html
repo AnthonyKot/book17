@@ -53,7 +53,21 @@
 
 <section class="mechanism">
 <h2>The mechanism</h2>
-<p>…</p>
+<p>OWASP defines the dependency in one sentence: <q class="owasp" data-src="A09">Without logging and monitoring, attacks and breaches cannot be detected, and without alerting it is very difficult to respond quickly and effectively during a security incident.</q> The category name matters. It now says logging <em>and alerting</em>. A durable record is evidence; an alert is a request for attention. Neither is yet a response.</p>
+
+<p>Draw the mechanism as six boxes: activity → event → detection → alert → decision → action. Under the boxes, draw context and a clock. An application first emits an event with enough identity, time, resource, and result to distinguish expected behavior from abuse. A detector combines that event with rules or other events. An alert routes the finding to someone or something. A decision gives it a disposition. An action contains, blocks, escalates, or investigates it. Verification checks that the action happened and worked.</p>
+
+<p>Each arrow is a separate failure boundary. Activity can leave no event. An event can omit the user or affected asset. A useful detection can drown among low-value detections. An alert can reach the wrong queue. An analyst can reasonably classify an ambiguous item with too little context. A correct decision can invoke a stale playbook. An assigned containment step can fail without feeding its result back. Buying a better sensor repairs only some of those arrows.</p>
+
+<p>OWASP names several of these conditions. It includes cases where <q class="owasp" data-src="A09">Appropriate alerting thresholds and response escalation processes are not in place or effective.</q> It also includes a detected alert that cannot be processed because its playbook is incomplete, obsolete, or absent. That is a broader and more useful model than “logs missing.” It treats the operational route to action as part of the control.</p>
+
+<p>Target's account can be placed on the drawing without guessing at the unseen box. Activity became a logged event. Some activity was detected and surfaced. A security professional evaluated it. The record then jumps to later external notification and investigation. Put a question mark between decision and effective action. Do not label the question mark “ignored.” The fetched documents do not establish that.</p>
+
+<p>Now add two feedback arrows. From decision, send the reason back to detection engineering: true positive, false positive, duplicate, or insufficient evidence. From action, return proof: host isolated, credential disabled, process stopped, owner reached. Without the first loop, rules do not learn from judgments. Without the second, a ticket can close while exposure continues. The control is not complete merely because the interface records a click.</p>
+
+<p>This example sits awkwardly but usefully under an application-security list. Target's incident spanned an enterprise network and payment environment, not simply one web application's log statement. OWASP itself describes applications, APIs, log management, operations teams, and incident response in the same category. The lens fits because the mechanism is the same: application and infrastructure signals must cross an owned, testable path to response.</p>
+
+<p>The hard engineering problem is therefore a contract between components and people. For one high-consequence detection, you should be able to state what evidence it emits, who owns it, what context travels with it, how quickly it must be judged, what action follows each disposition, and where success is recorded. If one answer is “the SOC will know,” the whiteboard has exposed a missing interface.</p>
 </section>
 
 <section class="defense">
