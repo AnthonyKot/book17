@@ -28,3 +28,15 @@ Changed:
 - Trimmed the "polite internal name" flourish to a plain sentence.
 
 Mechanism section now 540 words. Chapter 2,362.
+
+## Lens 3 — The ledger and the record
+
+Read every marked sentence against its excerpt. Findings and changes:
+- **Spokesperson quote compressed.** The chapter had "a sophisticated, multi-stage zero-day attack"; TechTarget's quote is "a sophisticated, multi-stage attack to exploit this zero-day vulnerability". Now quoted as the excerpt has it, with the "fixed the issue" phrase set up as the one folk claim that comes from Progress itself (which is why a vendor statement sits in the folk column of row 5). TSV rows `05-spokesperson-techtarget` and `-provenance` reworded.
+- **KB capture overstated.** "catches the advisory while the patch was still being made" — the 1 June 00:22 UTC capture still says "while our team produces a patch" but already lists fixed versions. Now says only what the capture says. "leave only SFTP and FTP/S operating normally" was an instruction the article did not give; it noted those protocols would keep working. TSV rows `05-kb-first-state`, `05-kb-revision-cve`, `05-kev-entry` tightened to the excerpts' wording (the KEV "Known" mark is on the entry; the date is the add date).
+- **1,690 of 2,098 attributed to "Emsisoft".** The excerpt attributes the sentence to "Callow" and never states his affiliation (the tally itself is Emsisoft's). Now "TechTarget reported…", with a `pending fact-check` comment. TSV row `05-third-party-share` says so.
+- **Row 1 record cell** did not itself earn "steal customer data"; added Mandiant's 27 May web-shells-then-data-theft evidence (source added to the TSV row).
+- **Row 4 folk cell** lacked its source tag; now "(TechCrunch)".
+- **Row 5 record cell** now quotes Rapid7 exactly ("several parts of an exploit chain that were not fully mitigated by the first patch") rather than paraphrasing, since the OVERSTATED verdict rests on that sentence. Fairness to Progress: its position (the June flaws were distinct) stays in the cell.
+- Verdicts unchanged: HOLDS 2, OVERSTATED 1, MISSING 1, OPEN 1. `drafts/05.ledger.md` synced (rows 1, 4, 5).
+- Checked and left alone: the 8-K timeline, Mandiant attribution wording, Emsisoft/KonBriefing method sentences, the five-CVE count (34362, 35036, 35708, 36934, 36932 across 31 May–6 July), the 10-K counts, the SEC letter, Order 22's status as allegations, all Rapid7 diff claims, the CISA Secure by Design paraphrases.
