@@ -1,6 +1,7 @@
 FBI Statement on Compromise of Colonial Pipeline Networks, 10 May 2021
 Source: https://www.fbi.gov/news/press-releases/fbi-statement-on-compromise-of-colonial-pipeline-networks
 Fetched: 2026-09-02 (fbi.gov returned 403 to curl; text obtained through the r.jina.ai reader proxy)
+Re-verified 2026-09-02 at drafting: fbi.gov still 403 to curl (Cloudflare challenge) and to WebFetch; the Wayback Machine snapshot of 11 May 2021 (web.archive.org/web/20210511id_/<url>) carries the identical two sentences. CONFIRMED.
 Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
 
 May 10, 2021

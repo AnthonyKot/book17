@@ -1,6 +1,7 @@
 TSA Security Directive Pipeline-2021-02E (July 2024 renewal of the July 2021 directive; SD-02 text as currently public)
 Source: https://www.tsa.gov/sites/default/files/tsa-security-directive-pipeline-2021-02e-and-memo-508c.pdf
 Fetched: 2026-09-02 (tsa.gov returned 403 to curl; identical PDF fetched from the mirror https://www.mangancyber.com/wp-content/uploads/2024/08/tsa-security-directive-pipeline-2021-02e-and-memo-508c.pdf)
+Re-verified 2026-09-02 at drafting: tsa.gov still 403 to a direct fetch; the PDF at the tsa.gov URL was fetched from the Wayback Machine (web.archive.org/web/2024id_/<url>, 416,482 bytes) and its III.C.1-5 text is identical to the mirror copy excerpted here, including "Multi-factor authentication, or other logical and physical security controls that supplement password authentication to provide risk mitigation commensurate to multi-factor authentication" and "first issued by TSA on July 26, 2021". CONFIRMED (2024 wording; the 2021 original remains SSI and unpublished).
 Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
 
 --- header (pdftotext p.1-2) ---

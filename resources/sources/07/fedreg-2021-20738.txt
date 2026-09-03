@@ -1,6 +1,7 @@
 Federal Register 86 FR 52953, 'Ratification of Security Directive' (TSOB ratification of SD Pipeline-2021-02), 24 Sept 2021, doc. 2021-20738
 Source: https://www.federalregister.gov/documents/2021/09/24/2021-20738/ratification-of-security-directive
 Fetched: 2026-09-02 (federalregister.gov served a CAPTCHA page to curl and a redirect to WebFetch; text obtained through the r.jina.ai reader proxy)
+Re-verified 2026-09-02 at drafting: federalregister.gov returned HTTP 500 ("Something went wrong") to a direct fetch; the Wayback Machine copy (web.archive.org/web/2024id_/<url>) carries the same text: SD-01 issued May 26, 2021, effective May 28, 2021, "within 12 hours"; SD-02 issued July 19, 2021, effective July 26, 2021, "annual cybersecurity architecture design review"; ratified August 17, 2021. CONFIRMED.
 Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
 
 ## I. Background

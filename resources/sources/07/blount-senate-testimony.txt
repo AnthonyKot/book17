@@ -1,6 +1,7 @@
 Joseph Blount, written testimony to the Senate HSGAC, 8 June 2021 (PDF)
 Source: https://www.hsgac.senate.gov/wp-content/uploads/imo/media/doc/Testimony-Blount-2021-06-08.pdf
 Fetched: 2026-09-02 (hsgac.senate.gov returned 403 to curl and WebFetch; text obtained through the r.jina.ai reader proxy)
+Re-verified 2026-09-02 at drafting: hsgac.senate.gov still 403 to curl and WebFetch; the same PDF was fetched from the Wayback Machine (web.archive.org/web/2024id_/<url>, 114,630 bytes) and, independently, the statement is printed in the Appendix of the govinfo Senate hearing PDF (CHRG-117shrg46569.pdf, pdf pp. 42-46), fetched directly. Every phrase quoted in the chapter ("stop work order", 5:55 AM, 6:10 AM, "approximately fifteen minutes", "not intended to be in use", "still trying to determine how the attackers gained the needed credentials", "Wednesday evening, May 12") is present in both. CONFIRMED.
 Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
 
 Published Time: Mon, 04 Nov 2024 13:31:48 GMT

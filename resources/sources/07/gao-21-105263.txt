@@ -1,6 +1,7 @@
 GAO-21-105263, 'Critical Infrastructure Protection: TSA Is Taking Steps to Address Some Pipeline Security Program Weaknesses' (testimony), 27 July 2021
 Source: https://www.gao.gov/assets/gao-21-105263.pdf
 Fetched: 2026-09-02 (gao.gov returned 403 to curl; product page read via WebFetch; PDF text obtained through the r.jina.ai reader proxy)
+Re-verified 2026-09-02 at drafting: gao.gov still 403 to a direct fetch; the PDF was fetched from the Wayback Machine (web.archive.org/web/2024id_/<url>, 1,312,602 bytes) and every sentence excerpted here is present in it. CONFIRMED.
 Excerpt of the passages read for the chapter-07 pitches; line/page refs are to the fetched text.
 
 35:Protecting the nation’s pipeline systems from security threats is a responsibility shared by both the Transportation Security Administration (TSA) and private industry stakeholders. Prior to issuing a cybersecurity directive in May 2021, TSA’s efforts included issuing voluntary security guidelines and security reviews of privately owned and operated pipelines. GAO reports in 2018 and 2019 identified some weaknesses in the agency’s oversight and guidance, and made 15 recommendations to address these weaknesses. TSA concurred with GAO’s recommendations and has addressed most of them, such as clarifying portions of its Pipeline Security Guidelines improving its monitoring of security review performance, and assessing staffing needs. 

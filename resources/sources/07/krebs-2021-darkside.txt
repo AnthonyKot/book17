@@ -1,0 +1,10 @@
+Krebs on Security, 'A Closer Look at the DarkSide Ransomware Gang', 11 May 2021 - retelling only (folk story; never the source for a ledger verdict)
+Source: https://krebsonsecurity.com/2021/05/a-closer-look-at-the-darkside-ransomware-gang/
+Fetched: 2026-09-02 - krebsonsecurity.com returned HTTP 502 to curl, WebFetch and the reader proxy on every attempt (pitch stage and drafting stage); this text is from the Wayback Machine copy at https://web.archive.org/web/2024id_/https://krebsonsecurity.com/2021/05/a-closer-look-at-the-darkside-ransomware-gang/
+Excerpt: only the sentences quoted or characterised in the chapter.
+
+The FBI confirmed this week that a relatively new ransomware group known as DarkSide is responsible for an attack that caused Colonial Pipeline to shut down 5,550 miles of pipe, stranding countless barrels of gasoline, diesel and jet fuel on the Gulf Coast.
+
+DarkSide says it targets only big companies, and forbids affiliates from dropping ransomware on organizations in several industries, including healthcare, funeral services, education, public sector and non-profits.
+
+DarkSide also started recruiting new affiliates again last month - mainly seeking network penetration testers who can help turn a single compromised computer into a full-on data breach and ransomware incident.
