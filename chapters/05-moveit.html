@@ -47,6 +47,44 @@
 
 <section class="mechanism">
 <h2>The mechanism</h2>
+<p>OWASP defines the category this way: <q class="owasp" data-src="A05">An injection vulnerability is an application flaw that allows untrusted user input to be sent to an interpreter (e.g. a browser, database, the command line) and causes the interpreter to execute parts of that input as commands.</q> The interpreter here is a SQL database. Its grammar gives quotation marks, operators and keywords structural meaning. If an application makes one string from its SQL and a caller’s text, the database must decide which characters are instructions and which are data.</p>
+
+<p>The smallest unsafe shape is <code>query = prefix + input + suffix</code>. Escaping tries to rewrite every meaningful character in <code>input</code> for one exact context. That promise is local. Change the surrounding quotes, use the value twice, switch database engines, or forget one occurrence, and the promise must be proved again. A parameterized query changes the interface. The application sends a statement containing placeholders and supplies the values separately. The driver presents those values as data, not as more statement text.</p>
+
+<p>Rapid7’s diff turns that distinction into something you can draw. In the old <code>UserGetUsersWithEmailAddress()</code>, one format argument held an escaped email and another held the raw email. <!-- CHECK: 05-diff-old-arguments --> Selected pre-patch expressions are below. Rapid7 published them from its decompilation; line breaks and indentation have been added for legibility.</p>
+<pre><code>// pre-patch: one formatted SQL string
+(object) "Email='{2}' OR "
+(object) this.siGlobs.objUtility.BuildLikeForSQL(
+    "Email", "{1},%", bEscapeAndConvertMatchString: false)
+
+(object) InstID,
+(object) this.siGlobs.objUtility.EscapeLikeForSQL(EmailAddress), // {1}
+(object) EmailAddress                                           // {2}
+
+this.siGlobs.objWrap.DoReadQuery(
+    Conversions.ToString(obj), ref MyRS, true);</code></pre>
+
+<p>Follow the subscripts, not the surrounding decompiler noise. The <code>LIKE</code> branch consumes <code>{1}</code>, the escaped value. The equality branch spells <code>Email='{2}'</code> and consumes the raw value. <!-- CHECK: 05-diff-clause-mismatch --> The developer did treat the address as hostile. The treatment covered one use and not the other, inside the same statement. Rapid7 reported that naive attempts through the paths it first traced failed because arguments were escaped. The route through session state reached the use that was not. <!-- CHECK: 05-rapid7-naive-failed --></p>
+
+<p>The replacement keeps query construction and values apart. These are selected post-patch lines from the same published diff, again wrapped only for display. <!-- CHECK: 05-diff-new-builder --></p>
+<pre><code>// post-patch: a builder plus named values
+SQLBasicBuilder where = this._sqlBuilderUsers.SelectBuilder()
+    .AddColumnsToSelect("Username", "Permission", "LoginName", "Email")
+    .AddAndColumnEqualsToWhere&lt;string&gt;(nameof (InstID), InstID, true)
+    .AddAndColumnEqualsToWhere&lt;int&gt;("Deleted", 0);
+
+string.Format("Email={0}", (object) func("Email"))
+where.WithParameter("Email", (object) EmailAddress);
+where.WithParameter("FirstEmail", (object) string.Format("{0},%", (object) str));
+where.WithParameter("MiddleEmail", (object) string.Format("%,{0},%", (object) str));
+where.WithParameter("LastEmail", (object) string.Format("%,{0}", (object) str));
+
+this.siGlobs.objWrap.DoReadQuery(
+    where.GetQuery(), where.Parameters, ref MyRS, true);</code></pre>
+
+<p>The final call is the whiteboard boundary. Before the patch, <code>DoReadQuery</code> received one completed string. After it, the call receives a query and a parameter collection. The pattern values still need handling for the meaning of <code>LIKE</code>, but they no longer become SQL syntax merely by entering the statement. Four named bindings make four data flows visible. A reviewer can count them against the placeholders.</p>
+
+<p>The removed header function explains why “sanitize the form” is too narrow. It turned a special request header into session values; a later page loaded its package information from that session; four application calls led to the vulnerable user lookup. <!-- CHECK: 05-rapid7-call-path --> None of those facts makes headers inherently dangerous. They show why trust must follow the value, not the widget that normally supplies it. Once external influence crosses into session state, its polite internal name does not make it internal data.</p>
 </section>
 
 <section class="defense">
