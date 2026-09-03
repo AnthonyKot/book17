@@ -224,3 +224,6 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   GPS, not watches); codex applied both reports (`drafts/reviews/04-applied.md`,
   `06-applied.md`); the memo's letterhead and date line were captured, closing the open
   claim.
+- 2026-09-03 — Chapter 8 pitch gate (standard mode; pitches by codex): the user chose A
+  ("the backup that was not a backup"), anchored on the DOJ indictment, Cisco's incident
+  response and Ashton's Maersk account; B, C, D fold in as mechanism and ledger rows.
