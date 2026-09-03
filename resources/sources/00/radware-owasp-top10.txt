@@ -1,0 +1,6 @@
+Radware, “OWASP Top 10 2025: Vulnerabilities, Mitigations & Best Practices”
+URL: https://www.radware.com/cyberpedia/application-security/owasp-top-10/
+Fetched: 2026-09-03
+Use: named retelling for Chapter 0's folk claim; excerpt from “What is the OWASP Top 10?”
+
+The OWASP Top 10 is a consensus list of the most critical security risks to web applications, compiled by the Open Web Application Security Project (OWASP). Established as an industry standard, the Top 10 serves as both an awareness document and a practical guide for software developers and security professionals. Its purpose is to highlight the most common and impactful vulnerabilities, enabling organizations to focus their security efforts where it matters most.
