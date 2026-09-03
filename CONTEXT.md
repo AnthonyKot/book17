@@ -190,3 +190,12 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   several .gov documents were fetched through reader proxies and are flagged in
   SOURCES.md for re-verification; the original 2021 SD-02 is SSI, only the 2024 renewal
   is public.
+- 2026-09-03 — Chapters 2, 5, 7 drafted and wired (pre-review for 5 and 7). All three
+  evening drafting agents died at the token limit; recovered state was committed as-is.
+  Ch. 2 revised by a Claude agent against the panel (drafts/reviews/02-applied.md): the
+  3.6 GA date now rests on the r3.6.0 tag and the announce post, the ledger is ten rows.
+  Ch. 7's claims register and structure pass, and ch. 5's prose from the finished ledger,
+  were done by codex gpt-5.6-sol (logs in drafts/codex/, gitignored). Working-method
+  decision: mechanical steps (registers, trims, ledger-to-prose, applying a consolidated
+  panel report) go to codex by default; Claude agents only for judgment-heavy revision.
+  Reason: three parallel Claude agents drained ~6% of the session quota per minute.

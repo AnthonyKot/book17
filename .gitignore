@@ -2,3 +2,4 @@ resources/sources/**/*.pdf
 drafts/*.log
 *.err
 .DS_Store
+drafts/codex/
