@@ -72,7 +72,27 @@
 
 <section class="defense">
 <h2>The defense</h2>
-<p>…</p>
+<p>Target later published a short list of security and technology changes. Under “Enhancing monitoring and logging,” it said it had implemented additional rules and alerts, centralized log feeds, and enabled more logging. The same update named application whitelisting on point-of-sale systems, stronger segmentation, streamlined firewall rules, and reduced vendor access. These are recorded changes, not a recorded result. The fetched Target material does not measure whether its new decision path stopped a later incident. <!-- CHECK: 09-target-changes --></p>
+
+<p>That thin outcome record matters. More rules and more logs could improve coverage, but they could also increase the judging load described in Mulligan's testimony. Central feeds can preserve and correlate evidence, but they do not choose an owner or make a playbook work. OWASP's defense reaches the missing interface: <q class="owasp" data-src="A09">DevSecOps and security teams should establish effective monitoring and alerting use cases including playbooks such that suspicious activities are detected and responded to quickly by the Security Operations Center (SOC) team.</q></p>
+
+<p>Equifax supplies a physical mirror for the same idea. A House Oversight majority staff report says the certificate on a device inspecting traffic to its ACIS environment expired on January 31, 2016. The device's default allowed encrypted web traffic to continue, but the inspection systems could not analyze it. The monitoring product remained in the path while its view disappeared. <!-- CHECK: 09-equifax-blindness --></p>
+
+<p>The report says Equifax lacked that visibility for nineteen months. When the certificate was updated on July 29, 2017, a countermeasures team detected a suspicious request almost immediately. Employees could analyze the current packet, but the report says they could not determine what the actor had done before that date from this missing traffic view. This was not an alert waiting for judgment. It was a dependency silently preventing the sensor from seeing. <!-- CHECK: 09-equifax-restored --></p>
+
+<p>The popular sentence that the certificate had expired for nine months is therefore WRONG against the House report's discovery clock. GAO supplies the likely source of confusion: it says the certificate expired about ten months before the breach began. Those are different intervals with different endpoints. The House report also records at least 324 expired SSL certificates, 79 on devices monitoring highly business-critical domains. “The certificate” hides an inventory and ownership failure. <!-- CHECK: 09-equifax-counts --></p>
+
+<p>Logs still mattered after discovery. GAO says Equifax officials reported that undamaged electronic logs helped reconstruct attacker commands and determine which data was compromised. Those same officials described new vulnerability-management processes and continuous network monitoring. GAO immediately limits the claim: it did not independently assess those efforts. The record supports adoption and forensic value, not a demonstrated prevention result. <!-- CHECK: 09-equifax-gao --></p>
+
+<p>The later FTC documents preserve another important distinction. Its complaint alleges failures, including a scan that was not correctly configured and did not identify the vulnerable portal. The stipulated order is different: it requires an asset inventory, protections across legacy assets, confirmation that patch directives are completed, and periodic testing of safeguards. An allegation is not a finding, and an ordered program is not proof that a particular control succeeded. <!-- CHECK: 09-ftc-record --></p>
+
+<p>For measured outcomes, the best saved record is broader than either company. Mandiant's 2024 infographic reports a global median dwell time of 416 days in 2011 and 10 days in 2023. Its scope is Mandiant Consulting investigations, not all breaches. “Dwell time” ends at detection, so it measures one interval on the whiteboard. It does not measure whether containment followed or succeeded. <!-- CHECK: 09-dwell-trend --></p>
+
+<p>Even that interval mixes different discovery paths. In the 2023 investigations, 46% of organizations first found evidence internally and 54% first learned from an external source. For ransomware cases, 70% learned externally; among those external notifications, 76% came from the adversary. A ransom note can end measured dwell time while demonstrating that prevention and early containment failed. <!-- CHECK: 09-notification-mix --></p>
+
+<p>The series also moves with the cases Mandiant handles. Its 2026 executive report says median dwell time rose from 11 days in 2024 to 14 in 2025. It attributes the increase largely to long-running espionage and North Korean IT-worker operations. The same report says internal discovery accounted for 52% of its 2025 investigations, while outside entities accounted for 34% and adversaries 14%. Faster detection is not one stable score of defender quality. <!-- CHECK: 09-dwell-reversal --></p>
+
+<p>Mandiant does document practices, including red-team measurement of detection and response time, tabletop exercises, centralized long-term log storage, and alerts when logging unexpectedly stops. It does not run a controlled experiment showing that one practice caused the long decline. The defense record is strongest when read modestly: test the complete path, retain evidence beyond the compromised host, and separate internal detection from outside or adversary notification. <!-- CHECK: 09-mtrends-practices --></p>
 </section>
 
 <h2>The ledger</h2>
