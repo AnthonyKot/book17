@@ -227,3 +227,7 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
 - 2026-09-03 — Chapter 8 pitch gate (standard mode; pitches by codex): the user chose A
   ("the backup that was not a backup"), anchored on the DOJ indictment, Cisco's incident
   response and Ashton's Maersk account; B, C, D fold in as mechanism and ledger rows.
+- 2026-09-03 — Chapter 9 pitch gate (standard mode; pitches by codex): the user chose A
+  ("evaluated, not ignored"), anchored on Mulligan's Senate statement and the Senate staff
+  report's timeline; B (Equifax certificate) is the mirror, C (dwell time) the defense, D
+  (the report's Businessweek dependence) a caveat and OPEN row.
