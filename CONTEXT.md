@@ -246,3 +246,4 @@ Each chapter has one exclusive job; the pitch (AGENT.md) fixes the angle before 
   prev/next links follow the author's launch order from `drafts/reviews/virality-order.md`
   (0, 7, 8, 4, 10, 1, 9, 2, 3, 6, 5), with chapter 0 first as the introduction; chapter
   numbers stay the OWASP category numbers. `scripts/nav.py` carries the ORDER list.
+- 2026-09-05 — Post bake-off verdict (user): no dramatic difference between v1–v5; the one finding was that "You know both headlines" loses a reader who does not. Merged brief v6 (`scripts/prompts/fable-pass-v6-merged.md`): concrete opening, assume nothing, every paragraph earns its place, ~2,500 words. Applied by the main session to ch. 0, 4, 5, 6, 8, 9 (`posts/NN-v6.md`); openings of 01-v3, 07-v2, 10-v4 rewritten to assume nothing. Every chapter now has one standalone post.
