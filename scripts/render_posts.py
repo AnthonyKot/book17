@@ -62,7 +62,7 @@ for src in sorted(glob.glob(os.path.join(root, 'posts', '*-v*.md'))):
     body = render_md(md)
     body = body.replace('<p><em>%s</em></p>' % inline(lede), '', 1) if lede else body
     page = head.replace('TITLE — Ten Ways In', html.escape(title) + ' — Ten Ways In').replace('ONE SENTENCE.', html.escape(lede[:200]))
-    page += '\n<p class="kicker">Post · from chapter %d · %s</p>\n<h1>%s</h1>\n<p class="lede">%s</p>\n%s\n<p class="note"><a href="../chapters/%s">The chapter this post was written from</a> · <a href="../index.html">All chapters and posts</a></p>\n' % (int(nn), os.path.basename(src), inline(title), inline(lede), body, os.path.basename(glob.glob(os.path.join(root, 'chapters', nn + '-*.html'))[0]))
+    page += '\n<p class="kicker">Post · from chapter %d · %s</p>\n<h1>%s</h1>\n%s\n%s\n<p class="note"><a href="../chapters/%s">The chapter this post was written from</a> · <a href="../index.html">All chapters and posts</a></p>\n' % (int(nn), os.path.basename(src), inline(title), ('<p class="lede">%s</p>' % inline(lede)) if lede else '', body, os.path.basename(glob.glob(os.path.join(root, 'chapters', nn + '-*.html'))[0]))
     page += tail
     dst = os.path.join(root, 'posts', nn + '.html'); open(dst, 'w', encoding='utf-8').write(page)
     pages.append((nn, title, lede, os.path.basename(src)))
