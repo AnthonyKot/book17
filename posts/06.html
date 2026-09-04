@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What &quot;Turn Off GPS&quot; Left Out — Ten Ways In</title>
+<meta name="description" content="Strava, 2018. A fitness app&#x27;s map drew the outlines of military bases. The story says the company gave them away and the Pentagon banned the trackers. The documents say the map worked exactly as desig">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Ten Ways <span>In</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Post · from chapter 6 · 06-v6.md</p>
+<h1>What "Turn Off GPS" Left Out</h1>
+<p class="lede">Strava, 2018. A fitness app's map drew the outlines of military bases. The story says the company gave them away and the Pentagon banned the trackers. The documents say the map worked exactly as designed, and that the design was the problem.</p>
+
+<p>In January 2018 a student of international security in Australia opens a map published by Strava, the app that runners and cyclists use to record their workouts, and looks at Syria. Most of the country is dark. A few places glow: neat rectangles and loops in the desert, drawn by the running routes of people who exercise there every day. They are the outlines of military bases. The same map shows forward operating bases in Afghanistan and the perimeter of the Royal Navy's submarine base on the Clyde.</p>
+<p>Strava had published the map two months earlier, in November 2017, as an engineering achievement: two years of activity from its users worldwide, 700 million workouts, 1.4 trillion GPS points, 16 billion kilometres. The company called it the Global Heatmap. It was meant to show athletes where other people run and ride.</p>
+<h2>The story everyone tells</h2>
+<p>The Guardian's headline on 28 January 2018 fixed the first version: "Fitness tracking app Strava gives away location of secret US army bases". Seven months later, Ars Technica fixed the second: "Pentagon tells troops: Turn off fitness tracker GPS when you head to warzones". And a data-science textbook by four well-known authors later supplied the absolution: "Strava did nothing wrong; they displayed anonymized tracks for opted-in users who hadn't realized this compromised military security."</p>
+<p>Each is nearly right. The map did show the bases. The Pentagon did issue a policy. Strava's processing did work as designed. What the three sentences leave out is why a correctly working map drew a base, and what the Pentagon's policy actually says.</p>
+<h2>The map worked</h2>
+<p>Strava's engineer described the pipeline in detail. The heatmap "contained only public activities and respected all privacy settings". Filters removed implausible running speeds and cars mislabelled as bike rides. Nothing in the record describes a processing defect. Every activity on the map was one its user had classed as public.</p>
+<p>The company's chief executive said the same thing from the inside, the day after the story broke. Military members and aid workers "may have shared their location in areas without other activity density and, in doing so, inadvertently increased awareness of sensitive locations". The academic paper that studied the incident names the condition: "the sparsity of background noise in some regions".</p>
+<p>That is the mechanism, and it is a design property, not a bug. A heatmap is an aggregate. In a city, one person's run disappears into thousands of others. In a desert, five people's daily run is the only thing on the map, and it draws the fence line. The same output that is harmless at one density is an outline at another.</p>
+<p>Two design choices made it worse. The 2017 map drew each workout as a continuous path rather than a scatter of dots, at twice the previous resolution, so sparse traces read as roads. And to keep quiet trails visible alongside busy cities, the colouring used relative contrast: a pixel's brightness depended on how it ranked against other pixels, not on how many people had passed. The engineer stated the cost himself: the map "is not absolutely quantitative". Dense areas got cover from the crowd. Sparse areas got maximum contrast and no crowd.</p>
+<p>One more word in the textbook's absolution is wrong. Strava's users had not opted in. The company's own letter describes "the ability to opt out of heatmaps altogether", and two US senators wrote to Strava that month saying consumers "were confused by Strava's opt-out provisions or unaware of what information was tracked". Opt-out, not opt-in.</p>
+<h2>Why no scanner would have found it</h2>
+<p>The OWASP Top 10, the standard list of web-application weakness classes, has a category for this called Insecure Design, defined as "missing or ineffective control design". Its page draws the line that matters here: "A secure design can still have implementation defects leading to vulnerabilities that may be exploited. An insecure design cannot be fixed by a perfect implementation as needed security controls were never created to defend against specific attacks."</p>
+<p>The tools that find ordinary bugs look for patterns in code and probe running systems with bad input. Strava's code had no such pattern; every privacy setting was honoured. The dangerous behaviour lived one level up, in the decision to render public records at uniform contrast across regions of wildly different density. Testing that needs a different question. Assume every input is authorised and every branch correct. Then name the reader, the sensitive asset, and what that reader can observe. Compare a dense city with an isolated installation. Ask when a cohort becomes a person, when a route becomes a routine, and when historical detail becomes operational knowledge. That is threat modelling, and OWASP names its absence as a cause: "the lack of business risk profiling inherent in the software or system being developed".</p>
+<h2>What Strava changed, and what the Pentagon actually said</h2>
+<p>Strava's fix was not a patch. It was a threshold. Roads and trails with very little activity "would not show any heat until several different athletes uploaded activities in that area". Opt-outs would take effect at a monthly refresh. Street-level zoom was restricted to logged-in users. Note what the threshold does that an opt-out cannot. A per-user privacy zone hides that user's own rows, but as Strava's own update says, "Other athletes recording on Strava within an athlete's Privacy Zone may create heat on the map through that zone". A control that protects one person's data does not protect the place. The threshold protects the place.</p>
+<p>The Pentagon's policy is more careful than its headline. The Deputy Secretary of Defense's memorandum of 3 August 2018 prohibits geolocation features on government and personal devices "while in locations designated as operational areas". Everywhere else, it rejects a single rule: component heads "will consider the inherent risks" and "should apply a tiered structure for categorizing location and operations sensitivity". And even in operational areas it allows exceptions, on one condition for personal devices: a commander may authorise them after "a threat-based comprehensive Operations Security (OPSEC) survey".</p>
+<p>That survey is the interesting part, because it already existed. A year before the map, in July 2017, the US Government Accountability Office had reported that the Defense Department's own 2016 guidance warned that aggregated device data "could inform adversaries about capabilities, deployments, or work patterns", and that the OPSEC surveys required by the Department's directive were not being conducted for those risks. The Department had the process. It had not run it. The 2018 memorandum made running it the condition for an exception.</p>
+<p>What neither the company nor the Department published is a measurement: whether sensitive sites stopped appearing, or whether personnel followed the directive. Publishing a policy is not the same as measuring its effect.</p>
+<h2>The ledger</h2>
+<ul><li><strong>"Pentagon tells troops: Turn off fitness tracker GPS when you head to warzones."</strong> The memorandum applies in designated operational areas, allows exceptions after an OPSEC survey, and gives every other location risk-based rules. <em>Overstated.</em></li><li><strong>"Strava gives away location of secret US army bases."</strong> The academic study and the CEO's letter both confirm the exposure and its cause, sparse background activity. <em>Holds.</em></li><li><strong>The heatmap was anonymised.</strong> The study: "the identities of specific athletes were not directly leaked in the heatmap". <em>Holds.</em> (The same study found a separate route to identities, by uploading spoofed GPS data, which needed another interaction with Strava.)</li><li><strong>The users had opted in.</strong> Strava's letter and the senators' inquiry both describe an opt-out. <em>Wrong.</em></li></ul>
+<h2>What you can now check</h2>
+<p>Find one feature in a system you run that publishes an aggregate: a heatmap, a leaderboard, a usage summary, a "popular near you". Assume the code is correct and every row in it was shared on purpose. Then ask what a hostile reader learns from the places where the aggregate is nearly empty, because that is where a handful of ordinary actions stops being a crowd and becomes an outline.</p>
+<p>If your aggregate has no minimum below which it shows nothing, you have Strava's design. Strava's fix was a threshold of several athletes before any heat appears. The Department's was a survey before any exception. Neither is a scanner finding. Both required someone to ask what the empty map would reveal.</p>
+<hr>
+<p><em>Sources: Deputy Secretary of Defense, memorandum "Use of Geolocation-Capable Devices, Applications, and Services", 3 August 2018; Drew Robb, "Building the Global Heatmap", Strava Engineering, 1 November 2017; James Quarles, "A Letter to the Strava Community", 29 January 2018; Strava, "Heatmap Updates" (2018); GAO-17-668, July 2017; Senators Coons and Flake, letter to Strava, 14 February 2018; Hassan et al., "Fitness Trackers: Fit for Health but Unfit for Security and Privacy", USENIX Security 2018; OWASP Top 10:2025, A06 Insecure Design; The Guardian, 28 January 2018; Ars Technica, 7 August 2018; Spector, Norvig, Wiggins and Wing, Data Science in Context (2022 draft). Part of a series that reads each case against its primary record. Corrections welcome.</em></p>
+<p><em>Editor's note (v6). Kept: the engineer's own account, the two design decisions, the memorandum's structure, the GAO sequence, the threshold-versus-opt-out point, the ledger. Changed most: opens on the student looking at Syria; the three folk sentences are quoted together up front; every term explained on first use; cut from 2,700 to about 1,650 words.</em></p>
+<p class="note"><a href="../chapters/06-strava.html">The chapter this post was written from</a> · <a href="../index.html">All chapters and posts</a></p>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Seventeenth in a series built the same way. Corrections welcome.</p></div></footer>
+</body>
+</html>
