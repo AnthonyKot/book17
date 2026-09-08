@@ -103,7 +103,7 @@ if cuts:
 for nn, title, lede, src in pages:
     for ch in glob.glob(os.path.join(root, 'chapters', nn + '-*.html')):
         h = open(ch, encoding='utf-8').read()
-        if 'class="post-link"' in h: continue
+        if 'post-link' in h: continue
         h = re.sub(r'(<p class="kicker">[^\n]*</p>\n)', r'\1<p class="note post-link"><a href="../posts/%s.html">Read this chapter as a standalone post</a> · <a href="../posts/all.html">all posts on one page</a></p>\n' % nn, h, count=1)
         open(ch, 'w', encoding='utf-8').write(h)
 print('  chapter -> post links in place')
