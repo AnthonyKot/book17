@@ -39,6 +39,22 @@
 </section>
 
 <hr>
+<section id="l04">
+<p class="kicker">From post 4 · <a href="04.html">full post</a></p>
+<h2>The Backup That Outlived the Fix</h2>
+<p>October 2013. Adobe announces that attackers took customer IDs and encrypted passwords. The database that leaks holds about 150 million accounts, and next to each scrambled password sits a plain-text "password hint."</p>
+<p>The story everyone tells: Adobe never protected passwords properly. No salt, weak cryptography, quickly cracked.</p>
+<p>Three privacy regulators investigated. What they found is stranger. Adobe had built the proper system, hashed, salted and iterated, in April 2010. It had been running for three years. The company kept the old encrypted database "as a backup measure in case of issues with the new system."</p>
+<p>The attackers took the backup.</p>
+<p>And the backup was not stale. In Australia alone, 1.8 million users had a password in that old copy that still opened their account. Nobody broke the encryption. The dump was a crossword: identical passwords scrambled identically, so anyone could group users by stored value, then read every hint in the group. One careless hint gave away the password for all of them.</p>
+<p>The Australian Commissioner wrote the sentence this case exists for. Security "will not be satisfied if an organisation has adequate security measures in place to protect personal information stored in one area of its systems" but not in all of them.</p>
+<p>A migration is finished when the old store is gone, not when the new one works.</p>
+<p>Check, this week:</p>
+<p>Find one migration everyone calls finished. A password store, a secrets system, a card table. Ask one question: where is the old copy? Not the old code. The old data. A backup from before the cut-over, a replica never torn down, an export that still runs. If you can name it and the date it was destroyed, the migration is finished. If you can only name the new system, you have Adobe.</p>
+<p>The Australian investigation report: https://www.oaic.gov.au/privacy/privacy-assessments-and-decisions/privacy-decisions/Investigation-inquiry-reports/adobe-systems-software-ireland-ltd-own-motion-investigation-report</p>
+</section>
+
+<hr>
 <section id="l06">
 <p class="kicker">From post 6 · <a href="06.html">full post</a></p>
 <h2>What "Turn Off GPS" Left Out</h2>
@@ -53,6 +69,20 @@
 </section>
 
 <hr>
+<section id="l07">
+<p class="kicker">From post 7 · <a href="07.html">full post</a></p>
+<h2>The Door Colonial Could Not See</h2>
+<p>May 2021. A ransomware note appears on an office computer at Colonial Pipeline before five in the morning. By ten past six, all 5,500 miles of fuel pipeline are shut down. Most of the US East Coast spends a week short of petrol.</p>
+<p>The story that settled within a month: one leaked password, a VPN account with no second factor. True, and the least useful version.</p>
+<p>A month later the chief executive testified to the Senate. Colonial's normal remote access did use a second factor, a hardware token. One legacy VPN profile sat outside it. It was "not intended to be in use." It was believed disabled. And it accepted a username and a password on 29 April.</p>
+<p>His sentence, under oath: "That we could not see and it did not show up in any pen testing, that is unfortunate."</p>
+<p>Belief about a configuration is not a configuration. A door you think is bricked up, that still opens for a key, is the door an attacker uses. The password mattered. The record's subject is the door.</p>
+<p>Check, this week, no attacker needed:</p>
+<p>Draw your perimeter as a table, not a wall. One row per way in: each VPN profile, remote-desktop gateway, service account, vendor portal. One column: what that row demands, password only, password plus code, password plus key. The perimeter is not the average of the column. It is the weakest row. Then test the rows documented as disabled, by trying to log in.</p>
+<p>The Senate hearing, full transcript: https://www.govinfo.gov/content/pkg/CHRG-117shrg46569/html/CHRG-117shrg46569.htm</p>
+</section>
+
+<hr>
 <section id="l08">
 <p class="kicker">From post 8 · <a href="08.html">full post</a></p>
 <h2>The Backup That Was Not a Backup</h2>
@@ -63,6 +93,20 @@
 <p>Check, this week:</p>
 <p>Find the copy of your critical state that survives if destructive code can reach every current peer through the same administrative paths. If the answer is another live replica, you have availability. You have not yet drawn recovery.</p>
 <p>Ashton's account, written as a participant: https://gvnshtn.com/p/maersk-me-and-notpetya</p>
+</section>
+
+<hr>
+<section id="l10">
+<p class="kicker">From post 10 · <a href="10.html">full post</a></p>
+<h2>One Line Too Many, One Field Too Few</h2>
+<p>Two bugs, ten years apart, that failed in opposite directions.</p>
+<p>February 2014. In the code Apple used to secure every connection from its devices, one line appears twice: goto fail. The second copy, wrongly indented, always runs. It jumps past the one call that checks a server's signature, carrying the "no error" left by the previous step. The function returns success from a label named fail. Anyone able to sit on a connection could impersonate any website. No error was ever raised.</p>
+<p>July 2024. CrowdStrike pushes a content update to its Windows security sensor. The rule format defined 21 fields. The code had supplied 20 since February. Every test used a wildcard in field 21, so nothing ever looked. One July rule looked. The sensor read past the end of its array, inside the kernel, and Windows stopped 8.5 million machines. The crash text, in Windows' own words: "This cannot be protected by try-except."</p>
+<p>Apple's boundary was open where it had to be closed: authentication. CrowdStrike's was closed at the size of a whole machine when the failing unit was one rule. Both fixes were tiny. Neither fix is the lesson.</p>
+<p>Check, this week:</p>
+<p>Find one place where an error path and a success path share an exit: a cleanup label, a finally, a catch that returns a status variable. If control arrives there with no check having run, what does it return? If "whatever the variable held," and it starts at success, you have Apple's bug waiting for its line.</p>
+<p>Then find a component driven by configuration it did not write, and ask what happens the first time that configuration names a field the code never supplied. Decide now how much should crash: the rule, the process, or the machine.</p>
+<p>CrowdStrike's root-cause analysis, twelve pages: https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf</p>
 </section>
 
 <p class="note"><a href="all.html">All eleven posts on one page</a> · <a href="../index.html">All chapters and posts</a></p>
