@@ -21,6 +21,7 @@
 </header>
 <main class="wrap">
 <p class="kicker">Chapter 4 · A04:2025 Cryptographic Failures</p>
+<p class="note post-link"><a href="../posts/04.html">Read this chapter as a standalone post</a> · <a href="../posts/all.html">all posts on one page</a></p>
 <h1>The Backup That Outlived the Fix</h1>
 <p class="lede">On 3 October 2013 Adobe's chief security officer wrote that attackers had "accessed Adobe customer IDs and encrypted passwords on our systems". <!-- CHECK: 04-adobe-announcement --> The stolen database made equal passwords look equal and included plain-text hints for a small percentage of users. <!-- CHECK: 04-lede-crossword --> The dump became the most famous crossword in security. The headline version says Adobe never hashed or salted its passwords. The regulators' reports say something more useful. Adobe introduced a replacement authentication system in April 2010. <!-- CHECK: 04-new-system-2010 --> What the attackers copied was a backup database of the old system, kept "as a backup measure in case of issues with the new system". <!-- CHECK: 04-backup-reason --> The fix had shipped. The data it replaced was still retained.</p>
 

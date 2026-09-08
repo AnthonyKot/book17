@@ -68,3 +68,43 @@ for src in sorted(glob.glob(os.path.join(root, 'posts', '*-v*.md'))):
     pages.append((nn, title, lede, os.path.basename(src)))
     print('  wrote posts/%s.html  (%s)' % (nn, os.path.basename(src)))
 open(os.path.join(root, 'posts', 'index.json'), 'w').write(repr(pages))
+
+# --- all posts on one page, in reading order (nav.py ORDER) -------------------------------
+order = re.search(r'ORDER\s*=\s*\[(.*?)\]', open(os.path.join(root, 'scripts', 'nav.py'), encoding='utf-8').read(), re.S).group(1)
+order = re.findall(r'"(\d\d)"', order)
+bynn = {nn: (title, lede, src) for nn, title, lede, src in pages}
+allpage = head.replace('TITLE — Ten Ways In', 'All eleven posts — Ten Ways In').replace('ONE SENTENCE.', 'Every chapter as a standalone post, on one page, in reading order.')
+allpage += '\n<p class="kicker">Posts · all eleven on one page · reading order</p>\n<h1>All eleven posts</h1>\n<p class="lede">Read in bulk, pick one. Each post opens on the moment and assumes the reader has never heard of the case.</p>\n<ol class="toc">' + ''.join('<li><a href="#p%s">%s · %s</a></li>' % (nn, int(nn), inline(bynn[nn][0])) for nn in order if nn in bynn) + '</ol>\n'
+for nn in order:
+    if nn not in bynn: continue
+    title, lede, src = bynn[nn]
+    md = open(os.path.join(root, 'posts', src), encoding='utf-8').read()
+    body = render_md(md)
+    body = body.replace('<p><em>%s</em></p>' % inline(lede), '', 1) if lede else body
+    allpage += '\n<hr>\n<section id="p%s">\n<p class="kicker">Post · from chapter %d · <a href="%s.html">own page</a></p>\n<h1>%s</h1>\n%s\n%s\n</section>\n' % (nn, int(nn), nn, inline(title), ('<p class="lede">%s</p>' % inline(lede)) if lede else '', body)
+allpage += '\n<p class="note"><a href="../index.html">All chapters and posts</a></p>\n' + tail
+open(os.path.join(root, 'posts', 'all.html'), 'w', encoding='utf-8').write(allpage)
+print('  wrote posts/all.html (%d posts)' % len(order))
+
+# --- LinkedIn cuts, one page ---------------------------------------------------------------
+cuts = sorted(glob.glob(os.path.join(root, 'posts', 'linkedin', '*.md')))
+if cuts:
+    li = head.replace('TITLE — Ten Ways In', 'LinkedIn cuts — Ten Ways In').replace('ONE SENTENCE.', 'Short versions of the posts, about 200 words each, one incident, one quoted line, one primary source.')
+    li += '\n<p class="kicker">Posts · LinkedIn cuts</p>\n<h1>LinkedIn cuts</h1>\n<p class="lede">About 200 words each: one incident, one quoted line, one link to the primary source. Paste as-is.</p>\n'
+    for c in cuts:
+        nn = os.path.basename(c)[:2]; md = open(c, encoding='utf-8').read()
+        m = re.search(r'^#\s+(.*)$', md, re.M); t = m.group(1).strip() if m else nn
+        li += '\n<hr>\n<section id="l%s">\n<p class="kicker">From post %d · <a href="%s.html">full post</a></p>\n<h2>%s</h2>\n%s\n</section>\n' % (nn, int(nn), nn, inline(t), render_md(md))
+    li += '\n<p class="note"><a href="all.html">All eleven posts on one page</a> · <a href="../index.html">All chapters and posts</a></p>\n' + tail
+    open(os.path.join(root, 'posts', 'linkedin.html'), 'w', encoding='utf-8').write(li)
+    print('  wrote posts/linkedin.html (%d cuts)' % len(cuts))
+
+# --- chapter -> post link, idempotent ----------------------------------------------------
+for nn, title, lede, src in pages:
+    for ch in glob.glob(os.path.join(root, 'chapters', nn + '-*.html')):
+        h = open(ch, encoding='utf-8').read()
+        if 'class="post-link"' in h: continue
+        h = re.sub(r'(<p class="kicker">[^\n]*</p>\n)', r'\1<p class="note post-link"><a href="../posts/%s.html">Read this chapter as a standalone post</a> · <a href="../posts/all.html">all posts on one page</a></p>\n' % nn, h, count=1)
+        open(ch, 'w', encoding='utf-8').write(h)
+print('  chapter -> post links in place')
+

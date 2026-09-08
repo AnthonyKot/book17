@@ -21,6 +21,7 @@
 </header>
 <main class="wrap">
 <p class="kicker">Chapter 10 · A10:2025 Mishandling of Exceptional Conditions</p>
+<p class="note post-link"><a href="../posts/10.html">Read this chapter as a standalone post</a> · <a href="../posts/all.html">all posts on one page</a></p>
 <h1>One Line Too Many, One Field Too Few</h1>
 <p class="lede">You know both headlines. In February 2014 a duplicated <code>goto fail;</code> in Apple's TLS code let an attacker who could intercept a connection impersonate a server to an affected client without holding the certificate's private key. <!-- CHECK: 10-wrong-key --> In July 2024 a CrowdStrike content update crashed the Windows hosts that received it; Microsoft estimated 8.5 million devices affected. <!-- CHECK: 10-ms-85m --> The record adds the detail the headlines skip: the two bugs failed in opposite directions. Apple's never raised an error. It returned success from a label called <code>fail</code>. CrowdStrike's raised an error that nothing could catch; the crash text, in Windows' own words, reads "This cannot be protected by try-except". <!-- CHECK: 10-bugcheck-text --> Each was fixed by a small change. Neither change is the lesson.</p>
 

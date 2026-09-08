@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LinkedIn cuts — Ten Ways In</title>
+<meta name="description" content="Short versions of the posts, about 200 words each, one incident, one quoted line, one primary source.">
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/theme.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Ten Ways <span>In</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Contents</a>
+      <a href="../about.html">Method</a>
+      <button class="theme-toggle" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="kicker">Posts · LinkedIn cuts</p>
+<h1>LinkedIn cuts</h1>
+<p class="lede">About 200 words each: one incident, one quoted line, one link to the primary source. Paste as-is.</p>
+
+<hr>
+<section id="l01">
+<p class="kicker">From post 1 · <a href="01.html">full post</a></p>
+<h2>The Firewall Could Read the Bank</h2>
+<p>In 2019 an intruder took data on about a hundred million Capital One customers.</p>
+<p>The story that spread within days: a web firewall was tricked into fetching cloud credentials, a trick called server-side request forgery. The FBI's sworn complaint never uses those words. It says something plainer, and more useful.</p>
+<p>The firewall's cloud identity "does not, in the ordinary course of business, invoke the List Buckets Command." Yet one call with that identity returned the names of more than 700 storage buckets. A second call copied from every bucket it had permission to read.</p>
+<p>So the bug that mattered was not the forwarding rule. It was a permission. A firewall's job is to inspect traffic and pass or drop it. Nothing in that job requires listing every bucket in a bank. Whatever route the requests took, that policy is what turned a proxy into a bank.</p>
+<p>A permitted call by a permitted identity is the hardest thing in a log to see. Nothing fails.</p>
+<p>Monday check, no attacker needed:</p>
+<p>Pick one machine you run that forwards requests: a firewall, a proxy, a gateway. Find the identity attached to it. Open the policy, not the wiki. Beside each permission, write the machine's job in five words. Any line with no job beside it is the finding. Look at list permissions first: a stolen key that can list is a map of the account.</p>
+<p>The complaint, twelve pages, allegations not findings: https://www.justice.gov/usao-wdwa/press-release/file/1188626/download</p>
+</section>
+
+<hr>
+<section id="l06">
+<p class="kicker">From post 6 · <a href="06.html">full post</a></p>
+<h2>What "Turn Off GPS" Left Out</h2>
+<p>January 2018. A student in Australia opens Strava's global heatmap, two years of runs and rides from millions of users, and looks at Syria. Most of the country is dark. A few neat rectangles glow in the desert. They are the running routes on military bases.</p>
+<p>The headlines: Strava gave away secret bases. The Pentagon banned fitness trackers.</p>
+<p>The record: the map worked exactly as designed. Every activity on it was one its user had made public. The design was the problem.</p>
+<p>In a city, one run disappears into thousands. In a desert, five people's daily run is the only thing on the map, and it draws the fence line. Strava's own engineer wrote that the colouring was relative, so quiet places got maximum contrast, and that the map "is not absolutely quantitative." No scanner finds that. The code had no bug.</p>
+<p>Strava's fix was not a patch. It was a threshold: no heat until several different athletes had passed. And the Pentagon did not ban anything. Its memo restricts geolocation in designated operational areas and allows exceptions after a security survey the department already required, and had not been running.</p>
+<p>Check, this week:</p>
+<p>Find one aggregate you publish: a heatmap, a leaderboard, a "popular near you." Assume every row was shared on purpose. Ask what a hostile reader learns where the aggregate is nearly empty. If it has no minimum below which it shows nothing, you have Strava's design.</p>
+<p>The memo, three pages: https://media.defense.gov/2018/Aug/06/2001951064/-1/-1/1/GEOLOCATION-DEVICES-APPLICATIONS-SERVICES.PDF</p>
+</section>
+
+<hr>
+<section id="l08">
+<p class="kicker">From post 8 · <a href="08.html">full post</a></p>
+<h2>The Backup That Was Not a Backup</h2>
+<p>27 June 2017. Screens at Maersk, the company that moves a fifth of the world's container trade, go black and show a ransom note. Within hours: no email, no bookings, no way to tell a port which box goes on which ship. Ten days to rebuild. 250 to 300 million dollars.</p>
+<p>The story everyone tells ends in Ghana. Maersk's identity system ran on about 150 servers worldwide, constantly synchronising. The malware wiped them all, except one in Ghana that a power cut had knocked offline. Its disk was flown to London and the company was rebuilt from it.</p>
+<p>It is a good scene. Maersk's own identity engineer, Gavin Ashton, draws the lesson differently. The recovery plan covered losing a site. It had not covered losing every controller everywhere at once. Even the magazine that made the scene famous concedes the synchronised servers "had not accounted for every controller being wiped simultaneously."</p>
+<p>That is the whole lesson. A live replica answers one question: can another machine serve the latest state? A backup answers a different one: can we recover a known earlier state after the latest state has become dangerous? Ghana was the second thing, by accident.</p>
+<p>Check, this week:</p>
+<p>Find the copy of your critical state that survives if destructive code can reach every current peer through the same administrative paths. If the answer is another live replica, you have availability. You have not yet drawn recovery.</p>
+<p>Ashton's account, written as a participant: https://gvnshtn.com/p/maersk-me-and-notpetya</p>
+</section>
+
+<p class="note"><a href="all.html">All eleven posts on one page</a> · <a href="../index.html">All chapters and posts</a></p>
+</main>
+<footer class="site-footer"><div class="wrap"><p>Seventeenth in a series built the same way. Corrections welcome.</p></div></footer>
+</body>
+</html>
